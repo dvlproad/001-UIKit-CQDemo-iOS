@@ -1,0 +1,41 @@
+PODS:
+  - CJBaseUtil/CJDataUtil (0.5.1)
+  - CQDemoKit (0.1.0):
+    - CQDemoKit/Home_Base (= 0.1.0)
+    - CQDemoKit/Home_Collection (= 0.1.0)
+    - CQDemoKit/Home_TextView (= 0.1.0)
+  - CQDemoKit/Home_Base (0.1.0):
+    - CJBaseUtil/CJDataUtil
+    - Masonry
+  - CQDemoKit/Home_Collection (0.1.0):
+    - CQDemoKit/Home_Base
+  - CQDemoKit/Home_TextView (0.1.0):
+    - CQDemoKit/Home_Base
+  - Masonry (1.1.0)
+  - TSDemo_Demo (0.1.0):
+    - CQDemoKit
+
+DEPENDENCIES:
+  - CQDemoKit (from `../`)
+  - TSDemo_Demo (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CJBaseUtil
+    - Masonry
+
+EXTERNAL SOURCES:
+  CQDemoKit:
+    :path: "../"
+  TSDemo_Demo:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
+  CQDemoKit: 15bf829e2cbac3257f8dca9aaf15d7fbcfa8a621
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  TSDemo_Demo: b9f952d98e78730b8c3926253c39826e391291ad
+
+PODFILE CHECKSUM: 5babd6855395e10826a318e232fe5bdbb3ad01fe
+
+COCOAPODS: 1.8.4
