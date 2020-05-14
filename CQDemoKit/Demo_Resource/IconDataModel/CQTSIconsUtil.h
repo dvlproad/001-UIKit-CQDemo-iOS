@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CQTSNetImageDataModel.h"
+#import "CQTSIconDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CQTSIconsUtil : NSObject
 
 /// 获取测试用的数据(image为网络图片)
-+ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModels;
++ (NSMutableArray<CQTSIconDataModel *> *)__getTestNetImageDataModels;
 
 #pragma mark - icon Image
 + (UIImage *)cjts_iconImage1;

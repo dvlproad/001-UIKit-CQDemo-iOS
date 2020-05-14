@@ -11,64 +11,64 @@
 @implementation CQTSIconsUtil
 
 /// 获取测试用的数据(image为网络图片)
-+ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModels {
-    NSMutableArray<CQTSNetImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
++ (NSMutableArray<CQTSIconDataModel *> *)__getTestNetImageDataModels {
+    NSMutableArray<CQTSIconDataModel *> *dataModels = [[NSMutableArray alloc] init];
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"1X透社";
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl1];
         dataModel.badgeCount = 0;
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"2新鲜事";
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl2];
         dataModel.badgeCount = 1;
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"3XX信";
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl3];
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"4X角信";
         dataModel.badgeCount = 9;
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl4];
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"5蓝精灵";
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl5];
         dataModel.badgeCount = 10;
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"6年轻范";
         dataModel.badgeCount = 99;
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl6];
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"7XX福";
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl7];
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"8X之语";
         dataModel.badgeCount = 888;
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl8];
         [dataModels addObject:dataModel];
     }
     {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         dataModel.name = @"我是6个字";
         dataModel.badgeCount = 888;
         dataModel.imageUrl = [CQTSIconsUtil cjts_iconImageUrl8];
