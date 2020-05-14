@@ -45,10 +45,23 @@
             CJModuleModel *module = [[CJModuleModel alloc] init];
             module.title = @"Alert";
             module.actionBlock = ^{
-                [CJUIKitAlertUtil showInViewController:self withTitle:@"提示" message:@"选择比努力更重要" cancleBlock:^{
-                    NSLog(@"点击取消");
+                [CJUIKitAlertUtil showAlertInViewController:self withTitle:@"提示" message:@"选择比努力更重要" cancleBlock:^{
+                    [CJUIKitToastUtil showMessage:@"点击取消"];
                 } okBlock:^{
-                    NSLog(@"点击确认");
+                    [CJUIKitToastUtil showMessage:@"点击确认"];
+                }];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CJModuleModel *module = [[CJModuleModel alloc] init];
+            module.title = @"ActionSheet";
+            module.actionBlock = ^{
+                [CJUIKitAlertUtil showActionSheetInViewController:self withTitle:@"提示" message:@"选择比努力更重要" itemTitles:@[@"从相册选择", @"拍摄"] cancleBlock:^{
+                    [CJUIKitToastUtil showMessage:@"点击取消"];
+                } itemClickBlock:^(NSInteger index) {
+                    NSString *message = [NSString stringWithFormat:@"点击index=%ld", index];
+                    [CJUIKitToastUtil showMessage:message];
                 }];
             };
             [sectionDataModel.values addObject:module];
