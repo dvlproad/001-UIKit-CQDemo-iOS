@@ -10,6 +10,8 @@
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
 
+#import "TSResourceViewController.h"
+
 @interface DemoHomeViewController () {
     
 }
@@ -27,10 +29,10 @@
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
-    // BaseOverlay
+    // Overlay
     {
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Demo中 ViewController事件 等";
+        sectionDataModel.theme = @"测试 Overlay 等";
         {
             CJModuleModel *module = [[CJModuleModel alloc] init];
             module.title = @"Toast";
@@ -49,6 +51,19 @@
                     NSLog(@"点击确认");
                 }];
             };
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // Resources
+    {
+        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 Resources 等";
+        {
+            CJModuleModel *module = [[CJModuleModel alloc] init];
+            module.title = @"Resources";
+            module.classEntry = [TSResourceViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

@@ -1,191 +1,150 @@
 //
-//  CJUIKitResoucesUtil.m
-//  CJUIKitDemo
+//  CQTSNetImagesUtil.m
+//  CJComplexUIKitDemo
 //
-//  Created by ciyouzen on 2017/2/25.
-//  Copyright © 2017年 dvlproad. All rights reserved.
+//  Created by lcQian on 2020/4/7.
+//  Copyright © 2020 dvlproad. All rights reserved.
 //
 
-#import "CJUIKitResoucesUtil.h"
+#import "CQTSNetImagesUtil.h"
 
-@implementation CJUIKitResoucesUtil
+@implementation CQTSNetImagesUtil
 
-+ (UIImage *)imageWithUrl:(NSString *)imageUrl {
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]]];
-    return image;
+
++ (void)setupImageView:(UIImageView *)imageView withImageUrl:(NSString *)imageUrl {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]]];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            imageView.image = image;
+        });
+    });
 }
 
 
-#pragma mark - icon Image
-+ (UIImage *)cjts_iconImage1 {
-    return [self imageWithUrl:[self cjts_iconImageUrl1]];
+/// 获取测试用的数据(image为网络图片地址)
+///
+/// @param count 图片个数
+///
+/// @return 返回图片数据
++ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModelsWithCount:(NSInteger)count {
+    NSArray *selStrings = @[NSStringFromSelector(@selector(cjts_imageUrl1)),
+                            NSStringFromSelector(@selector(cjts_imageUrl2)),
+                            NSStringFromSelector(@selector(cjts_imageUrl3)),
+                            NSStringFromSelector(@selector(cjts_imageUrl4)),
+                            NSStringFromSelector(@selector(cjts_imageUrl5)),
+                            NSStringFromSelector(@selector(cjts_imageUrl6)),
+                            NSStringFromSelector(@selector(cjts_imageUrl7)),
+                            NSStringFromSelector(@selector(cjts_imageUrl8)),
+                            NSStringFromSelector(@selector(cjts_imageUrl9)),
+                            NSStringFromSelector(@selector(cjts_imageUrl10)),
+                            NSStringFromSelector(@selector(cjts_imageUrl11)),
+                            NSStringFromSelector(@selector(cjts_imageUrl12)),
+                            NSStringFromSelector(@selector(cjts_imageUrl13)),
+                            NSStringFromSelector(@selector(cjts_imageUrl14)),
+                            NSStringFromSelector(@selector(cjts_imageUrl15)),
+                            NSStringFromSelector(@selector(cjts_imageUrl16)),
+                            NSStringFromSelector(@selector(cjts_imageUrl17)),
+                            NSStringFromSelector(@selector(cjts_imageUrl18)),
+                            NSStringFromSelector(@selector(cjts_imageUrl19)),
+                            NSStringFromSelector(@selector(cjts_imageUrl20)),
+                            NSStringFromSelector(@selector(cjts_imageUrl21)),
+                            NSStringFromSelector(@selector(cjts_imageUrl22)),
+                            NSStringFromSelector(@selector(cjts_imageUrl23)),
+                            NSStringFromSelector(@selector(cjts_imageUrl24)),
+                            NSStringFromSelector(@selector(cjts_imageUrl25)),
+                            NSStringFromSelector(@selector(cjts_imageUrl26)),
+    ];
+    
+    
+    NSMutableArray<CQTSNetImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    
+    for (NSInteger i = 0; i < count; i++) {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        
+        NSInteger selIndex = random()%selStrings.count;
+        NSString *selString = [selStrings objectAtIndex:selIndex];
+        SEL sel = NSSelectorFromString(selString);
+        dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
+        [dataModels addObject:dataModel];
+    }
+    
+    return dataModels;
 }
-
-+ (UIImage *)cjts_iconImage2 {
-    return [self imageWithUrl:[self cjts_iconImageUrl2]];
-}
-
-+ (UIImage *)cjts_iconImage3 {
-    return [self imageWithUrl:[self cjts_iconImageUrl3]];
-}
-
-+ (UIImage *)cjts_iconImage4 {
-    return [self imageWithUrl:[self cjts_iconImageUrl4]];
-}
-
-+ (UIImage *)cjts_iconImage5 {
-    return [self imageWithUrl:[self cjts_iconImageUrl5]];
-}
-
-+ (UIImage *)cjts_iconImage6 {
-    return [self imageWithUrl:[self cjts_iconImageUrl6]];
-}
-
-+ (UIImage *)cjts_iconImage7 {
-    return [self imageWithUrl:[self cjts_iconImageUrl7]];
-}
-
-+ (UIImage *)cjts_iconImage8 {
-    return [self imageWithUrl:[self cjts_iconImageUrl8]];
-}
-
-#pragma mark - icon ImageUrl
-+ (NSString *)cjts_iconImageUrl1 {
-    return @"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4012764803,2714809145&fm=26&gp=0.jpg";
-}
-
-+ (NSString *)cjts_iconImageUrl2 {
-    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586263545058&di=cbe1e0a579231c04bf511c0d2fc72460&imgtype=0&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D329733760%2C3032832928%26fm%3D214%26gp%3D0.jpg";
-}
-
-+ (NSString *)cjts_iconImageUrl3 {
-    return @"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2349859212,1053714951&fm=26&gp=0.jpg";
-}
-
-+ (NSString *)cjts_iconImageUrl4 {
-    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586263068902&di=5874c527bfd19f27db2b066e74411eb6&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F5fdf8db1cb13495404d04cf4544e9258d0094a57.jpg";
-}
-
-+ (NSString *)cjts_iconImageUrl5 {
-    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586263601036&di=3876d2d43d466f9678206ef237626834&imgtype=0&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D1879040502%2C280709257%26fm%3D214%26gp%3D0.jpg";
-}
-
-+ (NSString *)cjts_iconImageUrl6 {
-    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586263627980&di=22fd69f597e7b87c353bc98a85a0d453&imgtype=0&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D3488745561%2C199519317%26fm%3D214%26gp%3D0.jpg";
-}
-
-+ (NSString *)cjts_iconImageUrl7 {
-    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586263611842&di=04be24736a2727a95bfbf05fdefee3ea&imgtype=0&src=http%3A%2F%2Fa1.att.hudong.com%2F30%2F37%2F19300001372833132237377419887.png";
-}
-
-+ (NSString *)cjts_iconImageUrl8 {
-    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586263649084&di=f84aae3f3e512116dec9fba77cd7027e&imgtype=0&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3283679520%2C4132935319%26fm%3D214%26gp%3D0.jpg";
-}
+   
 
 
-#pragma mark - normal Image
-+ (UIImage *)cjts_image1 {
-    return [self imageWithUrl:[self cjts_imageUrl1]];
-}
-
-+ (UIImage *)cjts_image2 {
-    return [self imageWithUrl:[self cjts_imageUrl2]];
-}
-
-+ (UIImage *)cjts_image3 {
-    return [self imageWithUrl:[self cjts_imageUrl3]];
-}
-
-+ (UIImage *)cjts_image4 {
-    return [self imageWithUrl:[self cjts_imageUrl4]];
-}
-
-+ (UIImage *)cjts_image5 {
-    return [self imageWithUrl:[self cjts_imageUrl5]];
-}
-
-+ (UIImage *)cjts_image6 {
-    return [self imageWithUrl:[self cjts_imageUrl6]];
-}
-
-+ (UIImage *)cjts_image7 {
-    return [self imageWithUrl:[self cjts_imageUrl7]];
-}
-
-+ (UIImage *)cjts_image8 {
-    return [self imageWithUrl:[self cjts_imageUrl8]];
-}
-
-+ (UIImage *)cjts_image9 {
-    return [self imageWithUrl:[self cjts_imageUrl9]];
-}
-
-+ (UIImage *)cjts_image10 {
-    return [self imageWithUrl:[self cjts_imageUrl10]];
-}
-
-+ (UIImage *)cjts_image11 {
-    return [self imageWithUrl:[self cjts_imageUrl11]];
-}
-
-+ (UIImage *)cjts_image12 {
-    return [self imageWithUrl:[self cjts_imageUrl12]];
-}
-
-+ (UIImage *)cjts_image13 {
-    return [self imageWithUrl:[self cjts_imageUrl13]];
-}
-
-+ (UIImage *)cjts_image14 {
-    return [self imageWithUrl:[self cjts_imageUrl14]];
-}
-
-+ (UIImage *)cjts_image15 {
-    return [self imageWithUrl:[self cjts_imageUrl15]];
-}
-
-+ (UIImage *)cjts_image16 {
-    return [self imageWithUrl:[self cjts_imageUrl16]];
-}
-
-+ (UIImage *)cjts_image17 {
-    return [self imageWithUrl:[self cjts_imageUrl17]];
-}
-
-+ (UIImage *)cjts_image18 {
-    return [self imageWithUrl:[self cjts_imageUrl18]];
-}
-
-+ (UIImage *)cjts_image19 {
-    return [self imageWithUrl:[self cjts_imageUrl19]];
-}
-
-+ (UIImage *)cjts_image20 {
-    return [self imageWithUrl:[self cjts_imageUrl20]];
-}
-
-+ (UIImage *)cjts_image21 {
-    return [self imageWithUrl:[self cjts_imageUrl21]];
-}
-
-+ (UIImage *)cjts_image22 {
-    return [self imageWithUrl:[self cjts_imageUrl22]];
-}
-
-+ (UIImage *)cjts_image23 {
-    return [self imageWithUrl:[self cjts_imageUrl23]];
-}
-
-+ (UIImage *)cjts_image24 {
-    return [self imageWithUrl:[self cjts_imageUrl24]];
-}
-
-+ (UIImage *)cjts_image25 {
-    return [self imageWithUrl:[self cjts_imageUrl25]];
+/// 获取测试用的数据(image为网络图片)
++ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModels {
+    NSMutableArray<CQTSNetImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"1X透社";
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl1];
+        dataModel.badgeCount = 0;
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"2新鲜事";
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl2];
+        dataModel.badgeCount = 1;
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"3XX信";
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl3];
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"4X角信";
+        dataModel.badgeCount = 9;
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl4];
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"5蓝精灵";
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl5];
+        dataModel.badgeCount = 10;
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"6年轻范";
+        dataModel.badgeCount = 99;
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl6];
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"7XX福";
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl7];
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"8X之语";
+        dataModel.badgeCount = 888;
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl8];
+        [dataModels addObject:dataModel];
+    }
+    {
+        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
+        dataModel.name = @"我是6个字";
+        dataModel.badgeCount = 888;
+        dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl8];
+        [dataModels addObject:dataModel];
+    }
+    
+    return dataModels;
 }
 
 
-#pragma mark normal ImageUrl
+
+#pragma mark network ImageUrl
 + (NSString *)cjts_imageUrl1 {
     return @"https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1586193729&di=00aed1f537a4cf78aefdc8bb72c028b6&src=http://hbimg.b0.upaiyun.com/e9c0871fe111ce790c22052ed395ac19a8a9200ba5afa-VLWA3b_fw658";
 }

@@ -1,15 +1,17 @@
 PODS:
   - CJBaseUtil/CJDataUtil (0.5.1)
-  - CQDemoKit (0.2.0):
-    - CQDemoKit/Home_Base (= 0.2.0)
-    - CQDemoKit/Home_Collection (= 0.2.0)
-    - CQDemoKit/Home_TextView (= 0.2.0)
-  - CQDemoKit/Home_Base (0.2.0):
+  - CQDemoKit (0.3.0):
+    - CQDemoKit/Demo_Resource (= 0.3.0)
+    - CQDemoKit/Home_Base (= 0.3.0)
+    - CQDemoKit/Home_Collection (= 0.3.0)
+    - CQDemoKit/Home_TextView (= 0.3.0)
+  - CQDemoKit/Demo_Resource (0.3.0)
+  - CQDemoKit/Home_Base (0.3.0):
     - CJBaseUtil/CJDataUtil
     - Masonry
-  - CQDemoKit/Home_Collection (0.2.0):
+  - CQDemoKit/Home_Collection (0.3.0):
     - CQDemoKit/Home_Base
-  - CQDemoKit/Home_TextView (0.2.0):
+  - CQDemoKit/Home_TextView (0.3.0):
     - CQDemoKit/Home_Base
   - Masonry (1.1.0)
   - TSDemo_Demo (0.1.0):
@@ -32,7 +34,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CQDemoKit: 5548d22582aa21b3090a5ab0d3301b7cf70d4f74
+  CQDemoKit: 1598343e28b8d6805aa40e11ce6a7e3b7b100ffc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TSDemo_Demo: a0ee201f03454b7561d5fea0418b450fa81f7dbd
 

@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   #查看本地已同步的pod库：pod repo
   #上传方法：pod repo push cocoapods CQDemoKit.podspec --sources=cocoapods --allow-warnings
   s.name         = "CQDemoKit"
-  s.version      = "0.2.0"
+  s.version      = "0.3.0"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.2.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.3.0" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -60,6 +60,14 @@ Pod::Spec.new do |s|
     ss.source_files = "CQDemoKit/Collection/**/*.{h,m}"
 
     ss.dependency 'CQDemoKit/Home_Base'
+  end
+
+  # Demo 工程中基本都需要的 Resource
+  s.subspec 'Demo_Resource' do |ss|
+    ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
+    ss.resource_bundle = {
+      'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
+    }
   end
 
 end
