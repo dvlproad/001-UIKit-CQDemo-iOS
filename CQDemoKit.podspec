@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   #查看本地已同步的pod库：pod repo
   #上传方法：pod repo push cocoapods CQDemoKit.podspec --sources=cocoapods --allow-warnings
   s.name         = "CQDemoKit"
-  s.version      = "0.3.2"
+  s.version      = "0.4.0"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.3.2" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.4.0" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
