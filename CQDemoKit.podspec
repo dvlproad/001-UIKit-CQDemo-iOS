@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   #查看本地已同步的pod库：pod repo
   #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
-  #上传方法：pod trunk push CQDemoKit.podspec --sources=master --allow-warnings
+  #上传方法：pod trunk push CQDemoKit.podspec --allow-warnings
   s.name         = "CQDemoKit"
   s.version      = "0.5.0"
   s.summary      = "Demo"

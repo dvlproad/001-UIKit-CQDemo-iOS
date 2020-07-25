@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 	#验证方法1：pod lib lint TSDemo_Demo.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
   #验证方法2：pod lib lint TSDemo_Demo.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
-  #提交方法： pod repo push dvlproad TSDemo_Demo.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
+  #提交方法： pod trunk push TSDemo_Demo.podspec --allow-warnings --use-libraries --verbose
   s.name         = "TSDemo_Demo"
   s.version      = "0.5.0"
   s.summary      = "浮层弹窗Overlay演示示例"
