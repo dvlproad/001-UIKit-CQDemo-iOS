@@ -1,1 +1,1 @@
-../../../../../CQDemoKit/TextView/Model/CJDealTextModel.h
+../../../../../CQDemoKit/BaseVC/TextView/Model/CJDealTextModel.h

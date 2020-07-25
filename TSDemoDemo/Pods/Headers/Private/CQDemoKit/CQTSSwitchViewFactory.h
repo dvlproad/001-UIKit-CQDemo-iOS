@@ -1,1 +1,1 @@
-../../../../../CQDemoKit/Base/View/CQTSSwitchViewFactory.h
+../../../../../CQDemoKit/BaseUIKit/CQTSSwitchViewFactory.h

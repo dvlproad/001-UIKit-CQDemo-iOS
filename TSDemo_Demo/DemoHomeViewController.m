@@ -12,6 +12,7 @@
 
 #import "TSResourceViewController.h"
 
+#import "TSButtonHomeViewController.h"
 #import "TSContainerViewController.h"
 #import "TSSwitchViewController.h"
 
@@ -95,10 +96,16 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
-    // Buttons、Switch
+    // Button、Container、Switch
     {
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Container、Switch 等";
+        sectionDataModel.theme = @"测试 Button、Container、Switch 等";
+        {
+            CJModuleModel *module = [[CJModuleModel alloc] init];
+            module.title = @"Button";
+            module.classEntry = [TSButtonHomeViewController class];
+            [sectionDataModel.values addObject:module];
+        }
         {
             CJModuleModel *module = [[CJModuleModel alloc] init];
             module.title = @"Container";

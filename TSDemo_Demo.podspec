@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   #验证方法2：pod lib lint TSDemo_Demo.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
   #提交方法： pod repo push dvlproad TSDemo_Demo.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
   s.name         = "TSDemo_Demo"
-  s.version      = "0.2.0"
+  s.version      = "0.5.0"
   s.summary      = "浮层弹窗Overlay演示示例"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git"
 
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "TSDemo_Demo_0.2.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "TSDemo_Demo_0.5.0" }
   #s.source_files  = "CJDemoCommon/*.{h,m}"
   #s.source_files = "CJChat/TestOSChinaPod.{h,m}"
 

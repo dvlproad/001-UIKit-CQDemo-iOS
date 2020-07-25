@@ -28,7 +28,7 @@ source 'https://gitee.com/dvlproad/dvlproadSpecs'  #这里要增加的是这条�
 inhibit_all_warnings! #inhibit_warnings参数能够有效的抑制CocoaPods引入的第三方代码库产生的warning。
 
 target 'TSDemoDemo' do   
-    pod 'TSDemo_Demo',          :path => '../’
+    pod 'TSDemo_Demo',        :path => '../’
     pod 'CQDemoKit',        	:path => '../’
 end
 

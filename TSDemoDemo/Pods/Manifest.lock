@@ -1,20 +1,33 @@
 PODS:
   - CJBaseUtil/CJDataUtil (0.5.1)
-  - CQDemoKit (0.4.0):
-    - CQDemoKit/Demo_Resource (= 0.4.0)
-    - CQDemoKit/Home_Base (= 0.4.0)
-    - CQDemoKit/Home_Collection (= 0.4.0)
-    - CQDemoKit/Home_TextView (= 0.4.0)
-  - CQDemoKit/Demo_Resource (0.4.0)
-  - CQDemoKit/Home_Base (0.4.0):
-    - CJBaseUtil/CJDataUtil
+  - CQDemoKit (0.5.0):
+    - CQDemoKit/BaseUIKit (= 0.5.0)
+    - CQDemoKit/BaseUtil (= 0.5.0)
+    - CQDemoKit/BaseVC (= 0.5.0)
+    - CQDemoKit/Demo_Resource (= 0.5.0)
+  - CQDemoKit/BaseUIKit (0.5.0):
     - Masonry
-  - CQDemoKit/Home_Collection (0.4.0):
-    - CQDemoKit/Home_Base
-  - CQDemoKit/Home_TextView (0.4.0):
-    - CQDemoKit/Home_Base
+  - CQDemoKit/BaseUtil (0.5.0)
+  - CQDemoKit/BaseVC (0.5.0):
+    - CQDemoKit/BaseVC/Base (= 0.5.0)
+    - CQDemoKit/BaseVC/Collection (= 0.5.0)
+    - CQDemoKit/BaseVC/ScrollView (= 0.5.0)
+    - CQDemoKit/BaseVC/TableView (= 0.5.0)
+    - CQDemoKit/BaseVC/TextView (= 0.5.0)
+  - CQDemoKit/BaseVC/Base (0.5.0):
+    - Masonry
+  - CQDemoKit/BaseVC/Collection (0.5.0):
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/ScrollView (0.5.0):
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TableView (0.5.0):
+    - CJBaseUtil/CJDataUtil
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TextView (0.5.0):
+    - CQDemoKit/BaseVC/Base
+  - CQDemoKit/Demo_Resource (0.5.0)
   - Masonry (1.1.0)
-  - TSDemo_Demo (0.1.0):
+  - TSDemo_Demo (0.5.0):
     - CQDemoKit
 
 DEPENDENCIES:
@@ -34,10 +47,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CQDemoKit: 85bdf8abb83cc62c2746679107603a326215cf09
+  CQDemoKit: 23b4a9fda6ef82b60e9187ae5b9148c9bb58a5c2
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  TSDemo_Demo: a0ee201f03454b7561d5fea0418b450fa81f7dbd
+  TSDemo_Demo: 564c2e8c3e7eaa95723cd076f3a5d5592fe50e9b
 
-PODFILE CHECKSUM: 5babd6855395e10826a318e232fe5bdbb3ad01fe
+PODFILE CHECKSUM: aa3ee9f089fe7253485c52a537f0744cabc9be5c
 
 COCOAPODS: 1.9.3

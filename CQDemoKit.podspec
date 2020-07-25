@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
-  #验证方法：pod lib lint CQDemoKit.podspec --sources=cocoapods --allow-warnings
   #查看本地已同步的pod库：pod repo
-  #上传方法：pod repo push cocoapods CQDemoKit.podspec --sources=cocoapods --allow-warnings
+  #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
+  #上传方法：pod trunk push CQDemoKit.podspec --sources=master --allow-warnings
   s.name         = "CQDemoKit"
-  s.version      = "0.4.0"
+  s.version      = "0.5.0"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.4.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.0" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -44,23 +44,37 @@ Pod::Spec.new do |s|
   # s.frameworks = "MediaPlayer"
   
 
-  s.subspec 'Home_Base' do |ss|
-    ss.source_files = "CQDemoKit/Base/**/*.{h,m}"
-    ss.dependency 'Masonry'
-    ss.dependency "CJBaseUtil/CJDataUtil"
+  s.subspec 'BaseVC' do |ss|
+    ss.subspec 'Base' do |sss|
+      sss.source_files = "CQDemoKit/BaseVC/Base/**/*.{h,m}"
+      sss.dependency 'Masonry'
+    end
+
+    ss.subspec 'ScrollView' do |sss|
+      sss.source_files = "CQDemoKit/BaseVC/ScrollView/**/*.{h,m}"
+      sss.dependency 'CQDemoKit/BaseVC/Base'
+    end
+
+    ss.subspec 'TableView' do |sss|
+      sss.source_files = "CQDemoKit/BaseVC/TableView/**/*.{h,m}"
+      sss.dependency 'CQDemoKit/BaseVC/Base'
+      sss.dependency "CJBaseUtil/CJDataUtil"
+    end
+
+    ss.subspec 'Collection' do |sss|
+      sss.source_files = "CQDemoKit/BaseVC/Collection/**/*.{h,m}"
+      sss.dependency 'CQDemoKit/BaseVC/Base'
+      sss.dependency "CJBaseUtil/CJDataUtil"
+    end
+
+    ss.subspec 'TextView' do |sss|
+      sss.source_files = "CQDemoKit/BaseVC/TextView/**/*.{h,m}"
+      sss.dependency 'CQDemoKit/BaseVC/Base'
+      sss.dependency 'CQDemoKit/BaseUtil'
+      sss.dependency "CJBaseUtil/CJDataUtil"
+    end
   end
 
-  s.subspec 'Home_TextView' do |ss|
-    ss.source_files = "CQDemoKit/TextView/**/*.{h,m}"
-
-    ss.dependency 'CQDemoKit/Home_Base'
-  end
-
-  s.subspec 'Home_Collection' do |ss|
-    ss.source_files = "CQDemoKit/Collection/**/*.{h,m}"
-
-    ss.dependency 'CQDemoKit/Home_Base'
-  end
 
   # Demo 工程中基本都需要的 Resource
   s.subspec 'Demo_Resource' do |ss|
@@ -69,5 +83,15 @@ Pod::Spec.new do |s|
       'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
     }
   end
+
+  s.subspec 'BaseUIKit' do |ss|
+    ss.source_files = "CQDemoKit/BaseUIKit/**/*.{h,m}"
+    ss.dependency 'Masonry'
+  end
+
+  s.subspec 'BaseUtil' do |ss|
+    ss.source_files = "CQDemoKit/BaseUtil/**/*.{h,m}"
+  end
+
 
 end
