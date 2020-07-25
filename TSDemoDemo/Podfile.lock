@@ -17,6 +17,7 @@ PODS:
   - CQDemoKit/BaseVC/Base (0.5.0):
     - Masonry
   - CQDemoKit/BaseVC/Collection (0.5.0):
+    - CJBaseUtil/CJDataUtil
     - CQDemoKit/BaseVC/Base
   - CQDemoKit/BaseVC/ScrollView (0.5.0):
     - CQDemoKit/BaseVC/Base
@@ -24,6 +25,8 @@ PODS:
     - CJBaseUtil/CJDataUtil
     - CQDemoKit/BaseVC/Base
   - CQDemoKit/BaseVC/TextView (0.5.0):
+    - CJBaseUtil/CJDataUtil
+    - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
   - CQDemoKit/Demo_Resource (0.5.0)
   - Masonry (1.1.0)
@@ -47,7 +50,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CQDemoKit: 23b4a9fda6ef82b60e9187ae5b9148c9bb58a5c2
+  CQDemoKit: 8ad326fdc285244a77a8210a31d3295b91e49877
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TSDemo_Demo: 564c2e8c3e7eaa95723cd076f3a5d5592fe50e9b
 

@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
   #上传方法：pod trunk push CQDemoKit.podspec --allow-warnings
   s.name         = "CQDemoKit"
-  s.version      = "0.5.0"
+  s.version      = "0.5.2"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.2" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"

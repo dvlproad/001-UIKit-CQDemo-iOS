@@ -57,6 +57,9 @@
           "dependencies": {
             "CQDemoKit/BaseVC/Base": [
 
+            ],
+            "CJBaseUtil/CJDataUtil": [
+
             ]
           }
         },
@@ -65,6 +68,12 @@
           "source_files": "CQDemoKit/BaseVC/TextView/**/*.{h,m}",
           "dependencies": {
             "CQDemoKit/BaseVC/Base": [
+
+            ],
+            "CQDemoKit/BaseUtil": [
+
+            ],
+            "CJBaseUtil/CJDataUtil": [
 
             ]
           }

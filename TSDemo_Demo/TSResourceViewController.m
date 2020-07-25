@@ -56,7 +56,7 @@
     imageView1.image = localImage;
     
     
-    NSArray *networkImageModels = [CQTSNetImagesUtil __getTestNetImageDataModelsWithCount:10];
+    NSArray *networkImageModels = [CQTSNetImagesUtil __getTestNetImageDataModelsWithCount:10 randomOrder:NO];
     CQTSNetImageDataModel *networkImageModel = [networkImageModels objectAtIndex:random()%10];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         UIImage *networkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:networkImageModel.imageUrl]]];
