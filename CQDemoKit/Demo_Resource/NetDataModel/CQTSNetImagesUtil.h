@@ -26,6 +26,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 #pragma mark network ImageUrl
+/// 所有的网络测试图片地址
++ (NSArray<NSString *> *)cjts_imageUrls;
+
+/// 随机的网络测试图片地址
++ (NSString *)cjts_imageUrlRandom;
+
 + (NSString *)cjts_imageUrl1;
 
 + (NSString *)cjts_imageUrl2;

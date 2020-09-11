@@ -11,6 +11,7 @@
 #import <CQDemoKit/CJUIKitAlertUtil.h>
 
 #import "TSResourceViewController.h"
+#import "TSResourceCollectionViewController.h"
 
 #import "TSButtonHomeViewController.h"
 #import "TSContainerViewController.h"
@@ -91,6 +92,12 @@
             CJModuleModel *module = [[CJModuleModel alloc] init];
             module.title = @"Resources";
             module.classEntry = [TSResourceViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CJModuleModel *module = [[CJModuleModel alloc] init];
+            module.title = @"Resources All";
+            module.classEntry = [TSResourceCollectionViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

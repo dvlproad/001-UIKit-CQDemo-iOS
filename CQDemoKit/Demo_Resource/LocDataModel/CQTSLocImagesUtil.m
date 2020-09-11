@@ -21,15 +21,7 @@
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSLocImageDataModel *> *)__getTestLocalImageDataModelsWithCount:(NSInteger)count {
-    NSArray *selStrings = @[NSStringFromSelector(@selector(cjts_localImage1)),
-                            NSStringFromSelector(@selector(cjts_localImage2)),
-                            NSStringFromSelector(@selector(cjts_localImage3)),
-                            NSStringFromSelector(@selector(cjts_localImage4)),
-                            NSStringFromSelector(@selector(cjts_localImage5)),
-                            NSStringFromSelector(@selector(cjts_localImage6)),
-                            NSStringFromSelector(@selector(cjts_localImage7)),
-                            NSStringFromSelector(@selector(cjts_localImage8)),
-    ];
+    NSArray<UIImage *> *images = [self cjts_localImages];
     
     NSMutableArray<CQTSLocImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
     
@@ -37,10 +29,9 @@
         CQTSLocImageDataModel *dataModel = [[CQTSLocImageDataModel alloc] init];
         dataModel.name = [NSString stringWithFormat:@"%zd", i];
         
-        NSInteger selIndex = random()%selStrings.count;
-        NSString *selString = [selStrings objectAtIndex:selIndex];
-        SEL sel = NSSelectorFromString(selString);
-        dataModel.image = [CQTSLocImagesUtil performSelector:sel];
+        NSInteger selIndex = random()%images.count;
+        UIImage *image = [images objectAtIndex:selIndex];
+        dataModel.image = image;
         [dataModels addObject:dataModel];
     }
     
@@ -105,13 +96,42 @@
 }
 
 
-#pragma mark - local Image
+#pragma mark - local BGImage
 + (UIImage *)cjts_localImageBG1 {
     return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_bgSky.jpg"];
 }
 
 + (UIImage *)cjts_localImageBG2 {
     return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_bgCar.jpg"];
+}
+
+
+#pragma mark - local Image
+
+/// 所有的本地测试图片
++ (NSArray<UIImage *> *)cjts_localImages {
+    NSArray<UIImage *> *images = @[[CQTSLocImagesUtil cjts_localImage1],
+                                   [CQTSLocImagesUtil cjts_localImage2],
+                                   [CQTSLocImagesUtil cjts_localImage3],
+                                   [CQTSLocImagesUtil cjts_localImage4],
+                                   [CQTSLocImagesUtil cjts_localImage5],
+                                   [CQTSLocImagesUtil cjts_localImage6],
+                                   [CQTSLocImagesUtil cjts_localImage7],
+                                   [CQTSLocImagesUtil cjts_localImage8],
+                                   [CQTSLocImagesUtil cjts_localImage9],
+                                   [CQTSLocImagesUtil cjts_localImage10],
+    ];
+    
+    return images;
+}
+
+/// 随机的本地测试图片
++ (UIImage *)cjts_localImageRandom {
+    NSArray<UIImage *> *images = [self cjts_localImages];
+    NSInteger selIndex = random()%images.count;
+    UIImage *image = [images objectAtIndex:selIndex];
+    
+    return image;
 }
 
 + (UIImage *)cjts_localImage1 {
@@ -127,23 +147,31 @@
 }
 
 + (UIImage *)cjts_localImage4 {
-    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_3.jpg"];
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_4.jpg"];
 }
 
 + (UIImage *)cjts_localImage5 {
-    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_3.jpg"];
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_5.jpg"];
 }
 
 + (UIImage *)cjts_localImage6 {
-    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_3.jpg"];
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_6.jpg"];
 }
 
 + (UIImage *)cjts_localImage7 {
-    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_3.jpg"];
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_7.jpg"];
 }
 
 + (UIImage *)cjts_localImage8 {
-    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_3.jpg"];
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_8.jpg"];
+}
+
++ (UIImage *)cjts_localImage9 {
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_9.jpg"];
+}
+
++ (UIImage *)cjts_localImage10 {
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_10.jpg"];
 }
 
 

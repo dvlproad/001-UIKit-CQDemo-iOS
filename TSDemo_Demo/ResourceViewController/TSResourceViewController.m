@@ -50,16 +50,13 @@
     
     
     // 设置数据
-    NSArray *localImageModels = [CQTSLocImagesUtil __getTestLocalImageDataModelsWithCount:10];
-    CQTSLocImageDataModel *localImageModel = [localImageModels objectAtIndex:random()%10];
-    UIImage *localImage = localImageModel.image;
+    UIImage *localImage = [CQTSLocImagesUtil cjts_localImageRandom];
     imageView1.image = localImage;
     
     
-    NSArray *networkImageModels = [CQTSNetImagesUtil __getTestNetImageDataModelsWithCount:10 randomOrder:NO];
-    CQTSNetImageDataModel *networkImageModel = [networkImageModels objectAtIndex:random()%10];
+    NSString *networkImageUrl = [CQTSNetImagesUtil cjts_imageUrlRandom];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *networkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:networkImageModel.imageUrl]]];
+        UIImage *networkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:networkImageUrl]]];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             imageView2.image = networkImage;

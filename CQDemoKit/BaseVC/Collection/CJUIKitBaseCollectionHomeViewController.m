@@ -143,7 +143,10 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     CJModuleModel *moduleModel = [dataModels objectAtIndex:indexPath.row];
     
     CJUIKitCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.imageView.image = [UIImage imageNamed:@"icon"];
+    
+    UIImage *image = moduleModel.normalImage ? moduleModel.normalImage : [UIImage imageNamed:@"icon"];
+    cell.imageView.image = image;
+    
     cell.textLabel.text = moduleModel.title;
     
     return cell;

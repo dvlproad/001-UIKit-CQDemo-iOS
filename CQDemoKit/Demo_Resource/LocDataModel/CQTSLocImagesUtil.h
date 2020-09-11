@@ -27,9 +27,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSMutableArray<CQTSLocImageDataModel *> *)__getTestLocalImageDataModelsWithCount:(NSInteger)count;
 
 
-#pragma mark - local Image
+#pragma mark - local BGImage
 + (UIImage *)cjts_localImageBG1;
 + (UIImage *)cjts_localImageBG2;
+
+#pragma mark - local Image
+/// 所有的本地测试图片
++ (NSArray<UIImage *> *)cjts_localImages;
+/// 随机的本地测试图片
++ (UIImage *)cjts_localImageRandom;
 + (UIImage *)cjts_localImage1;
 + (UIImage *)cjts_localImage2;
 + (UIImage *)cjts_localImage3;
@@ -38,6 +44,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)cjts_localImage6;
 + (UIImage *)cjts_localImage7;
 + (UIImage *)cjts_localImage8;
++ (UIImage *)cjts_localImage9;
++ (UIImage *)cjts_localImage10;
+
 
 
 @end

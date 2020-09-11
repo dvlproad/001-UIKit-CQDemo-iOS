@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
   #上传方法：pod trunk push CQDemoKit.podspec --allow-warnings
   s.name         = "CQDemoKit"
-  s.version      = "0.5.2"
+  s.version      = "0.5.4"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.2" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.4" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   s.subspec 'Demo_Resource' do |ss|
     ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
     ss.resource_bundle = {
-      'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
+      'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
     }
   end
 
