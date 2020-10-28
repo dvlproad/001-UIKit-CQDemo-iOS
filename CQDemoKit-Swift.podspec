@@ -33,6 +33,7 @@ Pod::Spec.new do |s|
  
   s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit-Swift_0.1.0" }
   #s.source_files  = "CQDemoKit-Swift/*.{h,m}"
+  s.swift_version = '5.0'
 
   s.frameworks = "UIKit"
 
@@ -45,34 +46,14 @@ Pod::Spec.new do |s|
   
 
   s.subspec 'BaseVC' do |ss|
-    ss.subspec 'Base' do |sss|
-      sss.source_files = "CQDemoKit-Swift/BaseVC/Base/**/*.{h,m}"
-      sss.dependency 'Masonry'
-    end
+    ss.source_files = "CQDemoKit-Swift/BaseVC/**/*.{swift}"
+    ss.dependency 'SnapKit'
 
-    ss.subspec 'ScrollView' do |sss|
-      sss.source_files = "CQDemoKit-Swift/BaseVC/ScrollView/**/*.{h,m}"
-      sss.dependency 'CQDemoKit-Swift/BaseVC/Base'
-    end
-
-    ss.subspec 'TableView' do |sss|
-      sss.source_files = "CQDemoKit-Swift/BaseVC/TableView/**/*.{h,m}"
-      sss.dependency 'CQDemoKit-Swift/BaseVC/Base'
-      sss.dependency "CJBaseUtil/CJDataUtil"
-    end
-
-    ss.subspec 'Collection' do |sss|
-      sss.source_files = "CQDemoKit-Swift/BaseVC/Collection/**/*.{h,m}"
-      sss.dependency 'CQDemoKit-Swift/BaseVC/Base'
-      sss.dependency "CJBaseUtil/CJDataUtil"
-    end
-
-    ss.subspec 'TextView' do |sss|
-      sss.source_files = "CQDemoKit-Swift/BaseVC/TextView/**/*.{h,m}"
-      sss.dependency 'CQDemoKit-Swift/BaseVC/Base'
-      sss.dependency 'CQDemoKit-Swift/BaseUtil'
-      sss.dependency "CJBaseUtil/CJDataUtil"
-    end
+    # ss.subspec 'TextView' do |sss|
+    #   sss.source_files = "CQDemoKit-Swift/BaseVC/TextView/**/*.{h,m}"
+    #   sss.dependency 'CQDemoKit-Swift/BaseVC/Base'
+    #   sss.dependency 'CQDemoKit-Swift/BaseUtil'
+    # end
   end
 
 
