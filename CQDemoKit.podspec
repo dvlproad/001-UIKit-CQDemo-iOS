@@ -57,21 +57,18 @@ Pod::Spec.new do |s|
 
     ss.subspec 'TableView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TableView/**/*.{h,m}"
-      sss.dependency 'CQDemoKit/BaseVC/Base'
-      sss.dependency "CJBaseUtil/CJDataUtil"
+      sss.dependency 'CQDemoKit/BaseVC/Base'	# 已含 CQDMSectionDataModel 和 CQDMModuleModel
     end
 
     ss.subspec 'Collection' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/Collection/**/*.{h,m}"
-      sss.dependency 'CQDemoKit/BaseVC/Base'
-      sss.dependency "CJBaseUtil/CJDataUtil"
+      sss.dependency 'CQDemoKit/BaseVC/Base'	# 已含 CQDMSectionDataModel 和 CQDMModuleModel
     end
 
     ss.subspec 'TextView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TextView/**/*.{h,m}"
-      sss.dependency 'CQDemoKit/BaseVC/Base'
+      sss.dependency 'CQDemoKit/BaseVC/Base'	# 已含 CQDMSectionDataModel 和 CQDMModuleModel
       sss.dependency 'CQDemoKit/BaseUtil'
-      sss.dependency "CJBaseUtil/CJDataUtil"
     end
   end
 

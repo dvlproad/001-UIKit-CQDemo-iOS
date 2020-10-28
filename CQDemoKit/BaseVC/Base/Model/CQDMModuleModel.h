@@ -1,5 +1,5 @@
 //
-//  CJModuleModel.h
+//  CQDMModuleModel.h
 //  CJBaseUtilDemo
 //
 //  Created by ciyouzen on 2016/11/23.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface CJModuleModel : NSObject
+@interface CQDMModuleModel : NSObject
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *content;

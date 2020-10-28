@@ -1,14 +1,14 @@
 //
-//  CJSectionDataModel.m
+//  CQDMSectionDataModel.m
 //  CJBaseUtilDemo
 //
 //  Created by ciyouzen on 2016/11/23.
 //  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
-#import "CJSectionDataModel.h"
+#import "CQDMSectionDataModel.h"
 
-@implementation CJSectionDataModel
+@implementation CQDMSectionDataModel
 
 - (instancetype)init {
     self = [super init];
@@ -20,7 +20,7 @@
 
 //知识点(深拷贝deepCopy)
 - (id)copyWithZone:(NSZone *)zone {
-    CJSectionDataModel *deepCopySectionDataModel = [[self class] allocWithZone:zone];
+    CQDMSectionDataModel *deepCopySectionDataModel = [[self class] allocWithZone:zone];
     deepCopySectionDataModel.type = _type;
     deepCopySectionDataModel.theme = [_theme copy];
     
@@ -35,7 +35,7 @@
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    CJSectionDataModel *deepCopySectionDataModel = [[self class] allocWithZone:zone];
+    CQDMSectionDataModel *deepCopySectionDataModel = [[self class] allocWithZone:zone];
     deepCopySectionDataModel.type = _type;
     deepCopySectionDataModel.theme = [_theme copy];
     

@@ -1,5 +1,5 @@
 //
-//  CJSectionDataModel.h
+//  CQDMSectionDataModel.h
 //  CJBaseUtilDemo
 //
 //  Created by ciyouzen on 2016/11/23.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CJSectionDataModel : NSObject<NSCopying, NSMutableCopying> {
+@interface CQDMSectionDataModel : NSObject<NSCopying, NSMutableCopying> {
     
 }
 @property (nonatomic, assign) NSInteger type;           /**< section的类型 */

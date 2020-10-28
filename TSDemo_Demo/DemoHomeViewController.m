@@ -36,10 +36,10 @@
     
     // Overlay
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"测试 Overlay 等";
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Toast";
             module.actionBlock = ^{
                 [CJUIKitToastUtil showMessage:@"展示信息"];
@@ -47,7 +47,7 @@
             [sectionDataModel.values addObject:module];
         }
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Alert(我知道了)";
             module.actionBlock = ^{
                 [CJUIKitAlertUtil showIKnowAlertInViewController:self withTitle:@"最多选择9张" iKnowBlock:^{
@@ -57,7 +57,7 @@
             [sectionDataModel.values addObject:module];
         }
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Alert(取消+确认)";
             module.actionBlock = ^{
                 [CJUIKitAlertUtil showCancleOKAlertInViewController:self withTitle:@"提示" message:@"选择比努力更重要" cancleBlock:^{
@@ -69,13 +69,13 @@
             [sectionDataModel.values addObject:module];
         }
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"ActionSheet";
             module.actionBlock = ^{
                 [CJUIKitAlertUtil showActionSheetInViewController:self withTitle:@"提示" message:@"选择比努力更重要" itemTitles:@[@"从相册选择", @"拍摄"] cancleBlock:^{
                     [CJUIKitToastUtil showMessage:@"点击取消"];
                 } itemClickBlock:^(NSInteger index) {
-                    NSString *message = [NSString stringWithFormat:@"点击index=%ld", index];
+                    NSString *message = [NSString stringWithFormat:@"点击index=%zd", index];
                     [CJUIKitToastUtil showMessage:message];
                 }];
             };
@@ -86,16 +86,16 @@
     
     // Resources
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"测试 Resources 等";
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Resources";
             module.classEntry = [TSResourceViewController class];
             [sectionDataModel.values addObject:module];
         }
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Resources All";
             module.classEntry = [TSResourceCollectionViewController class];
             [sectionDataModel.values addObject:module];
@@ -105,22 +105,22 @@
     
     // Button、Container、Switch
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"测试 Button、Container、Switch 等";
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Button";
             module.classEntry = [TSButtonHomeViewController class];
             [sectionDataModel.values addObject:module];
         }
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Container";
             module.classEntry = [TSContainerViewController class];
             [sectionDataModel.values addObject:module];
         }
         {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Switch";
             module.classEntry = [TSSwitchViewController class];
             [sectionDataModel.values addObject:module];

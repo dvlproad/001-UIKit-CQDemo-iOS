@@ -26,13 +26,13 @@
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     // 本地图片
     {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"本地图片";
         
         NSArray<UIImage *> *images = [CQTSLocImagesUtil cjts_localImages];
         NSInteger imageCount = images.count;
         for (int i = 0; i < imageCount; i++) {
-            CJModuleModel *module = [[CJModuleModel alloc] init];
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = [NSString stringWithFormat:@"%zd", i];
             module.normalImage = images[i];
             [sectionDataModel.values addObject:module];
@@ -43,13 +43,13 @@
     // 网络图片
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+            CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
             sectionDataModel.theme = @"网络图片";
             
             NSArray<NSString *> *imageUrls = [CQTSNetImagesUtil cjts_imageUrls];
             NSInteger imageCount = imageUrls.count;
             for (int i = 0; i < imageCount; i++) {
-                CJModuleModel *module = [[CJModuleModel alloc] init];
+                CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
                 module.title = [NSString stringWithFormat:@"%zd", i];
                 
                 NSString *imageUrl = imageUrls[i];

@@ -40,13 +40,13 @@
             NSString *selString = [selStrings objectAtIndex:selIndex];
             SEL sel = NSSelectorFromString(selString);
             dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
-            dataModel.name = [NSString stringWithFormat:@"%ld:%@", i, selString];
+            dataModel.name = [NSString stringWithFormat:@"%zd:%@", i, selString];
         } else {
             NSInteger selIndex = i%selStrings.count;
             NSString *selString = [selStrings objectAtIndex:selIndex];
             SEL sel = NSSelectorFromString(selString);
             dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
-            dataModel.name = [NSString stringWithFormat:@"%ld:%@", i, selString];
+            dataModel.name = [NSString stringWithFormat:@"%zd:%@", i, selString];
         }
         
         
