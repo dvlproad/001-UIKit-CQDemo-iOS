@@ -7,8 +7,6 @@
 //
 
 import SnapKit
-//#import <CJBaseUtil/CJSectionDataModel.h>   //在CJDataUtil中
-//#import <CJBaseUtil/CJModuleModel.h>        //在CJDataUtil中
 
 class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -38,22 +36,22 @@ class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionDataModel: CJSectionDataModel = self.sectionDataModels.object(at: section) as! CJSectionDataModel
+        let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels.object(at: section) as! CQDMSectionDataModel
         let dataModels: NSArray = sectionDataModel.values;
         
         return dataModels.count;
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sectionDataModel: CJSectionDataModel = self.sectionDataModels.object(at: section) as! CJSectionDataModel
+        let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels.object(at: section) as! CQDMSectionDataModel
         let indexTitle: String = sectionDataModel.theme
         return indexTitle
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sectionDataModel: CJSectionDataModel = self.sectionDataModels.object(at: indexPath.section) as! CJSectionDataModel
+        let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels.object(at: indexPath.section) as! CQDMSectionDataModel
         let dataModels: NSArray = sectionDataModel.values;
-        let moduleModel: CJModuleModel = dataModels.object(at: indexPath.row) as! CJModuleModel
+        let moduleModel: CQDMModuleModel = dataModels.object(at: indexPath.row) as! CQDMModuleModel
         
         
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
@@ -66,31 +64,31 @@ class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataS
         //NSLog(@"didSelectRowAtIndexPath = %zd %zd", indexPath.section, indexPath.row);
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let sectionDataModel: CJSectionDataModel = self.sectionDataModels.object(at: indexPath.section) as! CJSectionDataModel
+        let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels.object(at: indexPath.section) as! CQDMSectionDataModel
         let dataModels: NSArray = sectionDataModel.values;
-        let moduleModel: CJModuleModel = dataModels.object(at: indexPath.row) as! CJModuleModel
+        let moduleModel: CQDMModuleModel = dataModels.object(at: indexPath.row) as! CQDMModuleModel
         
         self.execModuleModel(moduleModel: moduleModel)
     }
     
-    func execModuleModel(moduleModel: CJModuleModel) {
+    func execModuleModel(moduleModel: CQDMModuleModel) {
         if (moduleModel.actionBlock != nil) {
-            moduleModel.actionBlock()
+            moduleModel.actionBlock!()
             
         } else if (moduleModel.selector != nil) {
-            self.performSelector(onMainThread: moduleModel.selector, with: nil, waitUntilDone: false)
+            self.performSelector(onMainThread: moduleModel.selector!, with: nil, waitUntilDone: false)
             
         } else {
             var viewController: UIViewController? = nil
-            let classEntry: AnyClass = moduleModel.classEntry
+            let classEntry: AnyClass = moduleModel.classEntry!
             let viewControllerClass: UIViewController.Type = classEntry as! UIViewController.Type
             
-            let clsString: String = NSStringFromClass(moduleModel.classEntry)
+            let clsString: String = NSStringFromClass(moduleModel.classEntry!)
             if clsString.isEqual(NSStringFromClass(UIViewController.self)) {
                 viewController = viewControllerClass.init()
                 viewController!.view.backgroundColor = UIColor.white
             } else {
-                if moduleModel.isCreateByXib {
+                if moduleModel.isCreateByXib! {
                     viewController = viewControllerClass.init(nibName: clsString, bundle: nil)
                 } else {
                     viewController = viewControllerClass.init()
@@ -102,6 +100,5 @@ class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataS
             self.navigationController?.pushViewController(viewController!, animated: true)
 
         }
-
     }
 }

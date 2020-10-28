@@ -10,6 +10,6 @@ import UIKit
 
 class CJUIKitBaseViewController: UIViewController {
     override func viewDidLoad() {
-        self.view.backgroundColor = CJColorFromHexString("#f2f2f2")
+        self.view.backgroundColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0) //"#f2f2f2"
     }
 }

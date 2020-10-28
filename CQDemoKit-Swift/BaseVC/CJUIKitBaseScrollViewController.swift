@@ -16,7 +16,7 @@ class CJUIKitBaseScrollViewController: CJUIKitBaseViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let scrollView: UIScrollView = UIScrollView()
-        scrollView.backgroundColor = CJColorFromHexString("#f2f2f2")
+        scrollView.backgroundColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0) //"#f2f2f2"
         self.view.addSubview(scrollView)
         scrollView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()

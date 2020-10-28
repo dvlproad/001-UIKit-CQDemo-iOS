@@ -15,7 +15,7 @@ import Foundation
 //#import "HelperHomeViewController.h"
 //#import "MoreHomeViewController.h"
 
-extension AppDelegate {
+extension UIWindow {
     func getMainRootViewController() -> UIViewController? {
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundImage = UIImage(named: "tabbar_BG")
