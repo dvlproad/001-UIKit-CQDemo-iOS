@@ -53,6 +53,12 @@
 + (UIView *)containerViewAlongAxis:(MASAxisType)axisType
                       withSubviews:(NSArray<UIView *> *)subviews
 {
+    NSAssert(subviews.count >= 0, @"视图个数不能为空");
+    if (subviews.count == 1) {
+        UIView *view = subviews[0];
+        return view;
+    }
+    
     UIView *containerView = [[UIView alloc] init];
     for (UIView *view in subviews) {
         [containerView addSubview:view];
