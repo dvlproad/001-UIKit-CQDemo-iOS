@@ -41,6 +41,17 @@ NS_ASSUME_NONNULL_BEGIN
                    clickSubmitTitleHandle:(void(^)(UIButton *button))clickSubmitTitleHandle
                      clickEditTitleHandle:(void(^)(UIButton *button))clickEditTitleHandle;
 
+
+#pragma mark - 成熟的测试Button(已含标题和事件)
+/*
+ *  成熟的测试Button的构建方法(已含标题和事件)
+ *
+ *  @param index index
+ *
+ *  @return Button
+ */
+UIButton *tsRipeButtonIndex(NSInteger index);
+
 @end
 
 NS_ASSUME_NONNULL_END
