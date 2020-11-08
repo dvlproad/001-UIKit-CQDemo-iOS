@@ -7,300 +7,315 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		018FF8058EC5385BE7A597231435B13F /* DemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67996DCB6D8B2ABEA20C9DE558F1AD0 /* DemoHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0552E4D133476EA67B22CA3106DBE179 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AEA8F34CAE43AA76247FF577BAA68 /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		05C8D21DB6B0D9D28D654E4568F766B2 /* CQTSLocImagesUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F66C842B7F78B3FF8819B279C901CC3E /* CQTSLocImagesUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0673E807D566BFD4616199AFCAAB9839 /* CJUIKitBaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C91D81E9708E8DFCC1DE3DA3CB6358C /* CJUIKitBaseScrollViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		06B5D21A76E5CAEE1CC3C13765D02345 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 49AC5D4983C8BEF841BBE185811C5FB0 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		06F8C8BE3A17FB176432F6F4179CAF2A /* CQTSIconDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 80D9BA8DBCE6AF1692C4D6C518077CCC /* CQTSIconDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		072679A765548DA20029F6D1C6A796D0 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1660D370806B3EFD74C49D3471C1C /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		07E676458C1527CD4F5D2B223CD4D2E1 /* UISwitch+CQTSMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C9371DADC865EBD5380BD5E9861E8D /* UISwitch+CQTSMoreProperty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0971F5ED6D008521E0FE0EA02C962FF6 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AA56AA7AF365E444271F9F4BE178D5A0 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0A2C6A2DED4D1457DDF66B0A3324E132 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 558B2763E324B8D237D904287AE7A690 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E44C5C2122A1F7D75FB078B809E0E43 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 370F325DDBF27B3EF280D0011A024B35 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		106B0BF5EC5CCC17278AA0745D99AAFC /* CQDMSectionDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 43BC967CEC70ABA4DEDA863BDF4D76C5 /* CQDMSectionDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		115FA2FA6FF33D01FCA557B2257043DA /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 411CCCE6A707DDA02AF236A6F4DD8B74 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		11BFC65C9C85889F8E480055BD3C3F40 /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8967E66A2FCB5BA81BFA1E139139A237 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		141B2BF74E49BE589DC91ABF6DEB7172 /* CJUIKitBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EB58E2D517DECB955A0193D23F102E /* CJUIKitBaseViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1823AAFCA59D0668700FB8769CBC75A0 /* CQDMModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E6BF1C1965AB6534067B96F1ABA536 /* CQDMModuleModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1B1D51D06592211695213AEBECFFA8A0 /* cqts_bgSky@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BBD775F630489442E672A8AB9927254C /* cqts_bgSky@2x.jpg */; };
-		1C5421D1105442DC951282C46AE617C9 /* TSResourceCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B0D75771261C3FA5790F20D49600F9F /* TSResourceCollectionViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1D28CB711FA327ED555531BD1CF673A7 /* CQTSLocImagesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DF913B513F3AEB3949F7702124FA712A /* CQTSLocImagesUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1EA0818C6A5F1648E07F7D0BB7D085F6 /* DemoHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D2E03699DE87D851BBBA27A7C165541 /* DemoHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1F2FF3D5FE40C586F23F0808FBD82B34 /* cqts_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDBBC6322E21CE756AAA3BAB895DD520 /* cqts_2.jpg */; };
-		1F8D54EC539FE72AA696DF5A6B53C436 /* CJDealTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD1963F6DB7E1244E8E04EE2FF5E1A /* CJDealTextModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		209F3A55E7F33D798D7178FB448E1FD0 /* cqts_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B50385A16C4C94FAE701CCC733A34DE /* cqts_5.jpg */; };
-		23463A67DA86E6E5FE14B26D9BEF9087 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA0898FAC44183744D557073E2F8AA5 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		253AC98065DC1BCADD691B9633696053 /* CQTSLocImageDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7990908470E0DF8670FB946B5493D8 /* CQTSLocImageDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		259A57D550D5A9E4A22787F92E66D208 /* CQTSIconsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F1956C0340AC74235F93CAEBD9F24C /* CQTSIconsUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		29F94E8E9B3E5CA10F615DE94196581E /* CJUIKitAlertUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D29FBF5459676C308610E653E94843C /* CJUIKitAlertUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		324C50C44075481527EF3417BEF7FCD0 /* TSContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9227C22087A135676D2B8FBA87CE6292 /* TSContainerViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		357061190DA3CC360EEBD8E286A4C9AB /* TSButtonHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518F0A7080117248FDC77703B76C51CC /* TSButtonHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		39E95AD7BB9365CBDE4309BC0EF594AF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DA097256D24886D70E33FBA786911 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3C66DA26D8A06CC8206E75E1F77B519E /* CJUIKitBaseCollectionHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A8B8EF4AF0CFD83AD623C3830893CD /* CJUIKitBaseCollectionHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3CB98EB6CBCDE701F7DEAE9654DB47DE /* CQTSContainerViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC310FA2115F222D7B05A928527A121 /* CQTSContainerViewFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3E27E467E0912F2758EAE9CAA5442A80 /* TSSwitchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1132DBE1EF17EA76A244FE6B9B79142F /* TSSwitchViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3E4CAC14E31DB013EA87CEB1BAD5ABDB /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 45892546416F43C43E8AA0E2AA27BC95 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3FB90FAB1AA49A9CABB670F07E6370A8 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A301E9D7640CAAE872D2257184D64010 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4227366C4A91C22D6E6BF2C6B20EBF51 /* CQDMSectionDataModel+CJDealTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C580A09E1B4C3936B349CDD841FB6314 /* CQDMSectionDataModel+CJDealTextModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		45EEDD17E7895EAA527066440A5752FD /* CQTSNetImageDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 517B7009B3D8CED0B3EC614407B7D40C /* CQTSNetImageDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		494CCFEA37D79A566258A88A766C4FD0 /* TSButtonHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C35DF1CE19DDCB630A3A24AD894CCA1 /* TSButtonHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4C7DDC274EE079EEEB2FF6B1444C1C32 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEBAAA2225352CFA3BA703D5C21510 /* Masonry-dummy.m */; };
-		4D037DF81ED15A851440DB1191C4FB6F /* CJValidateStringTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C96A40D1A40324DFE0A33711549F1BDE /* CJValidateStringTableViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4DB57ABC9C4C4DD2265CCDEF7E6DD3D4 /* cqts_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6995D98BB0108C59792CFBA01609BCA /* cqts_4.jpg */; };
-		4DB9CAAB82D6750654C7FFDA80CB8ECE /* UISwitch+CQTSMoreProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = A8073DA8700D8A9D97E1D599F441AD2B /* UISwitch+CQTSMoreProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5997C43B37F343C2823DC9A8DF280F6F /* CQTSNetImagesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA93D96FEF09F05018DEB3A31CE745 /* CQTSNetImagesUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		59AE0262F48A1D214F0B2A9F9B85B92B /* CJDealTextModelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = D581A19457154AF6C3698C11797A546F /* CJDealTextModelFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		019A2F5716B63D40D34AADB94091C82F /* cqts_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5740FFAB518265C84ADAFBE3BB475D79 /* cqts_7.jpg */; };
+		0550589F49478915FD3A50D44AC48B7D /* cqts_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 854CF801B32B842F628FF5DF69AEB056 /* cqts_8.jpg */; };
+		060AF796C614E09629C0AEC8F1614220 /* cqts_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F38FBDEA709EE22D53E73ACD49CF911F /* cqts_10.jpg */; };
+		088902BA36AF67ADDC2E4CDDB9BE4E84 /* CQTSButtonFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FA641A2F44B399B213B8E90FAC0391 /* CQTSButtonFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0A5AF91728B59CFBAC9E62CD7947BCAF /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8967E66A2FCB5BA81BFA1E139139A237 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0B617A8CDC471E2B762F97700E56CA5D /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 935171CB319C057FAEE8F843F46825FE /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0C866209ABECCF8F726BBB5FFF798609 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB032F0BEDBBDDF91030E59ACA7DC98 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0DC523F3FDF5DCABE004C67F2994F07C /* CQTSNetImagesUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = BF72075A50A9E0EA7DFE633A5E74FE7F /* CQTSNetImagesUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		10028FA15136D29111E4A9B0E5538B8D /* CQDMSectionDataModel+CJDealTextModel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA20A306D008408D55CDEB0A825C2594 /* CQDMSectionDataModel+CJDealTextModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11698DBC3C59DB6713A7624EE2D5FCBE /* CQTSButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C45EDAE6BC1E63DC0DF9E43C949EB6 /* CQTSButtonFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		11A42B32F4B197FD86D9041B71F7DC44 /* CJDealTextModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AC4AAD29065C8F2C57A4710203734A2 /* CJDealTextModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1227B487173B88B9900F261DB07DCC32 /* CJUIKitBaseHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D96016DCC9A4460EDBAF7B7EA87590F5 /* CJUIKitBaseHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		152C7F2BF77F6BE5014218BDC3FE5F0A /* CQTSNetImageDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EE788B416FD9C392897CE6FC9503B4 /* CQTSNetImageDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B033CD11BFBE87588B1637C0A8EB387 /* CJUIKitAlertUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6660AFF166130128C9541259197033 /* CJUIKitAlertUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1C9817731E72A2FEB84FD019583D5382 /* cqts_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F664C234A5187904663938EC50740201 /* cqts_2.jpg */; };
+		1E066CD1EF5EFD3DD7E17957BA4CC39F /* CQTSLocImageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF76BFD767AB93CED3A1A9B97A72153 /* CQTSLocImageDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		209F1698A14639BE57B0AD8442D1E207 /* CJUIKitAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 350553C1DFEBB04191945EE896A2DC63 /* CJUIKitAlertUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2358588266FDEC928A3087D171F1F783 /* CJDealTextModelFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CBE218DB619E5A712489E2AB8D422C9 /* CJDealTextModelFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		23FF2BA6AE2C0090825F03D7D3B886F2 /* CQTSBorderStateButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 7371FD9BF82BADA7CE22EA425C22E2C3 /* CQTSBorderStateButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		244761DECDB9843DF0D14358034044F1 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8160CD72114EFF3597CD4BF6F7F1F7 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		279E7B8D00592D612BE18DF63ECB52ED /* TSSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D2F228557C86D8B2E58BB9AC9921DA /* TSSwitchViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		368DD41451D2CA1A4F96A97B15BAE139 /* CJValidateStringTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C8FD997BD1AAEB7BA74CE4BC01E2C5 /* CJValidateStringTableViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		37645FAC4F3B982005E0F72A85325BD6 /* CJUIKitCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A900926E59FF51E812279D057A6622F /* CJUIKitCollectionViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F5F5A43516E059F3309D70A5A569B7E /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A301E9D7640CAAE872D2257184D64010 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		40116B9EA35FF54D61395093688C6B13 /* CQDMModuleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A29980173AD20CD8318DF92A28D3CB35 /* CQDMModuleModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		417B2415BA76D35F6E4AE55A8993687B /* CQTSContainerViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = DBA12311BB6EC87D53146CFA1DBE8CF4 /* CQTSContainerViewFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4361E3E0EEF9A31D394EB960FE8484A9 /* DemoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85837CF331A5D32AB188EE34437B71E8 /* DemoHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		441C3FBCE68E297B3E99CEEA632FFE91 /* CJUIKitBaseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4542B530A2F1E47BB76877349339A76C /* CJUIKitBaseScrollViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4845B111358E6582E6DF98E0525B8657 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AA01142B191C535B620A7D90F8B79380 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4CAB38C70A15B850F2861B3E50FE1BBC /* CQTSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AC7A0A709271E88F33F3FE26FD56B2 /* CQTSTableView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4EFC81ED6FC62F512B8FDA8E06C40935 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EFED6E52B374EE53B8B532C8A65A293 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4F38B4ECBE2EB4BC59EED33C47487D79 /* CJUIKitBaseTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3021BCA650182E01A12DE54279547238 /* CJUIKitBaseTextViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5093B195715C272C72981E1FB13872C1 /* CJValidateStringTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C31315F2DE5FEDA05F8EA33C4EFDD96B /* CJValidateStringTableViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5168FF8DDDBC581B52736912A8C5CC32 /* TSContainerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ABCE52241726589D872D689B10A25D4 /* TSContainerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		533F0CB344D17F2EE02D30D31FF0E878 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C44599FE7C1C51F94F910C9C3E7827 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		554A379165F8284833F4FB8DF6D7C18A /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A9244EA17B6E04FACE497603F0088190 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		573F405610BF34F1A8A70D23315FE2DC /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1660D370806B3EFD74C49D3471C1C /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5A2E1E27567C0A5D779B5D5AA32758D6 /* CQTSIconsUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FE44B89FAC52405434C41D542DE7252E /* CQTSIconsUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5AC3D7D1E7F5BD6DCF96D6C116F963CD /* Pods-TSDemoDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F6D4FA8CC20F1354C117871E1B835F /* Pods-TSDemoDemo-dummy.m */; };
-		5CDA41D2E75AF3C03D4F9C54341CCD73 /* CJUIKitToastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D94A0DF667E6AA3B4423AB0AEEC3A2 /* CJUIKitToastUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5F7DE21014EF38209A26FD81BAC03DF0 /* CQDemoKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EFB7541D57A7922944344136C15B03 /* CQDemoKit-dummy.m */; };
-		6765126FA0DC87E6923D339F4BFBF88F /* CQTSBorderStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 51496BCCDBFEA67692084F8622FBA172 /* CQTSBorderStateButton.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6A439AD510721E4BBCCEDEDCE8C53448 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBB3725D2C0052C8143BF229622340A /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6ACCA68C5530E5069D179CE727CE376F /* CQTSNetImagesUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F1756166262646A58F0B3F3F1471C83E /* CQTSNetImagesUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7378BC021F4935BCC9707D562861AA7F /* CJDealTextModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCFA2CF35279EB8E068553BAF8ECE7A /* CJDealTextModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7554BD1A3BBCB8C87CA6050DEC0D3CE9 /* CQTSContainerViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 074A9B1D44CD1BE9AE65BCA393DBABE6 /* CQTSContainerViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		770DED8F582FBFF0349A9E396FA45685 /* CJUIKitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBD99727962C30897E5A2E1F287FAC8 /* CJUIKitCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7C5EACC3EAFB52A1B429B11708759ACE /* CQTSButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B671DB2350A5BE71C43D6C8D767335D7 /* CQTSButtonFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7DC17877119A9418429E93D823D4A819 /* cqts_placeholder01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F76497745F7AE29C64EF0A22783FC7F /* cqts_placeholder01.jpg */; };
-		832C23BB0604F877DFB7F6AD83AFBEFF /* CQTSSwitchViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 131EE07806C1274D651BA768BD98B354 /* CQTSSwitchViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		891752DE2BB7F77FA55AB2BDE44D30F5 /* CQTSIconDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6D88418E06EF87AFFF49B25F7D9257 /* CQTSIconDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		89B6FA55A6AC47716B414063D3A35B00 /* cqts_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C623DA677DEA129C984597E818187B5 /* cqts_7.jpg */; };
-		8BA17A33729A15F9AA643DD7310594A6 /* CQTSIconsUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F368DA6B6608312BB0ED6AA75B622E51 /* CQTSIconsUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		932CD11D7F972B734EC8E0D33DDE2D37 /* CQTSNetImageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 640379B1329BC244CE0823214AB8A95B /* CQTSNetImageDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9525C51FDD8F7D47AC7A3EA47C5D9EA4 /* CQTSBorderStateButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 43CDBC5D93E32CCAE4FFEC70F440414D /* CQTSBorderStateButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		984F75F66BDAE51655A8DF12E3A2A0C1 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EFED6E52B374EE53B8B532C8A65A293 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9BA2C63E4B2A5FB3C2A01F10B26CB2C0 /* CQTSButtonFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 31FD1C54E51FAC6DE7433E3144612F5E /* CQTSButtonFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A0F85DEF10DFB37706C914E55940ECE1 /* TSResourceCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A16B730DC44A15F3BFE35F8EDAD91A /* TSResourceCollectionViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A44F3FFE6FDFA3BE35ACA9B59F65DB43 /* CQDMSectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 492C51CCA7C92C95EBA22DAC4ECBCF99 /* CQDMSectionDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AB376B8453FAA81F785616769CE4AE72 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E52D0D54D9FDA8B5EE9BC43560E445 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AD12CDD25DE3C1B673F577B2D97E0ADE /* TSSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA3562A7B22B3ECE077CC86B8097F4C /* TSSwitchViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AD5426283720101EAC2BF6F860EDD26B /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D5BA9F847C587E22F8DD9250EDEC7CDA /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B4CF0C9FE0C2B3BB1F891298CF2EDF15 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C44599FE7C1C51F94F910C9C3E7827 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B66F03B1288E2C4EB43F1B03905C4300 /* CJValidateStringTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7DF372B80444F55AD8AF7469618F7F /* CJValidateStringTableViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B7A56145391CCAE45755E071B7E24960 /* CJUIKitBaseHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 518330AD0EA25C1651AE3FEBA2BF9CED /* CJUIKitBaseHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B88928EC5E0A01F4D43BEDCF34F0DA50 /* CJUIKitBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EEEB534684E36873BC19DF1ECA0A204 /* CJUIKitBaseViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BA127F3726A0A53C6F1A8451D7E057CA /* cqts_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9885CC6F16F7BFCD1D23A7A63BB34ACA /* cqts_1.jpg */; };
-		BBA0B5CF05DE443889A126383DFA11A3 /* CJUIKitBaseScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CCF96DD6B5665BF085D0131A62E97A /* CJUIKitBaseScrollViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BF9EA3BC5CFAE577B6AF6F19B9118AA2 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = A9244EA17B6E04FACE497603F0088190 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C15D89D3F43548425A0BE9FEB43E830D /* CJUIKitBaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9895AF22C881C16D69159E46233BA7D7 /* CJUIKitBaseHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C6BA5B5AFFA77029BD8FF32130C7FD28 /* cqts_bgCar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8F135D6784E1701FC22A0792B667C508 /* cqts_bgCar@2x.jpg */; };
-		C7932DD5EE89977BEB2C88D542700AA8 /* cqts_8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 271C206C59A881262B555B8113E7FB03 /* cqts_8.jpg */; };
-		CD6C90B61C727B21E19E0A86931A4B0D /* cqts_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3E1B8B4E5AB9B238F63894DD5064CD4 /* cqts_3.jpg */; };
-		CF23910E1C5E706E619DAED0257A52C9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB032F0BEDBBDDF91030E59ACA7DC98 /* NSLayoutConstraint+MASDebugAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D056A94ABC12825B76D5C155AA4CFA56 /* TSResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09954051B1D455E790DA921D10A40B67 /* TSResourceViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D1656CC8075E7A7D2BFFE0341A03CBD9 /* TSContainerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6063C9376056E1C925AA07282A24231 /* TSContainerViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D2980B0C0BC0D40AD77D04463EB0B927 /* cqts_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 087456209B0F6F824FF8B980143FB0BA /* cqts_10.jpg */; };
-		D56ABFDA9FDC4CC683EB81273BA26255 /* CQDMModuleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A874B832E052D21D04F9BDA09D98581D /* CQDMModuleModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D5A39F8BC93C9249D2FA5823E64F3644 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 72A1A97E52C283A47BA4E8F48BC313FB /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D7145A527893ADD49AC7153B85ED6776 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AA01142B191C535B620A7D90F8B79380 /* MASLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D8A2D019EB350C250C9CA0E68B7E386F /* CJUIKitToastUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 076799F65102FF37420DEE57B2746C85 /* CJUIKitToastUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DAE6225938722229222017238FCEEB27 /* CJUIKitAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D7DFB258A3425EE5BCD426049ABB56 /* CJUIKitAlertUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DBD50C58940115258B9A95ABB18FFEBD /* CJUIKitCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 36895C922B1AA1D6EA776C73013AF02B /* CJUIKitCollectionViewCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DD48AB9B6C0BD1B13432A8EADA75BB3B /* CJUIKitBaseTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BCF70AEB0651681951E8F3E73E1CAD /* CJUIKitBaseTextViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DEB50F82153E97C19229C6A062A3767E /* CJDealTextModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C720FAC2B1419CA3911749444A5237F /* CJDealTextModelFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DEFC5A87993446851D1B709D265E7F9A /* TSResourceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FC18D376985CE4FE1B9A4BB1154415BF /* TSResourceViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E172B527C5026AADE76EAC7B7552B586 /* CQTSSwitchViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 6799D3A60013C66B8A10560924A67717 /* CQTSSwitchViewFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E21BCE8431BD4CE3133DA3748938839A /* UIButton+CQTSMoreProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = AC3201CA4937BA7937D720002500E236 /* UIButton+CQTSMoreProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E5966570922A14290657366502440478 /* cqts_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB782CA46B1FC0AAB423B0B299834523 /* cqts_6.jpg */; };
-		E85C34F1FEBD2DB1CDF9B5CC75AF06F7 /* CQTSLocImageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A56C5033123E24759B023B74673EA45 /* CQTSLocImageDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E9B8A07A9A6F62667980E288EF07C6C5 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8160CD72114EFF3597CD4BF6F7F1F7 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EA8DC70CE3A9B19D215A0F7818B6FE64 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 587E0B8E883D6AD4B29DA2365B8C2EFA /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		ECB364206D77CBB8D76C5EB394894E02 /* UIButton+CQTSMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D817395F8A7746F1DFF904E48B3DA08 /* UIButton+CQTSMoreProperty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FA63B4E7BBAD8DADAB93AF65AD44B6A4 /* cqts_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71A31347D94268822735D6D12AB3099D /* cqts_9.jpg */; };
-		FBC3FBCC9E7E8BC4BD2EA79A1DC2EF76 /* CJUIKitBaseCollectionHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DFF743CB8D3350E736BB219DE07383 /* CJUIKitBaseCollectionHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FC28FAC32ED62F33B967B99D1A4B34D7 /* CJUIKitBaseTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D2254FC0D92BB996D87D140FD3BD0883 /* CJUIKitBaseTextViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FCAE1BAD25038119ED31D65BAE4968A6 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 935171CB319C057FAEE8F843F46825FE /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FDDB904940FB39F14EF3C7F78EC784D8 /* CQDMSectionDataModel+CJDealTextModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD2944C9DCEF78D8C2166429AD21300B /* CQDMSectionDataModel+CJDealTextModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FF01C957860F3ED90475AD49F30674EC /* TSDemo_Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD7E3E0ED6AE2A3FAA69FA4E6E561EAA /* TSDemo_Demo-dummy.m */; };
-		FFCAA9DD0B055E1B5D4DA0DAF90D1629 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C2B405D244ABC4F0728546D75B2D86 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B578A5B6ECFD36630AF218C9E92568E /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = D5BA9F847C587E22F8DD9250EDEC7CDA /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C4755EE6BCB5000125A121BCB1A8E93 /* CQTSContainerViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 200878FFD0B3B8C02997F04DF8A6B924 /* CQTSContainerViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		669840F3D781933F99B30493B62C878D /* cqts_bgSky@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308C1542F57D14D7E05F511CD5546600 /* cqts_bgSky@2x.jpg */; };
+		6ADFF9BB887EA3694019B852B73A7FB4 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 411CCCE6A707DDA02AF236A6F4DD8B74 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6DB43C4492ACFE77F05B0DCBDA687919 /* UIButton+CQTSMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D3034C9905E920F19C9F2D7C9D4A2C2C /* UIButton+CQTSMoreProperty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		710B67BFA309666176753C5ED7A02971 /* CQTSSwitchViewFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B9DCF097CD7B9602F447382BDF9159B1 /* CQTSSwitchViewFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		724C44D1D427687109789B24DD274A21 /* TSResourceViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AECFE884D98443561E2595C152DC8AD /* TSResourceViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		756222D5CED9DB25FA99637907584B46 /* CQDMModuleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 648892DE5FD7C99D62EB1C594AF1124A /* CQDMModuleModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7815609BB1B4FDFA1D4353782B6620C3 /* cqts_placeholder01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D403711A7E3E1E2E05944202A176C4D9 /* cqts_placeholder01.jpg */; };
+		78BDD1A4835A53AEA60B65E446ABB658 /* CQTSNetImagesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09C795CE969605E0D531A781D1B9C4 /* CQTSNetImagesUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7B37BEE4A75D6A08F84776B7DB6C539D /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 49AC5D4983C8BEF841BBE185811C5FB0 /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7E75A298CDEB6D97B08C71D99CF172A7 /* CJUIKitBaseScrollViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CC74AF2537FDBC1451DF895B383CB9AA /* CJUIKitBaseScrollViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		803E59BE460C45FDC51D2DE89BCD9F5E /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 370F325DDBF27B3EF280D0011A024B35 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8083BBAE924549EDC34B82AB36DDCDE5 /* TSResourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94982F72C029F00FD7EA085D276813 /* TSResourceViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		82BA2F8536FF0582C4FC45C41FFD3BC5 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C2B405D244ABC4F0728546D75B2D86 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		838108D3074E198767D162F5DF755BD1 /* CQDMSectionDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A9A7EA3807C2BC81CC5470105DAC8C8 /* CQDMSectionDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		88589385E452E14226EB372C717C6401 /* CJUIKitBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A3E95AC3483579356C97E80FB3BB39 /* CJUIKitBaseViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		894FEAF145A13BDC74EC4084DEAE3272 /* CQTSLocImageDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 955C24330399A5612152A35F32641054 /* CQTSLocImageDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		89603A6D53CCB094FD16E479184B0793 /* CJUIKitBaseCollectionHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F02A49E0339BB76BD386AADCC1156D55 /* CJUIKitBaseCollectionHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8BD09A83787E6623476521E288CFF944 /* CQDMSectionDataModel+CJDealTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE03B83AA5D20BF5E643054A811335 /* CQDMSectionDataModel+CJDealTextModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8C5E73A1E2CA5529D4DF8E2306B7C8F8 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 72A1A97E52C283A47BA4E8F48BC313FB /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		906AF30872FE5F1F814B4044F5351983 /* cqts_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86C14C36A086A21B91422D1D3E001B2F /* cqts_1.jpg */; };
+		98F6C2F36B2D25B72DA8FA7F7FC05FFB /* TSResourceCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA93940B7CD3334EB5CC8372730111 /* TSResourceCollectionViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9E0467E88795170154DD1D8D40926F67 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA0898FAC44183744D557073E2F8AA5 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E06A0B8D492D426DE39DCE20F855CA2 /* CJUIKitBaseTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F388B9CDE2F4FFA32802428A7DB86A3 /* CJUIKitBaseTextViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9EB1042C0BFB99C0BD1C8D1FD01E00EB /* cqts_9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 262844ED1F86F9C337EE13C95A059C66 /* cqts_9.jpg */; };
+		A020472F4B2824AA47E3655168EB04DD /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 553DA097256D24886D70E33FBA786911 /* ViewController+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A1FC5D2C7726F91E94C902ABFD43A48A /* CQTSBorderStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F942D1455918CBE8B80AD3CF09FDAA08 /* CQTSBorderStateButton.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A5B16C23FF2FFF053CF37F53D0174262 /* cqts_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7594EF8F04B8DCE41EFE0AA7B7827F7F /* cqts_3.jpg */; };
+		A6AE9ED0ACCA792F98421A8A15A6B9F9 /* CQTSIconsUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AE355FF3E5C20A199C6C5EB976D9AE /* CQTSIconsUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A6EDC1B0A3099D91557E7C5A61028A3B /* CJUIKitToastUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0DC70383B63E357189F5407E41E4F7 /* CJUIKitToastUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A9198E2632733A9E7F06528E50EF0A59 /* CQTSTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 84455DC34DC24ABCE96B6668489321F0 /* CQTSTableView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A97DBEC79D6D2AEABB6434595AEEFE23 /* CJUIKitToastUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E6B822B10143FB550F2B60F27C9495 /* CJUIKitToastUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC6ADF55E12271A2714166BA053B55D0 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 587E0B8E883D6AD4B29DA2365B8C2EFA /* View+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B0755BE55BBC838195C9BF0DB6F5CF06 /* CQTSNetImageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CD29D1606F5A8F64027A0EB7346AF /* CQTSNetImageDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B264E474298AB555A051DADDE946463C /* CJUIKitBaseCollectionHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B031B0E6AEBC6346C271B4BB0953B4 /* CJUIKitBaseCollectionHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B4BE18751465659FB43F2DCFD777FD93 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E52D0D54D9FDA8B5EE9BC43560E445 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5410D5825CA0573595D8F1AAE751009 /* TSContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 647ACC6998F3F0A6841ACFEAB8DE5C2A /* TSContainerViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B9EE666919E0B842665A1E118D71DC67 /* TSDemo_Demo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D31F0C8880F1ED8FD8219C31D90C420F /* TSDemo_Demo-dummy.m */; };
+		BCF02700BE3101B41C9FAE9AA903E5FD /* CJUIKitBaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 941AC9E4031296FA3BF4496FF98D6383 /* CJUIKitBaseHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BDF019DBFFDB8A681F2FD9F4E38E7D37 /* TSSwitchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2188CB696B4BE9AFA01307DB7DB83FAA /* TSSwitchViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF32CC862787ABEB37D72046D53F495F /* cqts_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00ECBFD82673555C4ED94A4E2A8E2D55 /* cqts_4.jpg */; };
+		C066EA5649CFDBB0F408E2533A01693E /* TSResourceCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9661AF0575222CCC926DFF76AA75AC0C /* TSResourceCollectionViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C74078A1B1070DD1C00B698778C466C1 /* CQTSSwitchViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DA03CC4CFEEECF2EEB3CE2E5CA92DA /* CQTSSwitchViewFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CB0358ECCB75DEA9C58C9206A0D89A3C /* CQTSLocImagesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFEE1E6E1840121A6B786B8758366C3 /* CQTSLocImagesUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CCEC85B5104B3A211B477B85C359A547 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 558B2763E324B8D237D904287AE7A690 /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D0949A4A59859E3A96563EA73D6A9CBC /* UISwitch+CQTSMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 12779BC5890573A0499D5951AEB450E7 /* UISwitch+CQTSMoreProperty.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D4564F23788E01FA38CA42CEA7546E2C /* CJUIKitCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B58A206B0DF5B3DA21ABAA55566A3F7E /* CJUIKitCollectionViewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DA2D90E0680834D79D22BBBE35772652 /* CQTSIconDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1462AA88F55F641A7E9E07E21BF7CBA8 /* CQTSIconDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DB4B97BF7832930E3E76021F48732DCA /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 45892546416F43C43E8AA0E2AA27BC95 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DBC5238733DE47AB214DAA754736DFB0 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AA56AA7AF365E444271F9F4BE178D5A0 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DC644765B4B7CEB94A05292333EAB617 /* TSDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB9BB5F6BD97611D49348870B0A9102 /* TSDemoTableViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E003E4A0324449C1A43748DF0FF0D6E7 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBB3725D2C0052C8143BF229622340A /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E0F2576F237EF11C24EED148CE7A1375 /* TSButtonHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8453D7A1595AB46E91DC0D48302E1B /* TSButtonHomeViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E49059C64CA21484C4C92F064F5DFC1D /* CJUIKitBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107B482E65AD1D82DA27F83B70281954 /* CJUIKitBaseViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E4B9B56CDE09CEDEAEEE4D197A302F03 /* UISwitch+CQTSMoreProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E5F522C53D12BE2BEA9FE5249512EC /* UISwitch+CQTSMoreProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E4D6580109A7BB0AE054EA96BE213FFB /* CQDMSectionDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 464BA771885434CFFF4DC90028243FF4 /* CQDMSectionDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E66727B74EB005FB323C1E2609DF7542 /* cqts_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1037107848FEB97F81930A14635040E8 /* cqts_5.jpg */; };
+		E8563F0858AF5C0A45A81FC75FBB6F19 /* UIButton+CQTSMoreProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB40E4012AA9606FDD834350EAD898B /* UIButton+CQTSMoreProperty.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E8BF468C0FF4AAFD84F3FCF57AFBF22A /* CJDealTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55E01BF80EC68B2E6E7A3B8F5FB31C42 /* CJDealTextModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E9C8A15222C29059F5C518A204776383 /* DemoHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E69ADD8D5F0BBF857B44F38564BB2DA /* DemoHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC7F97B726B382098E2B73ACC8DA3D86 /* CQDemoKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E22689D89C8321E2C85C60E062823 /* CQDemoKit-dummy.m */; };
+		EE28AE70F36B41C299B3CE2389E30F1A /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0AEA8F34CAE43AA76247FF577BAA68 /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EEADFFC880A63F9274864B7AABA3A7C9 /* cqts_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39FB52E84E09CEB1512EC2CE46C08ACE /* cqts_6.jpg */; };
+		F17412176526148BB2B0B75BD312B56B /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AEBAAA2225352CFA3BA703D5C21510 /* Masonry-dummy.m */; };
+		F3D9AF11689C515CA59966429A5A7E3C /* TSButtonHomeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E1B05A9FE2AD2037191851DBF1FEE7 /* TSButtonHomeViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F9068F020589FCDAFDD9DB7DA4CC194B /* cqts_bgCar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F451B620FB60F6890FEC2B9F8A8F62F4 /* cqts_bgCar@2x.jpg */; };
+		FB7C8AFE9B3E441E0FA0AB5D1725A4C9 /* CQTSIconDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 09A7362EE3A1D9172AFAADADF1F9AE18 /* CQTSIconDataModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FC602DD1B0AFB74BF03D408AE05A670A /* CJDealTextModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B9533D01BB245BE619343AE35B9582 /* CJDealTextModelFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FD42147F23A4F4C12FE2019477BBE22F /* CQTSLocImagesUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 434F974CB4995D11A1A23F7227BFBAD7 /* CQTSLocImagesUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FE13A5FB09CCC2C52751FE0B8CA29C9D /* TSDemoTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 420B01CCF456392FB7CFD31B6675C1C8 /* TSDemoTableViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		08745C5804F609B10DA7B0136B6B7057 /* PBXContainerItemProxy */ = {
+		2BB1A544B379961226A7FC0D7F53E4CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
+			remoteInfo = CQDemoKit;
+		};
+		334783CDE83571FC7E7A5B1AC59BB7FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		5FF9C882CEA6F121188F76E9774EB6EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
+		};
+		B4BA1E066944E5DC60DA6C522687E591 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A298648BD841CE3685F5460FD8E86774;
 			remoteInfo = TSDemo_Demo;
 		};
-		4BDF83B6FDA98E41B2DC0DCC5C06BB69 /* PBXContainerItemProxy */ = {
+		B972DBAEF72237E1001DFB6259C41BF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
+			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
+			remoteInfo = CQDemoKit;
 		};
-		A599C8FB43442D6A21A5289EB8C5331A /* PBXContainerItemProxy */ = {
+		ECFC43972545F8868B7C03BFEFFE15A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AAC1AA156F8D03E66524B1C17710D766;
 			remoteInfo = "CQDemoKit-CQDemoKit";
 		};
-		AA645731F249D299AE48991656F8D9F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
-		};
-		E99AAC45289D16A1855BC9F03D639571 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
-			remoteInfo = CQDemoKit;
-		};
-		FEDFEB02702903021D52A450540D4785 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC509E0B2457961842D06F82D4E8C691;
-			remoteInfo = CQDemoKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A47982E4CF29E12600666F37F6335B /* libTSDemo_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTSDemo_Demo.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		074A9B1D44CD1BE9AE65BCA393DBABE6 /* CQTSContainerViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSContainerViewFactory.m; path = CQDemoKit/BaseUIKit/CQTSContainerViewFactory.m; sourceTree = "<group>"; };
-		076799F65102FF37420DEE57B2746C85 /* CJUIKitToastUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitToastUtil.h; path = CQDemoKit/BaseUtil/CJUIKitToastUtil.h; sourceTree = "<group>"; };
-		087456209B0F6F824FF8B980143FB0BA /* cqts_10.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_10.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_10.jpg; sourceTree = "<group>"; };
-		09954051B1D455E790DA921D10A40B67 /* TSResourceViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSResourceViewController.m; sourceTree = "<group>"; };
+		00ECBFD82673555C4ED94A4E2A8E2D55 /* cqts_4.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_4.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_4.jpg; sourceTree = "<group>"; };
+		04A47982E4CF29E12600666F37F6335B /* libTSDemo_Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTSDemo_Demo.a; path = libTSDemo_Demo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		06DA03CC4CFEEECF2EEB3CE2E5CA92DA /* CQTSSwitchViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSSwitchViewFactory.m; path = CQDemoKit/BaseUIKit/CQTSSwitchViewFactory.m; sourceTree = "<group>"; };
+		09A7362EE3A1D9172AFAADADF1F9AE18 /* CQTSIconDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSIconDataModel.h; sourceTree = "<group>"; };
+		0CB9BB5F6BD97611D49348870B0A9102 /* TSDemoTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSDemoTableViewController.m; sourceTree = "<group>"; };
 		0D0AEA8F34CAE43AA76247FF577BAA68 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		0E2E5EE5CC2BA3AD1F7FC756360A1E19 /* libCQDemoKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCQDemoKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2E5EE5CC2BA3AD1F7FC756360A1E19 /* libCQDemoKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCQDemoKit.a; path = libCQDemoKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1037107848FEB97F81930A14635040E8 /* cqts_5.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_5.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_5.jpg; sourceTree = "<group>"; };
+		107B482E65AD1D82DA27F83B70281954 /* CJUIKitBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseViewController.m; path = CQDemoKit/BaseVC/Base/CJUIKitBaseViewController.m; sourceTree = "<group>"; };
 		1085244F771628CF60C274E3DD6775F6 /* Pods-TSDemoDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TSDemoDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1132DBE1EF17EA76A244FE6B9B79142F /* TSSwitchViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSSwitchViewController.h; path = TSDemo_Demo/TSSwitchViewController.h; sourceTree = "<group>"; };
-		131EE07806C1274D651BA768BD98B354 /* CQTSSwitchViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSSwitchViewFactory.m; path = CQDemoKit/BaseUIKit/CQTSSwitchViewFactory.m; sourceTree = "<group>"; };
-		14D7DFB258A3425EE5BCD426049ABB56 /* CJUIKitAlertUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitAlertUtil.m; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.m; sourceTree = "<group>"; };
+		12779BC5890573A0499D5951AEB450E7 /* UISwitch+CQTSMoreProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+CQTSMoreProperty.m"; path = "CQDemoKit/BaseUIKit/UISwitch+CQTSMoreProperty.m"; sourceTree = "<group>"; };
+		1462AA88F55F641A7E9E07E21BF7CBA8 /* CQTSIconDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSIconDataModel.m; sourceTree = "<group>"; };
 		16AEBAAA2225352CFA3BA703D5C21510 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		189DF5D5515BBE8A781972D0418BB3E8 /* TSDemo_Demo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TSDemo_Demo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		19A8B8EF4AF0CFD83AD623C3830893CD /* CJUIKitBaseCollectionHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseCollectionHomeViewController.h; path = CQDemoKit/BaseVC/Collection/CJUIKitBaseCollectionHomeViewController.h; sourceTree = "<group>"; };
-		1BC310FA2115F222D7B05A928527A121 /* CQTSContainerViewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSContainerViewFactory.h; path = CQDemoKit/BaseUIKit/CQTSContainerViewFactory.h; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		250D128B62CDD03B64E77DBCCC4CB78C /* libPods-TSDemoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TSDemoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		271C206C59A881262B555B8113E7FB03 /* cqts_8.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_8.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_8.jpg; sourceTree = "<group>"; };
-		27D94A0DF667E6AA3B4423AB0AEEC3A2 /* CJUIKitToastUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitToastUtil.m; path = CQDemoKit/BaseUtil/CJUIKitToastUtil.m; sourceTree = "<group>"; };
-		2B0D75771261C3FA5790F20D49600F9F /* TSResourceCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSResourceCollectionViewController.h; sourceTree = "<group>"; };
+		1A900926E59FF51E812279D057A6622F /* CJUIKitCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitCollectionViewCell.h; path = CQDemoKit/BaseVC/Collection/CJUIKitCollectionViewCell.h; sourceTree = "<group>"; };
+		1FF76BFD767AB93CED3A1A9B97A72153 /* CQTSLocImageDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSLocImageDataModel.m; sourceTree = "<group>"; };
+		1FFED36A657123030ABB700256D73F15 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		200878FFD0B3B8C02997F04DF8A6B924 /* CQTSContainerViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSContainerViewFactory.m; path = CQDemoKit/BaseUIKit/CQTSContainerViewFactory.m; sourceTree = "<group>"; };
+		2188CB696B4BE9AFA01307DB7DB83FAA /* TSSwitchViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSSwitchViewController.h; path = TSDemo_Demo/TSSwitchViewController.h; sourceTree = "<group>"; };
+		24E1B05A9FE2AD2037191851DBF1FEE7 /* TSButtonHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSButtonHomeViewController.h; path = TSDemo_Demo/TSButtonHomeViewController.h; sourceTree = "<group>"; };
+		250D128B62CDD03B64E77DBCCC4CB78C /* libPods-TSDemoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TSDemoDemo.a"; path = "libPods-TSDemoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		262844ED1F86F9C337EE13C95A059C66 /* cqts_9.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_9.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_9.jpg; sourceTree = "<group>"; };
+		28B031B0E6AEBC6346C271B4BB0953B4 /* CJUIKitBaseCollectionHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseCollectionHomeViewController.m; path = CQDemoKit/BaseVC/Collection/CJUIKitBaseCollectionHomeViewController.m; sourceTree = "<group>"; };
 		2D1D5810991AC79F7A6D3AE3B984FEA6 /* Pods-TSDemoDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TSDemoDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		2D817395F8A7746F1DFF904E48B3DA08 /* UIButton+CQTSMoreProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+CQTSMoreProperty.m"; path = "CQDemoKit/BaseUIKit/UIButton+CQTSMoreProperty.m"; sourceTree = "<group>"; };
-		2DCD1963F6DB7E1244E8E04EE2FF5E1A /* CJDealTextModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJDealTextModel.m; sourceTree = "<group>"; };
+		2F639054E39E82B12101FF11A01DEA97 /* CQDemoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoKit.debug.xcconfig; sourceTree = "<group>"; };
 		2F8160CD72114EFF3597CD4BF6F7F1F7 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		31FD1C54E51FAC6DE7433E3144612F5E /* CQTSButtonFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSButtonFactory.h; path = CQDemoKit/BaseUIKit/CQTSButtonFactory.h; sourceTree = "<group>"; };
-		320B54A485A0EB2EDA286C7CB508B79E /* CQDemoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoKit.debug.xcconfig; sourceTree = "<group>"; };
-		32EFB7541D57A7922944344136C15B03 /* CQDemoKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CQDemoKit-dummy.m"; sourceTree = "<group>"; };
-		33E6BF1C1965AB6534067B96F1ABA536 /* CQDMModuleModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQDMModuleModel.m; sourceTree = "<group>"; };
-		36895C922B1AA1D6EA776C73013AF02B /* CJUIKitCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitCollectionViewCell.h; path = CQDemoKit/BaseVC/Collection/CJUIKitCollectionViewCell.h; sourceTree = "<group>"; };
+		3021BCA650182E01A12DE54279547238 /* CJUIKitBaseTextViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseTextViewController.h; path = CQDemoKit/BaseVC/TextView/CJUIKitBaseTextViewController.h; sourceTree = "<group>"; };
+		308C1542F57D14D7E05F511CD5546600 /* cqts_bgSky@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = "cqts_bgSky@2x.jpg"; path = "CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_bgSky@2x.jpg"; sourceTree = "<group>"; };
+		31DE03B83AA5D20BF5E643054A811335 /* CQDMSectionDataModel+CJDealTextModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CQDMSectionDataModel+CJDealTextModel.m"; sourceTree = "<group>"; };
+		33C8FD997BD1AAEB7BA74CE4BC01E2C5 /* CJValidateStringTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJValidateStringTableViewCell.h; sourceTree = "<group>"; };
+		350553C1DFEBB04191945EE896A2DC63 /* CJUIKitAlertUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitAlertUtil.m; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.m; sourceTree = "<group>"; };
 		370F325DDBF27B3EF280D0011A024B35 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		3A56C5033123E24759B023B74673EA45 /* CQTSLocImageDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSLocImageDataModel.m; sourceTree = "<group>"; };
-		3B50385A16C4C94FAE701CCC733A34DE /* cqts_5.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_5.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_5.jpg; sourceTree = "<group>"; };
-		3B7990908470E0DF8670FB946B5493D8 /* CQTSLocImageDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSLocImageDataModel.h; sourceTree = "<group>"; };
-		3C91D81E9708E8DFCC1DE3DA3CB6358C /* CJUIKitBaseScrollViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseScrollViewController.m; path = CQDemoKit/BaseVC/ScrollView/CJUIKitBaseScrollViewController.m; sourceTree = "<group>"; };
+		38AC7A0A709271E88F33F3FE26FD56B2 /* CQTSTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSTableView.m; path = CQDemoKit/Demo_View/CQTSTableView.m; sourceTree = "<group>"; };
+		39C45EDAE6BC1E63DC0DF9E43C949EB6 /* CQTSButtonFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSButtonFactory.m; path = CQDemoKit/BaseUIKit/CQTSButtonFactory.m; sourceTree = "<group>"; };
+		39FB52E84E09CEB1512EC2CE46C08ACE /* cqts_6.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_6.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_6.jpg; sourceTree = "<group>"; };
+		3AFEE1E6E1840121A6B786B8758366C3 /* CQTSLocImagesUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSLocImagesUtil.m; sourceTree = "<group>"; };
+		3B09C795CE969605E0D531A781D1B9C4 /* CQTSNetImagesUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSNetImagesUtil.m; sourceTree = "<group>"; };
 		3FFBB76AEFC1581BD4DA7C533170F6B2 /* Pods-TSDemoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TSDemoDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		40F6D4FA8CC20F1354C117871E1B835F /* Pods-TSDemoDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TSDemoDemo-dummy.m"; sourceTree = "<group>"; };
 		411CCCE6A707DDA02AF236A6F4DD8B74 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
-		41A16B730DC44A15F3BFE35F8EDAD91A /* TSResourceCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSResourceCollectionViewController.m; sourceTree = "<group>"; };
-		41CCF96DD6B5665BF085D0131A62E97A /* CJUIKitBaseScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseScrollViewController.h; path = CQDemoKit/BaseVC/ScrollView/CJUIKitBaseScrollViewController.h; sourceTree = "<group>"; };
-		43BC967CEC70ABA4DEDA863BDF4D76C5 /* CQDMSectionDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQDMSectionDataModel.h; sourceTree = "<group>"; };
-		43CDBC5D93E32CCAE4FFEC70F440414D /* CQTSBorderStateButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSBorderStateButton.h; path = CQDemoKit/BaseUIKit/CQTSBorderStateButton.h; sourceTree = "<group>"; };
+		420B01CCF456392FB7CFD31B6675C1C8 /* TSDemoTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSDemoTableViewController.h; sourceTree = "<group>"; };
+		434F974CB4995D11A1A23F7227BFBAD7 /* CQTSLocImagesUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSLocImagesUtil.h; sourceTree = "<group>"; };
 		44AEC6462659DC0098D6E58E0470E73F /* Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.release.xcconfig; sourceTree = "<group>"; };
+		4542B530A2F1E47BB76877349339A76C /* CJUIKitBaseScrollViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseScrollViewController.m; path = CQDemoKit/BaseVC/ScrollView/CJUIKitBaseScrollViewController.m; sourceTree = "<group>"; };
 		45892546416F43C43E8AA0E2AA27BC95 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		492C51CCA7C92C95EBA22DAC4ECBCF99 /* CQDMSectionDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQDMSectionDataModel.m; sourceTree = "<group>"; };
+		464BA771885434CFFF4DC90028243FF4 /* CQDMSectionDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQDMSectionDataModel.m; sourceTree = "<group>"; };
 		49AC5D4983C8BEF841BBE185811C5FB0 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		4BE46A37241F632227823FBA7AEC0097 /* CQDemoKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoKit.release.xcconfig; sourceTree = "<group>"; };
-		51496BCCDBFEA67692084F8622FBA172 /* CQTSBorderStateButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSBorderStateButton.m; path = CQDemoKit/BaseUIKit/CQTSBorderStateButton.m; sourceTree = "<group>"; };
-		517B7009B3D8CED0B3EC614407B7D40C /* CQTSNetImageDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSNetImageDataModel.h; sourceTree = "<group>"; };
-		518330AD0EA25C1651AE3FEBA2BF9CED /* CJUIKitBaseHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseHomeViewController.h; path = CQDemoKit/BaseVC/TableView/CJUIKitBaseHomeViewController.h; sourceTree = "<group>"; };
-		518F0A7080117248FDC77703B76C51CC /* TSButtonHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSButtonHomeViewController.m; path = TSDemo_Demo/TSButtonHomeViewController.m; sourceTree = "<group>"; };
+		4CB40E4012AA9606FDD834350EAD898B /* UIButton+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/UIButton+CQTSMoreProperty.h"; sourceTree = "<group>"; };
+		4F94982F72C029F00FD7EA085D276813 /* TSResourceViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSResourceViewController.m; sourceTree = "<group>"; };
+		546DD1253418020352216560C0BE7D51 /* TSDemo_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Demo.release.xcconfig; sourceTree = "<group>"; };
 		54C94C95DC711F1EF57C13A23C7DDFF0 /* Pods-TSDemoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TSDemoDemo.release.xcconfig"; sourceTree = "<group>"; };
 		553DA097256D24886D70E33FBA786911 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		558B2763E324B8D237D904287AE7A690 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		55E01BF80EC68B2E6E7A3B8F5FB31C42 /* CJDealTextModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJDealTextModel.m; sourceTree = "<group>"; };
+		5740FFAB518265C84ADAFBE3BB475D79 /* cqts_7.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_7.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_7.jpg; sourceTree = "<group>"; };
 		587E0B8E883D6AD4B29DA2365B8C2EFA /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		5C35DF1CE19DDCB630A3A24AD894CCA1 /* TSButtonHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSButtonHomeViewController.h; path = TSDemo_Demo/TSButtonHomeViewController.h; sourceTree = "<group>"; };
-		5D2E03699DE87D851BBBA27A7C165541 /* DemoHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DemoHomeViewController.h; path = TSDemo_Demo/DemoHomeViewController.h; sourceTree = "<group>"; };
+		5ABCE52241726589D872D689B10A25D4 /* TSContainerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSContainerViewController.h; path = TSDemo_Demo/TSContainerViewController.h; sourceTree = "<group>"; };
+		5AECFE884D98443561E2595C152DC8AD /* TSResourceViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSResourceViewController.h; sourceTree = "<group>"; };
 		5DB032F0BEDBBDDF91030E59ACA7DC98 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		5EFED6E52B374EE53B8B532C8A65A293 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		5F76497745F7AE29C64EF0A22783FC7F /* cqts_placeholder01.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_placeholder01.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_placeholder01.jpg; sourceTree = "<group>"; };
-		61DFF743CB8D3350E736BB219DE07383 /* CJUIKitBaseCollectionHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseCollectionHomeViewController.m; path = CQDemoKit/BaseVC/Collection/CJUIKitBaseCollectionHomeViewController.m; sourceTree = "<group>"; };
-		640379B1329BC244CE0823214AB8A95B /* CQTSNetImageDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSNetImageDataModel.m; sourceTree = "<group>"; };
+		647ACC6998F3F0A6841ACFEAB8DE5C2A /* TSContainerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSContainerViewController.m; path = TSDemo_Demo/TSContainerViewController.m; sourceTree = "<group>"; };
+		648892DE5FD7C99D62EB1C594AF1124A /* CQDMModuleModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQDMModuleModel.h; sourceTree = "<group>"; };
 		64C2B405D244ABC4F0728546D75B2D86 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		654010414CCC03E9DE624DDFD7E60AB6 /* CQDemoKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CQDemoKit-prefix.pch"; sourceTree = "<group>"; };
-		65486D4829762BBCB9600DE56AF49587 /* CQDemoKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CQDemoKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6799D3A60013C66B8A10560924A67717 /* CQTSSwitchViewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSwitchViewFactory.h; path = CQDemoKit/BaseUIKit/CQTSSwitchViewFactory.h; sourceTree = "<group>"; };
-		6B99222E43814257CD72AFAEF8227059 /* CQDemoKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CQDemoKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D29FBF5459676C308610E653E94843C /* CJUIKitAlertUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitAlertUtil.h; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.h; sourceTree = "<group>"; };
-		6EEEB534684E36873BC19DF1ECA0A204 /* CJUIKitBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseViewController.h; path = CQDemoKit/BaseVC/Base/CJUIKitBaseViewController.h; sourceTree = "<group>"; };
+		6AC4AAD29065C8F2C57A4710203734A2 /* CJDealTextModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJDealTextModel.h; sourceTree = "<group>"; };
+		6B99222E43814257CD72AFAEF8227059 /* CQDemoKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CQDemoKit.bundle; path = "CQDemoKit-CQDemoKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C0DC70383B63E357189F5407E41E4F7 /* CJUIKitToastUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitToastUtil.m; path = CQDemoKit/BaseUtil/CJUIKitToastUtil.m; sourceTree = "<group>"; };
+		6CAA93940B7CD3334EB5CC8372730111 /* TSResourceCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSResourceCollectionViewController.m; sourceTree = "<group>"; };
 		6FBB3725D2C0052C8143BF229622340A /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		70F1956C0340AC74235F93CAEBD9F24C /* CQTSIconsUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSIconsUtil.m; sourceTree = "<group>"; };
-		71A31347D94268822735D6D12AB3099D /* cqts_9.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_9.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_9.jpg; sourceTree = "<group>"; };
 		72A1A97E52C283A47BA4E8F48BC313FB /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		72D98643BA30A79011275CBE433EF86F /* Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.debug.xcconfig; sourceTree = "<group>"; };
-		73EB58E2D517DECB955A0193D23F102E /* CJUIKitBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseViewController.m; path = CQDemoKit/BaseVC/Base/CJUIKitBaseViewController.m; sourceTree = "<group>"; };
-		7BCFA2CF35279EB8E068553BAF8ECE7A /* CJDealTextModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJDealTextModel.h; sourceTree = "<group>"; };
+		7371FD9BF82BADA7CE22EA425C22E2C3 /* CQTSBorderStateButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSBorderStateButton.h; path = CQDemoKit/BaseUIKit/CQTSBorderStateButton.h; sourceTree = "<group>"; };
+		7594EF8F04B8DCE41EFE0AA7B7827F7F /* cqts_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_3.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_3.jpg; sourceTree = "<group>"; };
+		76AE355FF3E5C20A199C6C5EB976D9AE /* CQTSIconsUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSIconsUtil.m; sourceTree = "<group>"; };
+		79E5F522C53D12BE2BEA9FE5249512EC /* UISwitch+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISwitch+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/UISwitch+CQTSMoreProperty.h"; sourceTree = "<group>"; };
+		7A238874BD52D603E5EE44C5832EFC8E /* TSDemo_Demo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TSDemo_Demo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7DF204E469559AEC56683A2365523530 /* TSDemo_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Demo.debug.xcconfig; sourceTree = "<group>"; };
 		7EE1660D370806B3EFD74C49D3471C1C /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		80D9BA8DBCE6AF1692C4D6C518077CCC /* CQTSIconDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSIconDataModel.h; sourceTree = "<group>"; };
+		7F388B9CDE2F4FFA32802428A7DB86A3 /* CJUIKitBaseTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseTextViewController.m; path = CQDemoKit/BaseVC/TextView/CJUIKitBaseTextViewController.m; sourceTree = "<group>"; };
+		84455DC34DC24ABCE96B6668489321F0 /* CQTSTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSTableView.h; path = CQDemoKit/Demo_View/CQTSTableView.h; sourceTree = "<group>"; };
+		854CF801B32B842F628FF5DF69AEB056 /* cqts_8.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_8.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_8.jpg; sourceTree = "<group>"; };
+		85837CF331A5D32AB188EE34437B71E8 /* DemoHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DemoHomeViewController.m; path = TSDemo_Demo/DemoHomeViewController.m; sourceTree = "<group>"; };
+		85C915723C1799F44A4D68A86559C120 /* TSDemo_Demo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Demo-prefix.pch"; sourceTree = "<group>"; };
+		86C14C36A086A21B91422D1D3E001B2F /* cqts_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_1.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_1.jpg; sourceTree = "<group>"; };
 		8967E66A2FCB5BA81BFA1E139139A237 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		8B8453D7A1595AB46E91DC0D48302E1B /* TSButtonHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSButtonHomeViewController.m; path = TSDemo_Demo/TSButtonHomeViewController.m; sourceTree = "<group>"; };
 		8BA0898FAC44183744D557073E2F8AA5 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
-		8C720FAC2B1419CA3911749444A5237F /* CJDealTextModelFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJDealTextModelFactory.m; sourceTree = "<group>"; };
-		8F135D6784E1701FC22A0792B667C508 /* cqts_bgCar@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = "cqts_bgCar@2x.jpg"; path = "CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_bgCar@2x.jpg"; sourceTree = "<group>"; };
+		8CBE218DB619E5A712489E2AB8D422C9 /* CJDealTextModelFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJDealTextModelFactory.h; sourceTree = "<group>"; };
 		91F10A7E4BAA437E4DF7B3CED9B560B4 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		9227C22087A135676D2B8FBA87CE6292 /* TSContainerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSContainerViewController.m; path = TSDemo_Demo/TSContainerViewController.m; sourceTree = "<group>"; };
 		935171CB319C057FAEE8F843F46825FE /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		9885CC6F16F7BFCD1D23A7A63BB34ACA /* cqts_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_1.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_1.jpg; sourceTree = "<group>"; };
-		9895AF22C881C16D69159E46233BA7D7 /* CJUIKitBaseHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseHomeViewController.m; path = CQDemoKit/BaseVC/TableView/CJUIKitBaseHomeViewController.m; sourceTree = "<group>"; };
-		9C623DA677DEA129C984597E818187B5 /* cqts_7.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_7.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_7.jpg; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		941AC9E4031296FA3BF4496FF98D6383 /* CJUIKitBaseHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseHomeViewController.m; path = CQDemoKit/BaseVC/TableView/CJUIKitBaseHomeViewController.m; sourceTree = "<group>"; };
+		94E6B822B10143FB550F2B60F27C9495 /* CJUIKitToastUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitToastUtil.h; path = CQDemoKit/BaseUtil/CJUIKitToastUtil.h; sourceTree = "<group>"; };
+		955C24330399A5612152A35F32641054 /* CQTSLocImageDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSLocImageDataModel.h; sourceTree = "<group>"; };
+		9661AF0575222CCC926DFF76AA75AC0C /* TSResourceCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSResourceCollectionViewController.h; sourceTree = "<group>"; };
+		97A3E95AC3483579356C97E80FB3BB39 /* CJUIKitBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseViewController.h; path = CQDemoKit/BaseVC/Base/CJUIKitBaseViewController.h; sourceTree = "<group>"; };
+		97FA641A2F44B399B213B8E90FAC0391 /* CQTSButtonFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSButtonFactory.h; path = CQDemoKit/BaseUIKit/CQTSButtonFactory.h; sourceTree = "<group>"; };
+		9A9A7EA3807C2BC81CC5470105DAC8C8 /* CQDMSectionDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQDMSectionDataModel.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E69ADD8D5F0BBF857B44F38564BB2DA /* DemoHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DemoHomeViewController.h; path = TSDemo_Demo/DemoHomeViewController.h; sourceTree = "<group>"; };
+		9F8E22689D89C8321E2C85C60E062823 /* CQDemoKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CQDemoKit-dummy.m"; sourceTree = "<group>"; };
+		A29980173AD20CD8318DF92A28D3CB35 /* CQDMModuleModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQDMModuleModel.m; sourceTree = "<group>"; };
 		A301E9D7640CAAE872D2257184D64010 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		A6063C9376056E1C925AA07282A24231 /* TSContainerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSContainerViewController.h; path = TSDemo_Demo/TSContainerViewController.h; sourceTree = "<group>"; };
-		A67996DCB6D8B2ABEA20C9DE558F1AD0 /* DemoHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DemoHomeViewController.m; path = TSDemo_Demo/DemoHomeViewController.m; sourceTree = "<group>"; };
-		A8073DA8700D8A9D97E1D599F441AD2B /* UISwitch+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISwitch+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/UISwitch+CQTSMoreProperty.h"; sourceTree = "<group>"; };
-		A874B832E052D21D04F9BDA09D98581D /* CQDMModuleModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQDMModuleModel.h; sourceTree = "<group>"; };
 		A9244EA17B6E04FACE497603F0088190 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		AA01142B191C535B620A7D90F8B79380 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		AA56AA7AF365E444271F9F4BE178D5A0 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		AB7E4E87C20EE272DFF7FACB615AF744 /* ResourceBundle-CQDemoKit-CQDemoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CQDemoKit-CQDemoKit-Info.plist"; sourceTree = "<group>"; };
-		AC3201CA4937BA7937D720002500E236 /* UIButton+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/UIButton+CQTSMoreProperty.h"; sourceTree = "<group>"; };
-		AFA3562A7B22B3ECE077CC86B8097F4C /* TSSwitchViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSSwitchViewController.m; path = TSDemo_Demo/TSSwitchViewController.m; sourceTree = "<group>"; };
-		B671DB2350A5BE71C43D6C8D767335D7 /* CQTSButtonFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSButtonFactory.m; path = CQDemoKit/BaseUIKit/CQTSButtonFactory.m; sourceTree = "<group>"; };
-		BBD775F630489442E672A8AB9927254C /* cqts_bgSky@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = "cqts_bgSky@2x.jpg"; path = "CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_bgSky@2x.jpg"; sourceTree = "<group>"; };
-		BD2944C9DCEF78D8C2166429AD21300B /* CQDMSectionDataModel+CJDealTextModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CQDMSectionDataModel+CJDealTextModel.h"; sourceTree = "<group>"; };
-		BD7E3E0ED6AE2A3FAA69FA4E6E561EAA /* TSDemo_Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSDemo_Demo-dummy.m"; sourceTree = "<group>"; };
-		C3C9371DADC865EBD5380BD5E9861E8D /* UISwitch+CQTSMoreProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+CQTSMoreProperty.m"; path = "CQDemoKit/BaseUIKit/UISwitch+CQTSMoreProperty.m"; sourceTree = "<group>"; };
-		C3EA93D96FEF09F05018DEB3A31CE745 /* CQTSNetImagesUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSNetImagesUtil.m; sourceTree = "<group>"; };
-		C580A09E1B4C3936B349CDD841FB6314 /* CQDMSectionDataModel+CJDealTextModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CQDMSectionDataModel+CJDealTextModel.m"; sourceTree = "<group>"; };
+		B14BF1D4971F96F8CCAB0BD0EFCC601E /* CQDemoKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CQDemoKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B58A206B0DF5B3DA21ABAA55566A3F7E /* CJUIKitCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitCollectionViewCell.m; path = CQDemoKit/BaseVC/Collection/CJUIKitCollectionViewCell.m; sourceTree = "<group>"; };
+		B5D2F228557C86D8B2E58BB9AC9921DA /* TSSwitchViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSSwitchViewController.m; path = TSDemo_Demo/TSSwitchViewController.m; sourceTree = "<group>"; };
+		B8F783A94CF0B95630DB3B4C05E768F2 /* CQDemoKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoKit.release.xcconfig; sourceTree = "<group>"; };
+		B9DCF097CD7B9602F447382BDF9159B1 /* CQTSSwitchViewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSwitchViewFactory.h; path = CQDemoKit/BaseUIKit/CQTSSwitchViewFactory.h; sourceTree = "<group>"; };
+		BE46140D2B20507EF808931588F1F00F /* CQDemoKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CQDemoKit-prefix.pch"; sourceTree = "<group>"; };
+		BF72075A50A9E0EA7DFE633A5E74FE7F /* CQTSNetImagesUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSNetImagesUtil.h; sourceTree = "<group>"; };
+		C31315F2DE5FEDA05F8EA33C4EFDD96B /* CJValidateStringTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJValidateStringTableViewCell.m; sourceTree = "<group>"; };
+		C37F8770D06014109D47B8E62AFD1805 /* ResourceBundle-CQDemoKit-CQDemoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CQDemoKit-CQDemoKit-Info.plist"; sourceTree = "<group>"; };
 		C5C44599FE7C1C51F94F910C9C3E7827 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		C8E52D0D54D9FDA8B5EE9BC43560E445 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
-		C96A40D1A40324DFE0A33711549F1BDE /* CJValidateStringTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJValidateStringTableViewCell.h; sourceTree = "<group>"; };
-		CB782CA46B1FC0AAB423B0B299834523 /* cqts_6.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_6.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_6.jpg; sourceTree = "<group>"; };
-		CCBD99727962C30897E5A2E1F287FAC8 /* CJUIKitCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitCollectionViewCell.m; path = CQDemoKit/BaseVC/Collection/CJUIKitCollectionViewCell.m; sourceTree = "<group>"; };
-		D2254FC0D92BB996D87D140FD3BD0883 /* CJUIKitBaseTextViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseTextViewController.h; path = CQDemoKit/BaseVC/TextView/CJUIKitBaseTextViewController.h; sourceTree = "<group>"; };
-		D3E1B8B4E5AB9B238F63894DD5064CD4 /* cqts_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_3.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_3.jpg; sourceTree = "<group>"; };
-		D581A19457154AF6C3698C11797A546F /* CJDealTextModelFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJDealTextModelFactory.h; sourceTree = "<group>"; };
+		CC74AF2537FDBC1451DF895B383CB9AA /* CJUIKitBaseScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseScrollViewController.h; path = CQDemoKit/BaseVC/ScrollView/CJUIKitBaseScrollViewController.h; sourceTree = "<group>"; };
+		CE2CD29D1606F5A8F64027A0EB7346AF /* CQTSNetImageDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSNetImageDataModel.m; sourceTree = "<group>"; };
+		D1B9533D01BB245BE619343AE35B9582 /* CJDealTextModelFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJDealTextModelFactory.m; sourceTree = "<group>"; };
+		D3034C9905E920F19C9F2D7C9D4A2C2C /* UIButton+CQTSMoreProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+CQTSMoreProperty.m"; path = "CQDemoKit/BaseUIKit/UIButton+CQTSMoreProperty.m"; sourceTree = "<group>"; };
+		D31F0C8880F1ED8FD8219C31D90C420F /* TSDemo_Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSDemo_Demo-dummy.m"; sourceTree = "<group>"; };
+		D403711A7E3E1E2E05944202A176C4D9 /* cqts_placeholder01.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_placeholder01.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_placeholder01.jpg; sourceTree = "<group>"; };
 		D5BA9F847C587E22F8DD9250EDEC7CDA /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		D6995D98BB0108C59792CFBA01609BCA /* cqts_4.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_4.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_4.jpg; sourceTree = "<group>"; };
-		D8BCF70AEB0651681951E8F3E73E1CAD /* CJUIKitBaseTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseTextViewController.m; path = CQDemoKit/BaseVC/TextView/CJUIKitBaseTextViewController.m; sourceTree = "<group>"; };
-		DA7DF372B80444F55AD8AF7469618F7F /* CJValidateStringTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJValidateStringTableViewCell.m; sourceTree = "<group>"; };
+		D96016DCC9A4460EDBAF7B7EA87590F5 /* CJUIKitBaseHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseHomeViewController.h; path = CQDemoKit/BaseVC/TableView/CJUIKitBaseHomeViewController.h; sourceTree = "<group>"; };
+		DBA12311BB6EC87D53146CFA1DBE8CF4 /* CQTSContainerViewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSContainerViewFactory.h; path = CQDemoKit/BaseUIKit/CQTSContainerViewFactory.h; sourceTree = "<group>"; };
 		DF90728199AD8071D694C9BF99A64F7F /* Pods-TSDemoDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TSDemoDemo-resources.sh"; sourceTree = "<group>"; };
-		DF913B513F3AEB3949F7702124FA712A /* CQTSLocImagesUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSLocImagesUtil.m; sourceTree = "<group>"; };
-		E46B4E7B81BD1D1B65CA51304EC76778 /* TSDemo_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Demo.release.xcconfig; sourceTree = "<group>"; };
-		EAB494BFD2E37256203F7CA03691DA56 /* TSDemo_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Demo.debug.xcconfig; sourceTree = "<group>"; };
-		EB6D88418E06EF87AFFF49B25F7D9257 /* CQTSIconDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSIconDataModel.m; sourceTree = "<group>"; };
-		F1756166262646A58F0B3F3F1471C83E /* CQTSNetImagesUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSNetImagesUtil.h; sourceTree = "<group>"; };
-		F368DA6B6608312BB0ED6AA75B622E51 /* CQTSIconsUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSIconsUtil.h; sourceTree = "<group>"; };
-		F66C842B7F78B3FF8819B279C901CC3E /* CQTSLocImagesUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSLocImagesUtil.h; sourceTree = "<group>"; };
-		F978E2E8D66D0DA243EE9D2D7EAFDD87 /* TSDemo_Demo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Demo-prefix.pch"; sourceTree = "<group>"; };
-		FC18D376985CE4FE1B9A4BB1154415BF /* TSResourceViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSResourceViewController.h; sourceTree = "<group>"; };
-		FDBBC6322E21CE756AAA3BAB895DD520 /* cqts_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = cqts_2.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_2.jpg; sourceTree = "<group>"; };
+		E8EE788B416FD9C392897CE6FC9503B4 /* CQTSNetImageDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSNetImageDataModel.h; sourceTree = "<group>"; };
+		EA20A306D008408D55CDEB0A825C2594 /* CQDMSectionDataModel+CJDealTextModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CQDMSectionDataModel+CJDealTextModel.h"; sourceTree = "<group>"; };
+		F02A49E0339BB76BD386AADCC1156D55 /* CJUIKitBaseCollectionHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseCollectionHomeViewController.h; path = CQDemoKit/BaseVC/Collection/CJUIKitBaseCollectionHomeViewController.h; sourceTree = "<group>"; };
+		F38FBDEA709EE22D53E73ACD49CF911F /* cqts_10.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_10.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_10.jpg; sourceTree = "<group>"; };
+		F451B620FB60F6890FEC2B9F8A8F62F4 /* cqts_bgCar@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = "cqts_bgCar@2x.jpg"; path = "CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_bgCar@2x.jpg"; sourceTree = "<group>"; };
+		F664C234A5187904663938EC50740201 /* cqts_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = cqts_2.jpg; path = CQDemoKit/Demo_Resource/LocDataModel/Resources/cqts_2.jpg; sourceTree = "<group>"; };
+		F942D1455918CBE8B80AD3CF09FDAA08 /* CQTSBorderStateButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSBorderStateButton.m; path = CQDemoKit/BaseUIKit/CQTSBorderStateButton.m; sourceTree = "<group>"; };
+		FE44B89FAC52405434C41D542DE7252E /* CQTSIconsUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSIconsUtil.h; sourceTree = "<group>"; };
+		FE6660AFF166130128C9541259197033 /* CJUIKitAlertUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitAlertUtil.h; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F990968EDE9D290C3B187CFD4B42875 /* Frameworks */ = {
+		1F527941A0DE4008BBE42564964B99F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69A5469D71E09873CBDD5DA593E4E50F /* Frameworks */ = {
+		4C03DCD807E20C3D78C09A99D3330C1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FA4AB600E5ACBB91617F1D84A5E8DCC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,14 +329,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDD5B73F520459CD5D3BB28372D56F1D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEA6AA46815C8080E7BDBEA662A08C6A /* Frameworks */ = {
+		F97E11B1239727163B68AB4B5B9A77AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,31 +339,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0267FE136378A6AE1F35E5CC07FC00B6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				32EFB7541D57A7922944344136C15B03 /* CQDemoKit-dummy.m */,
-				654010414CCC03E9DE624DDFD7E60AB6 /* CQDemoKit-prefix.pch */,
-				320B54A485A0EB2EDA286C7CB508B79E /* CQDemoKit.debug.xcconfig */,
-				4BE46A37241F632227823FBA7AEC0097 /* CQDemoKit.release.xcconfig */,
-				AB7E4E87C20EE272DFF7FACB615AF744 /* ResourceBundle-CQDemoKit-CQDemoKit-Info.plist */,
-			);
-			name = "Support Files";
-			path = "TSDemoDemo/Pods/Target Support Files/CQDemoKit";
-			sourceTree = "<group>";
-		};
-		03C41DF9674A99991CA1499B38E9A40F /* BaseVC */ = {
-			isa = PBXGroup;
-			children = (
-				09BF12995C77B670EB886372F18CDCA9 /* Base */,
-				FFDFAA6B7D8AB6F381468B41C07A1698 /* Collection */,
-				0DF15D96F774E2120B966997A1B9D7B6 /* ScrollView */,
-				716863431DB11E8A946956B2F3881F11 /* TableView */,
-				FAFDB94C7847EEC293A5F087E7155E46 /* TextView */,
-			);
-			name = BaseVC;
-			sourceTree = "<group>";
-		};
 		06C894CEE2483C259A9FC1E71A3C10F5 /* Pods-TSDemoDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,16 +353,6 @@
 			path = "Target Support Files/Pods-TSDemoDemo";
 			sourceTree = "<group>";
 		};
-		09BF12995C77B670EB886372F18CDCA9 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				6EEEB534684E36873BC19DF1ECA0A204 /* CJUIKitBaseViewController.h */,
-				73EB58E2D517DECB955A0193D23F102E /* CJUIKitBaseViewController.m */,
-				63655EFAEEBA8812A823D59FC87F89B5 /* Model */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
 		0AD083FBD3974BDD2319EC528601F0B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,49 +365,94 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0DF15D96F774E2120B966997A1B9D7B6 /* ScrollView */ = {
+		18CCD6C1D71661F7E173E27E2D43D840 /* NetDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				41CCF96DD6B5665BF085D0131A62E97A /* CJUIKitBaseScrollViewController.h */,
-				3C91D81E9708E8DFCC1DE3DA3CB6358C /* CJUIKitBaseScrollViewController.m */,
+				E8EE788B416FD9C392897CE6FC9503B4 /* CQTSNetImageDataModel.h */,
+				CE2CD29D1606F5A8F64027A0EB7346AF /* CQTSNetImageDataModel.m */,
+				BF72075A50A9E0EA7DFE633A5E74FE7F /* CQTSNetImagesUtil.h */,
+				3B09C795CE969605E0D531A781D1B9C4 /* CQTSNetImagesUtil.m */,
+			);
+			name = NetDataModel;
+			path = CQDemoKit/Demo_Resource/NetDataModel;
+			sourceTree = "<group>";
+		};
+		2128EA3A212C0B50252BFD78182631DE /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CC74AF2537FDBC1451DF895B383CB9AA /* CJUIKitBaseScrollViewController.h */,
+				4542B530A2F1E47BB76877349339A76C /* CJUIKitBaseScrollViewController.m */,
 			);
 			name = ScrollView;
 			sourceTree = "<group>";
 		};
-		10F8A09D7215A30F36A08D8E694A7166 /* View */ = {
+		2A2593DC776E7483EFCECDAB56D781E4 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
-				C96A40D1A40324DFE0A33711549F1BDE /* CJValidateStringTableViewCell.h */,
-				DA7DF372B80444F55AD8AF7469618F7F /* CJValidateStringTableViewCell.m */,
+				3021BCA650182E01A12DE54279547238 /* CJUIKitBaseTextViewController.h */,
+				7F388B9CDE2F4FFA32802428A7DB86A3 /* CJUIKitBaseTextViewController.m */,
+				814DC57A05B42AB95F02FEB666667FBB /* Model */,
+				DD2A13C8ECEDB437B2468040ACEA5451 /* View */,
 			);
-			name = View;
-			path = CQDemoKit/BaseVC/TextView/View;
+			name = TextView;
 			sourceTree = "<group>";
 		};
-		13B2F9EEB859C394DBB901AFED125EF2 /* CQDemoKit */ = {
+		2A4F88CDD0B5872B0D4EDE69F4BC822A /* TSDemo_Demo */ = {
 			isa = PBXGroup;
 			children = (
-				84124B8DC7E9D336B735CEFA2BA7AF75 /* BaseUIKit */,
-				967F7EC00877173506243F3D54F0DAE5 /* BaseUtil */,
-				03C41DF9674A99991CA1499B38E9A40F /* BaseVC */,
-				C2D2064C0AE9E0046A22B3B51B710909 /* Demo_Resource */,
-				E1A0073E1B5E9257F02D56714303FE57 /* Pod */,
-				0267FE136378A6AE1F35E5CC07FC00B6 /* Support Files */,
+				9E69ADD8D5F0BBF857B44F38564BB2DA /* DemoHomeViewController.h */,
+				85837CF331A5D32AB188EE34437B71E8 /* DemoHomeViewController.m */,
+				24E1B05A9FE2AD2037191851DBF1FEE7 /* TSButtonHomeViewController.h */,
+				8B8453D7A1595AB46E91DC0D48302E1B /* TSButtonHomeViewController.m */,
+				5ABCE52241726589D872D689B10A25D4 /* TSContainerViewController.h */,
+				647ACC6998F3F0A6841ACFEAB8DE5C2A /* TSContainerViewController.m */,
+				2188CB696B4BE9AFA01307DB7DB83FAA /* TSSwitchViewController.h */,
+				B5D2F228557C86D8B2E58BB9AC9921DA /* TSSwitchViewController.m */,
+				3C6089C3A4998E1A6FC3A04CC31E2777 /* DemoView */,
+				6647437F81FF74F8020826C253D29C9A /* Pod */,
+				9D99EA64F8D8624DD84288AD87A247BA /* ResourceViewController */,
+				AECADA5983F82DB401AE921FD0ADD58F /* Support Files */,
 			);
-			name = CQDemoKit;
+			name = TSDemo_Demo;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		1B80C3E8B7E18FB757E0FD71B8281B5A /* IconDataModel */ = {
+		34C74289DF590D6E5EB49373E790CFB4 /* BaseUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				80D9BA8DBCE6AF1692C4D6C518077CCC /* CQTSIconDataModel.h */,
-				EB6D88418E06EF87AFFF49B25F7D9257 /* CQTSIconDataModel.m */,
-				F368DA6B6608312BB0ED6AA75B622E51 /* CQTSIconsUtil.h */,
-				70F1956C0340AC74235F93CAEBD9F24C /* CQTSIconsUtil.m */,
+				7371FD9BF82BADA7CE22EA425C22E2C3 /* CQTSBorderStateButton.h */,
+				F942D1455918CBE8B80AD3CF09FDAA08 /* CQTSBorderStateButton.m */,
+				97FA641A2F44B399B213B8E90FAC0391 /* CQTSButtonFactory.h */,
+				39C45EDAE6BC1E63DC0DF9E43C949EB6 /* CQTSButtonFactory.m */,
+				DBA12311BB6EC87D53146CFA1DBE8CF4 /* CQTSContainerViewFactory.h */,
+				200878FFD0B3B8C02997F04DF8A6B924 /* CQTSContainerViewFactory.m */,
+				B9DCF097CD7B9602F447382BDF9159B1 /* CQTSSwitchViewFactory.h */,
+				06DA03CC4CFEEECF2EEB3CE2E5CA92DA /* CQTSSwitchViewFactory.m */,
+				4CB40E4012AA9606FDD834350EAD898B /* UIButton+CQTSMoreProperty.h */,
+				D3034C9905E920F19C9F2D7C9D4A2C2C /* UIButton+CQTSMoreProperty.m */,
+				79E5F522C53D12BE2BEA9FE5249512EC /* UISwitch+CQTSMoreProperty.h */,
+				12779BC5890573A0499D5951AEB450E7 /* UISwitch+CQTSMoreProperty.m */,
 			);
-			name = IconDataModel;
-			path = CQDemoKit/Demo_Resource/IconDataModel;
+			name = BaseUIKit;
+			sourceTree = "<group>";
+		};
+		36327EC76FACA0D98B8D848F11A844FF /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D96016DCC9A4460EDBAF7B7EA87590F5 /* CJUIKitBaseHomeViewController.h */,
+				941AC9E4031296FA3BF4496FF98D6383 /* CJUIKitBaseHomeViewController.m */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		3C6089C3A4998E1A6FC3A04CC31E2777 /* DemoView */ = {
+			isa = PBXGroup;
+			children = (
+				420B01CCF456392FB7CFD31B6675C1C8 /* TSDemoTableViewController.h */,
+				0CB9BB5F6BD97611D49348870B0A9102 /* TSDemoTableViewController.m */,
+			);
+			name = DemoView;
+			path = TSDemo_Demo/DemoView;
 			sourceTree = "<group>";
 		};
 		4357C9F6652A94DC2CBCC1A30010EE33 /* Support Files */ = {
@@ -449,95 +467,47 @@
 			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
-		5B245FE929E110BA8E09CB718D7A6918 /* Resources */ = {
+		48B683B5BC322FCADE2933E50EEB7533 /* LocDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				9885CC6F16F7BFCD1D23A7A63BB34ACA /* cqts_1.jpg */,
-				087456209B0F6F824FF8B980143FB0BA /* cqts_10.jpg */,
-				FDBBC6322E21CE756AAA3BAB895DD520 /* cqts_2.jpg */,
-				D3E1B8B4E5AB9B238F63894DD5064CD4 /* cqts_3.jpg */,
-				D6995D98BB0108C59792CFBA01609BCA /* cqts_4.jpg */,
-				3B50385A16C4C94FAE701CCC733A34DE /* cqts_5.jpg */,
-				CB782CA46B1FC0AAB423B0B299834523 /* cqts_6.jpg */,
-				9C623DA677DEA129C984597E818187B5 /* cqts_7.jpg */,
-				271C206C59A881262B555B8113E7FB03 /* cqts_8.jpg */,
-				71A31347D94268822735D6D12AB3099D /* cqts_9.jpg */,
-				8F135D6784E1701FC22A0792B667C508 /* cqts_bgCar@2x.jpg */,
-				BBD775F630489442E672A8AB9927254C /* cqts_bgSky@2x.jpg */,
-				5F76497745F7AE29C64EF0A22783FC7F /* cqts_placeholder01.jpg */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		6195531B6BEDA4759C409BA8BF14862C /* NetDataModel */ = {
-			isa = PBXGroup;
-			children = (
-				517B7009B3D8CED0B3EC614407B7D40C /* CQTSNetImageDataModel.h */,
-				640379B1329BC244CE0823214AB8A95B /* CQTSNetImageDataModel.m */,
-				F1756166262646A58F0B3F3F1471C83E /* CQTSNetImagesUtil.h */,
-				C3EA93D96FEF09F05018DEB3A31CE745 /* CQTSNetImagesUtil.m */,
-			);
-			name = NetDataModel;
-			path = CQDemoKit/Demo_Resource/NetDataModel;
-			sourceTree = "<group>";
-		};
-		63655EFAEEBA8812A823D59FC87F89B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A874B832E052D21D04F9BDA09D98581D /* CQDMModuleModel.h */,
-				33E6BF1C1965AB6534067B96F1ABA536 /* CQDMModuleModel.m */,
-				43BC967CEC70ABA4DEDA863BDF4D76C5 /* CQDMSectionDataModel.h */,
-				492C51CCA7C92C95EBA22DAC4ECBCF99 /* CQDMSectionDataModel.m */,
-			);
-			name = Model;
-			path = CQDemoKit/BaseVC/Base/Model;
-			sourceTree = "<group>";
-		};
-		6868BFC13FE03244BE4E4F07D3839305 /* LocDataModel */ = {
-			isa = PBXGroup;
-			children = (
-				3B7990908470E0DF8670FB946B5493D8 /* CQTSLocImageDataModel.h */,
-				3A56C5033123E24759B023B74673EA45 /* CQTSLocImageDataModel.m */,
-				F66C842B7F78B3FF8819B279C901CC3E /* CQTSLocImagesUtil.h */,
-				DF913B513F3AEB3949F7702124FA712A /* CQTSLocImagesUtil.m */,
+				955C24330399A5612152A35F32641054 /* CQTSLocImageDataModel.h */,
+				1FF76BFD767AB93CED3A1A9B97A72153 /* CQTSLocImageDataModel.m */,
+				434F974CB4995D11A1A23F7227BFBAD7 /* CQTSLocImagesUtil.h */,
+				3AFEE1E6E1840121A6B786B8758366C3 /* CQTSLocImagesUtil.m */,
 			);
 			name = LocDataModel;
 			path = CQDemoKit/Demo_Resource/LocDataModel;
 			sourceTree = "<group>";
 		};
-		6883DD9638399C9829D93761EC70045B /* Model */ = {
+		560EDBF34EDE90F60E16DF1F79238592 /* IconDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				7BCFA2CF35279EB8E068553BAF8ECE7A /* CJDealTextModel.h */,
-				2DCD1963F6DB7E1244E8E04EE2FF5E1A /* CJDealTextModel.m */,
-				D581A19457154AF6C3698C11797A546F /* CJDealTextModelFactory.h */,
-				8C720FAC2B1419CA3911749444A5237F /* CJDealTextModelFactory.m */,
-				BD2944C9DCEF78D8C2166429AD21300B /* CQDMSectionDataModel+CJDealTextModel.h */,
-				C580A09E1B4C3936B349CDD841FB6314 /* CQDMSectionDataModel+CJDealTextModel.m */,
+				09A7362EE3A1D9172AFAADADF1F9AE18 /* CQTSIconDataModel.h */,
+				1462AA88F55F641A7E9E07E21BF7CBA8 /* CQTSIconDataModel.m */,
+				FE44B89FAC52405434C41D542DE7252E /* CQTSIconsUtil.h */,
+				76AE355FF3E5C20A199C6C5EB976D9AE /* CQTSIconsUtil.m */,
 			);
-			name = Model;
-			path = CQDemoKit/BaseVC/TextView/Model;
+			name = IconDataModel;
+			path = CQDemoKit/Demo_Resource/IconDataModel;
 			sourceTree = "<group>";
 		};
-		6A24620CC59749D5D082DF5F5F4B7730 /* Support Files */ = {
+		5F34C93875CBBDFD88045AECAD9EE309 /* Demo_Resource */ = {
 			isa = PBXGroup;
 			children = (
-				BD7E3E0ED6AE2A3FAA69FA4E6E561EAA /* TSDemo_Demo-dummy.m */,
-				F978E2E8D66D0DA243EE9D2D7EAFDD87 /* TSDemo_Demo-prefix.pch */,
-				EAB494BFD2E37256203F7CA03691DA56 /* TSDemo_Demo.debug.xcconfig */,
-				E46B4E7B81BD1D1B65CA51304EC76778 /* TSDemo_Demo.release.xcconfig */,
+				560EDBF34EDE90F60E16DF1F79238592 /* IconDataModel */,
+				48B683B5BC322FCADE2933E50EEB7533 /* LocDataModel */,
+				18CCD6C1D71661F7E173E27E2D43D840 /* NetDataModel */,
+				BE65248DC774C3A9C9D2000CD80E3691 /* Resources */,
 			);
-			name = "Support Files";
-			path = "TSDemoDemo/Pods/Target Support Files/TSDemo_Demo";
+			name = Demo_Resource;
 			sourceTree = "<group>";
 		};
-		716863431DB11E8A946956B2F3881F11 /* TableView */ = {
+		6647437F81FF74F8020826C253D29C9A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				518330AD0EA25C1651AE3FEBA2BF9CED /* CJUIKitBaseHomeViewController.h */,
-				9895AF22C881C16D69159E46233BA7D7 /* CJUIKitBaseHomeViewController.m */,
+				7A238874BD52D603E5EE44C5832EFC8E /* TSDemo_Demo.podspec */,
 			);
-			name = TableView;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		7529FD53BCE26816CCD46658378AAF1B /* Pods */ = {
@@ -556,93 +526,140 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		84124B8DC7E9D336B735CEFA2BA7AF75 /* BaseUIKit */ = {
+		814DC57A05B42AB95F02FEB666667FBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				43CDBC5D93E32CCAE4FFEC70F440414D /* CQTSBorderStateButton.h */,
-				51496BCCDBFEA67692084F8622FBA172 /* CQTSBorderStateButton.m */,
-				31FD1C54E51FAC6DE7433E3144612F5E /* CQTSButtonFactory.h */,
-				B671DB2350A5BE71C43D6C8D767335D7 /* CQTSButtonFactory.m */,
-				1BC310FA2115F222D7B05A928527A121 /* CQTSContainerViewFactory.h */,
-				074A9B1D44CD1BE9AE65BCA393DBABE6 /* CQTSContainerViewFactory.m */,
-				6799D3A60013C66B8A10560924A67717 /* CQTSSwitchViewFactory.h */,
-				131EE07806C1274D651BA768BD98B354 /* CQTSSwitchViewFactory.m */,
-				AC3201CA4937BA7937D720002500E236 /* UIButton+CQTSMoreProperty.h */,
-				2D817395F8A7746F1DFF904E48B3DA08 /* UIButton+CQTSMoreProperty.m */,
-				A8073DA8700D8A9D97E1D599F441AD2B /* UISwitch+CQTSMoreProperty.h */,
-				C3C9371DADC865EBD5380BD5E9861E8D /* UISwitch+CQTSMoreProperty.m */,
+				6AC4AAD29065C8F2C57A4710203734A2 /* CJDealTextModel.h */,
+				55E01BF80EC68B2E6E7A3B8F5FB31C42 /* CJDealTextModel.m */,
+				8CBE218DB619E5A712489E2AB8D422C9 /* CJDealTextModelFactory.h */,
+				D1B9533D01BB245BE619343AE35B9582 /* CJDealTextModelFactory.m */,
+				EA20A306D008408D55CDEB0A825C2594 /* CQDMSectionDataModel+CJDealTextModel.h */,
+				31DE03B83AA5D20BF5E643054A811335 /* CQDMSectionDataModel+CJDealTextModel.m */,
 			);
-			name = BaseUIKit;
+			name = Model;
+			path = CQDemoKit/BaseVC/TextView/Model;
 			sourceTree = "<group>";
 		};
-		967F7EC00877173506243F3D54F0DAE5 /* BaseUtil */ = {
+		8864B862AA1E0365AF18266ADF7CE465 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
-				6D29FBF5459676C308610E653E94843C /* CJUIKitAlertUtil.h */,
-				14D7DFB258A3425EE5BCD426049ABB56 /* CJUIKitAlertUtil.m */,
-				076799F65102FF37420DEE57B2746C85 /* CJUIKitToastUtil.h */,
-				27D94A0DF667E6AA3B4423AB0AEEC3A2 /* CJUIKitToastUtil.m */,
+				B7BA1EF969299A610A8DE6C83677A64C /* Base */,
+				C28F14AD7FE9616DA977AAFDBF4C181C /* Collection */,
+				2128EA3A212C0B50252BFD78182631DE /* ScrollView */,
+				36327EC76FACA0D98B8D848F11A844FF /* TableView */,
+				2A2593DC776E7483EFCECDAB56D781E4 /* TextView */,
+			);
+			name = BaseVC;
+			sourceTree = "<group>";
+		};
+		9B62A60AB1BAFEF160545DBFE18BA1DE /* Demo_View */ = {
+			isa = PBXGroup;
+			children = (
+				84455DC34DC24ABCE96B6668489321F0 /* CQTSTableView.h */,
+				38AC7A0A709271E88F33F3FE26FD56B2 /* CQTSTableView.m */,
+			);
+			name = Demo_View;
+			sourceTree = "<group>";
+		};
+		9D99EA64F8D8624DD84288AD87A247BA /* ResourceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9661AF0575222CCC926DFF76AA75AC0C /* TSResourceCollectionViewController.h */,
+				6CAA93940B7CD3334EB5CC8372730111 /* TSResourceCollectionViewController.m */,
+				5AECFE884D98443561E2595C152DC8AD /* TSResourceViewController.h */,
+				4F94982F72C029F00FD7EA085D276813 /* TSResourceViewController.m */,
+			);
+			name = ResourceViewController;
+			path = TSDemo_Demo/ResourceViewController;
+			sourceTree = "<group>";
+		};
+		9E85AD8B2BA613E555A0E813EC2A98A7 /* BaseUtil */ = {
+			isa = PBXGroup;
+			children = (
+				FE6660AFF166130128C9541259197033 /* CJUIKitAlertUtil.h */,
+				350553C1DFEBB04191945EE896A2DC63 /* CJUIKitAlertUtil.m */,
+				94E6B822B10143FB550F2B60F27C9495 /* CJUIKitToastUtil.h */,
+				6C0DC70383B63E357189F5407E41E4F7 /* CJUIKitToastUtil.m */,
 			);
 			name = BaseUtil;
 			sourceTree = "<group>";
 		};
-		ACD6A27B9034E855A6A1567F5F43B2F0 /* TSDemo_Demo */ = {
+		A2C970C59A1961C69C514205E4241356 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D2E03699DE87D851BBBA27A7C165541 /* DemoHomeViewController.h */,
-				A67996DCB6D8B2ABEA20C9DE558F1AD0 /* DemoHomeViewController.m */,
-				5C35DF1CE19DDCB630A3A24AD894CCA1 /* TSButtonHomeViewController.h */,
-				518F0A7080117248FDC77703B76C51CC /* TSButtonHomeViewController.m */,
-				A6063C9376056E1C925AA07282A24231 /* TSContainerViewController.h */,
-				9227C22087A135676D2B8FBA87CE6292 /* TSContainerViewController.m */,
-				1132DBE1EF17EA76A244FE6B9B79142F /* TSSwitchViewController.h */,
-				AFA3562A7B22B3ECE077CC86B8097F4C /* TSSwitchViewController.m */,
-				C8AEF26347BCDF7A869FDA897AE118AD /* Pod */,
-				E57FD85BD99C327A63ED53DA3AB32EAC /* ResourceViewController */,
-				6A24620CC59749D5D082DF5F5F4B7730 /* Support Files */,
+				9F8E22689D89C8321E2C85C60E062823 /* CQDemoKit-dummy.m */,
+				BE46140D2B20507EF808931588F1F00F /* CQDemoKit-prefix.pch */,
+				2F639054E39E82B12101FF11A01DEA97 /* CQDemoKit.debug.xcconfig */,
+				B8F783A94CF0B95630DB3B4C05E768F2 /* CQDemoKit.release.xcconfig */,
+				C37F8770D06014109D47B8E62AFD1805 /* ResourceBundle-CQDemoKit-CQDemoKit-Info.plist */,
 			);
-			name = TSDemo_Demo;
-			path = ../..;
+			name = "Support Files";
+			path = "TSDemoDemo/Pods/Target Support Files/CQDemoKit";
 			sourceTree = "<group>";
 		};
-		C2D2064C0AE9E0046A22B3B51B710909 /* Demo_Resource */ = {
+		AECADA5983F82DB401AE921FD0ADD58F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1B80C3E8B7E18FB757E0FD71B8281B5A /* IconDataModel */,
-				6868BFC13FE03244BE4E4F07D3839305 /* LocDataModel */,
-				6195531B6BEDA4759C409BA8BF14862C /* NetDataModel */,
-				5B245FE929E110BA8E09CB718D7A6918 /* Resources */,
+				D31F0C8880F1ED8FD8219C31D90C420F /* TSDemo_Demo-dummy.m */,
+				85C915723C1799F44A4D68A86559C120 /* TSDemo_Demo-prefix.pch */,
+				7DF204E469559AEC56683A2365523530 /* TSDemo_Demo.debug.xcconfig */,
+				546DD1253418020352216560C0BE7D51 /* TSDemo_Demo.release.xcconfig */,
 			);
-			name = Demo_Resource;
+			name = "Support Files";
+			path = "TSDemoDemo/Pods/Target Support Files/TSDemo_Demo";
 			sourceTree = "<group>";
 		};
-		C8AEF26347BCDF7A869FDA897AE118AD /* Pod */ = {
+		B7BA1EF969299A610A8DE6C83677A64C /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				189DF5D5515BBE8A781972D0418BB3E8 /* TSDemo_Demo.podspec */,
+				97A3E95AC3483579356C97E80FB3BB39 /* CJUIKitBaseViewController.h */,
+				107B482E65AD1D82DA27F83B70281954 /* CJUIKitBaseViewController.m */,
+				F7257CC4ECC12F8ABFD4086017192894 /* Model */,
 			);
-			name = Pod;
+			name = Base;
+			sourceTree = "<group>";
+		};
+		BE65248DC774C3A9C9D2000CD80E3691 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				86C14C36A086A21B91422D1D3E001B2F /* cqts_1.jpg */,
+				F38FBDEA709EE22D53E73ACD49CF911F /* cqts_10.jpg */,
+				F664C234A5187904663938EC50740201 /* cqts_2.jpg */,
+				7594EF8F04B8DCE41EFE0AA7B7827F7F /* cqts_3.jpg */,
+				00ECBFD82673555C4ED94A4E2A8E2D55 /* cqts_4.jpg */,
+				1037107848FEB97F81930A14635040E8 /* cqts_5.jpg */,
+				39FB52E84E09CEB1512EC2CE46C08ACE /* cqts_6.jpg */,
+				5740FFAB518265C84ADAFBE3BB475D79 /* cqts_7.jpg */,
+				854CF801B32B842F628FF5DF69AEB056 /* cqts_8.jpg */,
+				262844ED1F86F9C337EE13C95A059C66 /* cqts_9.jpg */,
+				F451B620FB60F6890FEC2B9F8A8F62F4 /* cqts_bgCar@2x.jpg */,
+				308C1542F57D14D7E05F511CD5546600 /* cqts_bgSky@2x.jpg */,
+				D403711A7E3E1E2E05944202A176C4D9 /* cqts_placeholder01.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C28F14AD7FE9616DA977AAFDBF4C181C /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F02A49E0339BB76BD386AADCC1156D55 /* CJUIKitBaseCollectionHomeViewController.h */,
+				28B031B0E6AEBC6346C271B4BB0953B4 /* CJUIKitBaseCollectionHomeViewController.m */,
+				1A900926E59FF51E812279D057A6622F /* CJUIKitCollectionViewCell.h */,
+				B58A206B0DF5B3DA21ABAA55566A3F7E /* CJUIKitCollectionViewCell.m */,
+			);
+			name = Collection;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D508F49EC9179D19CEA554EF590C159C /* Development Pods */,
+				F7F0934FD6AC95B7A0BF9F90935F7328 /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				7529FD53BCE26816CCD46658378AAF1B /* Pods */,
 				0AD083FBD3974BDD2319EC528601F0B7 /* Products */,
 				7BF6F3530BD4047C1AE515032CEA34B8 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D508F49EC9179D19CEA554EF590C159C /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				13B2F9EEB859C394DBB901AFED125EF2 /* CQDemoKit */,
-				ACD6A27B9034E855A6A1567F5F43B2F0 /* TSDemo_Demo */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -652,24 +669,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E1A0073E1B5E9257F02D56714303FE57 /* Pod */ = {
+		DD2A13C8ECEDB437B2468040ACEA5451 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				65486D4829762BBCB9600DE56AF49587 /* CQDemoKit.podspec */,
+				33C8FD997BD1AAEB7BA74CE4BC01E2C5 /* CJValidateStringTableViewCell.h */,
+				C31315F2DE5FEDA05F8EA33C4EFDD96B /* CJValidateStringTableViewCell.m */,
 			);
-			name = Pod;
+			name = View;
+			path = CQDemoKit/BaseVC/TextView/View;
 			sourceTree = "<group>";
 		};
-		E57FD85BD99C327A63ED53DA3AB32EAC /* ResourceViewController */ = {
+		DDE27904B2F4A0B86D9873B309E4290F /* CQDemoKit */ = {
 			isa = PBXGroup;
 			children = (
-				2B0D75771261C3FA5790F20D49600F9F /* TSResourceCollectionViewController.h */,
-				41A16B730DC44A15F3BFE35F8EDAD91A /* TSResourceCollectionViewController.m */,
-				FC18D376985CE4FE1B9A4BB1154415BF /* TSResourceViewController.h */,
-				09954051B1D455E790DA921D10A40B67 /* TSResourceViewController.m */,
+				34C74289DF590D6E5EB49373E790CFB4 /* BaseUIKit */,
+				9E85AD8B2BA613E555A0E813EC2A98A7 /* BaseUtil */,
+				8864B862AA1E0365AF18266ADF7CE465 /* BaseVC */,
+				5F34C93875CBBDFD88045AECAD9EE309 /* Demo_Resource */,
+				9B62A60AB1BAFEF160545DBFE18BA1DE /* Demo_View */,
+				E0B5FAA9FD29DA8E6B546EE03AF6BED8 /* Pod */,
+				A2C970C59A1961C69C514205E4241356 /* Support Files */,
 			);
-			name = ResourceViewController;
-			path = TSDemo_Demo/ResourceViewController;
+			name = CQDemoKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E0B5FAA9FD29DA8E6B546EE03AF6BED8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				B14BF1D4971F96F8CCAB0BD0EFCC601E /* CQDemoKit.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		F47FDAAE8298DEBC98D156CFA4146C99 /* Masonry */ = {
@@ -702,99 +732,101 @@
 				553DA097256D24886D70E33FBA786911 /* ViewController+MASAdditions.m */,
 				4357C9F6652A94DC2CBCC1A30010EE33 /* Support Files */,
 			);
+			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
-		FAFDB94C7847EEC293A5F087E7155E46 /* TextView */ = {
+		F7257CC4ECC12F8ABFD4086017192894 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D2254FC0D92BB996D87D140FD3BD0883 /* CJUIKitBaseTextViewController.h */,
-				D8BCF70AEB0651681951E8F3E73E1CAD /* CJUIKitBaseTextViewController.m */,
-				6883DD9638399C9829D93761EC70045B /* Model */,
-				10F8A09D7215A30F36A08D8E694A7166 /* View */,
+				648892DE5FD7C99D62EB1C594AF1124A /* CQDMModuleModel.h */,
+				A29980173AD20CD8318DF92A28D3CB35 /* CQDMModuleModel.m */,
+				9A9A7EA3807C2BC81CC5470105DAC8C8 /* CQDMSectionDataModel.h */,
+				464BA771885434CFFF4DC90028243FF4 /* CQDMSectionDataModel.m */,
 			);
-			name = TextView;
+			name = Model;
+			path = CQDemoKit/BaseVC/Base/Model;
 			sourceTree = "<group>";
 		};
-		FFDFAA6B7D8AB6F381468B41C07A1698 /* Collection */ = {
+		F7F0934FD6AC95B7A0BF9F90935F7328 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				19A8B8EF4AF0CFD83AD623C3830893CD /* CJUIKitBaseCollectionHomeViewController.h */,
-				61DFF743CB8D3350E736BB219DE07383 /* CJUIKitBaseCollectionHomeViewController.m */,
-				36895C922B1AA1D6EA776C73013AF02B /* CJUIKitCollectionViewCell.h */,
-				CCBD99727962C30897E5A2E1F287FAC8 /* CJUIKitCollectionViewCell.m */,
+				DDE27904B2F4A0B86D9873B309E4290F /* CQDemoKit */,
+				2A4F88CDD0B5872B0D4EDE69F4BC822A /* TSDemo_Demo */,
 			);
-			name = Collection;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		30C2C8E8ECDAA3D2A9165A5544C845CC /* Headers */ = {
+		1E525A8CA5CC393945D87EF3825AB942 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2C6A2DED4D1457DDF66B0A3324E132 /* MASCompositeConstraint.h in Headers */,
-				AD5426283720101EAC2BF6F860EDD26B /* MASConstraint+Private.h in Headers */,
-				115FA2FA6FF33D01FCA557B2257043DA /* MASConstraint.h in Headers */,
-				D5A39F8BC93C9249D2FA5823E64F3644 /* MASConstraintMaker.h in Headers */,
-				AB376B8453FAA81F785616769CE4AE72 /* MASLayoutConstraint.h in Headers */,
-				3E4CAC14E31DB013EA87CEB1BAD5ABDB /* Masonry.h in Headers */,
-				984F75F66BDAE51655A8DF12E3A2A0C1 /* MASUtilities.h in Headers */,
-				06B5D21A76E5CAEE1CC3C13765D02345 /* MASViewAttribute.h in Headers */,
-				BF9EA3BC5CFAE577B6AF6F19B9118AA2 /* MASViewConstraint.h in Headers */,
-				11BFC65C9C85889F8E480055BD3C3F40 /* NSArray+MASAdditions.h in Headers */,
-				B4CF0C9FE0C2B3BB1F891298CF2EDF15 /* NSArray+MASShorthandAdditions.h in Headers */,
-				0971F5ED6D008521E0FE0EA02C962FF6 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
-				FFCAA9DD0B055E1B5D4DA0DAF90D1629 /* View+MASAdditions.h in Headers */,
-				0E44C5C2122A1F7D75FB078B809E0E43 /* View+MASShorthandAdditions.h in Headers */,
-				23463A67DA86E6E5FE14B26D9BEF9087 /* ViewController+MASAdditions.h in Headers */,
+				E9C8A15222C29059F5C518A204776383 /* DemoHomeViewController.h in Headers */,
+				F3D9AF11689C515CA59966429A5A7E3C /* TSButtonHomeViewController.h in Headers */,
+				5168FF8DDDBC581B52736912A8C5CC32 /* TSContainerViewController.h in Headers */,
+				FE13A5FB09CCC2C52751FE0B8CA29C9D /* TSDemoTableViewController.h in Headers */,
+				C066EA5649CFDBB0F408E2533A01693E /* TSResourceCollectionViewController.h in Headers */,
+				724C44D1D427687109789B24DD274A21 /* TSResourceViewController.h in Headers */,
+				BDF019DBFFDB8A681F2FD9F4E38E7D37 /* TSSwitchViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		63EB367D67C62FC351F6B442CCF068DC /* Headers */ = {
+		44A24566D49D35B9DC00A5741B2CE09C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7378BC021F4935BCC9707D562861AA7F /* CJDealTextModel.h in Headers */,
-				59AE0262F48A1D214F0B2A9F9B85B92B /* CJDealTextModelFactory.h in Headers */,
-				FDDB904940FB39F14EF3C7F78EC784D8 /* CQDMSectionDataModel+CJDealTextModel.h in Headers */,
-				29F94E8E9B3E5CA10F615DE94196581E /* CJUIKitAlertUtil.h in Headers */,
-				3C66DA26D8A06CC8206E75E1F77B519E /* CJUIKitBaseCollectionHomeViewController.h in Headers */,
-				B7A56145391CCAE45755E071B7E24960 /* CJUIKitBaseHomeViewController.h in Headers */,
-				BBA0B5CF05DE443889A126383DFA11A3 /* CJUIKitBaseScrollViewController.h in Headers */,
-				FC28FAC32ED62F33B967B99D1A4B34D7 /* CJUIKitBaseTextViewController.h in Headers */,
-				B88928EC5E0A01F4D43BEDCF34F0DA50 /* CJUIKitBaseViewController.h in Headers */,
-				DBD50C58940115258B9A95ABB18FFEBD /* CJUIKitCollectionViewCell.h in Headers */,
-				D8A2D019EB350C250C9CA0E68B7E386F /* CJUIKitToastUtil.h in Headers */,
-				4D037DF81ED15A851440DB1191C4FB6F /* CJValidateStringTableViewCell.h in Headers */,
-				D56ABFDA9FDC4CC683EB81273BA26255 /* CQDMModuleModel.h in Headers */,
-				106B0BF5EC5CCC17278AA0745D99AAFC /* CQDMSectionDataModel.h in Headers */,
-				9525C51FDD8F7D47AC7A3EA47C5D9EA4 /* CQTSBorderStateButton.h in Headers */,
-				9BA2C63E4B2A5FB3C2A01F10B26CB2C0 /* CQTSButtonFactory.h in Headers */,
-				3CB98EB6CBCDE701F7DEAE9654DB47DE /* CQTSContainerViewFactory.h in Headers */,
-				06F8C8BE3A17FB176432F6F4179CAF2A /* CQTSIconDataModel.h in Headers */,
-				8BA17A33729A15F9AA643DD7310594A6 /* CQTSIconsUtil.h in Headers */,
-				253AC98065DC1BCADD691B9633696053 /* CQTSLocImageDataModel.h in Headers */,
-				05C8D21DB6B0D9D28D654E4568F766B2 /* CQTSLocImagesUtil.h in Headers */,
-				45EEDD17E7895EAA527066440A5752FD /* CQTSNetImageDataModel.h in Headers */,
-				6ACCA68C5530E5069D179CE727CE376F /* CQTSNetImagesUtil.h in Headers */,
-				E172B527C5026AADE76EAC7B7552B586 /* CQTSSwitchViewFactory.h in Headers */,
-				E21BCE8431BD4CE3133DA3748938839A /* UIButton+CQTSMoreProperty.h in Headers */,
-				4DB9CAAB82D6750654C7FFDA80CB8ECE /* UISwitch+CQTSMoreProperty.h in Headers */,
+				CCEC85B5104B3A211B477B85C359A547 /* MASCompositeConstraint.h in Headers */,
+				5B578A5B6ECFD36630AF218C9E92568E /* MASConstraint+Private.h in Headers */,
+				6ADFF9BB887EA3694019B852B73A7FB4 /* MASConstraint.h in Headers */,
+				8C5E73A1E2CA5529D4DF8E2306B7C8F8 /* MASConstraintMaker.h in Headers */,
+				B4BE18751465659FB43F2DCFD777FD93 /* MASLayoutConstraint.h in Headers */,
+				DB4B97BF7832930E3E76021F48732DCA /* Masonry.h in Headers */,
+				4EFC81ED6FC62F512B8FDA8E06C40935 /* MASUtilities.h in Headers */,
+				7B37BEE4A75D6A08F84776B7DB6C539D /* MASViewAttribute.h in Headers */,
+				554A379165F8284833F4FB8DF6D7C18A /* MASViewConstraint.h in Headers */,
+				0A5AF91728B59CFBAC9E62CD7947BCAF /* NSArray+MASAdditions.h in Headers */,
+				533F0CB344D17F2EE02D30D31FF0E878 /* NSArray+MASShorthandAdditions.h in Headers */,
+				DBC5238733DE47AB214DAA754736DFB0 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				82BA2F8536FF0582C4FC45C41FFD3BC5 /* View+MASAdditions.h in Headers */,
+				803E59BE460C45FDC51D2DE89BCD9F5E /* View+MASShorthandAdditions.h in Headers */,
+				9E0467E88795170154DD1D8D40926F67 /* ViewController+MASAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF09E6C372AC378D091035EE06BF315F /* Headers */ = {
+		8467A3A71ECF500FD5F17C8A760E6F12 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EA0818C6A5F1648E07F7D0BB7D085F6 /* DemoHomeViewController.h in Headers */,
-				494CCFEA37D79A566258A88A766C4FD0 /* TSButtonHomeViewController.h in Headers */,
-				D1656CC8075E7A7D2BFFE0341A03CBD9 /* TSContainerViewController.h in Headers */,
-				1C5421D1105442DC951282C46AE617C9 /* TSResourceCollectionViewController.h in Headers */,
-				DEFC5A87993446851D1B709D265E7F9A /* TSResourceViewController.h in Headers */,
-				3E27E467E0912F2758EAE9CAA5442A80 /* TSSwitchViewController.h in Headers */,
+				11A42B32F4B197FD86D9041B71F7DC44 /* CJDealTextModel.h in Headers */,
+				2358588266FDEC928A3087D171F1F783 /* CJDealTextModelFactory.h in Headers */,
+				1B033CD11BFBE87588B1637C0A8EB387 /* CJUIKitAlertUtil.h in Headers */,
+				89603A6D53CCB094FD16E479184B0793 /* CJUIKitBaseCollectionHomeViewController.h in Headers */,
+				1227B487173B88B9900F261DB07DCC32 /* CJUIKitBaseHomeViewController.h in Headers */,
+				7E75A298CDEB6D97B08C71D99CF172A7 /* CJUIKitBaseScrollViewController.h in Headers */,
+				4F38B4ECBE2EB4BC59EED33C47487D79 /* CJUIKitBaseTextViewController.h in Headers */,
+				88589385E452E14226EB372C717C6401 /* CJUIKitBaseViewController.h in Headers */,
+				37645FAC4F3B982005E0F72A85325BD6 /* CJUIKitCollectionViewCell.h in Headers */,
+				A97DBEC79D6D2AEABB6434595AEEFE23 /* CJUIKitToastUtil.h in Headers */,
+				368DD41451D2CA1A4F96A97B15BAE139 /* CJValidateStringTableViewCell.h in Headers */,
+				756222D5CED9DB25FA99637907584B46 /* CQDMModuleModel.h in Headers */,
+				10028FA15136D29111E4A9B0E5538B8D /* CQDMSectionDataModel+CJDealTextModel.h in Headers */,
+				838108D3074E198767D162F5DF755BD1 /* CQDMSectionDataModel.h in Headers */,
+				23FF2BA6AE2C0090825F03D7D3B886F2 /* CQTSBorderStateButton.h in Headers */,
+				088902BA36AF67ADDC2E4CDDB9BE4E84 /* CQTSButtonFactory.h in Headers */,
+				417B2415BA76D35F6E4AE55A8993687B /* CQTSContainerViewFactory.h in Headers */,
+				FB7C8AFE9B3E441E0FA0AB5D1725A4C9 /* CQTSIconDataModel.h in Headers */,
+				5A2E1E27567C0A5D779B5D5AA32758D6 /* CQTSIconsUtil.h in Headers */,
+				894FEAF145A13BDC74EC4084DEAE3272 /* CQTSLocImageDataModel.h in Headers */,
+				FD42147F23A4F4C12FE2019477BBE22F /* CQTSLocImagesUtil.h in Headers */,
+				152C7F2BF77F6BE5014218BDC3FE5F0A /* CQTSNetImageDataModel.h in Headers */,
+				0DC523F3FDF5DCABE004C67F2994F07C /* CQTSNetImagesUtil.h in Headers */,
+				710B67BFA309666176753C5ED7A02971 /* CQTSSwitchViewFactory.h in Headers */,
+				A9198E2632733A9E7F06528E50EF0A59 /* CQTSTableView.h in Headers */,
+				E8563F0858AF5C0A45A81FC75FBB6F19 /* UIButton+CQTSMoreProperty.h in Headers */,
+				E4B9B56CDE09CEDEAEEE4D197A302F03 /* UISwitch+CQTSMoreProperty.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,9 +851,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				55476E916ECBA8B4F4317006A09D3F87 /* PBXTargetDependency */,
-				CE28AEE5BFEA67449EA2E31C3F654DE8 /* PBXTargetDependency */,
-				8740E4B15D6623527C33A721CEB4703F /* PBXTargetDependency */,
+				4F9B3F09F065269972CBC0C5674C5936 /* PBXTargetDependency */,
+				3E5FADA4FAC13619F273A43FD1AAD04B /* PBXTargetDependency */,
+				4D1A619D07A499C9C6ED00A3A310570E /* PBXTargetDependency */,
 			);
 			name = "Pods-TSDemoDemo";
 			productName = "Pods-TSDemoDemo";
@@ -830,11 +862,11 @@
 		};
 		55AF53E6C77A10ED4985E04D74A8878E /* Masonry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 714163D79923158BC9A1F737A16BE250 /* Build configuration list for PBXNativeTarget "Masonry" */;
+			buildConfigurationList = 32B6677EEDC2987F661B36426F52F2AD /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				30C2C8E8ECDAA3D2A9165A5544C845CC /* Headers */,
-				37E776E511EBB34E02E9CDEEA412B201 /* Sources */,
-				DEA6AA46815C8080E7BDBEA662A08C6A /* Frameworks */,
+				44A24566D49D35B9DC00A5741B2CE09C /* Headers */,
+				5872F690761A0B1F1FA67FE0DFEA9876 /* Sources */,
+				1F527941A0DE4008BBE42564964B99F0 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -847,16 +879,16 @@
 		};
 		A298648BD841CE3685F5460FD8E86774 /* TSDemo_Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C72DD177E960FD2F764A1A0B3111049 /* Build configuration list for PBXNativeTarget "TSDemo_Demo" */;
+			buildConfigurationList = EE79185FBF08F21DC2237EDE80DF5FE8 /* Build configuration list for PBXNativeTarget "TSDemo_Demo" */;
 			buildPhases = (
-				CF09E6C372AC378D091035EE06BF315F /* Headers */,
-				1308FA0719388A686913F04EAE617A4B /* Sources */,
-				69A5469D71E09873CBDD5DA593E4E50F /* Frameworks */,
+				1E525A8CA5CC393945D87EF3825AB942 /* Headers */,
+				A69DCEAA87714E1A3D9E5B628E75FC0E /* Sources */,
+				4FA4AB600E5ACBB91617F1D84A5E8DCC /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				49C9BF98C3798F562A1C5F7A0B7F31E6 /* PBXTargetDependency */,
+				72D49DAF2AB8ACDAFD0E9BF1FBBC2BB9 /* PBXTargetDependency */,
 			);
 			name = TSDemo_Demo;
 			productName = TSDemo_Demo;
@@ -865,11 +897,11 @@
 		};
 		AAC1AA156F8D03E66524B1C17710D766 /* CQDemoKit-CQDemoKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B94F8ADFC1F7E336B7C034881450E92B /* Build configuration list for PBXNativeTarget "CQDemoKit-CQDemoKit" */;
+			buildConfigurationList = 5958E7E151EAD04EDB67662E5C052E9B /* Build configuration list for PBXNativeTarget "CQDemoKit-CQDemoKit" */;
 			buildPhases = (
-				8561CC8ECB912BBE5C07CB483E0ED112 /* Sources */,
-				BDD5B73F520459CD5D3BB28372D56F1D /* Frameworks */,
-				C6F9EEE72B35E2611AD2F78FEF7EEA1F /* Resources */,
+				F7DA579449633C8FB4FD72A7DE6C7FC3 /* Sources */,
+				4C03DCD807E20C3D78C09A99D3330C1D /* Frameworks */,
+				D1858B8A31EE2EFCB5AFD73787800C57 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -882,17 +914,17 @@
 		};
 		AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9667DE5082EA6FDD2FB8CE67F2CF564D /* Build configuration list for PBXNativeTarget "CQDemoKit" */;
+			buildConfigurationList = B491EF2701CD5A2059D69D25D5F81759 /* Build configuration list for PBXNativeTarget "CQDemoKit" */;
 			buildPhases = (
-				63EB367D67C62FC351F6B442CCF068DC /* Headers */,
-				E63D90F6A9BDE0D056E14FF51A4679D3 /* Sources */,
-				2F990968EDE9D290C3B187CFD4B42875 /* Frameworks */,
+				8467A3A71ECF500FD5F17C8A760E6F12 /* Headers */,
+				7F387B4AEBF5CB3CF9210BD4DA1DBF4C /* Sources */,
+				F97E11B1239727163B68AB4B5B9A77AC /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A146C76A27154D172FD361F96BC4B24 /* PBXTargetDependency */,
-				262F9E79EBA48C4941DB36FEDBB930EB /* PBXTargetDependency */,
+				25D7D02EC48584F5B9E4AC67760B4302 /* PBXTargetDependency */,
+				F0D8B40AEB2EC4E54D280828252311D7 /* PBXTargetDependency */,
 			);
 			name = CQDemoKit;
 			productName = CQDemoKit;
@@ -931,58 +963,44 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C6F9EEE72B35E2611AD2F78FEF7EEA1F /* Resources */ = {
+		D1858B8A31EE2EFCB5AFD73787800C57 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA127F3726A0A53C6F1A8451D7E057CA /* cqts_1.jpg in Resources */,
-				D2980B0C0BC0D40AD77D04463EB0B927 /* cqts_10.jpg in Resources */,
-				1F2FF3D5FE40C586F23F0808FBD82B34 /* cqts_2.jpg in Resources */,
-				CD6C90B61C727B21E19E0A86931A4B0D /* cqts_3.jpg in Resources */,
-				4DB57ABC9C4C4DD2265CCDEF7E6DD3D4 /* cqts_4.jpg in Resources */,
-				209F3A55E7F33D798D7178FB448E1FD0 /* cqts_5.jpg in Resources */,
-				E5966570922A14290657366502440478 /* cqts_6.jpg in Resources */,
-				89B6FA55A6AC47716B414063D3A35B00 /* cqts_7.jpg in Resources */,
-				C7932DD5EE89977BEB2C88D542700AA8 /* cqts_8.jpg in Resources */,
-				FA63B4E7BBAD8DADAB93AF65AD44B6A4 /* cqts_9.jpg in Resources */,
-				C6BA5B5AFFA77029BD8FF32130C7FD28 /* cqts_bgCar@2x.jpg in Resources */,
-				1B1D51D06592211695213AEBECFFA8A0 /* cqts_bgSky@2x.jpg in Resources */,
-				7DC17877119A9418429E93D823D4A819 /* cqts_placeholder01.jpg in Resources */,
+				906AF30872FE5F1F814B4044F5351983 /* cqts_1.jpg in Resources */,
+				060AF796C614E09629C0AEC8F1614220 /* cqts_10.jpg in Resources */,
+				1C9817731E72A2FEB84FD019583D5382 /* cqts_2.jpg in Resources */,
+				A5B16C23FF2FFF053CF37F53D0174262 /* cqts_3.jpg in Resources */,
+				BF32CC862787ABEB37D72046D53F495F /* cqts_4.jpg in Resources */,
+				E66727B74EB005FB323C1E2609DF7542 /* cqts_5.jpg in Resources */,
+				EEADFFC880A63F9274864B7AABA3A7C9 /* cqts_6.jpg in Resources */,
+				019A2F5716B63D40D34AADB94091C82F /* cqts_7.jpg in Resources */,
+				0550589F49478915FD3A50D44AC48B7D /* cqts_8.jpg in Resources */,
+				9EB1042C0BFB99C0BD1C8D1FD01E00EB /* cqts_9.jpg in Resources */,
+				F9068F020589FCDAFDD9DB7DA4CC194B /* cqts_bgCar@2x.jpg in Resources */,
+				669840F3D781933F99B30493B62C878D /* cqts_bgSky@2x.jpg in Resources */,
+				7815609BB1B4FDFA1D4353782B6620C3 /* cqts_placeholder01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1308FA0719388A686913F04EAE617A4B /* Sources */ = {
+		5872F690761A0B1F1FA67FE0DFEA9876 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				018FF8058EC5385BE7A597231435B13F /* DemoHomeViewController.m in Sources */,
-				357061190DA3CC360EEBD8E286A4C9AB /* TSButtonHomeViewController.m in Sources */,
-				324C50C44075481527EF3417BEF7FCD0 /* TSContainerViewController.m in Sources */,
-				FF01C957860F3ED90475AD49F30674EC /* TSDemo_Demo-dummy.m in Sources */,
-				A0F85DEF10DFB37706C914E55940ECE1 /* TSResourceCollectionViewController.m in Sources */,
-				D056A94ABC12825B76D5C155AA4CFA56 /* TSResourceViewController.m in Sources */,
-				AD12CDD25DE3C1B673F577B2D97E0ADE /* TSSwitchViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37E776E511EBB34E02E9CDEEA412B201 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0552E4D133476EA67B22CA3106DBE179 /* MASCompositeConstraint.m in Sources */,
-				3FB90FAB1AA49A9CABB670F07E6370A8 /* MASConstraint.m in Sources */,
-				FCAE1BAD25038119ED31D65BAE4968A6 /* MASConstraintMaker.m in Sources */,
-				D7145A527893ADD49AC7153B85ED6776 /* MASLayoutConstraint.m in Sources */,
-				4C7DDC274EE079EEEB2FF6B1444C1C32 /* Masonry-dummy.m in Sources */,
-				072679A765548DA20029F6D1C6A796D0 /* MASViewAttribute.m in Sources */,
-				E9B8A07A9A6F62667980E288EF07C6C5 /* MASViewConstraint.m in Sources */,
-				6A439AD510721E4BBCCEDEDCE8C53448 /* NSArray+MASAdditions.m in Sources */,
-				CF23910E1C5E706E619DAED0257A52C9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				EA8DC70CE3A9B19D215A0F7818B6FE64 /* View+MASAdditions.m in Sources */,
-				39E95AD7BB9365CBDE4309BC0EF594AF /* ViewController+MASAdditions.m in Sources */,
+				EE28AE70F36B41C299B3CE2389E30F1A /* MASCompositeConstraint.m in Sources */,
+				3F5F5A43516E059F3309D70A5A569B7E /* MASConstraint.m in Sources */,
+				0B617A8CDC471E2B762F97700E56CA5D /* MASConstraintMaker.m in Sources */,
+				4845B111358E6582E6DF98E0525B8657 /* MASLayoutConstraint.m in Sources */,
+				F17412176526148BB2B0B75BD312B56B /* Masonry-dummy.m in Sources */,
+				573F405610BF34F1A8A70D23315FE2DC /* MASViewAttribute.m in Sources */,
+				244761DECDB9843DF0D14358034044F1 /* MASViewConstraint.m in Sources */,
+				E003E4A0324449C1A43748DF0FF0D6E7 /* NSArray+MASAdditions.m in Sources */,
+				0C866209ABECCF8F726BBB5FFF798609 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				AC6ADF55E12271A2714166BA053B55D0 /* View+MASAdditions.m in Sources */,
+				A020472F4B2824AA47E3655168EB04DD /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,106 +1012,105 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8561CC8ECB912BBE5C07CB483E0ED112 /* Sources */ = {
+		7F387B4AEBF5CB3CF9210BD4DA1DBF4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BF468C0FF4AAFD84F3FCF57AFBF22A /* CJDealTextModel.m in Sources */,
+				FC602DD1B0AFB74BF03D408AE05A670A /* CJDealTextModelFactory.m in Sources */,
+				209F1698A14639BE57B0AD8442D1E207 /* CJUIKitAlertUtil.m in Sources */,
+				B264E474298AB555A051DADDE946463C /* CJUIKitBaseCollectionHomeViewController.m in Sources */,
+				BCF02700BE3101B41C9FAE9AA903E5FD /* CJUIKitBaseHomeViewController.m in Sources */,
+				441C3FBCE68E297B3E99CEEA632FFE91 /* CJUIKitBaseScrollViewController.m in Sources */,
+				9E06A0B8D492D426DE39DCE20F855CA2 /* CJUIKitBaseTextViewController.m in Sources */,
+				E49059C64CA21484C4C92F064F5DFC1D /* CJUIKitBaseViewController.m in Sources */,
+				D4564F23788E01FA38CA42CEA7546E2C /* CJUIKitCollectionViewCell.m in Sources */,
+				A6EDC1B0A3099D91557E7C5A61028A3B /* CJUIKitToastUtil.m in Sources */,
+				5093B195715C272C72981E1FB13872C1 /* CJValidateStringTableViewCell.m in Sources */,
+				EC7F97B726B382098E2B73ACC8DA3D86 /* CQDemoKit-dummy.m in Sources */,
+				40116B9EA35FF54D61395093688C6B13 /* CQDMModuleModel.m in Sources */,
+				8BD09A83787E6623476521E288CFF944 /* CQDMSectionDataModel+CJDealTextModel.m in Sources */,
+				E4D6580109A7BB0AE054EA96BE213FFB /* CQDMSectionDataModel.m in Sources */,
+				A1FC5D2C7726F91E94C902ABFD43A48A /* CQTSBorderStateButton.m in Sources */,
+				11698DBC3C59DB6713A7624EE2D5FCBE /* CQTSButtonFactory.m in Sources */,
+				5C4755EE6BCB5000125A121BCB1A8E93 /* CQTSContainerViewFactory.m in Sources */,
+				DA2D90E0680834D79D22BBBE35772652 /* CQTSIconDataModel.m in Sources */,
+				A6AE9ED0ACCA792F98421A8A15A6B9F9 /* CQTSIconsUtil.m in Sources */,
+				1E066CD1EF5EFD3DD7E17957BA4CC39F /* CQTSLocImageDataModel.m in Sources */,
+				CB0358ECCB75DEA9C58C9206A0D89A3C /* CQTSLocImagesUtil.m in Sources */,
+				B0755BE55BBC838195C9BF0DB6F5CF06 /* CQTSNetImageDataModel.m in Sources */,
+				78BDD1A4835A53AEA60B65E446ABB658 /* CQTSNetImagesUtil.m in Sources */,
+				C74078A1B1070DD1C00B698778C466C1 /* CQTSSwitchViewFactory.m in Sources */,
+				4CAB38C70A15B850F2861B3E50FE1BBC /* CQTSTableView.m in Sources */,
+				6DB43C4492ACFE77F05B0DCBDA687919 /* UIButton+CQTSMoreProperty.m in Sources */,
+				D0949A4A59859E3A96563EA73D6A9CBC /* UISwitch+CQTSMoreProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E63D90F6A9BDE0D056E14FF51A4679D3 /* Sources */ = {
+		A69DCEAA87714E1A3D9E5B628E75FC0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F8D54EC539FE72AA696DF5A6B53C436 /* CJDealTextModel.m in Sources */,
-				DEB50F82153E97C19229C6A062A3767E /* CJDealTextModelFactory.m in Sources */,
-				4227366C4A91C22D6E6BF2C6B20EBF51 /* CQDMSectionDataModel+CJDealTextModel.m in Sources */,
-				DAE6225938722229222017238FCEEB27 /* CJUIKitAlertUtil.m in Sources */,
-				FBC3FBCC9E7E8BC4BD2EA79A1DC2EF76 /* CJUIKitBaseCollectionHomeViewController.m in Sources */,
-				C15D89D3F43548425A0BE9FEB43E830D /* CJUIKitBaseHomeViewController.m in Sources */,
-				0673E807D566BFD4616199AFCAAB9839 /* CJUIKitBaseScrollViewController.m in Sources */,
-				DD48AB9B6C0BD1B13432A8EADA75BB3B /* CJUIKitBaseTextViewController.m in Sources */,
-				141B2BF74E49BE589DC91ABF6DEB7172 /* CJUIKitBaseViewController.m in Sources */,
-				770DED8F582FBFF0349A9E396FA45685 /* CJUIKitCollectionViewCell.m in Sources */,
-				5CDA41D2E75AF3C03D4F9C54341CCD73 /* CJUIKitToastUtil.m in Sources */,
-				B66F03B1288E2C4EB43F1B03905C4300 /* CJValidateStringTableViewCell.m in Sources */,
-				5F7DE21014EF38209A26FD81BAC03DF0 /* CQDemoKit-dummy.m in Sources */,
-				1823AAFCA59D0668700FB8769CBC75A0 /* CQDMModuleModel.m in Sources */,
-				A44F3FFE6FDFA3BE35ACA9B59F65DB43 /* CQDMSectionDataModel.m in Sources */,
-				6765126FA0DC87E6923D339F4BFBF88F /* CQTSBorderStateButton.m in Sources */,
-				7C5EACC3EAFB52A1B429B11708759ACE /* CQTSButtonFactory.m in Sources */,
-				7554BD1A3BBCB8C87CA6050DEC0D3CE9 /* CQTSContainerViewFactory.m in Sources */,
-				891752DE2BB7F77FA55AB2BDE44D30F5 /* CQTSIconDataModel.m in Sources */,
-				259A57D550D5A9E4A22787F92E66D208 /* CQTSIconsUtil.m in Sources */,
-				E85C34F1FEBD2DB1CDF9B5CC75AF06F7 /* CQTSLocImageDataModel.m in Sources */,
-				1D28CB711FA327ED555531BD1CF673A7 /* CQTSLocImagesUtil.m in Sources */,
-				932CD11D7F972B734EC8E0D33DDE2D37 /* CQTSNetImageDataModel.m in Sources */,
-				5997C43B37F343C2823DC9A8DF280F6F /* CQTSNetImagesUtil.m in Sources */,
-				832C23BB0604F877DFB7F6AD83AFBEFF /* CQTSSwitchViewFactory.m in Sources */,
-				ECB364206D77CBB8D76C5EB394894E02 /* UIButton+CQTSMoreProperty.m in Sources */,
-				07E676458C1527CD4F5D2B223CD4D2E1 /* UISwitch+CQTSMoreProperty.m in Sources */,
+				4361E3E0EEF9A31D394EB960FE8484A9 /* DemoHomeViewController.m in Sources */,
+				E0F2576F237EF11C24EED148CE7A1375 /* TSButtonHomeViewController.m in Sources */,
+				B5410D5825CA0573595D8F1AAE751009 /* TSContainerViewController.m in Sources */,
+				B9EE666919E0B842665A1E118D71DC67 /* TSDemo_Demo-dummy.m in Sources */,
+				DC644765B4B7CEB94A05292333EAB617 /* TSDemoTableViewController.m in Sources */,
+				98F6C2F36B2D25B72DA8FA7F7FC05FFB /* TSResourceCollectionViewController.m in Sources */,
+				8083BBAE924549EDC34B82AB36DDCDE5 /* TSResourceViewController.m in Sources */,
+				279E7B8D00592D612BE18DF63ECB52ED /* TSSwitchViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7DA579449633C8FB4FD72A7DE6C7FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		262F9E79EBA48C4941DB36FEDBB930EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = 4BDF83B6FDA98E41B2DC0DCC5C06BB69 /* PBXContainerItemProxy */;
-		};
-		49C9BF98C3798F562A1C5F7A0B7F31E6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CQDemoKit;
-			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
-			targetProxy = E99AAC45289D16A1855BC9F03D639571 /* PBXContainerItemProxy */;
-		};
-		55476E916ECBA8B4F4317006A09D3F87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CQDemoKit;
-			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
-			targetProxy = FEDFEB02702903021D52A450540D4785 /* PBXContainerItemProxy */;
-		};
-		8740E4B15D6623527C33A721CEB4703F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TSDemo_Demo;
-			target = A298648BD841CE3685F5460FD8E86774 /* TSDemo_Demo */;
-			targetProxy = 08745C5804F609B10DA7B0136B6B7057 /* PBXContainerItemProxy */;
-		};
-		9A146C76A27154D172FD361F96BC4B24 /* PBXTargetDependency */ = {
+		25D7D02EC48584F5B9E4AC67760B4302 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CQDemoKit-CQDemoKit";
 			target = AAC1AA156F8D03E66524B1C17710D766 /* CQDemoKit-CQDemoKit */;
-			targetProxy = A599C8FB43442D6A21A5289EB8C5331A /* PBXContainerItemProxy */;
+			targetProxy = ECFC43972545F8868B7C03BFEFFE15A6 /* PBXContainerItemProxy */;
 		};
-		CE28AEE5BFEA67449EA2E31C3F654DE8 /* PBXTargetDependency */ = {
+		3E5FADA4FAC13619F273A43FD1AAD04B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = AA645731F249D299AE48991656F8D9F6 /* PBXContainerItemProxy */;
+			targetProxy = 5FF9C882CEA6F121188F76E9774EB6EB /* PBXContainerItemProxy */;
+		};
+		4D1A619D07A499C9C6ED00A3A310570E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TSDemo_Demo;
+			target = A298648BD841CE3685F5460FD8E86774 /* TSDemo_Demo */;
+			targetProxy = B4BA1E066944E5DC60DA6C522687E591 /* PBXContainerItemProxy */;
+		};
+		4F9B3F09F065269972CBC0C5674C5936 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CQDemoKit;
+			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
+			targetProxy = 2BB1A544B379961226A7FC0D7F53E4CF /* PBXContainerItemProxy */;
+		};
+		72D49DAF2AB8ACDAFD0E9BF1FBBC2BB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CQDemoKit;
+			target = AC509E0B2457961842D06F82D4E8C691 /* CQDemoKit */;
+			targetProxy = B972DBAEF72237E1001DFB6259C41BF5 /* PBXContainerItemProxy */;
+		};
+		F0D8B40AEB2EC4E54D280828252311D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = 334783CDE83571FC7E7A5B1AC59BB7FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01BF466DF979828909788E3B523DD8F6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 320B54A485A0EB2EDA286C7CB508B79E /* CQDemoKit.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoKit";
-				IBSC_MODULE = CQDemoKit;
-				INFOPLIST_FILE = "Target Support Files/CQDemoKit/ResourceBundle-CQDemoKit-CQDemoKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = CQDemoKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		023398EFAE9DF63C706F62369F4CD1C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FFBB76AEFC1581BD4DA7C533170F6B2 /* Pods-TSDemoDemo.debug.xcconfig */;
@@ -1115,7 +1132,7 @@
 			};
 			name = Debug;
 		};
-		10A339D0E254E853C3E88391D2EF7AFF /* Release */ = {
+		097D46432176413AFC3ACF6AA941F985 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44AEC6462659DC0098D6E58E0470E73F /* Masonry.release.xcconfig */;
 			buildSettings = {
@@ -1139,9 +1156,9 @@
 			};
 			name = Release;
 		};
-		40397B740C79D4EB7C1C8DC5CF6DA486 /* Debug */ = {
+		2BEE092718BEB09555E54FFEE3DFBD27 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 320B54A485A0EB2EDA286C7CB508B79E /* CQDemoKit.debug.xcconfig */;
+			baseConfigurationReference = 2F639054E39E82B12101FF11A01DEA97 /* CQDemoKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1161,6 +1178,30 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		423F0A94ECDB8A26EE2B262689B9DBBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 546DD1253418020352216560C0BE7D51 /* TSDemo_Demo.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TSDemo_Demo/TSDemo_Demo-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TSDemo_Demo;
+				PRODUCT_NAME = TSDemo_Demo;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1222,7 +1263,7 @@
 			};
 			name = Release;
 		};
-		6AD96146C19377A1D3CCD23A02BF466D /* Debug */ = {
+		5E355ECF27E44E6622502F9E47D9D388 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72D98643BA30A79011275CBE433EF86F /* Masonry.debug.xcconfig */;
 			buildSettings = {
@@ -1331,9 +1372,26 @@
 			};
 			name = Debug;
 		};
-		850C03186B22E0CDED4DCA1A1FD0DCD6 /* Release */ = {
+		7F02A0F40E2582423E8EF9298DB35E5C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BE46A37241F632227823FBA7AEC0097 /* CQDemoKit.release.xcconfig */;
+			baseConfigurationReference = B8F783A94CF0B95630DB3B4C05E768F2 /* CQDemoKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoKit";
+				IBSC_MODULE = CQDemoKit;
+				INFOPLIST_FILE = "Target Support Files/CQDemoKit/ResourceBundle-CQDemoKit-CQDemoKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = CQDemoKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		9011653DB05FE96FF0697398834F6366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8F783A94CF0B95630DB3B4C05E768F2 /* CQDemoKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1355,50 +1413,9 @@
 			};
 			name = Release;
 		};
-		A513574D8953D0432D18C9CA3D31CAB4 /* Release */ = {
+		9016D7E3BDEA46934B92AA529A65B3B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BE46A37241F632227823FBA7AEC0097 /* CQDemoKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoKit";
-				IBSC_MODULE = CQDemoKit;
-				INFOPLIST_FILE = "Target Support Files/CQDemoKit/ResourceBundle-CQDemoKit-CQDemoKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = CQDemoKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		C6DC42E6B49BB38D8DF091534DD33F80 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E46B4E7B81BD1D1B65CA51304EC76778 /* TSDemo_Demo.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/TSDemo_Demo/TSDemo_Demo-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = TSDemo_Demo;
-				PRODUCT_NAME = TSDemo_Demo;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E1E483BEEB0FBDC46A32C87DBD78D310 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAB494BFD2E37256203F7CA03691DA56 /* TSDemo_Demo.debug.xcconfig */;
+			baseConfigurationReference = 7DF204E469559AEC56683A2365523530 /* TSDemo_Demo.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1419,14 +1436,31 @@
 			};
 			name = Debug;
 		};
+		DE0BAE9A014BCBB88E45B2C751DFBAFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F639054E39E82B12101FF11A01DEA97 /* CQDemoKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CQDemoKit";
+				IBSC_MODULE = CQDemoKit;
+				INFOPLIST_FILE = "Target Support Files/CQDemoKit/ResourceBundle-CQDemoKit-CQDemoKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = CQDemoKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C72DD177E960FD2F764A1A0B3111049 /* Build configuration list for PBXNativeTarget "TSDemo_Demo" */ = {
+		32B6677EEDC2987F661B36426F52F2AD /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1E483BEEB0FBDC46A32C87DBD78D310 /* Debug */,
-				C6DC42E6B49BB38D8DF091534DD33F80 /* Release */,
+				5E355ECF27E44E6622502F9E47D9D388 /* Debug */,
+				097D46432176413AFC3ACF6AA941F985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1440,6 +1474,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5958E7E151EAD04EDB67662E5C052E9B /* Build configuration list for PBXNativeTarget "CQDemoKit-CQDemoKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE0BAE9A014BCBB88E45B2C751DFBAFE /* Debug */,
+				7F02A0F40E2582423E8EF9298DB35E5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6670DF3AE82DA87DA1C02A16CA095755 /* Build configuration list for PBXNativeTarget "Pods-TSDemoDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1449,29 +1492,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		714163D79923158BC9A1F737A16BE250 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
+		B491EF2701CD5A2059D69D25D5F81759 /* Build configuration list for PBXNativeTarget "CQDemoKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6AD96146C19377A1D3CCD23A02BF466D /* Debug */,
-				10A339D0E254E853C3E88391D2EF7AFF /* Release */,
+				2BEE092718BEB09555E54FFEE3DFBD27 /* Debug */,
+				9011653DB05FE96FF0697398834F6366 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9667DE5082EA6FDD2FB8CE67F2CF564D /* Build configuration list for PBXNativeTarget "CQDemoKit" */ = {
+		EE79185FBF08F21DC2237EDE80DF5FE8 /* Build configuration list for PBXNativeTarget "TSDemo_Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40397B740C79D4EB7C1C8DC5CF6DA486 /* Debug */,
-				850C03186B22E0CDED4DCA1A1FD0DCD6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B94F8ADFC1F7E336B7C034881450E92B /* Build configuration list for PBXNativeTarget "CQDemoKit-CQDemoKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01BF466DF979828909788E3B523DD8F6 /* Debug */,
-				A513574D8953D0432D18C9CA3D31CAB4 /* Release */,
+				9016D7E3BDEA46934B92AA529A65B3B6 /* Debug */,
+				423F0A94ECDB8A26EE2B262689B9DBBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

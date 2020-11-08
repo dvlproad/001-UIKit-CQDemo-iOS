@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.title = NSLocalizedString(@"所有的测试图片(本地+网络)", nil);
+    self.navigationItem.title = NSLocalizedString(@"列出所有的测试图片(本地+网络)", nil);
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     // 本地图片

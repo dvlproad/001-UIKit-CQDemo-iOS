@@ -72,6 +72,14 @@ Pod::Spec.new do |s|
     end
   end
 
+  s.subspec 'BaseUIKit' do |ss|
+    ss.source_files = "CQDemoKit/BaseUIKit/**/*.{h,m}"
+    ss.dependency 'Masonry'
+  end
+
+  s.subspec 'BaseUtil' do |ss|
+    ss.source_files = "CQDemoKit/BaseUtil/**/*.{h,m}"
+  end
 
   # Demo 工程中基本都需要的 Resource
   s.subspec 'Demo_Resource' do |ss|
@@ -81,13 +89,9 @@ Pod::Spec.new do |s|
     }
   end
 
-  s.subspec 'BaseUIKit' do |ss|
-    ss.source_files = "CQDemoKit/BaseUIKit/**/*.{h,m}"
-    ss.dependency 'Masonry'
-  end
-
-  s.subspec 'BaseUtil' do |ss|
-    ss.source_files = "CQDemoKit/BaseUtil/**/*.{h,m}"
+  # 为了快速构建完整 Demo 工程提供的一些DemoView
+  s.subspec 'Demo_View' do |ss|
+    ss.source_files = "CQDemoKit/Demo_View/**/*.{h,m}"
   end
 
 

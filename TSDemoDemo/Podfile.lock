@@ -1,32 +1,34 @@
 PODS:
-  - CQDemoKit (0.5.4):
-    - CQDemoKit/BaseUIKit (= 0.5.4)
-    - CQDemoKit/BaseUtil (= 0.5.4)
-    - CQDemoKit/BaseVC (= 0.5.4)
-    - CQDemoKit/Demo_Resource (= 0.5.4)
-  - CQDemoKit/BaseUIKit (0.5.4):
+  - CQDemoKit (0.5.5):
+    - CQDemoKit/BaseUIKit (= 0.5.5)
+    - CQDemoKit/BaseUtil (= 0.5.5)
+    - CQDemoKit/BaseVC (= 0.5.5)
+    - CQDemoKit/Demo_Resource (= 0.5.5)
+    - CQDemoKit/Demo_View (= 0.5.5)
+  - CQDemoKit/BaseUIKit (0.5.5):
     - Masonry
-  - CQDemoKit/BaseUtil (0.5.4)
-  - CQDemoKit/BaseVC (0.5.4):
-    - CQDemoKit/BaseVC/Base (= 0.5.4)
-    - CQDemoKit/BaseVC/Collection (= 0.5.4)
-    - CQDemoKit/BaseVC/ScrollView (= 0.5.4)
-    - CQDemoKit/BaseVC/TableView (= 0.5.4)
-    - CQDemoKit/BaseVC/TextView (= 0.5.4)
-  - CQDemoKit/BaseVC/Base (0.5.4):
+  - CQDemoKit/BaseUtil (0.5.5)
+  - CQDemoKit/BaseVC (0.5.5):
+    - CQDemoKit/BaseVC/Base (= 0.5.5)
+    - CQDemoKit/BaseVC/Collection (= 0.5.5)
+    - CQDemoKit/BaseVC/ScrollView (= 0.5.5)
+    - CQDemoKit/BaseVC/TableView (= 0.5.5)
+    - CQDemoKit/BaseVC/TextView (= 0.5.5)
+  - CQDemoKit/BaseVC/Base (0.5.5):
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.5.4):
+  - CQDemoKit/BaseVC/Collection (0.5.5):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.5.4):
+  - CQDemoKit/BaseVC/ScrollView (0.5.5):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TableView (0.5.4):
+  - CQDemoKit/BaseVC/TableView (0.5.5):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TextView (0.5.4):
+  - CQDemoKit/BaseVC/TextView (0.5.5):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/Demo_Resource (0.5.4)
+  - CQDemoKit/Demo_Resource (0.5.5)
+  - CQDemoKit/Demo_View (0.5.5)
   - Masonry (1.1.0)
-  - TSDemo_Demo (0.5.0):
+  - TSDemo_Demo (0.5.2):
     - CQDemoKit
 
 DEPENDENCIES:
@@ -44,9 +46,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CQDemoKit: ef1c85fc48e0830a9f2a2b45a9e06b196b419e99
+  CQDemoKit: a0e3d0617c271bc5d887343db04b04237a074276
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  TSDemo_Demo: 564c2e8c3e7eaa95723cd076f3a5d5592fe50e9b
+  TSDemo_Demo: 0a96144cfc8afee68ca5f62833bebfcebf9eabfc
 
 PODFILE CHECKSUM: aa3ee9f089fe7253485c52a537f0744cabc9be5c
 

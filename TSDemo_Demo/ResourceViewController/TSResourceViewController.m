@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationItem.title = NSLocalizedString(@"测试本地图片、网络图片", nil);
     
     UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:imageView1];

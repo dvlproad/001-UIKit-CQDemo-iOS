@@ -9,13 +9,16 @@
 #import "DemoHomeViewController.h"
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
-
-#import "TSResourceViewController.h"
-#import "TSResourceCollectionViewController.h"
-
 #import "TSButtonHomeViewController.h"
 #import "TSContainerViewController.h"
 #import "TSSwitchViewController.h"
+
+
+// DemoResource
+#import "TSResourceViewController.h"
+#import "TSResourceCollectionViewController.h"
+// DemoView
+#import "TSDemoTableViewController.h"
 
 @interface DemoHomeViewController () {
     
@@ -84,25 +87,6 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
-    // Resources
-    {
-        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Resources 等";
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources";
-            module.classEntry = [TSResourceViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources All";
-            module.classEntry = [TSResourceCollectionViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        [sectionDataModels addObject:sectionDataModel];
-    }
-    
     // Button、Container、Switch
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
@@ -123,6 +107,39 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Switch";
             module.classEntry = [TSSwitchViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    
+    // DemoResource
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 DemoResource 等";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Resources";
+            module.classEntry = [TSResourceViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Resources All";
+            module.classEntry = [TSResourceCollectionViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // DemoView
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 DemoView 等";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Demo TableView";
+            module.classEntry = [TSDemoTableViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
