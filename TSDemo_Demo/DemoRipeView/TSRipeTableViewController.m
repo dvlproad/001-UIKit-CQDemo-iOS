@@ -1,27 +1,27 @@
 //
-//  TSDemoTableViewController.m
+//  TSRipeTableViewController.m
 //  TSDemo_Demo
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "TSDemoTableViewController.h"
-#import <CQDemoKit/CQTSTableView.h>
+#import "TSRipeTableViewController.h"
+#import <CQDemoKit/CQTSRipeTableView.h>
 
-@interface TSDemoTableViewController ()
+@interface TSRipeTableViewController ()
 
 @end
 
-@implementation TSDemoTableViewController
+@implementation TSRipeTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor orangeColor];
-    self.navigationItem.title = NSLocalizedString(@"测试CQTSTableView", nil);
+    self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeTableView", nil);
     
-    CQTSTableView *tableView = [[CQTSTableView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
+    CQTSRipeTableView *tableView = [[CQTSRipeTableView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
     tableView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:tableView];
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {

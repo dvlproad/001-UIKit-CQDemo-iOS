@@ -1,1 +1,1 @@
-../../../../../TSDemo_Demo/ResourceViewController/TSResourceCollectionViewController.h
+../../../../../TSDemo_Demo/DemoResource/TSResourceCollectionViewController.h

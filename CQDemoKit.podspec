@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
   #上传方法：pod trunk push CQDemoKit.podspec --allow-warnings
   s.name         = "CQDemoKit"
-  s.version      = "0.5.5"
+  s.version      = "0.5.6"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.5" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.6" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
     ss.source_files = "CQDemoKit/BaseUtil/**/*.{h,m}"
   end
 
-  # Demo 工程中基本都需要的 Resource
+  # Demo 工程中基本都需要的 DemoResource
   s.subspec 'Demo_Resource' do |ss|
     ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
     ss.resource_bundle = {
@@ -89,9 +89,11 @@ Pod::Spec.new do |s|
     }
   end
 
-  # 为了快速构建完整 Demo 工程提供的一些DemoView
-  s.subspec 'Demo_View' do |ss|
-    ss.source_files = "CQDemoKit/Demo_View/**/*.{h,m}"
+  # 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
+  s.subspec 'Demo_RipeView' do |ss|
+    ss.source_files = "CQDemoKit/Demo_RipeView/**/*.{h,m}"
+    ss.dependency 'CQDemoKit/BaseUtil'    # 因为 CQTSRipeButton 需要使用 CJUIKitToastUtil
+    ss.dependency 'CQDemoKit/BaseUIKit'   # 因为 CQTSRipeButton 需要使用 CQTSButtonFactory
   end
 
 

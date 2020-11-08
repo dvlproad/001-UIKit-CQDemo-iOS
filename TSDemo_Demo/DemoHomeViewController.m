@@ -18,7 +18,8 @@
 #import "TSResourceViewController.h"
 #import "TSResourceCollectionViewController.h"
 // DemoView
-#import "TSDemoTableViewController.h"
+#import "TSRipeButtonViewController.h"
+#import "TSRipeTableViewController.h"
 
 @interface DemoHomeViewController () {
     
@@ -135,11 +136,17 @@
     // DemoView
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 DemoView 等";
+        sectionDataModel.theme = @"测试 DemoRipeView 等";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo TableView";
-            module.classEntry = [TSDemoTableViewController class];
+            module.title = @"Demo RipeButton";
+            module.classEntry = [TSRipeButtonViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Demo RipeTableView";
+            module.classEntry = [TSRipeTableViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

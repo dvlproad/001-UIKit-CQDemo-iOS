@@ -1,17 +1,17 @@
 //
-//  CQTSTableView.h
+//  CQTSRipeTableView.h
 //  CQDemoKit
 //
 //  Created by ciyouzen on 7/9/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
-//  为了快速构建完整 Demo 工程提供的TableView
+//  为了快速构建完整 Demo 工程提供的成熟的TableView(已含内容和事件)
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CQTSTableView : UITableView {
+@interface CQTSRipeTableView : UITableView {
     
 }
 
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 
-// 初始化示例 CQTSTableView *tableView = [[CQTSTableView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
+// 初始化示例 CQTSRipeTableView *tableView = [[CQTSRipeTableView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
 
 @end
 

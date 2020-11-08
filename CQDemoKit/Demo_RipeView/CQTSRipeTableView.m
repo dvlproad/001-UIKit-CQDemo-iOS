@@ -1,14 +1,14 @@
 //
-//  CQTSTableView.m
+//  CQTSRipeTableView.m
 //  CQDemoKit
 //
 //  Created by ciyouzen on 7/9/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
-#import "CQTSTableView.h"
+#import "CQTSRipeTableView.h"
 
-@interface CQTSTableView () <UITableViewDataSource, UITableViewDelegate> {
+@interface CQTSRipeTableView () <UITableViewDataSource, UITableViewDelegate> {
     
 }
 @property (nonatomic, strong) UITableView *tableView;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation CQTSTableView
+@implementation CQTSRipeTableView
 
 
 /*
