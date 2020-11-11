@@ -2,8 +2,11 @@ Pod::Spec.new do |s|
   #查看本地已同步的pod库：pod repo
   #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
   #上传方法：pod trunk push CQDemoKit.podspec --allow-warnings
+  # 关于resource：
+  # s.resources = 会拷贝到mainBundle下
+  # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.5.6"
+  s.version      = "0.5.8"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -31,7 +34,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.6" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.8" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -70,6 +73,13 @@ Pod::Spec.new do |s|
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 已含 CQDMSectionDataModel 和 CQDMModuleModel
       sss.dependency 'CQDemoKit/BaseUtil'
     end
+
+    ss.subspec 'TabBar' do |sss|
+      sss.source_files = "CQDemoKit/BaseVC/TabBar/**/*.{h,m}"
+      sss.resources = ['CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,,jpeg}']
+      # s.resources = 会拷贝到mainBundle下
+      # s.resource_bundle = 会放在指定的customBundle下
+    end
   end
 
   s.subspec 'BaseUIKit' do |ss|
@@ -87,6 +97,8 @@ Pod::Spec.new do |s|
     ss.resource_bundle = {
       'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
     }
+    # s.resources = 会拷贝到mainBundle下
+    # s.resource_bundle = 会放在指定的customBundle下
   end
 
   # 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)

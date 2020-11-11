@@ -126,7 +126,7 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources All";
+            module.title = @"Resources All--Collection样式";
             module.classEntry = [TSResourceCollectionViewController class];
             [sectionDataModel.values addObject:module];
         }

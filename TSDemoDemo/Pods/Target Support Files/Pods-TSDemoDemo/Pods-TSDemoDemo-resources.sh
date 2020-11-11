@@ -97,9 +97,19 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-calendar.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-folder.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-home.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-menu.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-settings.png"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CQDemoKit/CQDemoKit.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-calendar.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-folder.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-home.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-menu.png"
+  install_resource "${PODS_ROOT}/../../CQDemoKit/BaseVC/TabBar/Resources/icons8-settings.png"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CQDemoKit/CQDemoKit.bundle"
 fi
 
