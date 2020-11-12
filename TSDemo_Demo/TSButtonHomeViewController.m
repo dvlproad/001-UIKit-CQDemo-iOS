@@ -58,6 +58,38 @@
     }];
     
     
+#pragma mark normalSelectedButton View
+    UIButton *normalSelectedButton1 = [CQTSButtonFactory submitButtonWithSubmitTitle:@"提交" editTitle:@"修改" showEditTitle:NO clickSubmitTitleHandle:nil clickEditTitleHandle:nil];
+//    [normalSelectedButton1 setTitle:@"修改(未选中，可点)" forState:UIControlStateNormal];
+    normalSelectedButton1.selected = false;
+    normalSelectedButton1.enabled = true;
+
+    UIButton *normalSelectedButton2 = [CQTSButtonFactory submitButtonWithSubmitTitle:@"提交" editTitle:@"修改" showEditTitle:NO clickSubmitTitleHandle:nil clickEditTitleHandle:nil];
+//    [normalSelectedButton2 setTitle:@"修改(未选中，不可点)" forState:UIControlStateNormal];
+    normalSelectedButton2.selected = false;
+    normalSelectedButton2.enabled = false;
+
+    UIButton *normalSelectedButton3 = [CQTSButtonFactory submitButtonWithSubmitTitle:@"提交" editTitle:@"修改" showEditTitle:NO clickSubmitTitleHandle:nil clickEditTitleHandle:nil];
+//    [normalSelectedButton3 setTitle:@"提交(选中，可点)" forState:UIControlStateNormal];
+    normalSelectedButton3.selected = true;
+    normalSelectedButton3.enabled = true;
+
+    UIButton *normalSelectedButton4 = [CQTSButtonFactory submitButtonWithSubmitTitle:@"提交" editTitle:@"修改" showEditTitle:NO clickSubmitTitleHandle:nil clickEditTitleHandle:nil];
+//    [normalSelectedButton4 setTitle:@"提交(选中，不可点)" forState:UIControlStateNormal];
+    normalSelectedButton4.selected = true;
+    normalSelectedButton4.enabled = false;
+
+    
+    UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4]];
+   [self.view addSubview:normalSelectedButtonView];
+   [normalSelectedButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
+       make.left.mas_equalTo(buttonsView);
+       make.centerX.mas_equalTo(buttonsView);
+       make.top.mas_equalTo(buttonsView.mas_bottom).mas_offset(40);
+       make.height.mas_equalTo(4*44+3*15+10+10);
+   }];
+    
+    
 //    [self updateScrollHeightWithBottomInterval:40 accordingToLastBottomView:submitButton];
 }
 

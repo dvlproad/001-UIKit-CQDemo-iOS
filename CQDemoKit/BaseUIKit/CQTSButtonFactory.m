@@ -188,7 +188,7 @@
     button.cjSelectedBorderColor = themeColor;
 //    button.cjSelectedDisabledBGColor = themeOppositeDisabledColor;
     UIImage *selectedDisabledBGImage = cqts_buttonBGImage(themeOppositeDisabledColor);
-    [button setBackgroundImage:selectedDisabledBGImage forState:UIControlStateSelected];
+    [button setBackgroundImage:selectedDisabledBGImage forState:UIControlStateSelected | UIControlStateDisabled];
     button.cjSelectedDisabledBorderColor = themeDisabledColor;
     
     return button;
