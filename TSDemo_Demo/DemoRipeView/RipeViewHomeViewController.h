@@ -1,5 +1,5 @@
 //
-//  DemoHomeViewController.h
+//  RipeViewHomeViewController.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/2/25.
@@ -8,7 +8,7 @@
 
 #import <CQDemoKit/CJUIKitBaseHomeViewController.h>
 
-@interface DemoHomeViewController : CJUIKitBaseHomeViewController {
+@interface RipeViewHomeViewController : CJUIKitBaseHomeViewController {
     
 }
 

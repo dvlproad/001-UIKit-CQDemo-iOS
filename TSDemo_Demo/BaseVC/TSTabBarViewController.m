@@ -7,7 +7,9 @@
 //
 
 #import "TSTabBarViewController.h"
-#import "DemoHomeViewController.h"
+#import "BaseUIHomeViewController.h"
+#import "UtilHomeViewController.h"
+#import "RipeViewHomeViewController.h"
 
 @interface TSTabBarViewController ()
 
@@ -22,14 +24,20 @@
     NSMutableArray<CQDMTabBarModel *> *tabBarModels = [[NSMutableArray alloc] init];
     {
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
-        tabBarModel.title = NSLocalizedString(@"首页1", nil);
-        tabBarModel.classEntry = [DemoHomeViewController class];
+        tabBarModel.title = NSLocalizedString(@"BaseUI", nil);
+        tabBarModel.classEntry = [BaseUIHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     {
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
-        tabBarModel.title = NSLocalizedString(@"首页2", nil);
-        tabBarModel.classEntry = [DemoHomeViewController class];
+        tabBarModel.title = NSLocalizedString(@"Util", nil);
+        tabBarModel.classEntry = [UtilHomeViewController class];
+        [tabBarModels addObject:tabBarModel];
+    }
+    {
+        CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
+        tabBarModel.title = NSLocalizedString(@"RipeView", nil);
+        tabBarModel.classEntry = [RipeViewHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     

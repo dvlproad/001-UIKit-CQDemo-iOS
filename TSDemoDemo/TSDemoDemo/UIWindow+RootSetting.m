@@ -13,7 +13,7 @@
 - (void)settingRoot {
     [self setBackgroundColor:[UIColor whiteColor]];
     // 只直接测试某个页面
-//    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"DemoHomeViewController") alloc] init]];
+//    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"BaseUIHomeViewController") alloc] init]];
     UIViewController *rootViewController = [[NSClassFromString(@"TSTabBarViewController") alloc] init];
     
     self.rootViewController = rootViewController;

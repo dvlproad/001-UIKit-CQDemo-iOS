@@ -1,34 +1,34 @@
 PODS:
-  - CQDemoKit (0.5.8):
-    - CQDemoKit/BaseUIKit (= 0.5.8)
-    - CQDemoKit/BaseUtil (= 0.5.8)
-    - CQDemoKit/BaseVC (= 0.5.8)
-    - CQDemoKit/Demo_Resource (= 0.5.8)
-    - CQDemoKit/Demo_RipeView (= 0.5.8)
-  - CQDemoKit/BaseUIKit (0.5.8):
+  - CQDemoKit (0.5.9):
+    - CQDemoKit/BaseUIKit (= 0.5.9)
+    - CQDemoKit/BaseUtil (= 0.5.9)
+    - CQDemoKit/BaseVC (= 0.5.9)
+    - CQDemoKit/Demo_Resource (= 0.5.9)
+    - CQDemoKit/Demo_RipeView (= 0.5.9)
+  - CQDemoKit/BaseUIKit (0.5.9):
     - Masonry
-  - CQDemoKit/BaseUtil (0.5.8)
-  - CQDemoKit/BaseVC (0.5.8):
-    - CQDemoKit/BaseVC/Base (= 0.5.8)
-    - CQDemoKit/BaseVC/Collection (= 0.5.8)
-    - CQDemoKit/BaseVC/ScrollView (= 0.5.8)
-    - CQDemoKit/BaseVC/TabBar (= 0.5.8)
-    - CQDemoKit/BaseVC/TableView (= 0.5.8)
-    - CQDemoKit/BaseVC/TextView (= 0.5.8)
-  - CQDemoKit/BaseVC/Base (0.5.8):
+  - CQDemoKit/BaseUtil (0.5.9)
+  - CQDemoKit/BaseVC (0.5.9):
+    - CQDemoKit/BaseVC/Base (= 0.5.9)
+    - CQDemoKit/BaseVC/Collection (= 0.5.9)
+    - CQDemoKit/BaseVC/ScrollView (= 0.5.9)
+    - CQDemoKit/BaseVC/TabBar (= 0.5.9)
+    - CQDemoKit/BaseVC/TableView (= 0.5.9)
+    - CQDemoKit/BaseVC/TextView (= 0.5.9)
+  - CQDemoKit/BaseVC/Base (0.5.9):
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.5.8):
+  - CQDemoKit/BaseVC/Collection (0.5.9):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.5.8):
+  - CQDemoKit/BaseVC/ScrollView (0.5.9):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TabBar (0.5.8)
-  - CQDemoKit/BaseVC/TableView (0.5.8):
+  - CQDemoKit/BaseVC/TabBar (0.5.9)
+  - CQDemoKit/BaseVC/TableView (0.5.9):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TextView (0.5.8):
+  - CQDemoKit/BaseVC/TextView (0.5.9):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/Demo_Resource (0.5.8)
-  - CQDemoKit/Demo_RipeView (0.5.8):
+  - CQDemoKit/Demo_Resource (0.5.9)
+  - CQDemoKit/Demo_RipeView (0.5.9):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
   - Masonry (1.1.0)
@@ -50,7 +50,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CQDemoKit: aa36fe581bb11b1e76c997ef851de11cc9c7f8f9
+  CQDemoKit: ef311a1fbb8ba1c58d5974da948ddaceac5ac245
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TSDemo_Demo: 0a96144cfc8afee68ca5f62833bebfcebf9eabfc
 

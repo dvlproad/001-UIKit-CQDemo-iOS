@@ -1,42 +1,57 @@
 //
-//  DemoHomeViewController.m
+//  UtilHomeViewController.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "DemoHomeViewController.h"
+#import "UtilHomeViewController.h"
+#import <CQDemoKit/CJUIKitRandomUtil.h>
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
-#import "TSButtonHomeViewController.h"
-#import "TSContainerViewController.h"
-#import "TSSwitchViewController.h"
 
-
-// DemoResource
-#import "TSResourceViewController.h"
-#import "TSResourceCollectionViewController.h"
-// DemoView
-#import "TSRipeButtonViewController.h"
-#import "TSRipeTableViewController.h"
-
-@interface DemoHomeViewController () {
+@interface UtilHomeViewController () {
     
 }
 
 @end
 
-@implementation DemoHomeViewController
+@implementation UtilHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = NSLocalizedString(@"Demo首页", nil); //知识点:使得tabBar中的title可以和显示在顶部的title保持各自
+    self.navigationItem.title = NSLocalizedString(@"Util首页", nil);
     
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
+    
+    // Random
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试随机Random等";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"随机颜色";
+            module.actionBlock = ^{
+                self.tableView.backgroundColor = cqtsRandomColor();
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"随机字符串";
+            module.actionBlock = ^{
+                NSString *randomString = cqtsRandomString(40, NO);
+                NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
+                [CJUIKitToastUtil showMessage:message];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
     
     // Overlay
     {
@@ -83,70 +98,6 @@
                     [CJUIKitToastUtil showMessage:message];
                 }];
             };
-            [sectionDataModel.values addObject:module];
-        }
-        [sectionDataModels addObject:sectionDataModel];
-    }
-    
-    // Button、Container、Switch
-    {
-        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Button、Container、Switch 等";
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Button";
-            module.classEntry = [TSButtonHomeViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Container";
-            module.classEntry = [TSContainerViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Switch";
-            module.classEntry = [TSSwitchViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        [sectionDataModels addObject:sectionDataModel];
-    }
-    
-    
-    // DemoResource
-    {
-        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 DemoResource 等";
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources";
-            module.classEntry = [TSResourceViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources All--Collection样式";
-            module.classEntry = [TSResourceCollectionViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        [sectionDataModels addObject:sectionDataModel];
-    }
-    
-    // DemoView
-    {
-        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 DemoRipeView 等";
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo RipeButton";
-            module.classEntry = [TSRipeButtonViewController class];
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo RipeTableView";
-            module.classEntry = [TSRipeTableViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
