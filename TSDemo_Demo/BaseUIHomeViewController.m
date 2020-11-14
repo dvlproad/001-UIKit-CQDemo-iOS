@@ -10,6 +10,7 @@
 #import "TSButtonHomeViewController.h"
 #import "TSContainerViewController.h"
 #import "TSSwitchViewController.h"
+#import <CQDemoKit/CJUIKitRandomUtil.h>
 
 @interface BaseUIHomeViewController () {
     
