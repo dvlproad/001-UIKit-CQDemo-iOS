@@ -48,7 +48,7 @@
             dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
             dataModel.name = [NSString stringWithFormat:@"%zd:%@", i, selString];
         }
-        
+        dataModel.badgeCount = i;
         
         
         [dataModels addObject:dataModel];
@@ -80,6 +80,7 @@
         CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
         dataModel.name = @"3XX信";
         dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl3];
+        dataModel.badgeCount = 0;
         [dataModels addObject:dataModel];
     }
     {
@@ -107,6 +108,7 @@
         CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
         dataModel.name = @"7XX福";
         dataModel.imageUrl = [CQTSNetImagesUtil cjts_imageUrl7];
+        dataModel.badgeCount = 1;
         [dataModels addObject:dataModel];
     }
     {
