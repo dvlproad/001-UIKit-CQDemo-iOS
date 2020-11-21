@@ -1,57 +1,31 @@
 //
-//  UtilHomeViewController.m
+//  UIUtilHomeViewController.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "UtilHomeViewController.h"
-#import <CQDemoKit/CJUIKitRandomUtil.h>
+#import "UIUtilHomeViewController.h"
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
 
-@interface UtilHomeViewController () {
+@interface UIUtilHomeViewController () {
     
 }
 
 @end
 
-@implementation UtilHomeViewController
+@implementation UIUtilHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = NSLocalizedString(@"Util首页", nil);
+    self.navigationItem.title = NSLocalizedString(@"UI-Util首页", nil);
     
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
-    
-    // Random
-    {
-        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试随机Random等";
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"随机颜色";
-            module.actionBlock = ^{
-                self.tableView.backgroundColor = cqtsRandomColor();
-            };
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"随机字符串";
-            module.actionBlock = ^{
-                NSString *randomString = cqtsRandomString(40, NO);
-                NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
-                [CJUIKitToastUtil showMessage:message];
-            };
-            [sectionDataModel.values addObject:module];
-        }
-        [sectionDataModels addObject:sectionDataModel];
-    }
     
     // Overlay
     {

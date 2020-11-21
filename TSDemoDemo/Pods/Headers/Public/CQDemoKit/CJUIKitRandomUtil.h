@@ -1,1 +1,1 @@
-../../../../../CQDemoKit/BaseUtil/CJUIKitRandomUtil.h
+../../../../../CQDemoKit/Demo_Resource/String/CJUIKitRandomUtil.h

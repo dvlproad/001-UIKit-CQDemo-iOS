@@ -1,5 +1,5 @@
 //
-//  UtilHomeViewController.h
+//  UIUtilHomeViewController.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/2/25.
@@ -8,7 +8,7 @@
 
 #import <CQDemoKit/CJUIKitBaseHomeViewController.h>
 
-@interface UtilHomeViewController : CJUIKitBaseHomeViewController {
+@interface UIUtilHomeViewController : CJUIKitBaseHomeViewController {
     
 }
 

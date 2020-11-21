@@ -1,1 +1,1 @@
-../../../../../TSDemo_Demo/BaseVC/TSTabBarViewController.h
+../../../../../TSDemo_Demo/TSTabBarViewController.h

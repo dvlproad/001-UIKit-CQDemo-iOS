@@ -213,7 +213,7 @@
 }
 
 + (NSString *)cjts_imageUrl2 {
-    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599856694757&di=e176a8525049aea8122d59eb7769f49b&imgtype=0&src=http%3A%2F%2Fimg.tupianzj.com%2Fuploads%2FBizhi%2Fdm42_1024.jpg";
+    return @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605960332804&di=d028807af23144ec89e6e76139d2bfe0&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190427%2Ff8b9019973a74483b761fbea41ff9229.jpeg";
 }
 
 + (NSString *)cjts_imageUrl3 {

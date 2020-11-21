@@ -1,1 +1,1 @@
-../../../../../TSDemo_Demo/TSSwitchViewController.h
+../../../../../TSDemo_Demo/UI/TSSwitchViewController.h

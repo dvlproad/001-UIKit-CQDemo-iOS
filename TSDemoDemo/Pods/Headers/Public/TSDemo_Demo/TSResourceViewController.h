@@ -1,1 +1,1 @@
-../../../../../TSDemo_Demo/DemoResource/TSResourceViewController.h
+../../../../../TSDemo_Demo/Ripe/DemoResource/TSResourceViewController.h

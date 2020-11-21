@@ -7,6 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
+/// 想要输出的随机字符的类型
+typedef NS_ENUM(NSUInteger, CQRipeStringType) {
+    CQRipeStringTypeNone,   // 中英文+数字任意
+    CQRipeStringTypeNumber, // 数字
+    CQRipeStringTypeEnglish,// 英文字母
+    CQRipeStringTypeChinese,// 中文
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CJUIKitRandomUtil : NSObject
@@ -20,15 +28,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 UIKIT_EXTERN UIColor *cqtsRandomColor();
 
+
 /*
  *  获取随机的字符串
  *
  *  @param maxLength    随机字符串的最大长度
  *  @param fixMaxLength 是否固定为最大长度
+ *  @param stringType   想要输出的随机字符的类型
  *
  *  @return 随机的字符串
  */
-UIKIT_EXTERN NSString *cqtsRandomString(NSInteger maxLength, BOOL fixMaxLength);
+NSString *cqtsRandomString(NSInteger maxLength, BOOL fixMaxLength, CQRipeStringType stringType);
 
 @end
 
