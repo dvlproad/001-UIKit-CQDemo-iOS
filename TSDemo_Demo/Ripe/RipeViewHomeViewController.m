@@ -61,7 +61,7 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"随机字符串(中英文+数字)";
             module.actionBlock = ^{
-                NSString *randomString = cqtsRandomString(40, NO, CQRipeStringTypeNone);
+                NSString *randomString = cqtsRandomString(1, 40, CQRipeStringTypeNone);
                 NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
                 [CJUIKitToastUtil showMessage:message];
             };
@@ -71,7 +71,7 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"随机字符串(数字)";
             module.actionBlock = ^{
-                NSString *randomString = cqtsRandomString(40, NO, CQRipeStringTypeNumber);
+                NSString *randomString = cqtsRandomString(1, 40, CQRipeStringTypeNumber);
                 NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
                 [CJUIKitToastUtil showMessage:message];
             };
@@ -81,7 +81,7 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"随机字符串(英文)";
             module.actionBlock = ^{
-                NSString *randomString = cqtsRandomString(40, NO, CQRipeStringTypeEnglish);
+                NSString *randomString = cqtsRandomString(1, 40, CQRipeStringTypeEnglish);
                 NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
                 [CJUIKitToastUtil showMessage:message];
             };
@@ -91,7 +91,7 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"随机字符串(中文)";
             module.actionBlock = ^{
-                NSString *randomString = cqtsRandomString(40, NO, CQRipeStringTypeChinese);
+                NSString *randomString = cqtsRandomString(1, 40, CQRipeStringTypeChinese);
                 NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
                 [CJUIKitToastUtil showMessage:message];
             };
