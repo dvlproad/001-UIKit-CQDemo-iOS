@@ -1,17 +1,17 @@
 //
-//  CJUIKitBaseTextViewController.h
+//  CJUIKitBaseBigTextViewController.h
 //  CJFoundationDemo
 //
 //  Created by ciyouzen on 2016/3/26.
 //  Copyright © 2016年 dvlproad. All rights reserved.
 //
-//  Cell视图【单行排列】的文本列表控制器
+//  Cell视图【多行排列】的文本列表控制器
 
 #import "CJUIKitBaseViewController.h"
 #import "CQDMSectionDataModel.h"
 #import "CQDMSectionDataModel+CJDealTextModel.h"
 
-@interface CJUIKitBaseTextViewController : CJUIKitBaseViewController {
+@interface CJUIKitBaseBigTextViewController : CJUIKitBaseViewController {
     
 }
 @property (nonatomic, strong) UITableView *tableView;

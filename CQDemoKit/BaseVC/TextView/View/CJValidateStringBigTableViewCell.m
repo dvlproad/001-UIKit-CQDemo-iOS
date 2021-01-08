@@ -1,20 +1,25 @@
 //
-//  CJValidateStringTableViewCell.m
+//  CJValidateStringBigTableViewCell.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/12/29.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJValidateStringTableViewCell.h"
+#import "CJValidateStringBigTableViewCell.h"
 
-@interface CJValidateStringTableViewCell () {
+@interface CJValidateStringBigTableViewCell () {
     
 }
 
 @end
 
-@implementation CJValidateStringTableViewCell
+@implementation CJValidateStringBigTableViewCell
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -45,20 +50,33 @@
 - (void)setupViews {
     self.backgroundColor = [UIColor clearColor];
     
-    UIView *parentView = self.contentView;
-    
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectZero];
-    textField.font = [UIFont systemFontOfSize:14];
-    textField.minimumFontSize = 6;
-    [textField addTarget:self action:@selector(__textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    [parentView addSubview:textField];
-    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(parentView).mas_offset(5);
-        //make.width.mas_equalTo(125);
-        make.centerY.mas_equalTo(parentView);
-        make.top.mas_equalTo(parentView).mas_offset(5);
+    //UIView *parentView = self.contentView;
+    UIView *container = [UIView new];
+    container.backgroundColor = [UIColor lightGrayColor];
+    [self.contentView addSubview:container];
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.contentView);
+        make.top.mas_equalTo(self.contentView).mas_offset(5);
+        make.left.mas_equalTo(self.contentView).mas_offset(5);
     }];
-    self.textField = textField;
+    UIView *parentView = container;
+    
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectZero];
+    textView.font = [UIFont systemFontOfSize:14];
+//    textField.minimumFontSize = 6;
+//    [textField addTarget:self action:@selector(__textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(__textViewDidChange)
+                                                 name:UITextViewTextDidChangeNotification
+                                               object:self];
+    [parentView addSubview:textView];
+    [textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(parentView);
+        make.centerX.mas_equalTo(parentView);
+        make.height.mas_equalTo(60);
+        make.top.mas_equalTo(parentView);
+    }];
+    self.textView = textView;
     
     
     UIButton *validateButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -70,26 +88,26 @@
     [validateButton addTarget:self action:@selector(validateAction) forControlEvents:UIControlEventTouchUpInside];
     [parentView addSubview:validateButton];
     [validateButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(textField.mas_right).offset(0);
+        make.left.mas_equalTo(textView);
         make.width.mas_equalTo(88);
-        make.centerY.mas_equalTo(parentView);
-        make.top.mas_equalTo(parentView).mas_offset(5);
+        make.height.mas_equalTo(22);
+        make.top.mas_equalTo(textView.mas_bottom);
     }];
     self.validateButton = validateButton;
     
     
     UILabel *resultLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    resultLabel.numberOfLines = 0;
     resultLabel.backgroundColor = [UIColor orangeColor];
     resultLabel.textColor = [UIColor lightGrayColor];
     resultLabel.textAlignment = NSTextAlignmentLeft;
     resultLabel.font = [UIFont systemFontOfSize:14];
     [parentView addSubview:resultLabel];
     [resultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(validateButton.mas_right).mas_offset(5);
-        make.right.mas_equalTo(parentView).mas_offset(-5);
-        make.centerY.mas_equalTo(parentView);
-        make.top.mas_equalTo(parentView).mas_offset(5);
-//        make.width.equalTo(@100);
+        make.left.mas_equalTo(textView);
+        make.right.mas_equalTo(textView);
+        make.top.mas_equalTo(validateButton.mas_bottom);
+        make.bottom.mas_equalTo(parentView);
     }];
     self.resultLabel = resultLabel;
 }
@@ -114,9 +132,9 @@
 
 
 #pragma mark - Private Method
-- (void)__textFieldDidChange:(UITextField *)textField {
-    //NSLog(@"textField内容改变了:%@", textField.text);
-    !self.textDidChangeBlock ?: self.textDidChangeBlock(textField.text);
+- (void)__textViewDidChange:(UITextView *)textView {
+    //NSLog(@"textField内容改变了:%@", textView.text);
+    !self.textDidChangeBlock ?: self.textDidChangeBlock(textView.text);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

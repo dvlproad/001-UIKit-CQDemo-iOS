@@ -8,6 +8,7 @@
 
 #import "TSTabBarViewController.h"
 #import "BaseUIHomeViewController.h"
+#import "BaseVCHomeViewController.h"
 #import "UIUtilHomeViewController.h"
 #import "RipeViewHomeViewController.h"
 
@@ -26,6 +27,12 @@
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"BaseUI", nil);
         tabBarModel.classEntry = [BaseUIHomeViewController class];
+        [tabBarModels addObject:tabBarModel];
+    }
+    {
+        CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
+        tabBarModel.title = NSLocalizedString(@"BaseVC", nil);
+        tabBarModel.classEntry = [BaseVCHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     {
