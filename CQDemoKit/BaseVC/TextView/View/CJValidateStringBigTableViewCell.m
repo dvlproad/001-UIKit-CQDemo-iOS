@@ -11,6 +11,7 @@
 @interface CJValidateStringBigTableViewCell () {
     
 }
+@property (nonatomic, strong) UIView *container;
 
 @end
 
@@ -37,12 +38,12 @@
 }
 
 #pragma mark - Setter
-- (void)setFixResultLableWidth:(CGFloat)fixResultLableWidth {
-    _fixResultLableWidth = fixResultLableWidth;
+- (void)setFixTextViewHeight:(CGFloat)fixTextViewHeight {
+    _fixTextViewHeight = fixTextViewHeight;
     
-    if (fixResultLableWidth > 20) {
-        [self.resultLabel mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.width.equalTo(@(fixResultLableWidth));
+    if (fixTextViewHeight > 44) {
+        [self.textView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@(fixTextViewHeight));
         }];
     }
 }
@@ -52,16 +53,18 @@
     
     //UIView *parentView = self.contentView;
     UIView *container = [UIView new];
-    container.backgroundColor = [UIColor lightGrayColor];
     [self.contentView addSubview:container];
     [container mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(self.contentView);
-        make.top.mas_equalTo(self.contentView).mas_offset(5);
-        make.left.mas_equalTo(self.contentView).mas_offset(5);
+        make.centerX.mas_equalTo(self.contentView);
+        make.centerY.mas_equalTo(self.contentView);
+        make.top.mas_equalTo(self.contentView).mas_offset(10);
+        make.left.mas_equalTo(self.contentView).mas_offset(10);
     }];
+    self.container = container;
     UIView *parentView = container;
     
     UITextView *textView = [[UITextView alloc] initWithFrame:CGRectZero];
+    textView.backgroundColor = [UIColor clearColor];
     textView.font = [UIFont systemFontOfSize:14];
 //    textField.minimumFontSize = 6;
 //    [textField addTarget:self action:@selector(__textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
@@ -73,32 +76,34 @@
     [textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(parentView);
         make.centerX.mas_equalTo(parentView);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(44);
         make.top.mas_equalTo(parentView);
     }];
     self.textView = textView;
     
     
     UIButton *validateButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [validateButton setBackgroundColor:[UIColor colorWithRed:0.4 green:0.3 blue:0.4 alpha:0.5]];
-    [validateButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [validateButton.titleLabel setFont:[UIFont systemFontOfSize:16]];
+    validateButton.layer.cornerRadius = 5;
+    validateButton.layer.masksToBounds = YES;
+    [validateButton setBackgroundColor:[UIColor orangeColor]];
+    [validateButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    [validateButton.titleLabel setFont:[UIFont boldSystemFontOfSize:16]];
     [validateButton.titleLabel setMinimumScaleFactor:0.4];
     [validateButton.titleLabel setAdjustsFontSizeToFitWidth:YES];
     [validateButton addTarget:self action:@selector(validateAction) forControlEvents:UIControlEventTouchUpInside];
     [parentView addSubview:validateButton];
     [validateButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(textView);
-        make.width.mas_equalTo(88);
+        make.left.mas_equalTo(textView).mas_offset(10);
+        make.centerX.mas_equalTo(textView);
         make.height.mas_equalTo(22);
-        make.top.mas_equalTo(textView.mas_bottom);
+        make.top.mas_equalTo(textView.mas_bottom).mas_offset(10);
     }];
     self.validateButton = validateButton;
     
     
     UILabel *resultLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     resultLabel.numberOfLines = 0;
-    resultLabel.backgroundColor = [UIColor orangeColor];
+    resultLabel.backgroundColor = [UIColor clearColor];
     resultLabel.textColor = [UIColor lightGrayColor];
     resultLabel.textAlignment = NSTextAlignmentLeft;
     resultLabel.font = [UIFont systemFontOfSize:14];
@@ -106,8 +111,8 @@
     [resultLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(textView);
         make.right.mas_equalTo(textView);
-        make.top.mas_equalTo(validateButton.mas_bottom);
-        make.bottom.mas_equalTo(parentView);
+        make.top.mas_equalTo(validateButton.mas_bottom).mas_offset(10);
+        make.bottom.mas_equalTo(parentView).mas_offset(-10);
     }];
     self.resultLabel = resultLabel;
 }
@@ -127,7 +132,7 @@
         validateSuccess = self.validateHandle(self, isAutoExec);
     }
     
-    self.resultLabel.backgroundColor = validateSuccess ? [UIColor greenColor] : [UIColor redColor];
+    self.container.backgroundColor = validateSuccess ? [UIColor greenColor] : [UIColor redColor];
 }
 
 

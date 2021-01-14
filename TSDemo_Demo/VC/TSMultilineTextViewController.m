@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = NSLocalizedString(@"Cell视图【多行排列】的文本列表控制器的使用示例", nil);
-    self.fixCellResultLableWidth = 60;  // 固定result的视图宽度（该值大于20才生效），默认为0<20，表示自适应宽度
+    self.fixTextViewHeight = 60;  // 固定textView的视图高度（该值大于44才生效），默认固定为44
     
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
