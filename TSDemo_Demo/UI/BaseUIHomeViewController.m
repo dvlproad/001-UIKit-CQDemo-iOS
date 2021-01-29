@@ -55,6 +55,9 @@
     }
     
     self.sectionDataModels = sectionDataModels;
+    
+    // 导航栏右边按钮
+    [self tsGoOtherViewControllerByRightBarButtonItem];
 }
 
 

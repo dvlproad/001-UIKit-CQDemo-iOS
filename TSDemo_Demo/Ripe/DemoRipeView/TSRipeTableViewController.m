@@ -25,10 +25,26 @@
     tableView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:tableView];
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.mas_topLayoutGuide).mas_offset(20);
+//        if #available(iOS 11.0, *) {
+//            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
+//            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+//        } else {
+//            // Fallback on earlier versions
+//            // topLayoutGuide\bottomLayoutGuide iOS11已经被弃用
+//            make.top.equalTo(topLayoutGuide.snp.bottom).offset(10)
+//            make.bottom.equalTo(bottomLayoutGuide.snp.top).offset(-10)
+//        }
+        if (@available(iOS 11.0, *)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(10);
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(-10);
+        } else {
+            // Fallback on earlier versions
+            // topLayoutGuide\bottomLayoutGuide iOS11已经被弃用
+            make.top.equalTo(self.mas_topLayoutGuideBottom).offset(10);
+            make.bottom.equalTo(self.mas_bottomLayoutGuideTop).offset(-10);
+        }
         make.left.mas_equalTo(self.view).mas_offset(10);
         make.centerX.mas_equalTo(self.view);
-        make.bottom.mas_equalTo(self.mas_bottomLayoutGuide).mas_offset(-20);
     }];
 }
 

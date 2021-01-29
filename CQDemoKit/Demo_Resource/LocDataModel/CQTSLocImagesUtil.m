@@ -120,6 +120,8 @@
                                    [CQTSLocImagesUtil cjts_localImage8],
                                    [CQTSLocImagesUtil cjts_localImage9],
                                    [CQTSLocImagesUtil cjts_localImage10],
+                                   [CQTSLocImagesUtil longHorizontal01],
+                                   [CQTSLocImagesUtil longVertical01],
     ];
     
     return images;
@@ -174,5 +176,15 @@
     return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_10.jpg"];
 }
 
+#pragma mark - test Image
+/// 水平长图
++ (UIImage *)longHorizontal01 {
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_long_horizontal_1.jpg"];
+}
+
+/// 竖直长图
++ (UIImage *)longVertical01 {
+    return [UIImage imageNamed:@"CQDemoKit.bundle/cqts_long_vertical_1.jpg"];
+}
 
 @end

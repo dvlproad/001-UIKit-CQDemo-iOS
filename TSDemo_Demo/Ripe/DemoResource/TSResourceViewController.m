@@ -9,6 +9,7 @@
 #import "TSResourceViewController.h"
 #import "CQTSLocImagesUtil.h"
 #import "CQTSNetImagesUtil.h"
+#import <CQDemoKit/CQTSContainerViewFactory.h>
 
 @interface TSResourceViewController ()
 
@@ -20,33 +21,48 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"测试本地图片、网络图片", nil);
+    self.view.backgroundColor = [UIColor greenColor];
     
     UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:imageView1];
-    [imageView1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view).mas_offset(120);
-        make.left.mas_equalTo(self.view).mas_offset(10);
-        make.centerX.mas_equalTo(self.view);
-        make.height.mas_equalTo(180);
-    }];
+    imageView1.contentMode = UIViewContentModeScaleAspectFill;
+    imageView1.layer.masksToBounds = YES;
     
     UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:imageView2];
-    [imageView2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(imageView1.mas_bottom).mas_offset(10);
-        make.left.mas_equalTo(imageView1);
-        make.centerX.mas_equalTo(imageView1);
-        make.height.mas_equalTo(imageView1);
-    }];
-
+    imageView2.contentMode = UIViewContentModeScaleAspectFill;
+    imageView2.layer.masksToBounds = YES;
+    
     UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:imageView3];
-    [imageView3 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(imageView2.mas_bottom).mas_offset(10);
-        make.left.mas_equalTo(imageView2);
-        make.centerX.mas_equalTo(imageView2);
-        make.height.mas_equalTo(imageView2);
+    imageView3.contentMode = UIViewContentModeScaleAspectFill;
+    imageView3.layer.masksToBounds = YES;
+    
+    NSArray *subViews = @[imageView1, imageView2, imageView3];
+    
+    UIView *container = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:subViews fixedSpacing:20];
+    [self.view addSubview:container];
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+//        if #available(iOS 11.0, *) {
+//            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
+//            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)
+//        } else {
+//            // Fallback on earlier versions
+//            // topLayoutGuide\bottomLayoutGuide iOS11已经被弃用
+//            make.top.equalTo(topLayoutGuide.snp.bottom).offset(10)
+//            make.bottom.equalTo(bottomLayoutGuide.snp.top).offset(-10)
+//        }
+        if (@available(iOS 11.0, *)) {
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).offset(10);
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(-10);
+        } else {
+            // Fallback on earlier versions
+            // topLayoutGuide\bottomLayoutGuide iOS11已经被弃用
+            make.top.equalTo(self.mas_topLayoutGuideBottom).offset(10);
+            make.bottom.equalTo(self.mas_bottomLayoutGuideTop).offset(-10);
+        }
+        make.left.mas_equalTo(self.view).mas_offset(10);
+        make.centerX.mas_equalTo(self.view);
     }];
+    
+    
     
     
     // 设置数据
@@ -62,6 +78,9 @@
             imageView2.image = networkImage;
         });
     });
+    
+    UIImage *longVerticalImage = [CQTSLocImagesUtil longVertical01];
+    imageView3.image = longVerticalImage;
 }
 
 /*

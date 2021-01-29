@@ -47,7 +47,7 @@
     // buttons
     NSArray *buttons = @[themeBGButton, themeBorderButton, submitButton];
     
-    UIView *buttonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:buttons];
+    UIView *buttonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:buttons fixedSpacing:10];
     
     [self.view addSubview:buttonsView];
     [buttonsView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -80,7 +80,7 @@
     normalSelectedButton4.enabled = false;
 
     
-    UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4]];
+    UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4] fixedSpacing:10];
    [self.view addSubview:normalSelectedButtonView];
    [normalSelectedButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
        make.left.mas_equalTo(buttonsView);
