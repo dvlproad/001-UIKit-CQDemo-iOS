@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A298648BD841CE3685F5460FD8E86774"
-               BuildableName = "libTSDemo_Demo.a"
+               BuildableName = "TSDemo_Demo.framework"
                BlueprintName = "TSDemo_Demo"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

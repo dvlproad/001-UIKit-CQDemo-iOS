@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AC509E0B2457961842D06F82D4E8C691"
-               BuildableName = "libCQDemoKit.a"
+               BuildableName = "CQDemoKit.framework"
                BlueprintName = "CQDemoKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
