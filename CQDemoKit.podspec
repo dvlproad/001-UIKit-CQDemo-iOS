@@ -2,11 +2,12 @@ Pod::Spec.new do |s|
   #查看本地已同步的pod库：pod repo
   #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
   #上传方法：pod trunk push CQDemoKit.podspec --allow-warnings
+  #清除缓存：pod cache clean CQDemoKit
   # 关于resource：
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.5.11"
+  s.version      = "0.6.0"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -34,7 +35,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.5.11" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.6.0" }
   #s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -43,7 +44,13 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  # s.resources = "CJHook/**/*.{png,xib}"
+  # s.resources = "CQDemoKit/**/*.{png,xib}"
+  s.resource_bundle = {
+    'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg}', 'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
+  }
+  # s.resources = 会拷贝到mainBundle下
+  # s.resource_bundle = 会放在指定的customBundle下
+
   # s.frameworks = "MediaPlayer"
   
 
@@ -94,11 +101,6 @@ Pod::Spec.new do |s|
   # Demo 工程中基本都需要的 DemoResource
   s.subspec 'Demo_Resource' do |ss|
     ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
-    ss.resource_bundle = {
-      'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
-    }
-    # s.resources = 会拷贝到mainBundle下
-    # s.resource_bundle = 会放在指定的customBundle下
   end
 
   # 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
