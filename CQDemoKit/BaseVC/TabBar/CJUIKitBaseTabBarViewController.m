@@ -55,7 +55,8 @@
     Class classEntry = tabBarModel.classEntry;
     NSString *clsString = NSStringFromClass(tabBarModel.classEntry);
     if (tabBarModel.isCreateByXib) {
-        viewController = [[classEntry alloc] initWithNibName:clsString bundle:nil];
+        NSBundle *xibBundle = tabBarModel.xibBundle;
+        viewController = [[classEntry alloc] initWithNibName:clsString bundle:xibBundle];
     } else {
         viewController = [[classEntry alloc] init];
     }
