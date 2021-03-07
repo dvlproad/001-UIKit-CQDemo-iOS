@@ -41,9 +41,9 @@
 #import "CQTSNetImageDataModel.h"
 #import "CQTSNetImagesUtil.h"
 #import "CJUIKitRandomUtil.h"
-#import "UIImage+CQDemoKit.h"
 #import "CQTSRipeButton.h"
 #import "CQTSRipeTableView.h"
+#import "UIImage+CQDemoKit.h"
 
 FOUNDATION_EXPORT double CQDemoKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CQDemoKitVersionString[];

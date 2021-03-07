@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
  
   s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.6.0" }
-  #s.source_files  = "CQDemoKit/*.{h,m}"
+  # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
 
@@ -53,6 +53,10 @@ Pod::Spec.new do |s|
 
   # s.frameworks = "MediaPlayer"
   
+  # 本库中的资源获取帮助类
+  s.subspec 'Helper' do |ss|
+    ss.source_files = "CQDemoKit/Helper/**/*.{h,m}"  # 包含UIImage+CQDemoKit
+  end
 
   s.subspec 'BaseVC' do |ss|
     ss.subspec 'Base' do |sss|
@@ -83,7 +87,8 @@ Pod::Spec.new do |s|
 
     ss.subspec 'TabBar' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TabBar/**/*.{h,m}"
-      sss.resources = ['CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,,jpeg}']
+      sss.resources = ['CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,jpeg}']
+      ss.dependency 'CQDemoKit/Helper'
       # s.resources = 会拷贝到mainBundle下
       # s.resource_bundle = 会放在指定的customBundle下
     end
@@ -101,6 +106,7 @@ Pod::Spec.new do |s|
   # Demo 工程中基本都需要的 DemoResource
   s.subspec 'Demo_Resource' do |ss|
     ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
+    ss.dependency 'CQDemoKit/Helper'
   end
 
   # 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
