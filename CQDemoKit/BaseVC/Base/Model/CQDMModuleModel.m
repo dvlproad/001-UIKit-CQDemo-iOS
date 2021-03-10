@@ -11,7 +11,7 @@
 @implementation CQDMModuleModel
 
 - (NSBundle *)xibBundle {
-    NSBundle *xibBundle = self.xibBundle;
+    NSBundle *xibBundle = _xibBundle;
     if (xibBundle == nil) {
         Class classEntry = self.classEntry;
         NSString *clsString = NSStringFromClass(classEntry);
