@@ -13,7 +13,15 @@
     
 }
 
+#pragma mark - 测试进入其他视图的情况（从导航栏右键）
 /// 测试进入其他视图的情况（从导航栏右键）
 - (void)tsGoOtherViewControllerByRightBarButtonItem;
+
+#pragma mark - 测试切换不同操作（从导航栏右键）
+/// 测试切换不同操作（从导航栏右键）
+- (void)tsChangeByRightBarButtonItemWithSubmitTitle:(NSString *)submitTitle
+                                          editTitle:(NSString *)editTitle
+                              clickSubmitTitleBlock:(void(^)(void))clickSubmitTitleBlock
+                                clickEditTitleBlock:(void(^)(void))clickEditTitleBlock;
 
 @end
