@@ -62,6 +62,7 @@ Pod::Spec.new do |s|
     ss.subspec 'Base' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/Base/**/*.{h,m}"
       sss.dependency 'Masonry'
+      sss.dependency 'CQDemoKit/BaseUIKit'  # 需要使用到 CQTSButtonFactory
     end
 
     ss.subspec 'ScrollView' do |sss|
@@ -71,17 +72,17 @@ Pod::Spec.new do |s|
 
     ss.subspec 'TableView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TableView/**/*.{h,m}"
-      sss.dependency 'CQDemoKit/BaseVC/Base'	# 已含 CQDMSectionDataModel 和 CQDMModuleModel
+      sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
     end
 
     ss.subspec 'Collection' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/Collection/**/*.{h,m}"
-      sss.dependency 'CQDemoKit/BaseVC/Base'	# 已含 CQDMSectionDataModel 和 CQDMModuleModel
+      sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
     end
 
     ss.subspec 'TextView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TextView/**/*.{h,m}"
-      sss.dependency 'CQDemoKit/BaseVC/Base'	# 已含 CQDMSectionDataModel 和 CQDMModuleModel
+      sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
       sss.dependency 'CQDemoKit/BaseUtil'
     end
 

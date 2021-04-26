@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Masonry/Masonry.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface CJUIKitBaseViewController : UIViewController {
     
 }
@@ -25,3 +27,5 @@
                                 clickEditTitleBlock:(void(^)(void))clickEditTitleBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END
