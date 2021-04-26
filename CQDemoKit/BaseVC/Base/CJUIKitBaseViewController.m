@@ -39,7 +39,7 @@
 
 
 #pragma mark - 测试切换不同操作（从导航栏右键）
-/// 测试切换不同操作（从导航栏右键）
+/// 测试切换不同操作（从导航栏右键）：当前显示的是 editTitle
 - (void)tsChangeByRightBarButtonItemWithSubmitTitle:(NSString *)submitTitle
                                           editTitle:(NSString *)editTitle
                               clickSubmitTitleBlock:(void(^)(void))clickSubmitTitleBlock
