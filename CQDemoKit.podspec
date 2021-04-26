@@ -62,7 +62,7 @@ Pod::Spec.new do |s|
     ss.subspec 'Base' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/Base/**/*.{h,m}"
       sss.dependency 'Masonry'
-      sss.dependency 'CQDemoKit/BaseUIKit'  # 需要使用到 CQTSButtonFactory
+      sss.dependency 'CQDemoKit/BaseUIKit'  # 因为 CJUIKitBaseViewController 需要使用到 CQTSButtonFactory
     end
 
     ss.subspec 'ScrollView' do |sss|
