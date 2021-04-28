@@ -106,10 +106,6 @@
       }
     },
     {
-      "name": "BaseWindow",
-      "source_files": "CQDemoKit/BaseWindow/**/*.{h,m}"
-    },
-    {
       "name": "BaseUtil",
       "source_files": "CQDemoKit/BaseUtil/**/*.{h,m}"
     },

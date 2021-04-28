@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CQTSSuspendWindow : UIWindow {
     
 }
+@property(nonatomic, copy) NSString *windowIdentifier;
 #pragma mark - Init
 - (instancetype)initWithFrame:(CGRect)frame;
 
