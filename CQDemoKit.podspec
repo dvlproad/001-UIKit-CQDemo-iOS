@@ -100,6 +100,10 @@ Pod::Spec.new do |s|
     ss.dependency 'Masonry'
   end
 
+  s.subspec 'BaseWindow' do |ss|
+    ss.source_files = "CQDemoKit/BaseWindow/**/*.{h,m}"
+  end
+
   s.subspec 'BaseUtil' do |ss|
     ss.source_files = "CQDemoKit/BaseUtil/**/*.{h,m}"
   end

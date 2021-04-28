@@ -12,7 +12,11 @@
 #import "UIUtilHomeViewController.h"
 #import "RipeViewHomeViewController.h"
 
-@interface TSTabBarViewController ()
+
+
+@interface TSTabBarViewController () {
+    
+}
 
 @end
 
