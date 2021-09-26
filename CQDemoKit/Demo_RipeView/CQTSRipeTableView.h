@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CQTSRipeTableView : UITableView {
     
 }
+@property (nonatomic, copy) void(^cellConfigBlock)(UITableViewCell *bCell); /**< cell的UI定制（有时候需要cell和其所在列表的背景色为透明） */
 
 /*
  *  初始化 TableView

@@ -61,6 +61,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
+    !self.cellConfigBlock ?: self.cellConfigBlock(cell);
     
     NSString *title = [NSString stringWithFormat:@"%zd", indexPath.row];
     cell.textLabel.text = title;
