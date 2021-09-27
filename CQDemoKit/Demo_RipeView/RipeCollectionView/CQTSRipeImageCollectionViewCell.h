@@ -1,5 +1,5 @@
 //
-//  CQTSRipeCollectionViewCell.h
+//  CQTSRipeImageCollectionViewCell.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 8/10/15.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CQTSRipeCollectionViewCell : UICollectionViewCell {
+@interface CQTSRipeImageCollectionViewCell : UICollectionViewCell {
     
 }
 @property (nonatomic, strong) UILabel *textLabel;

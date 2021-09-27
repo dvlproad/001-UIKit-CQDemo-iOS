@@ -1,67 +1,44 @@
 //
-//  CQTSRipeCollectionView.m
+//  CQTSRipeBaseCollectionView.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 8/10/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
-#import "CQTSRipeCollectionView.h"
-#import "CQTSRipeCollectionViewCell.h"
+#import "CQTSRipeBaseCollectionView.h"
 #import <CQDemoKit/CQTSLocImagesUtil.h>
 
-@interface CQTSRipeCollectionView () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource> {
+@interface CQTSRipeBaseCollectionView () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource> {
     
 }
 @property (nonatomic, strong) NSArray<NSNumber *> *sectionRowCounts;    /**< 每个section的rowCount个数 */
-@property (nonatomic, assign, readonly) CGFloat perMaxCount;   /**< 每行/每列个数 */
+@property (nonatomic, assign, readonly) CGFloat perMaxCount;            /**< 每行/每列个数 */
 
+@property (nonatomic, copy, readonly) void(^cellAtIndexPathConfigBlock)(UICollectionViewCell *bCollectionViewCell, NSIndexPath *bIndexPath); /**< 绘制指定indexPath的cell */
+@property (nonatomic, strong) UICollectionViewCell *cellClass;
 @end
 
 
-@implementation CQTSRipeCollectionView
+@implementation CQTSRipeBaseCollectionView
 
 #pragma mark - Init
-/*
- *  初始化 竖直滚动的CollectionView
- *
- *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param perRowMaxShowCount   每行最大显示的item个数
- *
- *  @return 竖直滚动的CollectionView
- */
-- (instancetype)initWithVerticalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                            perRowMaxColumnCount:(NSInteger)perRowMaxColumnCount
-{
-    return [self initWithSectionRowCounts:sectionRowCounts perMaxCount:perRowMaxColumnCount scrollDirection:UICollectionViewScrollDirectionVertical];
-}
-
-/*
- *  初始化 水平滚动的CollectionView
- *
- *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param perColumnMaxRowCount 每列最大显示的item个数
- *
- *  @return 水平滚动的CollectionView
- */
-- (instancetype)initWithHorizontalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                              perColumnMaxRowCount:(NSInteger)perColumnMaxRowCount
-{
-    return [self initWithSectionRowCounts:sectionRowCounts perMaxCount:perColumnMaxRowCount scrollDirection:UICollectionViewScrollDirectionHorizontal];
-}
-
 /*
  *  初始化 CollectionView
  *
  *  @param sectionRowCounts     每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
  *  @param perMaxCount          当滚动方向为①水平时,每列显示几个；②竖直时,每行显示几个；
  *  @param scrollDirection      集合视图的滚动方向
+ *  @param cellClass                    集合视图的cell类
+ *  @param cellForItemAtIndexPathBlock  对指定indexPath的cell进行设置
  *
  *  @return CollectionView
  */
 - (instancetype)initWithSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
                              perMaxCount:(NSInteger)perMaxCount
                          scrollDirection:(UICollectionViewScrollDirection)scrollDirection
+                               cellClass:(UICollectionViewCell *)cellClass
+             cellAtIndexPathConfigBlock:(void(^)(UICollectionViewCell *bCollectionViewCell, NSIndexPath *bIndexPath))cellAtIndexPathConfigBlock
 {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = scrollDirection;
@@ -69,7 +46,9 @@
     if (self) {
         _perMaxCount = perMaxCount;
         
-        [self registerClass:[CQTSRipeCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        [self registerClass:cellClass forCellWithReuseIdentifier:@"cell"];
+        _cellClass = cellClass;
+        _cellAtIndexPathConfigBlock = cellAtIndexPathConfigBlock;
         
         self.dataSource = self;
         self.delegate = self;
@@ -176,15 +155,9 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CQTSRipeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    NSString *title = [NSString stringWithFormat:@"%zd", indexPath.row];
-    cell.textLabel.text = title;
-    
-    UIImage *image = [CQTSLocImagesUtil cjts_localImageRandom];
-    cell.imageView.image = image;
-    
-    !self.cellConfigBlock ?: self.cellConfigBlock(cell);
+    !self.cellAtIndexPathConfigBlock ?: self.cellAtIndexPathConfigBlock(cell, indexPath);
     
     return cell;
 }

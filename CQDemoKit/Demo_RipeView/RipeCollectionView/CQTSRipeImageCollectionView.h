@@ -1,5 +1,5 @@
 //
-//  CQTSRipeCollectionView.h
+//  CQTSRipeImageCollectionView.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 8/10/15.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CQTSRipeCollectionView : UICollectionView {
+@interface CQTSRipeImageCollectionView : UICollectionView {
     
 }
 @property (nullable, nonatomic, copy) void(^cellConfigBlock)(UICollectionViewCell *bCell); /**< cell的UI定制（有时候需要cell和其所在列表的背景色为透明） */
@@ -46,8 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 
 /* 初始化示例
-CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithVerticalSectionRowCounts:@[@1, @3, @6, @8] perRowMaxColumnCount:3];
-//CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithHorizontalSectionRowCounts:@[@1, @3, @6, @8] perColumnMaxRowCount:3];
+CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithVerticalSectionRowCounts:@[@1, @3, @6, @8] perRowMaxColumnCount:3];
+//CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithHorizontalSectionRowCounts:@[@1, @3, @6, @8] perColumnMaxRowCount:3];
 collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
 collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
     bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];

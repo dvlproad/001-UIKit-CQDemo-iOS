@@ -1,14 +1,14 @@
 //
-//  CQTSRipeCollectionViewCell.m
+//  CQTSRipeImageCollectionViewCell.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 8/10/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
-#import "CQTSRipeCollectionViewCell.h"
+#import "CQTSRipeImageCollectionViewCell.h"
 
-@implementation CQTSRipeCollectionViewCell
+@implementation CQTSRipeImageCollectionViewCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
