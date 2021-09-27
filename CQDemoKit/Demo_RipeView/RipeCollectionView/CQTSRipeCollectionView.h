@@ -18,21 +18,36 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Init
 /*
- *  初始化 TableView
+ *  初始化 竖直滚动的CollectionView
  *
- *  @param sectionRowCounts     每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
+ *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
+ *  @param perRowMaxShowCount   每行最大显示的item个数
  *
- *  @return TableView
+ *  @return 竖直滚动的CollectionView
  */
-- (instancetype)initWithSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithVerticalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
+                            perRowMaxColumnCount:(NSInteger)perRowMaxColumnCount;
+
+/*
+ *  初始化 水平滚动的CollectionView
+ *
+ *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
+ *  @param perColumnMaxRowCount 每列最大显示的item个数
+ *
+ *  @return 水平滚动的CollectionView
+ */
+- (instancetype)initWithHorizontalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
+                              perColumnMaxRowCount:(NSInteger)perColumnMaxRowCount;
+
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
-- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style NS_UNAVAILABLE;
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 
 /* 初始化示例
-CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
+CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithVerticalSectionRowCounts:@[@1, @3, @6, @8] perRowMaxColumnCount:3];
+//CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithHorizontalSectionRowCounts:@[@1, @3, @6, @8] perColumnMaxRowCount:3];
 collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
 collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
     bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];

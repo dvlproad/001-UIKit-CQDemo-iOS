@@ -34,7 +34,8 @@
 }
 
 - (void)setupViews {
-    UICollectionViewLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     collectionView.backgroundColor = [UIColor clearColor];
     
@@ -81,28 +82,45 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
-                  layout:(UICollectionViewLayout*)collectionViewLayout
+                  layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat collectionViewCellWidth = 0;
-    if (0) {
+    CGFloat collectionViewCellHeight = 0;
+    
+    UICollectionViewFlowLayout *flowLayout = collectionViewLayout;
+    BOOL isScrollHorizontal = flowLayout.scrollDirection == UICollectionViewScrollDirectionHorizontal;
+    if (isScrollHorizontal) {   // 按水平方向滚动时，按个数计算cell的高
+        NSInteger perColumnMaxRowCount = 3;
         
-    } else {
-        NSInteger cellWidthFromPerRowMaxShowCount = 3;
+        UIEdgeInsets sectionInset = [self collectionView:collectionView
+                                                  layout:collectionViewLayout
+                                  insetForSectionAtIndex:indexPath.section];;
+        CGFloat rowSpacing = [self collectionView:collectionView
+                                           layout:collectionViewLayout
+         minimumInteritemSpacingForSectionAtIndex:indexPath.section];
+        
+        CGFloat height = CGRectGetHeight(collectionView.frame);
+        CGFloat validHeight = height - sectionInset.top - sectionInset.bottom - rowSpacing*(perColumnMaxRowCount-1);
+        collectionViewCellHeight = floorf(validHeight/perColumnMaxRowCount);
+        collectionViewCellWidth = collectionViewCellHeight;
+        
+    } else {                    // 按竖直方向滚动时，按个数计算cell的宽
+        NSInteger perRowMaxColumnCount = 3;
         
         UIEdgeInsets sectionInset = [self collectionView:collectionView
                                                   layout:collectionViewLayout
                                   insetForSectionAtIndex:indexPath.section];
-        CGFloat minimumInteritemSpacing = [self collectionView:collectionView
-                                                        layout:collectionViewLayout
-                      minimumInteritemSpacingForSectionAtIndex:indexPath.section];
+        CGFloat columnSpacing = [self collectionView:collectionView
+                                              layout:collectionViewLayout
+            minimumInteritemSpacingForSectionAtIndex:indexPath.section];
         
         CGFloat width = CGRectGetWidth(collectionView.frame);
-        CGFloat validWith = width - sectionInset.left - sectionInset.right - minimumInteritemSpacing*(cellWidthFromPerRowMaxShowCount-1);
-        collectionViewCellWidth = floorf(validWith/cellWidthFromPerRowMaxShowCount);
+        CGFloat validWith = width - sectionInset.left - sectionInset.right - columnSpacing*(perRowMaxColumnCount-1);
+        collectionViewCellWidth = floorf(validWith/perRowMaxColumnCount);
+        collectionViewCellHeight = collectionViewCellWidth;
     }
     
-    CGFloat collectionViewCellHeight = collectionViewCellWidth;
     
     return CGSizeMake(collectionViewCellWidth, collectionViewCellHeight);
 }

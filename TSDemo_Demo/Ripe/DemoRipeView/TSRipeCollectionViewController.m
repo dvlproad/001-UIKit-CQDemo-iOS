@@ -29,7 +29,7 @@
         make.bottom.mas_equalTo(self.mas_bottomLayoutGuide);
     }];
     
-    CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
+    CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithVerticalSectionRowCounts:@[@1, @3, @6, @8] perRowMaxColumnCount:3];
     collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
         bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
