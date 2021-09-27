@@ -1,22 +1,22 @@
 //
-//  CQTSRipeTableView.h
-//  CQDemoKit
+//  CQTSRipeCollectionView.h
+//  CJUIKitDemo
 //
-//  Created by ciyouzen on 7/9/15.
+//  Created by ciyouzen on 8/10/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
-//  为了快速构建完整 Demo 工程提供的成熟的TableView(已含内容和事件)
+//  为了快速构建完整 Demo 工程提供的成熟的CollectionView(已含内容和事件)
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CQTSRipeTableView : UITableView {
+@interface CQTSRipeCollectionView : UICollectionView {
     
 }
-@property (nullable, nonatomic, copy) void(^cellConfigBlock)(UITableViewCell *bCell); /**< cell的UI定制（有时候需要cell和其所在列表的背景色为透明） */
+@property (nullable, nonatomic, copy) void(^cellConfigBlock)(UICollectionViewCell *bCell); /**< cell的UI定制（有时候需要cell和其所在列表的背景色为透明） */
 
-
+#pragma mark - Init
 /*
  *  初始化 TableView
  *
@@ -32,10 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 
 /* 初始化示例
-CQTSRipeTableView *tableView = [[CQTSRipeTableView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
-CQTSRipeTableView *tableView = [[CQTSRipeTableView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
-tableView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-tableView.cellConfigBlock = ^(UITableViewCell * _Nonnull bCell) {
+CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
+collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
     bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
     bCell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
 };

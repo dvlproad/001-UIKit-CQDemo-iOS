@@ -1,47 +1,48 @@
 PODS:
-  - CQDemoKit (0.6.3):
-    - CQDemoKit/BaseUIKit (= 0.6.3)
-    - CQDemoKit/BaseUtil (= 0.6.3)
-    - CQDemoKit/BaseVC (= 0.6.3)
-    - CQDemoKit/Demo_Resource (= 0.6.3)
-    - CQDemoKit/Demo_RipeView (= 0.6.3)
-    - CQDemoKit/Helper (= 0.6.3)
-  - CQDemoKit/BaseUIKit (0.6.3):
+  - CQDemoKit (0.6.4):
+    - CQDemoKit/BaseUIKit (= 0.6.4)
+    - CQDemoKit/BaseUtil (= 0.6.4)
+    - CQDemoKit/BaseVC (= 0.6.4)
+    - CQDemoKit/Demo_Resource (= 0.6.4)
+    - CQDemoKit/Demo_RipeView (= 0.6.4)
+    - CQDemoKit/Helper (= 0.6.4)
+  - CQDemoKit/BaseUIKit (0.6.4):
     - Masonry
-  - CQDemoKit/BaseUtil (0.6.3)
-  - CQDemoKit/BaseVC (0.6.3):
-    - CQDemoKit/BaseVC/Base (= 0.6.3)
-    - CQDemoKit/BaseVC/Collection (= 0.6.3)
-    - CQDemoKit/BaseVC/ScrollView (= 0.6.3)
-    - CQDemoKit/BaseVC/TabBar (= 0.6.3)
-    - CQDemoKit/BaseVC/TableView (= 0.6.3)
-    - CQDemoKit/BaseVC/TextView (= 0.6.3)
+  - CQDemoKit/BaseUtil (0.6.4)
+  - CQDemoKit/BaseVC (0.6.4):
+    - CQDemoKit/BaseVC/Base (= 0.6.4)
+    - CQDemoKit/BaseVC/Collection (= 0.6.4)
+    - CQDemoKit/BaseVC/ScrollView (= 0.6.4)
+    - CQDemoKit/BaseVC/TabBar (= 0.6.4)
+    - CQDemoKit/BaseVC/TableView (= 0.6.4)
+    - CQDemoKit/BaseVC/TextView (= 0.6.4)
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/Base (0.6.3):
+  - CQDemoKit/BaseVC/Base (0.6.4):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.6.3):
+  - CQDemoKit/BaseVC/Collection (0.6.4):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/ScrollView (0.6.3):
+  - CQDemoKit/BaseVC/ScrollView (0.6.4):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TabBar (0.6.3):
+  - CQDemoKit/BaseVC/TabBar (0.6.4):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.6.3):
+  - CQDemoKit/BaseVC/TableView (0.6.4):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TextView (0.6.3):
+  - CQDemoKit/BaseVC/TextView (0.6.4):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_Resource (0.6.3):
+  - CQDemoKit/Demo_Resource (0.6.4):
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.6.3):
+  - CQDemoKit/Demo_RipeView (0.6.4):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
-  - CQDemoKit/Helper (0.6.3)
+    - CQDemoKit/Demo_Resource
+  - CQDemoKit/Helper (0.6.4)
   - Masonry (1.1.0)
   - TSDemo_Demo (0.5.2):
     - CQDemoKit
@@ -61,7 +62,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CQDemoKit: 3c5779ec66b0a5727d4b9d4ac21091379c6391cd
+  CQDemoKit: 6e16295ac8af3ac7516a561d8562e6d482faec3e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TSDemo_Demo: 7661dd69a6a8904171a2d0ed5c52556f4b91ddad
 

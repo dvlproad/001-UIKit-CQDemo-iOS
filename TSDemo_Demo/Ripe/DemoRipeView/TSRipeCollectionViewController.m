@@ -1,25 +1,25 @@
 //
-//  TSRipeTableViewController.m
+//  TSRipeCollectionViewController.m
 //  TSDemo_Demo
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "TSRipeTableViewController.h"
-#import <CQDemoKit/CQTSRipeTableView.h>
+#import "TSRipeCollectionViewController.h"
+#import <CQDemoKit/CQTSRipeCollectionView.h>
 #import <CQDemoKit/CQTSLocImagesUtil.h>
 
-@interface TSRipeTableViewController ()
+@interface TSRipeCollectionViewController ()
 
 @end
 
-@implementation TSRipeTableViewController
+@implementation TSRipeCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeTableView", nil);
+    self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeCollectionView", nil);
     
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSLocImagesUtil cjts_localImage3]];
     [self.view addSubview:imageView];
@@ -29,14 +29,14 @@
         make.bottom.mas_equalTo(self.mas_bottomLayoutGuide);
     }];
     
-    CQTSRipeTableView *tableView = [[CQTSRipeTableView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
-    tableView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
-    tableView.cellConfigBlock = ^(UITableViewCell * _Nonnull bCell) {
+    CQTSRipeCollectionView *collectionView = [[CQTSRipeCollectionView alloc] initWithSectionRowCounts:@[@1, @3, @6, @8]];
+    collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
+    collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
         bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
         bCell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
     };
-    [self.view addSubview:tableView];
-    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.view addSubview:collectionView];
+    [collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        if #available(iOS 11.0, *) {
 //            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(10)
 //            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-10)

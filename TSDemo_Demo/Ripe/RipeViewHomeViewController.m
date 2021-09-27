@@ -19,6 +19,7 @@
 // DemoRipeView
 #import "TSRipeButtonViewController.h"
 #import "TSRipeTableViewController.h"
+#import "TSRipeCollectionViewController.h"
 
 @interface RipeViewHomeViewController () {
     
@@ -133,6 +134,12 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Demo RipeTableView";
             module.classEntry = [TSRipeTableViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Demo RipeCollectionView";
+            module.classEntry = [TSRipeCollectionViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

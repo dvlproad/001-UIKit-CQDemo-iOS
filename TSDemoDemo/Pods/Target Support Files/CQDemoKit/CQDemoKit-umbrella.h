@@ -46,6 +46,8 @@
 #import "CJUIKitRandomUtil.h"
 #import "CQTSRipeButton.h"
 #import "CQTSRipeTableView.h"
+#import "CQTSRipeCollectionView.h"
+#import "CQTSRipeCollectionViewCell.h"
 #import "UIImage+CQDemoKit.h"
 
 FOUNDATION_EXPORT double CQDemoKitVersionNumber;

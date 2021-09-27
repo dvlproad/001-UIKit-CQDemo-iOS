@@ -13,6 +13,7 @@
 #import "TSResourceCollectionViewController.h"
 #import "TSResourceViewController.h"
 #import "TSRipeButtonViewController.h"
+#import "TSRipeCollectionViewController.h"
 #import "TSRipeTableViewController.h"
 #import "RipeViewHomeViewController.h"
 #import "TSTabBarViewController.h"
