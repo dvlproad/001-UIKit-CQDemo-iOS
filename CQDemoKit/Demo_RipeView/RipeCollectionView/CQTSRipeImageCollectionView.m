@@ -179,10 +179,10 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     CQTSRipeImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
     NSString *title = [NSString stringWithFormat:@"%zd", indexPath.row];
-    cell.textLabel.text = title;
+    cell.titleNameLabel.text = title;
     
     UIImage *image = [CQTSLocImagesUtil cjts_localImageRandom];
-    cell.imageView.image = image;
+    cell.iconImageView.image = image;
     
     !self.cellConfigBlock ?: self.cellConfigBlock(cell);
     
