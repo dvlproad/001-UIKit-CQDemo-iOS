@@ -7,17 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Masonry/Masonry.h>
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface CQTSRipeButtonCollectionViewCell : UICollectionViewCell {
     
 }
-@property (nonatomic, strong) UILabel *textLabel;
-@property (nonatomic, strong) UILabel *detailTextLabel;
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, copy) NSString *text;
+
+#pragma mark - Other Method
+/*
+ *  计算cell的宽度
+ *
+ *  @param tagString    cell上的文本
+ *  @param cellHeight   cell的高度
+ *  @param showEdit     计算时候是否要加上编辑按钮
+ *
+ *  @return cell的宽度
+ */
++ (CGFloat)cellWidthText:(NSString *)tagString cellHeight:(CGFloat)cellHeight;
 
 @end
-
-NS_ASSUME_NONNULL_END

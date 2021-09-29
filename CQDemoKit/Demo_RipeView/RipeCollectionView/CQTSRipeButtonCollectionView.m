@@ -8,7 +8,6 @@
 
 #import "CQTSRipeButtonCollectionView.h"
 #import "CQTSRipeButtonCollectionViewCell.h"
-#import <CQDemoKit/CQTSLocImagesUtil.h>
 
 @interface CQTSRipeButtonCollectionView () {
     
@@ -43,10 +42,7 @@
         CQTSRipeButtonCollectionViewCell *cell = (CQTSRipeButtonCollectionViewCell *)bCollectionViewCell;
         
         NSString *title = [NSString stringWithFormat:@"%zd", bIndexPath.row];
-        cell.textLabel.text = title;
-        
-        UIImage *image = [CQTSLocImagesUtil cjts_localImageRandom];
-        cell.imageView.image = image;
+        cell.text = title;
         
         !self.cellConfigBlock ?: self.cellConfigBlock(cell);
     }];

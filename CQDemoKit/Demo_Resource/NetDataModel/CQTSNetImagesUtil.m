@@ -163,6 +163,16 @@
     return imageUrl;
 }
 
+/// 获取指定位置的图片(为了cell显示的图片不会一直变化)
++ (NSString *)cjts_imageUrlAtIndex:(NSInteger)selIndex {
+    NSArray<NSString *> *imageUrls = [self cjts_imageUrls];
+    if (selIndex >= imageUrls.count) {  //位置太大的时候，固定使用第一张图片
+        selIndex = 0;
+    }
+    NSString *imageUrl = [imageUrls objectAtIndex:selIndex];
+    
+    return imageUrl;
+}
 
 
 /// 所有的网络测试图片地址

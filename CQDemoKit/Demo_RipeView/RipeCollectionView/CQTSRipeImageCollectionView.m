@@ -181,7 +181,8 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     NSString *title = [NSString stringWithFormat:@"%zd", indexPath.row];
     cell.titleNameLabel.text = title;
     
-    UIImage *image = [CQTSLocImagesUtil cjts_localImageRandom];
+   //UIImage *image = [CQTSLocImagesUtil cjts_localImageRandom];
+    UIImage *image = [CQTSLocImagesUtil cjts_localImageAtIndex:indexPath.item];
     cell.iconImageView.image = image;
     
     !self.cellConfigBlock ?: self.cellConfigBlock(cell);
