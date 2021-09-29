@@ -37,6 +37,7 @@ PODS:
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
   - CQDemoKit/Demo_Resource (0.6.4):
+    - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
   - CQDemoKit/Demo_RipeView (0.6.4):
     - CQDemoKit/BaseUIKit
@@ -62,7 +63,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CQDemoKit: 6e16295ac8af3ac7516a561d8562e6d482faec3e
+  CQDemoKit: 43c489eb57a0d90f05e560a98b4123ac324d22e4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TSDemo_Demo: 7661dd69a6a8904171a2d0ed5c52556f4b91ddad
 

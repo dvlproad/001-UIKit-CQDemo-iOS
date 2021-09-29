@@ -8,6 +8,7 @@
 
 #import "CJUIKitBaseCollectionHomeViewController.h"
 #import "CJUIKitCollectionViewCell.h"
+#import "UIImageView+CQTSBaseUtil.h"
 
 @interface CJUIKitBaseCollectionHomeViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource> {
     
@@ -162,8 +163,12 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     
     CJUIKitCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    UIImage *image = moduleModel.normalImage ? moduleModel.normalImage : [UIImage imageNamed:@"icon"];
-    cell.imageView.image = image;
+    if (moduleModel.imageUrl.length > 0) {
+        [cell.imageView cqdm_setImageWithUrl:moduleModel.imageUrl completed:nil];
+    } else {
+        UIImage *image = moduleModel.normalImage ? moduleModel.normalImage : [UIImage imageNamed:@"icon"];
+        cell.imageView.image = image;
+    }
     
     cell.textLabel.text = moduleModel.title;
     

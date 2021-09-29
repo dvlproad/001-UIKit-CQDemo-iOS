@@ -115,6 +115,9 @@
       "dependencies": {
         "CQDemoKit/Helper": [
 
+        ],
+        "CQDemoKit/BaseUIKit": [
+
         ]
       }
     },

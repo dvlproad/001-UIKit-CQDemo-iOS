@@ -139,7 +139,7 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo RipeCollectionView";
+            module.title = @"Demo RipeCollectionView:Image";
             module.classEntry = [TSRipeCollectionViewController class];
             [sectionDataModel.values addObject:module];
         }

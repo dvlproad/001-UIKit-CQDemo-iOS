@@ -113,6 +113,7 @@ Pod::Spec.new do |s|
   s.subspec 'Demo_Resource' do |ss|
     ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
     ss.dependency 'CQDemoKit/Helper'
+    ss.dependency 'CQDemoKit/BaseUIKit' # 需要使用到 CQTSImageLoader.h 和 UIImageView+CQTSBaseUtil.h
   end
 
   # 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)

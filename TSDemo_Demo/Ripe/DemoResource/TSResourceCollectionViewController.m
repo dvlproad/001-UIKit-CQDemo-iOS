@@ -34,7 +34,7 @@
         NSInteger imageCount = images.count;
         for (int i = 0; i < imageCount; i++) {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = [NSString stringWithFormat:@"%zd", i];
+            module.title = [NSString stringWithFormat:@"本地图片%zd", i];
             module.normalImage = images[i];
             [sectionDataModel.values addObject:module];
         }
@@ -51,21 +51,14 @@
             NSInteger imageCount = imageUrls.count;
             for (int i = 0; i < imageCount; i++) {
                 CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-                module.title = [NSString stringWithFormat:@"%zd", i];
-                
+                module.title = [NSString stringWithFormat:@"网络图片%zd", i];
                 NSString *imageUrl = imageUrls[i];
-                UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]]];
-                module.normalImage = image;
+                module.imageUrl = imageUrl;
                 
                 [sectionDataModel.values addObject:module];
             }
             
             [sectionDataModels addObject:sectionDataModel];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.collectionView reloadData];
-            });
-            
         });
     }
     
