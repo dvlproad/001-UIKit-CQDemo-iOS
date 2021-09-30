@@ -5,7 +5,7 @@
 //  Created by ciyouzen on 8/10/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
-//  为了快速构建完整 Demo 工程提供的成熟的CollectionView(已含内容和事件)
+//  为了快速构建完整 Demo 工程提供的成熟的CollectionView(已含内容和事件)，另图片数据源支持全本地图片或全网络图片
 
 #import <UIKit/UIKit.h>
 
@@ -18,36 +18,34 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Init
 /*
- *  初始化 竖直滚动的CollectionView
+ *  初始化 CollectionView
  *
- *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param perRowMaxShowCount   每行最大显示的item个数
+ *  @param scrollDirection      集合视图的滚动方向
+ *  @param perMaxCount          当滚动方向为①水平时,每列显示几个；②竖直时,每行显示几个；
  *
- *  @return 竖直滚动的CollectionView
+ *  @return CollectionView
  */
-- (instancetype)initWithVerticalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                            perRowMaxColumnCount:(NSInteger)perRowMaxColumnCount;
-
-/*
- *  初始化 水平滚动的CollectionView
- *
- *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param perColumnMaxRowCount 每列最大显示的item个数
- *
- *  @return 水平滚动的CollectionView
- */
-- (instancetype)initWithHorizontalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                              perColumnMaxRowCount:(NSInteger)perColumnMaxRowCount;
-
+- (instancetype)initWithScrollDirection:(UICollectionViewScrollDirection)scrollDirection
+                            perMaxCount:(NSInteger)perMaxCount;
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 
+#pragma mark - Setup
+/*
+ *  只设置数据源
+ *
+ *  @param sectionRowCounts     每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
+ *  @param useNetworkImage      数据源是否使用网络图片(否,则是使用本地图片)
+ */
+- (void)setupSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
+              useNetworkImage:(BOOL)useNetworkImage;
+
 /* 初始化示例
-CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithVerticalSectionRowCounts:@[@1, @3, @6, @8] perRowMaxColumnCount:3];
-//CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithHorizontalSectionRowCounts:@[@1, @3, @6, @8] perColumnMaxRowCount:3];
+CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithScrollDirection:UICollectionViewScrollDirectionVertical perMaxCount:3];
+[collectionView setupSectionRowCounts:@[@1, @3, @6, @8] useNetworkImage:YES];
 collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
 collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
     bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];

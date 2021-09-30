@@ -8,6 +8,7 @@
 
 #import "CQTSRipeImageCollectionViewCell.h"
 #import <Masonry/Masonry.h>
+#import "UIImageView+CQTSBaseUtil.h"
 
 static const CGFloat badgeLabelWidth = 16;  // badge的宽高大小
 const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
@@ -62,6 +63,17 @@ const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
     }];
 }
 
+#pragma mark - Set
+/// 使用本地图片设置image
+- (void)setupImageWithImage:(UIImage *)image {
+    [self.iconImageView setImage:image];
+}
+/// 使用网络图片设置image
+- (void)setupImageWithImageUrl:(NSString *)imageUrl {
+    [self.iconImageView cqdm_setImageWithUrl:imageUrl completed:nil];
+}
+
+/// 设置badge
 - (void)setupBadgeCount:(NSInteger)badgeCount withMaxNumber:(NSInteger)maxCount {
     _badgeCount = badgeCount;
     

@@ -41,7 +41,7 @@
     self = [super initWithSectionRowCounts:sectionRowCounts perMaxCount:perMaxCount scrollDirection:scrollDirection cellClass:[CQTSRipeButtonCollectionViewCell class] cellAtIndexPathConfigBlock:^(UICollectionViewCell * _Nonnull bCollectionViewCell, NSIndexPath * _Nonnull bIndexPath) {
         CQTSRipeButtonCollectionViewCell *cell = (CQTSRipeButtonCollectionViewCell *)bCollectionViewCell;
         
-        NSString *title = [NSString stringWithFormat:@"%zd", bIndexPath.row];
+        NSString *title = buttonTitles[bIndexPath.item];
         cell.text = title;
         
         !self.cellConfigBlock ?: self.cellConfigBlock(cell);

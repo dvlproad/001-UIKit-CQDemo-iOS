@@ -29,7 +29,8 @@
         make.bottom.mas_equalTo(self.mas_bottomLayoutGuide);
     }];
     
-    CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithVerticalSectionRowCounts:@[@1, @3, @6, @8] perRowMaxColumnCount:3];
+    CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithScrollDirection:UICollectionViewScrollDirectionVertical perMaxCount:3];
+    [collectionView setupSectionRowCounts:@[@1, @3, @6, @8] useNetworkImage:YES];
     collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
         bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];

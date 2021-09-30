@@ -31,7 +31,8 @@
     
     NSArray<NSString *> *buttonTitles = @[@"按钮01", @"按钮02", @"按钮03", @"按钮04", @"按钮05", @"按钮06", @"按钮07", @"按钮08", @"按钮09", @"按钮10"];
     CQTSRipeButtonCollectionView *horizontalCollectionView = [[CQTSRipeButtonCollectionView alloc] initWithTitles:buttonTitles scrollDirection:UICollectionViewScrollDirectionHorizontal didSelectItemAtIndexHandle:^(NSInteger index) {
-        NSLog(@"点击了%ld", index);
+        NSString *title = buttonTitles[index];
+        NSLog(@"点击了“%@”", title);
     }];
     horizontalCollectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     horizontalCollectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
@@ -61,7 +62,8 @@
     
     
     CQTSRipeButtonCollectionView *verticalCollectionView = [[CQTSRipeButtonCollectionView alloc] initWithTitles:buttonTitles scrollDirection:UICollectionViewScrollDirectionVertical didSelectItemAtIndexHandle:^(NSInteger index) {
-        NSLog(@"点击了%ld", index);
+        NSString *title = buttonTitles[index];
+        NSLog(@"点击了“%@”", title);
     }];
     verticalCollectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     verticalCollectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {

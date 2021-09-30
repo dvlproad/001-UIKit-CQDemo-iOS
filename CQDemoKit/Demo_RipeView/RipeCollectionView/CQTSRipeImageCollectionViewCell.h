@@ -22,6 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, assign, readonly) NSInteger badgeCount;
 
+#pragma mark - Set
+/// 使用本地图片设置image
+- (void)setupImageWithImage:(UIImage *)image;
+/// 使用网络图片设置image
+- (void)setupImageWithImageUrl:(NSString *)imageUrl;
+
+/// 设置badge
 - (void)setupBadgeCount:(NSInteger)badgeCount withMaxNumber:(NSInteger)maxCount;
 
 @end

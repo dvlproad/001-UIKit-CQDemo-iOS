@@ -9,12 +9,15 @@
 #import "CQTSRipeImageCollectionView.h"
 #import "CQTSRipeImageCollectionViewCell.h"
 #import <CQDemoKit/CQTSLocImagesUtil.h>
+#import <CQDemoKit/CQTSNetImagesUtil.h>
 
 @interface CQTSRipeImageCollectionView () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource> {
     
 }
-@property (nonatomic, strong) NSArray<NSNumber *> *sectionRowCounts;    /**< 每个section的rowCount个数 */
 @property (nonatomic, assign, readonly) CGFloat perMaxCount;   /**< 每行/每列个数 */
+
+@property (nonatomic, strong, readonly) NSArray<NSNumber *> *sectionRowCounts;  /**< 每个section的rowCount个数 */
+@property (nonatomic, assign, readonly) BOOL useNetworkImage;   /**< 数据源是否使用网络图片(否,则是使用本地图片) */
 
 @end
 
@@ -23,45 +26,15 @@
 
 #pragma mark - Init
 /*
- *  初始化 竖直滚动的CollectionView
- *
- *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param perRowMaxShowCount   每行最大显示的item个数
- *
- *  @return 竖直滚动的CollectionView
- */
-- (instancetype)initWithVerticalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                            perRowMaxColumnCount:(NSInteger)perRowMaxColumnCount
-{
-    return [self initWithSectionRowCounts:sectionRowCounts perMaxCount:perRowMaxColumnCount scrollDirection:UICollectionViewScrollDirectionVertical];
-}
-
-/*
- *  初始化 水平滚动的CollectionView
- *
- *  @param sectionRowCounts     每个section的itemCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param perColumnMaxRowCount 每列最大显示的item个数
- *
- *  @return 水平滚动的CollectionView
- */
-- (instancetype)initWithHorizontalSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                              perColumnMaxRowCount:(NSInteger)perColumnMaxRowCount
-{
-    return [self initWithSectionRowCounts:sectionRowCounts perMaxCount:perColumnMaxRowCount scrollDirection:UICollectionViewScrollDirectionHorizontal];
-}
-
-/*
  *  初始化 CollectionView
  *
- *  @param sectionRowCounts     每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param perMaxCount          当滚动方向为①水平时,每列显示几个；②竖直时,每行显示几个；
  *  @param scrollDirection      集合视图的滚动方向
+ *  @param perMaxCount          当滚动方向为①水平时,每列显示几个；②竖直时,每行显示几个；
  *
  *  @return CollectionView
  */
-- (instancetype)initWithSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                             perMaxCount:(NSInteger)perMaxCount
-                         scrollDirection:(UICollectionViewScrollDirection)scrollDirection
+- (instancetype)initWithScrollDirection:(UICollectionViewScrollDirection)scrollDirection
+                            perMaxCount:(NSInteger)perMaxCount
 {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = scrollDirection;
@@ -73,12 +46,23 @@
         
         self.dataSource = self;
         self.delegate = self;
-        
-        self.sectionRowCounts = sectionRowCounts;
     }
     return self;
 }
 
+#pragma mark - Setup
+/*
+ *  只设置数据源
+ *
+ *  @param sectionRowCounts     每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
+ *  @param useNetworkImage      数据源是否使用网络图片(否,则是使用本地图片)
+ */
+- (void)setupSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
+              useNetworkImage:(BOOL)useNetworkImage
+{
+    _sectionRowCounts = sectionRowCounts;
+    _useNetworkImage = useNetworkImage;
+}
 
 
 
@@ -181,9 +165,13 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     NSString *title = [NSString stringWithFormat:@"%zd", indexPath.row];
     cell.titleNameLabel.text = title;
     
-   //UIImage *image = [CQTSLocImagesUtil cjts_localImageRandom];
-    UIImage *image = [CQTSLocImagesUtil cjts_localImageAtIndex:indexPath.item];
-    cell.iconImageView.image = image;
+    if (self.useNetworkImage == YES) {
+        NSString *imageUrl = [CQTSNetImagesUtil cjts_imageUrlAtIndex:indexPath.item];
+        [cell setupImageWithImageUrl:imageUrl];
+    } else {
+        UIImage *image = [CQTSLocImagesUtil cjts_localImageAtIndex:indexPath.item];
+        [cell setupImageWithImage:image];
+    }
     
     !self.cellConfigBlock ?: self.cellConfigBlock(cell);
     
