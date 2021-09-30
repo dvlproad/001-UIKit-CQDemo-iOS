@@ -162,9 +162,11 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     CQTSRipeImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
+    // title
     NSString *title = [NSString stringWithFormat:@"%zd", indexPath.row];
-    cell.titleNameLabel.text = title;
+    [cell setupText:title];
     
+    // image
     if (self.useNetworkImage == YES) {
         NSString *imageUrl = [CQTSNetImagesUtil cjts_imageUrlAtIndex:indexPath.item];
         [cell setupImageWithImageUrl:imageUrl];
@@ -172,6 +174,10 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
         UIImage *image = [CQTSLocImagesUtil cjts_localImageAtIndex:indexPath.item];
         [cell setupImageWithImage:image];
     }
+    
+    // badge
+    NSInteger badgeCount = indexPath.item;
+    [cell setupBadgeCount:badgeCount withMaxNumber:9];
     
     !self.cellConfigBlock ?: self.cellConfigBlock(cell);
     

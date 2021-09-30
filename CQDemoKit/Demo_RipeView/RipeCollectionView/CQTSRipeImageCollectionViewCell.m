@@ -16,7 +16,7 @@ const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
 @interface CQTSRipeImageCollectionViewCell () {
     
 }
-@property (nonatomic, strong) UILabel *messageTipLabel;
+@property (nonatomic, strong) UILabel *badgeLabel;
 
 @end
 
@@ -38,9 +38,11 @@ const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
 }
 
 - (void)setupViews {
+    self.contentView.layer.masksToBounds = YES; // 防止image图片外溢
+    
     [self.contentView addSubview:self.titleNameLabel];
     [self.contentView addSubview:self.iconImageView];
-    [self.contentView addSubview:self.messageTipLabel];
+    [self.contentView addSubview:self.badgeLabel];
 
     [self.titleNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.contentView);
@@ -55,7 +57,7 @@ const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
         make.centerX.mas_equalTo(self.contentView);
     }];
     
-    [self.messageTipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.badgeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.iconImageView.mas_top).mas_offset(-badgeLabelMargin);
         make.right.mas_equalTo(self.iconImageView.mas_right).mas_offset(badgeLabelMargin);
         make.width.mas_equalTo(badgeLabelWidth);
@@ -64,13 +66,30 @@ const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
 }
 
 #pragma mark - Set
+/// 设置text
+- (void)setupText:(NSString *)text {
+    self.titleNameLabel.text = text;
+}
+
 /// 使用本地图片设置image
 - (void)setupImageWithImage:(UIImage *)image {
     [self.iconImageView setImage:image];
 }
 /// 使用网络图片设置image
 - (void)setupImageWithImageUrl:(NSString *)imageUrl {
+    // 修复使得在滑动过程中，不会因为cell的重用，而导致图片显示错位的问题
     [self.iconImageView cqdm_setImageWithUrl:imageUrl completed:nil];
+    
+    /*
+    // 以下代码会发生因为cell重用，导致图片显示错位
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]]];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.iconImageView.image = image;// 图片错乱根源:用户在滑动的过程中，因为cell的重用，第11行的cell可能使用的是第0行的cell
+        });
+    });
+    */
 }
 
 /// 设置badge
@@ -78,18 +97,18 @@ const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
     _badgeCount = badgeCount;
     
     if (badgeCount <= 0) {
-        self.messageTipLabel.hidden = YES;
-        self.messageTipLabel.text = @"";
+        self.badgeLabel.hidden = YES;
+        self.badgeLabel.text = @"";
         return;
     }
     
-    self.messageTipLabel.hidden = NO;
+    self.badgeLabel.hidden = NO;
     
     NSString *badgeString = [NSString stringWithFormat:@"%@", @(badgeCount)];
     if (badgeCount > maxCount) {
         badgeString = [NSString stringWithFormat:@"%ld+", maxCount];
     }
-    self.messageTipLabel.text = badgeString;
+    self.badgeLabel.text = badgeString;
 }
 
 #pragma mark - lazy init
@@ -117,21 +136,21 @@ const CGFloat badgeLabelMargin = 4;         // badge与cell的距离
     return _iconImageView;
 }
 
-@synthesize messageTipLabel = _messageTipLabel;
-- (UILabel *)messageTipLabel {
-    if (!_messageTipLabel) {
-        _messageTipLabel = [[UILabel alloc] init];
-        _messageTipLabel.backgroundColor = [UIColor redColor]; //#ff0000
-        _messageTipLabel.textColor = [UIColor whiteColor];  // (@"#FFFFFF");
-        _messageTipLabel.font = [UIFont systemFontOfSize:11];
-        _messageTipLabel.textAlignment = NSTextAlignmentCenter;
-        _messageTipLabel.layer.cornerRadius = badgeLabelWidth/2;
-        _messageTipLabel.adjustsFontSizeToFitWidth = YES;
-        _messageTipLabel.minimumScaleFactor = 0.3;
-        _messageTipLabel.clipsToBounds = YES;
-        _messageTipLabel.hidden = YES;
+@synthesize badgeLabel = _badgeLabel;
+- (UILabel *)badgeLabel {
+    if (!_badgeLabel) {
+        _badgeLabel = [[UILabel alloc] init];
+        _badgeLabel.backgroundColor = [UIColor redColor]; //#ff0000
+        _badgeLabel.textColor = [UIColor whiteColor];  // (@"#FFFFFF");
+        _badgeLabel.font = [UIFont systemFontOfSize:11];
+        _badgeLabel.textAlignment = NSTextAlignmentCenter;
+        _badgeLabel.layer.cornerRadius = badgeLabelWidth/2;
+        _badgeLabel.adjustsFontSizeToFitWidth = YES;
+        _badgeLabel.minimumScaleFactor = 0.3;
+        _badgeLabel.clipsToBounds = YES;
+        _badgeLabel.hidden = YES;
     }
-    return _messageTipLabel;
+    return _badgeLabel;
 }
 
 @end

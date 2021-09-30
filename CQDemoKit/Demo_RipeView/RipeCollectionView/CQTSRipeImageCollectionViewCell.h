@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSInteger badgeCount;
 
 #pragma mark - Set
+/// 设置text
+- (void)setupText:(NSString *)text;
+
 /// 使用本地图片设置image
 - (void)setupImageWithImage:(UIImage *)image;
 /// 使用网络图片设置image
