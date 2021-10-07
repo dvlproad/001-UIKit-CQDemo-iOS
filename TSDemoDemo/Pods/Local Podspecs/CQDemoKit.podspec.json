@@ -1,6 +1,6 @@
 {
   "name": "CQDemoKit",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "summary": "Demo",
   "homepage": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS",
   "description": "- CQDemoKit/xxx：Demo最基础类\n\n  A longer description of CJHook in Markdown format.\n\n  * Think: Why did you write this? What is the focus? What does it do?\n  * CocoaPods will be using this to generate tags, and improve search results.\n  * Try to keep it short, snappy and to the point.\n  * Finally, don't worry about the indent, CocoaPods strips it!",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git",
-    "tag": "CQDemoKit_0.6.6"
+    "tag": "CQDemoKit_0.6.7"
   },
   "frameworks": "UIKit",
   "requires_arc": true,
