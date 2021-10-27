@@ -7,6 +7,7 @@
 //
 
 #import "UIWindow+RootSetting.h"
+#import <CQDemoKit/CQTSFPSView.h>
 
 @implementation UIWindow (RootSetting)
 
@@ -18,6 +19,8 @@
     
     self.rootViewController = rootViewController;
     [self makeKeyAndVisible];
+    
+    [CQTSFPSView showInSuperView:self];
 }
 
 @end

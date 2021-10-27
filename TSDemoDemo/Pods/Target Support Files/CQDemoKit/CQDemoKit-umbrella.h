@@ -54,6 +54,7 @@
 #import "CQTSRipeImageCollectionView.h"
 #import "CQTSRipeImageCollectionViewCell.h"
 #import "UIImage+CQDemoKit.h"
+#import "CQTSFPSView.h"
 
 FOUNDATION_EXPORT double CQDemoKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CQDemoKitVersionString[];
