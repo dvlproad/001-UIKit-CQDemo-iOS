@@ -12,9 +12,22 @@
 
 @interface TSRipeCollectionViewController ()
 
+
+@property (nonatomic, assign) CQTSRipeImageSource ripeImageSource;
+
 @end
 
+
+
 @implementation TSRipeCollectionViewController
+
+- (instancetype)initWithRipeImageSource:(CQTSRipeImageSource)ripeImageSource {
+    self = [super init];
+    if (self) {
+        _ripeImageSource = ripeImageSource;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +43,7 @@
     }];
     
     CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithScrollDirection:UICollectionViewScrollDirectionVertical perMaxCount:3];
-    [collectionView setupSectionRowCounts:@[@1, @3, @6, @8] useNetworkImage:YES];
+    [collectionView setupSectionRowCounts:@[@1, @3, @6, @8] ripeImageSource:self.ripeImageSource];
     collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
         bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];

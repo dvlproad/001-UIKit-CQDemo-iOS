@@ -18,10 +18,11 @@
 
 /// 获取测试用的数据(image为本地图片)
 ///
-/// @param count 图片个数
+/// @param count                图片个数
+/// @param randomOrder  顺序是否随机
 ///
 /// @return 返回图片数据
-+ (NSMutableArray<CQTSLocImageDataModel *> *)__getTestLocalImageDataModelsWithCount:(NSInteger)count {
++ (NSMutableArray<CQTSLocImageDataModel *> *)__getTestLocalImageDataModelsWithCount:(NSInteger)count randomOrder:(BOOL)randomOrder {
     NSArray<UIImage *> *images = [self cjts_localImages];
     
     NSMutableArray<CQTSLocImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
@@ -30,9 +31,12 @@
         CQTSLocImageDataModel *dataModel = [[CQTSLocImageDataModel alloc] init];
         dataModel.name = [NSString stringWithFormat:@"%zd", i];
         
-        NSInteger selIndex = random()%images.count;
-        UIImage *image = [images objectAtIndex:selIndex];
+        NSInteger maySelIndex = randomOrder ? random() : i;
+        NSInteger lastSelIndex = maySelIndex%images.count;
+        
+        UIImage *image = [images objectAtIndex:lastSelIndex];
         dataModel.image = image;
+        dataModel.name = [NSString stringWithFormat:@"%zd:第index=%zd张", i, lastSelIndex];
         [dataModels addObject:dataModel];
     }
     

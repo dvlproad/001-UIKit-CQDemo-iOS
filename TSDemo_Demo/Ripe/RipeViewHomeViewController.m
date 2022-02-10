@@ -139,8 +139,29 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo RipeCollectionView:Image";
-            module.classEntry = [TSRipeCollectionViewController class];
+            module.title = @"Demo RipeCollectionView:ImageNetwork";
+            module.actionBlock = ^{
+                UIViewController *viewController = [[TSRipeCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageNetwork];
+                [self.navigationController pushViewController:viewController animated:YES];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Demo RipeCollectionView:ImageLocal";
+            module.actionBlock = ^{
+                UIViewController *viewController = [[TSRipeCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageLocal];
+                [self.navigationController pushViewController:viewController animated:YES];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Demo RipeCollectionView:IconNetwork";
+            module.actionBlock = ^{
+                UIViewController *viewController = [[TSRipeCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceIconNetwork];
+                [self.navigationController pushViewController:viewController animated:YES];
+            };
             [sectionDataModel.values addObject:module];
         }
         {

@@ -24,22 +24,15 @@
     for (NSInteger i = 0; i < count; i++) {
         CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
         
-        if (randomOrder) {
-            NSInteger selIndex = random()%selStrings.count;
-            NSString *selString = [selStrings objectAtIndex:selIndex];
-            SEL sel = NSSelectorFromString(selString);
-            dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
-            //dataModel.imageUrl = self.cjts_imageUrls[selIndex];
-            dataModel.name = [NSString stringWithFormat:@"%zd:%@", i, selString];
-        } else {
-            NSInteger selIndex = i%selStrings.count;
-            NSString *selString = [selStrings objectAtIndex:selIndex];
-            SEL sel = NSSelectorFromString(selString);
-            dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
-            dataModel.name = [NSString stringWithFormat:@"%zd:%@", i, selString];
-        }
-        dataModel.badgeCount = i;
+        NSInteger maySelIndex = randomOrder ? random() : i;
+        NSInteger lastSelIndex = maySelIndex%selStrings.count;
         
+        NSString *selString = [selStrings objectAtIndex:lastSelIndex];
+        SEL sel = NSSelectorFromString(selString);
+        dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
+        //dataModel.imageUrl = self.cjts_imageUrls[selIndex];
+        dataModel.name = [NSString stringWithFormat:@"%zd:%@", i, selString];
+        dataModel.badgeCount = i;
         
         [dataModels addObject:dataModel];
     }
@@ -125,6 +118,7 @@
 /// 所有的网络测试图片地址
 + (NSArray<NSString *> *)cjts_imageUrls {
     NSArray<NSString *> *imageUrls = @[
+        #pragma mark 以下网络图片从 https://stock.tuchong.com 中获取
         @"https://cdn3-banquan.ituchong.com/weili/l/903088213443084399.jpeg",
         @"https://cdn3-banquan.ituchong.com/weili/l/902924454934609986.jpeg",
         @"https://cdn9-banquan.ituchong.com/weili/l/914495302984269898.jpeg",
@@ -141,6 +135,7 @@
         @"https://cdn3-banquan.ituchong.com/weili/l/1073188615191658529.jpeg",
         @"https://cdn6-banquan.ituchong.com/weili/l/57461353849430061.jpeg",
         @"https://cdn6-banquan.ituchong.com/weili/l/1017308169985458197.jpeg",
+        #pragma mark 以下网络图片从 https://www.droitstock.com/ 中获取
         @"https://img1.droitstock.com/middleW/0a/3c/373880000.jpg",
         @"https://img1.droitstock.com/middleW/76/d4/324995286.jpg",
         @"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1892357736,3979425284&fm=26&gp=0.jpg",
@@ -152,6 +147,8 @@
         @"https://img1.droitstock.com/middleW/5a/8d/381503287.jpg",
         @"https://img1.droitstock.com/middleW/b6/22/164126642.jpg",
         @"https://img1.droitstock.com/middleW/df/26/271782228.jpg",
+        
+        #pragma mark 以下网络图片从 https://www.veer.com 中获取
         @"https://alifei04.cfp.cn/creative/vcg/veer/800water/veer-163722653.jpg",
         @"https://alifei01.cfp.cn/creative/vcg/veer/800water/veer-132426620.jpg"
         
@@ -213,7 +210,6 @@
     return selStrings;
 }
 
-#pragma mark 以下网络图片从 https://stock.tuchong.com 中获取
 + (NSString *)cjts_imageUrl1 {
     return self.cjts_imageUrls[0];
 }
@@ -274,7 +270,6 @@
     return self.cjts_imageUrls[14];
 }
 
-#pragma mark 以下网络图片从 https://www.droitstock.com/ 中获取
 + (NSString *)cjts_imageUrl16 {
     return self.cjts_imageUrls[15];
 }
@@ -315,7 +310,6 @@
     return self.cjts_imageUrls[24];
 }
 
-#pragma mark 以下网络图片从 https://www.veer.com 中获取
 + (NSString *)cjts_imageUrl26 {
     return self.cjts_imageUrls[25];
 }

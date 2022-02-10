@@ -11,6 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 图片来源
+typedef NS_ENUM(NSUInteger, CQTSRipeImageSource) {
+    CQTSRipeImageSourceImageNetwork = 0,  // 网络图片
+    CQTSRipeImageSourceImageLocal,        // 本地图片
+    CQTSRipeImageSourceIconNetwork,       // 网络icon
+};
+
 @interface CQTSRipeImageCollectionView : UICollectionView {
     
 }
@@ -38,10 +45,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  只设置数据源
  *
  *  @param sectionRowCounts     每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
- *  @param useNetworkImage      数据源是否使用网络图片(否,则是使用本地图片)
+ *  @param ripeImageSource      数据源(有网络图片、本地图片、网络icon)
  */
 - (void)setupSectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-              useNetworkImage:(BOOL)useNetworkImage;
+              ripeImageSource:(CQTSRipeImageSource)ripeImageSource;
 
 /* 初始化示例
 CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithScrollDirection:UICollectionViewScrollDirectionVertical perMaxCount:3];

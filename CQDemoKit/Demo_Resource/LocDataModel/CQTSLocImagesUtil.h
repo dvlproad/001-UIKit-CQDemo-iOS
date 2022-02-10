@@ -21,10 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 获取测试用的数据(image为本地图片)
 ///
-/// @param count 图片个数
+/// @param count                图片个数
+/// @param randomOrder  顺序是否随机
 ///
 /// @return 返回图片数据
-+ (NSMutableArray<CQTSLocImageDataModel *> *)__getTestLocalImageDataModelsWithCount:(NSInteger)count;
++ (NSMutableArray<CQTSLocImageDataModel *> *)__getTestLocalImageDataModelsWithCount:(NSInteger)count randomOrder:(BOOL)randomOrder;
 
 
 #pragma mark - local BGImage
