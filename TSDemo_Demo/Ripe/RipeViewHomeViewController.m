@@ -108,14 +108,35 @@
         sectionDataModel.theme = @"成熟资源 RipeResource";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources";
+            module.title = @"Resources 单张测试图片(本地/网络)";
             module.classEntry = [TSResourceViewController class];
             [sectionDataModel.values addObject:module];
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources All--Collection样式";
-            module.classEntry = [TSResourceCollectionViewController class];
+            module.title = @"Resources 所有测试图片(网络图片)";
+            module.actionBlock = ^{
+                UIViewController *viewController = [[TSResourceCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageNetwork];
+                [self.navigationController pushViewController:viewController animated:YES];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Resources 所有测试图片(本地图片)";
+            module.actionBlock = ^{
+                UIViewController *viewController = [[TSResourceCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageLocal];
+                [self.navigationController pushViewController:viewController animated:YES];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Resources 所有测试图片(网络icon)";
+            module.actionBlock = ^{
+                UIViewController *viewController = [[TSResourceCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceIconNetwork];
+                [self.navigationController pushViewController:viewController animated:YES];
+            };
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

@@ -250,37 +250,37 @@
 		02CA69FDFD4D7BB11F8E3E2E7A0B9879 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		02EAC55B3B583B21A2D24C30851E0892 /* CQTSFPSView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSFPSView.h; path = CQDemoKit/Monitor/CQTSFPSView.h; sourceTree = "<group>"; };
 		047EE388CF208BD5F57049BD98558C94 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		04A47982E4CF29E12600666F37F6335B /* TSDemo_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TSDemo_Demo.framework; path = TSDemo_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A47982E4CF29E12600666F37F6335B /* TSDemo_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TSDemo_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		060254171AF09538E5ACDAED9E545888 /* CJUIKitToastUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitToastUtil.h; path = CQDemoKit/BaseUtil/CJUIKitToastUtil.h; sourceTree = "<group>"; };
 		071EEE0A3CE36E163E09EA7F7915F1DE /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		07B4CBB4881ED738BD487954F86F515A /* RipeViewHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RipeViewHomeViewController.h; sourceTree = "<group>"; };
 		098CC4EDE2392FEA00C9399B77A0BFC4 /* CQTSRipeTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSRipeTableView.m; path = CQDemoKit/Demo_RipeView/CQTSRipeTableView.m; sourceTree = "<group>"; };
 		0CF191D6BC9CEE1268FC6F9CFA4BAD28 /* CQTSRipeButtonCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSRipeButtonCollectionViewCell.h; sourceTree = "<group>"; };
 		0D56056C62DA934551C85FBD743CD013 /* TSDemo_Demo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Demo-prefix.pch"; sourceTree = "<group>"; };
-		0E2E5EE5CC2BA3AD1F7FC756360A1E19 /* CQDemoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CQDemoKit.framework; path = CQDemoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2E5EE5CC2BA3AD1F7FC756360A1E19 /* CQDemoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CQDemoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E407F589E2CFB9059547DC435BF3308 /* CJUIKitBaseTabBarViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseTabBarViewController.h; path = CQDemoKit/BaseVC/TabBar/CJUIKitBaseTabBarViewController.h; sourceTree = "<group>"; };
 		0EE3CA0A925AB801028A88D95B3CEED2 /* CQDMSectionDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQDMSectionDataModel.h; sourceTree = "<group>"; };
 		0F75A5B02331140E3A6991686BE0CDCF /* CJUIKitBaseScrollViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseScrollViewController.h; path = CQDemoKit/BaseVC/ScrollView/CJUIKitBaseScrollViewController.h; sourceTree = "<group>"; };
 		11041CA6650C7285B0C294C00DE423C0 /* TSRipeButtonViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSRipeButtonViewController.h; sourceTree = "<group>"; };
 		119203C443B3BADE07A1F7AF1BE7387B /* CQTSSuspendButtonRootViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSSuspendButtonRootViewController.m; sourceTree = "<group>"; };
-		11DC2792ECA0230AE9C6DA9842EBF599 /* cqts_long_horizontal_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_long_horizontal_1.jpg; sourceTree = "<group>"; };
+		11DC2792ECA0230AE9C6DA9842EBF599 /* cqts_long_horizontal_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_long_horizontal_1.jpg; sourceTree = "<group>"; };
 		11E85362AFE4FF5AF965E4067E8F5713 /* CQTSLocImageDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSLocImageDataModel.m; sourceTree = "<group>"; };
 		14D43DCAEE9ED175B54F48D6DC02C9DD /* UIButton+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/UIButton+CQTSMoreProperty.h"; sourceTree = "<group>"; };
 		172F429D01BBAB5BF7DC5796DDA61914 /* TSContainerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSContainerViewController.h; sourceTree = "<group>"; };
 		1B778B71EACA95F1C2A56100C9546448 /* TSResourceCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSResourceCollectionViewController.m; sourceTree = "<group>"; };
 		1BCE93A7901AD8EBD84488D223BA21AA /* CQDMModuleModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQDMModuleModel.h; sourceTree = "<group>"; };
 		1F30CA69DD4889854734856694A584A2 /* CQTSIconsUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSIconsUtil.h; sourceTree = "<group>"; };
-		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Masonry.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFED36A657123030ABB700256D73F15 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2295D3E806BF05B191243B1F663B4882 /* UIButton+CQTSMoreProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+CQTSMoreProperty.m"; path = "CQDemoKit/BaseUIKit/UIButton+CQTSMoreProperty.m"; sourceTree = "<group>"; };
 		22B52759025CD34C910FDFD70653AD1E /* Pods-TSDemoDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TSDemoDemo.modulemap"; sourceTree = "<group>"; };
-		250D128B62CDD03B64E77DBCCC4CB78C /* Pods_TSDemoDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TSDemoDemo.framework; path = "Pods-TSDemoDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		250D128B62CDD03B64E77DBCCC4CB78C /* Pods_TSDemoDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TSDemoDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E12E3D2779B5C7A8301A94F715DB4C /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		29DD3EE967DE34028CEC544FCAFFCAD3 /* CJValidateStringBigTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJValidateStringBigTableViewCell.h; sourceTree = "<group>"; };
 		2C2C1414C571E285FDB3436F5F1A392D /* CQTSRipeBaseCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSRipeBaseCollectionView.h; sourceTree = "<group>"; };
 		2C2E9316DE9D09D6C07ABF14FE29AF6D /* CQTSBorderStateButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSBorderStateButton.h; path = CQDemoKit/BaseUIKit/CQTSBorderStateButton.h; sourceTree = "<group>"; };
-		2F08235B64C523344E6C3C981698AE7F /* cqts_8.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_8.jpg; sourceTree = "<group>"; };
+		2F08235B64C523344E6C3C981698AE7F /* cqts_8.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_8.jpg; sourceTree = "<group>"; };
 		3020BB1F86893EC6F64F6E56C6A92241 /* CQTSSwitchViewFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSSwitchViewFactory.h; path = CQDemoKit/BaseUIKit/CQTSSwitchViewFactory.h; sourceTree = "<group>"; };
-		3084288CE3E841AF091B81D3247875B2 /* cqts_bgCar@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = "cqts_bgCar@2x.jpg"; sourceTree = "<group>"; };
+		3084288CE3E841AF091B81D3247875B2 /* cqts_bgCar@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = "cqts_bgCar@2x.jpg"; sourceTree = "<group>"; };
 		30ADFEF9A3D2C737703D6158BB60A547 /* CJUIKitAlertUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitAlertUtil.m; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.m; sourceTree = "<group>"; };
 		30EC6C5D191587619B42076546EDC448 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
 		3105FE4078A8B9EBC7EB3CC7CC1A20CC /* CJValidateStringTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJValidateStringTableViewCell.h; sourceTree = "<group>"; };
@@ -301,11 +301,11 @@
 		45F3808C0D38502BD671D537BDB3FC91 /* TSRipeTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSRipeTableViewController.h; sourceTree = "<group>"; };
 		470C5CD1265270E95A8A89443C727427 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
 		480CA917EA2DE0A932EFBE002690E0E5 /* CJValidateStringBigTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJValidateStringBigTableViewCell.m; sourceTree = "<group>"; };
-		484F581628CCBDF520A116FFFC4CD568 /* CQDemoKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CQDemoKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		484F581628CCBDF520A116FFFC4CD568 /* CQDemoKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CQDemoKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		489045E6BD3421CF7C161D6B4015251B /* TSSingleLineTextViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSSingleLineTextViewController.h; sourceTree = "<group>"; };
 		4AD89987EC7EAE20D7034EEF9935E7CC /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		4BE76CBFAE027801E929B7F1800E773E /* CJUIKitToastUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitToastUtil.m; path = CQDemoKit/BaseUtil/CJUIKitToastUtil.m; sourceTree = "<group>"; };
-		4EA8FA554337228E8270C169FC2B3F54 /* cqts_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_3.jpg; sourceTree = "<group>"; };
+		4EA8FA554337228E8270C169FC2B3F54 /* cqts_3.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_3.jpg; sourceTree = "<group>"; };
 		4F64C6F01980F102789DCA391EC2DFDB /* UIImage+CQDemoKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CQDemoKit.m"; path = "CQDemoKit/Helper/UIImage+CQDemoKit.m"; sourceTree = "<group>"; };
 		50831B7E7608DD3240BF0D7EBA97D93B /* TSDemo_Demo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TSDemo_Demo-Info.plist"; sourceTree = "<group>"; };
 		50D334FDDC5810F0C22C197AB08F18C5 /* CJUIKitAlertUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitAlertUtil.h; path = CQDemoKit/BaseUtil/CJUIKitAlertUtil.h; sourceTree = "<group>"; };
@@ -326,7 +326,7 @@
 		637FDD13BFB35A3555255CB1817ADC57 /* UIImage+CQDemoKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CQDemoKit.h"; path = "CQDemoKit/Helper/UIImage+CQDemoKit.h"; sourceTree = "<group>"; };
 		679929FC108528BAC9E13D7632203A7A /* Pods-TSDemoDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TSDemoDemo-umbrella.h"; sourceTree = "<group>"; };
 		697803F53B41ACFBF7DF8D4270B994EA /* CQTSRipeTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSRipeTableView.h; path = CQDemoKit/Demo_RipeView/CQTSRipeTableView.h; sourceTree = "<group>"; };
-		6B99222E43814257CD72AFAEF8227059 /* CQDemoKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CQDemoKit.bundle; path = "CQDemoKit-CQDemoKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B99222E43814257CD72AFAEF8227059 /* CQDemoKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CQDemoKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2756A6A454558072F7DFA68FC599E8 /* CJDealTextModelFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJDealTextModelFactory.h; sourceTree = "<group>"; };
 		6CF8069504999FB8BF5FA1529175AA74 /* Masonry-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-umbrella.h"; sourceTree = "<group>"; };
 		6D527EE6C96863A9ABE4D0F3DA98BC48 /* CJDealTextModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJDealTextModel.h; sourceTree = "<group>"; };
@@ -342,14 +342,14 @@
 		761E6D623CB7D98E69BEC88485B6D20F /* CJDealTextModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJDealTextModel.m; sourceTree = "<group>"; };
 		7BA2C685B62ABF05EA6A565D198B8CD4 /* CQTSFPSView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSFPSView.m; path = CQDemoKit/Monitor/CQTSFPSView.m; sourceTree = "<group>"; };
 		7CFD4E7E306B79CA5AFD2ADC9F97AD0F /* TSRipeButtonViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSRipeButtonViewController.m; sourceTree = "<group>"; };
-		7F5DA4678C43CB260B536A1E8B3330F5 /* cqts_10.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_10.jpg; sourceTree = "<group>"; };
+		7F5DA4678C43CB260B536A1E8B3330F5 /* cqts_10.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_10.jpg; sourceTree = "<group>"; };
 		7F82281721AB15B055F636B61B2175FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7FD1E7E1916E89A1222CBA8809736CC8 /* CQTSRipeImageCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSRipeImageCollectionViewCell.h; sourceTree = "<group>"; };
 		7FFC59E1A2B959FDFB9A24A2835A43AE /* Pods-TSDemoDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TSDemoDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		812DAEDC8F59D0FE1A9B5BAFBFF44A20 /* CQTSRipeImageCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSRipeImageCollectionViewCell.m; sourceTree = "<group>"; };
 		837834476F3329FA118B081516D4FC28 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
 		86765B456E483806C4E13D2DD50E40A4 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		89AE6B10820B3899AA720948BF04D5EA /* cqts_4.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_4.jpg; sourceTree = "<group>"; };
+		89AE6B10820B3899AA720948BF04D5EA /* cqts_4.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_4.jpg; sourceTree = "<group>"; };
 		8A8777240D439F9CCF8529DCE185AC17 /* TSButtonHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSButtonHomeViewController.h; sourceTree = "<group>"; };
 		8AA68EE57F3C38705A686881445ACB4C /* CQTSIconDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSIconDataModel.m; sourceTree = "<group>"; };
 		8AEEBD88282BA13360CAA867D8465C75 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
@@ -363,26 +363,27 @@
 		93E5C38004CB1C764590A05EBEBCBB5D /* CJDealTextModelFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJDealTextModelFactory.m; sourceTree = "<group>"; };
 		94FFFDD20B1009690FCDABB025AD1E97 /* Pods-TSDemoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TSDemoDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		95FA9B6D0070E18F163A721A30B9F25F /* CQTSSwitchViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSSwitchViewFactory.m; path = CQDemoKit/BaseUIKit/CQTSSwitchViewFactory.m; sourceTree = "<group>"; };
-		9761E828A6026FFCF22E3AA029427E3E /* cqts_5.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_5.jpg; sourceTree = "<group>"; };
+		972A18BA27B4CDDC0056D5B6 /* TSResourceEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSResourceEnum.h; sourceTree = "<group>"; };
+		9761E828A6026FFCF22E3AA029427E3E /* cqts_5.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_5.jpg; sourceTree = "<group>"; };
 		978C592CFA79E7E90CB0A0A03F82BEF1 /* CQTSLocImagesUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSLocImagesUtil.m; sourceTree = "<group>"; };
 		97A6E2E98ED2B56A4AA5938774E45D43 /* TSSwitchViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSSwitchViewController.m; sourceTree = "<group>"; };
 		984308C96C10805A242EB6F4EDE9D4A0 /* CQTSRipeButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CQTSRipeButton.h; path = CQDemoKit/Demo_RipeView/CQTSRipeButton.h; sourceTree = "<group>"; };
-		986036BBCF801BA169246A98CE40E5E9 /* TSDemo_Demo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TSDemo_Demo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		986036BBCF801BA169246A98CE40E5E9 /* TSDemo_Demo.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TSDemo_Demo.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98E0FB584D55B2C9E670FDBDC7F12E5E /* TSRipeTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSRipeTableViewController.m; sourceTree = "<group>"; };
 		98FDD3B3C2844810732756C7C9590F08 /* CQDemoKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CQDemoKit.debug.xcconfig; sourceTree = "<group>"; };
 		996532BE1E163E4523198A3CD9318D11 /* TSDemo_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Demo.debug.xcconfig; sourceTree = "<group>"; };
-		9A152BC689105A791D437E95C2F50CAA /* cqts_placeholder01.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_placeholder01.jpg; sourceTree = "<group>"; };
+		9A152BC689105A791D437E95C2F50CAA /* cqts_placeholder01.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_placeholder01.jpg; sourceTree = "<group>"; };
 		9A4FF35C62E410A4FBEFA03A42ABB5B3 /* CJValidateStringTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CJValidateStringTableViewCell.m; sourceTree = "<group>"; };
 		9C3610D1E11EEC3A4965C6CF33B1D151 /* TSResourceViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSResourceViewController.h; sourceTree = "<group>"; };
 		9D042346D126F4924E37D63BE8E2DEC5 /* CQTSSuspendButtonRootViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSSuspendButtonRootViewController.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E1178B3007F9B90D65B062D821BE8A9 /* UISwitch+CQTSMoreProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISwitch+CQTSMoreProperty.h"; path = "CQDemoKit/BaseUIKit/UISwitch+CQTSMoreProperty.h"; sourceTree = "<group>"; };
 		9E4BA4C5E85D634C7AB9F5B504F2BEBF /* CQTSSuspendWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSSuspendWindow.h; sourceTree = "<group>"; };
 		9F778301788673FB83BD8D97E5B25A83 /* CQTSIconDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSIconDataModel.h; sourceTree = "<group>"; };
 		9F8321A666F080174C067137F1C5C71C /* CQTSSuspendWindowFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSSuspendWindowFactory.h; sourceTree = "<group>"; };
 		A1268360D3930ACB61B84D4058952B3E /* CQTSBorderStateButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSBorderStateButton.m; path = CQDemoKit/BaseUIKit/CQTSBorderStateButton.m; sourceTree = "<group>"; };
 		A2A1D8792AE3B377ACE32974007511C4 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2BFAD96A2A9BB89F9C746CFE4332A72 /* cqts_long_vertical_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_long_vertical_1.jpg; sourceTree = "<group>"; };
+		A2BFAD96A2A9BB89F9C746CFE4332A72 /* cqts_long_vertical_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_long_vertical_1.jpg; sourceTree = "<group>"; };
 		A2F85C12F3CFA687EF88AB9C09D315D9 /* UIImageView+CQTSBaseUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CQTSBaseUtil.m"; sourceTree = "<group>"; };
 		A78D3443F105E00FC21FE5A357C8F716 /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
 		A85AE9E36F67A1B513CB8DA940771B4F /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
@@ -396,14 +397,14 @@
 		B2C3E3651D5D5BB95BFD56B0BBCB1BC5 /* CQTSImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CQTSImageLoader.h; sourceTree = "<group>"; };
 		B4A8B8C0C6A9886DF7E1688005DC5539 /* TSMultilineTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSMultilineTextViewController.m; sourceTree = "<group>"; };
 		B559460B20BB8E90E9756A168AB04416 /* TSResourceCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSResourceCollectionViewController.h; sourceTree = "<group>"; };
-		B879D87A34848FFEE45A5EC7AFD99E63 /* cqts_bgSky@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = "cqts_bgSky@2x.jpg"; sourceTree = "<group>"; };
+		B879D87A34848FFEE45A5EC7AFD99E63 /* cqts_bgSky@2x.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = "cqts_bgSky@2x.jpg"; sourceTree = "<group>"; };
 		B9A39104746A91A608B0564B656D7454 /* icons8-home.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icons8-home.png"; path = "CQDemoKit/BaseVC/TabBar/Resources/icons8-home.png"; sourceTree = "<group>"; };
 		B9A9281820624751024E8CF67A106EDD /* TSDemo_Demo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TSDemo_Demo-umbrella.h"; sourceTree = "<group>"; };
-		BAF1C2A80248C4A080BA18F77DC5939A /* cqts_6.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_6.jpg; sourceTree = "<group>"; };
+		BAF1C2A80248C4A080BA18F77DC5939A /* cqts_6.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_6.jpg; sourceTree = "<group>"; };
 		BBA616CEDC0F3AE35553458492C06DC4 /* TSButtonHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TSButtonHomeViewController.m; sourceTree = "<group>"; };
 		BDB676D9D5D3AFD89D8DDCE3369D4BAC /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
 		BEAFBADD0B3AC52854EAD9873683928B /* CQDemoKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CQDemoKit.modulemap; sourceTree = "<group>"; };
-		BEB7106DCD1EAF0B4569F35E1325C0CF /* cqts_9.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_9.jpg; sourceTree = "<group>"; };
+		BEB7106DCD1EAF0B4569F35E1325C0CF /* cqts_9.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_9.jpg; sourceTree = "<group>"; };
 		BFF3FCCF6EC9D4049DFCD2B5D7BB3798 /* CJUIKitRandomUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CJUIKitRandomUtil.h; sourceTree = "<group>"; };
 		C0459A5E245DD377A8AE5ADBAB67A7CB /* TSRipeButtonCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSRipeButtonCollectionViewController.h; sourceTree = "<group>"; };
 		C1A65545BA31C8E490DFEBD2574BF813 /* TSRipeCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TSRipeCollectionViewController.h; sourceTree = "<group>"; };
@@ -421,7 +422,7 @@
 		D76DA1EEACB53DED3D6E53E794C72F7C /* CQDemoKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CQDemoKit-Info.plist"; sourceTree = "<group>"; };
 		D7B03656CB2830C80FE7B4ACBA8305AF /* icons8-menu.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "icons8-menu.png"; path = "CQDemoKit/BaseVC/TabBar/Resources/icons8-menu.png"; sourceTree = "<group>"; };
 		D805355932248D2B0F017A6C07D8B20A /* CQDMSectionDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQDMSectionDataModel.m; sourceTree = "<group>"; };
-		DC0820C4BD1D03B9EF85056C9D1816F0 /* cqts_7.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_7.jpg; sourceTree = "<group>"; };
+		DC0820C4BD1D03B9EF85056C9D1816F0 /* cqts_7.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_7.jpg; sourceTree = "<group>"; };
 		DE0C0F3BA283EA39A99421C8F376E99F /* CQDemoKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CQDemoKit-dummy.m"; sourceTree = "<group>"; };
 		DE4A518F6C07E7675D2F3C6DB50B587C /* CQTSRipeBaseCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSRipeBaseCollectionView.m; sourceTree = "<group>"; };
 		DF616BE30225DCEBB7EEC3076FC35F00 /* UISwitch+CQTSMoreProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+CQTSMoreProperty.m"; path = "CQDemoKit/BaseUIKit/UISwitch+CQTSMoreProperty.m"; sourceTree = "<group>"; };
@@ -432,7 +433,7 @@
 		E5381CC2D3071DC1116D6A2B2FCFD8B8 /* TSDemo_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TSDemo_Demo.release.xcconfig; sourceTree = "<group>"; };
 		E5743E7F5487A39E6C07E080226F6854 /* UIUtilHomeViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIUtilHomeViewController.m; sourceTree = "<group>"; };
 		E7851906D7976272A721C8C4E0CE9092 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
-		E8821D27F66848272632F6A485BB836A /* cqts_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_1.jpg; sourceTree = "<group>"; };
+		E8821D27F66848272632F6A485BB836A /* cqts_1.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_1.jpg; sourceTree = "<group>"; };
 		EB75E713DC69A9E0CE36ABAA16913584 /* TSTabBarViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSTabBarViewController.m; path = TSDemo_Demo/TSTabBarViewController.m; sourceTree = "<group>"; };
 		EB7CC7527FD599A1064055C060E14B43 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		EB7D092FDB772DB5A4366508985800AC /* CQTSContainerViewFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CQTSContainerViewFactory.m; path = CQDemoKit/BaseUIKit/CQTSContainerViewFactory.m; sourceTree = "<group>"; };
@@ -453,7 +454,7 @@
 		FADBDA9E50BC45D82B25AABAE93152FF /* TSDemo_Demo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TSDemo_Demo-dummy.m"; sourceTree = "<group>"; };
 		FC48030AB8A45BE9CA966E31C358AE0E /* CJUIKitBaseTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CJUIKitBaseTextViewController.m; path = CQDemoKit/BaseVC/TextView/CJUIKitBaseTextViewController.m; sourceTree = "<group>"; };
 		FD591C94589937681CCA79939AFE7AF0 /* CQTSSuspendWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CQTSSuspendWindow.m; sourceTree = "<group>"; };
-		FE1780F252EA23EE03175498A89B07FA /* cqts_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; path = cqts_2.jpg; sourceTree = "<group>"; };
+		FE1780F252EA23EE03175498A89B07FA /* cqts_2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; path = cqts_2.jpg; sourceTree = "<group>"; };
 		FE9936F44DFD432AB615B8AC99835ACE /* CJUIKitBaseCollectionHomeViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CJUIKitBaseCollectionHomeViewController.h; path = CQDemoKit/BaseVC/Collection/CJUIKitBaseCollectionHomeViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -556,7 +557,6 @@
 				342C4D9B5E1E36390E7AF01E35444998 /* ViewController+MASAdditions.m */,
 				C84A449C2DE4F91F0620A5147DD42E0F /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -827,7 +827,6 @@
 				9F8321A666F080174C067137F1C5C71C /* CQTSSuspendWindowFactory.h */,
 				CD8F5405A2669AE2ADBC4F81E99C2B2E /* CQTSSuspendWindowFactory.m */,
 			);
-			name = SuspendWindowFactory;
 			path = SuspendWindowFactory;
 			sourceTree = "<group>";
 		};
@@ -850,7 +849,6 @@
 				A2BFAD96A2A9BB89F9C746CFE4332A72 /* cqts_long_vertical_1.jpg */,
 				9A152BC689105A791D437E95C2F50CAA /* cqts_placeholder01.jpg */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -1021,7 +1019,6 @@
 				45F3808C0D38502BD671D537BDB3FC91 /* TSRipeTableViewController.h */,
 				98E0FB584D55B2C9E670FDBDC7F12E5E /* TSRipeTableViewController.m */,
 			);
-			name = DemoRipeView;
 			path = DemoRipeView;
 			sourceTree = "<group>";
 		};
@@ -1032,8 +1029,8 @@
 				1B778B71EACA95F1C2A56100C9546448 /* TSResourceCollectionViewController.m */,
 				9C3610D1E11EEC3A4965C6CF33B1D151 /* TSResourceViewController.h */,
 				729FAF91D10A224D5B1FA7BA6454C451 /* TSResourceViewController.m */,
+				972A18BA27B4CDDC0056D5B6 /* TSResourceEnum.h */,
 			);
-			name = DemoResource;
 			path = DemoResource;
 			sourceTree = "<group>";
 		};
