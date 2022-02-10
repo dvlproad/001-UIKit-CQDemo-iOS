@@ -1,13 +1,13 @@
 //
-//  TSResourceEnum.h
+//  CQTSResourceEnum.h
 //  TSDemo_Demo
 //
 //  Created by ciyouzen on 8/10/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
 
-#ifndef TSResourceEnum_h
-#define TSResourceEnum_h
+#ifndef CQTSResourceEnum_h
+#define CQTSResourceEnum_h
 
 /// 图片来源
 typedef NS_ENUM(NSUInteger, CQTSRipeImageSource) {
@@ -18,4 +18,4 @@ typedef NS_ENUM(NSUInteger, CQTSRipeImageSource) {
 
 
 
-#endif /* TSResourceEnum_h */
+#endif /* CQTSResourceEnum_h */

@@ -7,7 +7,7 @@
 //
 
 #import <CQDemoKit/CJUIKitBaseCollectionHomeViewController.h>
-#import "TSResourceEnum.h"
+#import "CQTSResourceEnum.h"
 
 @interface TSResourceCollectionViewController : CJUIKitBaseCollectionHomeViewController {
     

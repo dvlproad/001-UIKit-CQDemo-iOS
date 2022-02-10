@@ -8,15 +8,9 @@
 //  为了快速构建完整 Demo 工程提供的成熟的CollectionView(已含内容和事件)，另图片数据源支持全本地图片或全网络图片
 
 #import <UIKit/UIKit.h>
+#import "CQTSResourceEnum.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-/// 图片来源
-typedef NS_ENUM(NSUInteger, CQTSRipeImageSource) {
-    CQTSRipeImageSourceImageNetwork = 0,  // 网络图片
-    CQTSRipeImageSourceImageLocal,        // 本地图片
-    CQTSRipeImageSourceIconNetwork,       // 网络icon
-};
 
 @interface CQTSRipeImageCollectionView : UICollectionView {
     

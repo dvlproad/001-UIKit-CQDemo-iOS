@@ -39,6 +39,7 @@
 #import "CQDMSectionDataModel+CJDealTextModel.h"
 #import "CJValidateStringBigTableViewCell.h"
 #import "CJValidateStringTableViewCell.h"
+#import "CQTSResourceEnum.h"
 #import "CQTSIconDataModel.h"
 #import "CQTSIconsUtil.h"
 #import "CQTSLocImageDataModel.h"

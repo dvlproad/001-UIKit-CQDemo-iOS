@@ -61,7 +61,7 @@
         sectionDataModel.theme = @"测试随机字符串等";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"随机字符串(中英文+数字)";
+            module.title = @"随机字符串(中文+英文+数字 任意组合)";
             module.actionBlock = ^{
                 NSString *randomString = cqtsRandomString(1, 40, CQRipeStringTypeNone);
                 NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
@@ -95,6 +95,16 @@
             module.actionBlock = ^{
                 NSString *randomString = cqtsRandomString(1, 40, CQRipeStringTypeChinese);
                 NSString *message = [NSString stringWithFormat:@"随机字符串为：%@", randomString];
+                [CJUIKitToastUtil showMessage:message];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"随机名字(中文)";
+            module.actionBlock = ^{
+                NSString *randomString = cqtsRandomName(2, 6);
+                NSString *message = [NSString stringWithFormat:@"随机名字为：%@", randomString];
                 [CJUIKitToastUtil showMessage:message];
             };
             [sectionDataModel.values addObject:module];
@@ -160,29 +170,8 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo RipeCollectionView:ImageNetwork";
-            module.actionBlock = ^{
-                UIViewController *viewController = [[TSRipeCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageNetwork];
-                [self.navigationController pushViewController:viewController animated:YES];
-            };
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo RipeCollectionView:ImageLocal";
-            module.actionBlock = ^{
-                UIViewController *viewController = [[TSRipeCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageLocal];
-                [self.navigationController pushViewController:viewController animated:YES];
-            };
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Demo RipeCollectionView:IconNetwork";
-            module.actionBlock = ^{
-                UIViewController *viewController = [[TSRipeCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceIconNetwork];
-                [self.navigationController pushViewController:viewController animated:YES];
-            };
+            module.title = @"Demo RipeCollectionView";
+            module.classEntry = [TSRipeCollectionViewController class];
             [sectionDataModel.values addObject:module];
         }
         {

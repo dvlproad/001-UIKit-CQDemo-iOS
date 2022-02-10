@@ -55,7 +55,7 @@ DEPENDENCIES:
   - TSDemo_Demo (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Masonry
 
 EXTERNAL SOURCES:
@@ -69,6 +69,6 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TSDemo_Demo: 7661dd69a6a8904171a2d0ed5c52556f4b91ddad
 
-PODFILE CHECKSUM: 6dc306c5242a4ae5efa57f86362ba3cd843c0087
+PODFILE CHECKSUM: 77b867837ab8e7b37c355e4d429bff1074ad4187
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
