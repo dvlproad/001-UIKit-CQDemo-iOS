@@ -34,6 +34,7 @@ inhibit_all_warnings! #inhibit_warnings参数能够有效的抑制CocoaPods引�
 target 'TSDemoDemo' do   
     pod 'TSDemo_Demo',        :path => '../'
     pod 'CQDemoKit',        	:path => '../'
+#    pod 'CJBaseHelper',       '~> 0.1.7',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
 end
 
 #target 'TSDemoDemoTests' do
