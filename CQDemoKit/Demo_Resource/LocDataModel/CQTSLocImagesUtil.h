@@ -35,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - local Image
 /// 所有的本地测试图片
 + (NSArray<UIImage *> *)cjts_localImages;
+/// 所有的本地测试图片的名称
++ (NSArray<NSString *> *)cjts_localImageNames;
 /// 随机的本地测试图片
 + (UIImage *)cjts_localImageRandom;
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
