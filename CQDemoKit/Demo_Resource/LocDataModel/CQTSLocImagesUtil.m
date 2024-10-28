@@ -73,7 +73,8 @@
     NSInteger *imageCount = [imageNames count];
     for (int i = 0; i < imageCount; i++) {
         NSString *imageName = [imageNames objectAtIndex:i];
-        images = [UIImage cqdemokit_xcassetImageNamed:imageName];
+        UIImage *image = [UIImage cqdemokit_xcassetImageNamed:imageName];
+        [images addObject:image];
     }
     
     return images;

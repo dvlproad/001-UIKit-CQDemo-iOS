@@ -17,9 +17,6 @@
 
 @property(nonnull, nonatomic, strong) NSMutableArray<NSString *> *imageNameArray;
 
-@property (nonatomic, weak) NSTimer *timer1;
-@property (nonatomic, weak) NSTimer *timer2;
-
 @end
 
 @implementation TSLeakViewController
@@ -34,10 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = NSLocalizedString(@"模拟内存泄露Leak", nil);
+    NSLog(@"viewDidLoad -[%@ viewDidLoad], 地址%p", NSStringFromClass([self class]), self);// 用于检测循环引用
     
-    __weak typeof(self) weakSelf = self;
-    __strong __typeof(self) strongSelf = weakSelf;
+    self.view.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0]; // #f5f5f5
+    
+    self.navigationItem.title = NSLocalizedString(@"模拟内存泄露Leak", nil);
     
     UIButton *button1 = [self themeBGButtonWithTitle:@"会泄露" action:@selector(leakMemoryCircularRreference:)];
     UIButton *button2 = [self themeBGButtonWithTitle:@"不泄露" action:@selector(leakMemoryCircularRreference:)];
@@ -59,26 +57,13 @@
         make.left.mas_equalTo(self.view).mas_offset(10);
         make.centerX.mas_equalTo(self.view);
     }];
+    if (self.leakBlock != nil) {    // 在测试泄露的时候 button 不显示
+        button1.hidden = YES;
+        button2.hidden = YES;
+    }
     
     
     [self leakMemory];
-    
-//    self.timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeInterval1:) userInfo:nil repeats:YES];
-        
-    /*
-    错误做法：
-    self.timer2 = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timeInterval2:) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer2 forMode:NSDefaultRunLoopMode];
-    */
-    
-    //正确做法：
-    //特别注意：timer2创建时并没直接赋值给timer2。
-    //原因是timer2是weak属性，如果直接赋值给timer2会被立即释放。
-    //因为timerWithXXX方法创建的NSTimer默认并没有加入RunLoop，只有后面加入RunLoop以后才可以将引用指向timer2。从而导致执行到addTimer:forMode的时候，访问了野指针而发生EXC_BAD_ACCESS，崩溃。
-//    NSTimer *tempTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timeInterval2:) userInfo:nil repeats:YES];
-//    [[NSRunLoop currentRunLoop] addTimer:tempTimer forMode:NSDefaultRunLoopMode];
-//    self.timer2 = tempTimer;
-    
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.dataSource = self;
@@ -101,15 +86,6 @@
 }
 
 
-- (void)timeInterval1:(id)object {
-    NSLog(@"111");
-}
-
-- (void)timeInterval2:(id)object {
-    NSLog(@"222");
-}
-
-
 // 内存泄漏示例
 - (void)leakMemory {
     NSObject *leakObject = [[NSObject alloc] init];
@@ -118,14 +94,22 @@
 
 // 内存泄漏示例--循环引用导致的
 - (void)leakMemoryCircularRreference:(UIButton *)button {
+    //__weak typeof(self) weakSelf = self;
+    //__strong __typeof(self) strongSelf = weakSelf;
+    
     TSLeakViewController *viewController = [[TSLeakViewController alloc] init];
     if ([button.titleLabel.text containsString:@"会泄露"]) {
         viewController.leakBlock = ^(NSString * _Nonnull title) {
-            viewController.title = title;
+            viewController.title = title; // 会泄露
         };
     } else {
+        __weak typeof(viewController) weakViewController = viewController;
         viewController.leakBlock = ^(NSString * _Nonnull title) {
-            self.title = title;
+            //self.title = title;   // 不会泄露
+            weakViewController.title = title;   // 不会泄露，使得在 Block 中不会出现对 自身 的强引用
+                       
+           //__strong __typeof(viewController) strongViewController = weakViewController;
+           //strongViewController.title = title;   // 不会泄露
         };
     }
     [self.navigationController pushViewController:viewController animated:YES];

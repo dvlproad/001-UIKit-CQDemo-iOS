@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeCollectionView", nil);
+    self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeButtonCollectionView", nil);
     
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSLocImagesUtil cjts_localImage3]];
     [self.view addSubview:imageView];

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TSLeakViewController : UIViewController
 
-@property (nullable, nonatomic, strong) void(^leakBlock)(NSString *title); /**< 点击后执行的方法 */
+@property (nullable, nonatomic, copy) void(^leakBlock)(NSString *title); /**< 点击后执行的方法 */
 
 @end
 
