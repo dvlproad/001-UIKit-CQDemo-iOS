@@ -11,7 +11,6 @@
 #import "BaseVCHomeViewController.h"
 #import "UIUtilHomeViewController.h"
 #import "RipeViewHomeViewController.h"
-#import "OptimizeHomeViewController.h"
 
 
 
@@ -38,12 +37,6 @@
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"BaseVC", nil);
         tabBarModel.classEntry = [BaseVCHomeViewController class];
-        [tabBarModels addObject:tabBarModel];
-    }
-    {
-        CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
-        tabBarModel.title = NSLocalizedString(@"优化", nil);
-        tabBarModel.classEntry = [OptimizeHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     {
