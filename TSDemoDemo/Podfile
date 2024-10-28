@@ -31,10 +31,14 @@ source 'https://gitee.com/dvlproad/dvlproadSpecs'  #这里要增加的是这条�
 
 inhibit_all_warnings! #inhibit_warnings参数能够有效的抑制CocoaPods引入的第三方代码库产生的warning。
 
-target 'TSDemoDemo' do   
-    pod 'TSDemo_Demo',        :path => '../'
-    pod 'CQDemoKit',        	:path => '../'
-#    pod 'CJBaseHelper',       '~> 0.1.7',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
+target 'TSDemoDemo' do
+  pod 'TSDemo_Demo',        :path => '../'
+  pod 'CQDemoKit',        	:path => '../'
+  pod 'CJBaseHelper',       '~> 0.1.7',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
+
+  # [XCode14升级MLeaksFinder报错](https://blog.csdn.net/zcl369369/article/details/130828740)
+  # [CJAlertSwizzedHelper swizzledMLLeakAlert]; // MLeaksFinder 使用 UIAlertView 导致崩溃，需要调用此方法来交换
+  pod 'MLeaksFinder',       :configurations => ['Debug']
 end
 
 #target 'TSDemoDemoTests' do

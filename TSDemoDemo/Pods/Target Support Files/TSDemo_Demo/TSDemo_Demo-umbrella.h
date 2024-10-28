@@ -11,6 +11,7 @@
 #endif
 
 #import "OptimizeHomeViewController.h"
+#import "TSLeakViewController.h"
 #import "TSOptimizeTableViewController.h"
 #import "TSResourceCollectionViewController.h"
 #import "TSResourceViewController.h"

@@ -8,6 +8,7 @@
 
 #import "OptimizeHomeViewController.h"
 #import "TSOptimizeTableViewController.h"
+#import "TSLeakViewController.h"
 
 @interface OptimizeHomeViewController () {
     
@@ -47,8 +48,21 @@
         sectionDataModel.theme = @"优化UI";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"列表卡顿";
+            module.title = @"模拟卡顿FPS";
             module.classEntry = [TSOptimizeTableViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"模拟内存泄露Leak";
+            module.classEntry = [TSLeakViewController class];
+//            module.actionBlock = ^{
+//                TSLeakViewController *viewController = [[TSLeakViewController alloc] init];
+//                viewController.leakBlock = ^(NSString * _Nonnull title) {
+//                    NSLog(@"%@", title);
+//                };
+//                [self.navigationController pushViewController:viewController animated:YES];
+//            };
             [sectionDataModel.values addObject:module];
         }
         
@@ -57,13 +71,6 @@
     
     self.sectionDataModels = sectionDataModels;
 }
-
-// 内存泄漏示例
-- (void)leakMemory {
-    NSObject *leakObject = [[NSObject alloc] init];
-    // 没有释放对象，导致内存泄漏
-}
-
 
 
 #pragma mark - Event

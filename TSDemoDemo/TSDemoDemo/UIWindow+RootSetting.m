@@ -8,6 +8,7 @@
 
 #import "UIWindow+RootSetting.h"
 #import <CQDemoKit/CQTSFPSView.h>
+#import "CJAlertSwizzedHelper.h"
 
 @implementation UIWindow (RootSetting)
 
@@ -21,6 +22,8 @@
     [self makeKeyAndVisible];
     
     [CQTSFPSView showInSuperView:self];
+    
+    [CJAlertSwizzedHelper swizzledMLLeakAlert]; // MLeaksFinder 使用 UIAlertView 导致崩溃，需要调用此方法来交换
 }
 
 @end
