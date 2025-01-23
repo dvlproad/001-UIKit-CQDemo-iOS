@@ -8,12 +8,13 @@
 
 import SnapKit
 
-class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataSource, UITableViewDelegate {
+//@objc // CQDemoKit OC版中已有此类，所以此类不再用于 objc ，避免重复定义
+public class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     var tableView: UITableView!
     var sectionDataModels: NSMutableArray!
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         self.navigationItem.title = NSLocalizedString("XXX首页", comment: "XXX首页") //知识点:使得tabBar中的title可以和显示在顶部的title保持各自
         
         let tableView: UITableView = UITableView.init(frame: CGRect.zero, style: .grouped)
@@ -31,24 +32,24 @@ class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataS
     }
     
     // MARK: - UITableViewDataSource & UITableViewDelegate
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return self.sectionDataModels.count;
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels.object(at: section) as! CQDMSectionDataModel
         let dataModels: NSArray = sectionDataModel.values;
         
         return dataModels.count;
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels.object(at: section) as! CQDMSectionDataModel
         let indexTitle: String = sectionDataModel.theme
         return indexTitle
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels.object(at: indexPath.section) as! CQDMSectionDataModel
         let dataModels: NSArray = sectionDataModel.values;
         let moduleModel: CQDMModuleModel = dataModels.object(at: indexPath.row) as! CQDMModuleModel
@@ -60,7 +61,7 @@ class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableViewDataS
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //NSLog(@"didSelectRowAtIndexPath = %zd %zd", indexPath.section, indexPath.row);
         tableView.deselectRow(at: indexPath, animated: true)
         

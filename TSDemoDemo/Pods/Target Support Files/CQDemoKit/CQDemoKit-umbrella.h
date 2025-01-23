@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "UIView+CQAuxiliaryText.h"
 #import "CQTSBorderStateButton.h"
 #import "CQTSButtonFactory.h"
 #import "CQTSContainerViewFactory.h"

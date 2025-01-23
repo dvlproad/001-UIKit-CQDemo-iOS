@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "TSAuxiliaryHomeViewController.h"
+#import "TSAuxiliaryViewController.h"
 #import "TSResourceCollectionViewController.h"
 #import "TSResourceViewController.h"
 #import "TSRipeButtonCollectionViewController.h"

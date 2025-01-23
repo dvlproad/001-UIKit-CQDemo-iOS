@@ -2,6 +2,7 @@ PODS:
   - CJBaseHelper/HookCJHelper (0.1.7)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.7)
   - CQDemoKit (0.6.9):
+    - CQDemoKit/Auxiliary (= 0.6.9)
     - CQDemoKit/BaseUIKit (= 0.6.9)
     - CQDemoKit/BaseUtil (= 0.6.9)
     - CQDemoKit/BaseVC (= 0.6.9)
@@ -9,6 +10,7 @@ PODS:
     - CQDemoKit/Demo_RipeView (= 0.6.9)
     - CQDemoKit/Helper (= 0.6.9)
     - CQDemoKit/Monitor (= 0.6.9)
+  - CQDemoKit/Auxiliary (0.6.9)
   - CQDemoKit/BaseUIKit (0.6.9):
     - Masonry
   - CQDemoKit/BaseUtil (0.6.9)
@@ -77,12 +79,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
-  CQDemoKit: f7a6a6f2a7e3eea2a4a0684c654bfcf0360e6dca
+  CQDemoKit: 7db592649df566471688f9c3feeaf748b0f61c5b
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
-  TSDemo_Demo: 7661dd69a6a8904171a2d0ed5c52556f4b91ddad
+  TSDemo_Demo: f4a124fda912f3341d9761c758966f0dfd1d0214
 
-PODFILE CHECKSUM: f1866c397404156ae4a7835f700b7bda6251abf3
+PODFILE CHECKSUM: 2fcde93d25bc601e20874d8aec0c3e9255b75e30
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2

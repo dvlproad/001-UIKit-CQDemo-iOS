@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import SnapKit
 
-class CJUIKitBaseCollectionHomeViewController: CJUIKitBaseViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+//@objc // CQDemoKit OC版中已有此类，所以此类不再用于 objc ，避免重复定义
+public class CJUIKitBaseCollectionHomeViewController: CJUIKitBaseViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
 
     var collectionView: UICollectionView!;
     var sectionDataModels: NSMutableArray!;
@@ -19,7 +20,7 @@ class CJUIKitBaseCollectionHomeViewController: CJUIKitBaseViewController, UIColl
         return false
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         self.navigationItem.title = NSLocalizedString("XXX首页", comment: "")
@@ -50,19 +51,19 @@ class CJUIKitBaseCollectionHomeViewController: CJUIKitBaseViewController, UIColl
     // MARK: - UICollectionViewDelegateFlowLayout
     
     // 此部分已在父类中实现
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10);
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var collectionViewCellWidth: CGFloat = 0
         if false {
         } else {
@@ -81,29 +82,29 @@ class CJUIKitBaseCollectionHomeViewController: CJUIKitBaseViewController, UIColl
     
     // MARK: - UICollectionViewDelegate
     ////“点到”item时候执行的时间(allowsMultipleSelection为默认的NO的时候，只有选中，而为YES的时候有选中和取消选中两种操作)
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels![indexPath.section] as! CQDMSectionDataModel
         let dataModels: NSMutableArray = sectionDataModel.values
         let moduleModel: CQDMModuleModel = dataModels[indexPath.row] as! CQDMModuleModel
         self.execModuleModel(moduleModel: moduleModel)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
     }
     
     // MARK: - UICollectionViewDataSource
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.sectionDataModels.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels![section] as! CQDMSectionDataModel
         let dataModels: NSMutableArray = sectionDataModel.values
         return dataModels.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let sectionDataModel: CQDMSectionDataModel = self.sectionDataModels![indexPath.section] as! CQDMSectionDataModel
         let dataModels: NSMutableArray = sectionDataModel.values
         let moduleModel: CQDMModuleModel = dataModels[indexPath.row] as! CQDMModuleModel
@@ -147,7 +148,7 @@ class CJUIKitBaseCollectionHomeViewController: CJUIKitBaseViewController, UIColl
         }
     }
     
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

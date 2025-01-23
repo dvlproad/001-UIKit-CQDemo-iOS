@@ -45,16 +45,25 @@ Pod::Spec.new do |s|
   # s.frameworks = "MediaPlayer"
   
 
-  s.subspec 'BaseVC' do |ss|
-    ss.source_files = "CQDemoKit-Swift/BaseVC/**/*.{swift}"
-    ss.dependency 'SnapKit'
+#  s.subspec 'BaseVC' do |ss|
+#    ss.source_files = "CQDemoKit-Swift/BaseVC/**/*.{swift}"
+#    ss.dependency 'SnapKit'
+#
+#    # ss.subspec 'TextView' do |sss|
+#    #   sss.source_files = "CQDemoKit-Swift/BaseVC/TextView/**/*.{h,m}"
+#    #   sss.dependency 'CQDemoKit-Swift/BaseVC/Base'
+#    #   sss.dependency 'CQDemoKit-Swift/BaseUtil'
+#    # end
+#  end
+  
+  s.subspec 'CQDemoKit-OC' do |ss|
+   s.dependency "CQDemoKit"
+ end
 
-    # ss.subspec 'TextView' do |sss|
-    #   sss.source_files = "CQDemoKit-Swift/BaseVC/TextView/**/*.{h,m}"
-    #   sss.dependency 'CQDemoKit-Swift/BaseVC/Base'
-    #   sss.dependency 'CQDemoKit-Swift/BaseUtil'
-    # end
-  end
+ #  s.subspec 'Auxiliary' do |ss|
+ #   ss.source_files = "CQDemoKit-Swift/Auxiliary/**/*.{swift}"
+ #   ss.dependency 'SnapKit'
+ # end
 
 
   # # Demo 工程中基本都需要的 Resource

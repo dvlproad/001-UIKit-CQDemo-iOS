@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CJUIKitBaseViewController: UIViewController {
-    override func viewDidLoad() {
+//@objc // CQDemoKit OC版中已有此类，所以此类不再用于 objc ，避免重复定义
+public class CJUIKitBaseViewController: UIViewController {
+    public override func viewDidLoad() {
         self.view.backgroundColor = UIColor(red: 242/255.0, green: 242/255.0, blue: 242/255.0, alpha: 1.0) //"#f2f2f2"
     }
 }

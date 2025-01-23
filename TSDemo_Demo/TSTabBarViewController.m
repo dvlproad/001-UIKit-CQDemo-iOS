@@ -11,7 +11,7 @@
 #import "BaseVCHomeViewController.h"
 #import "UIUtilHomeViewController.h"
 #import "RipeViewHomeViewController.h"
-
+#import "TSAuxiliaryHomeViewController.h"
 
 
 @interface TSTabBarViewController () {
@@ -49,6 +49,12 @@
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"Ripe", nil);
         tabBarModel.classEntry = [RipeViewHomeViewController class];
+        [tabBarModels addObject:tabBarModel];
+    }
+    {
+        CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
+        tabBarModel.title = NSLocalizedString(@"Auxiliary", nil);
+        tabBarModel.classEntry = [TSAuxiliaryHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     

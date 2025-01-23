@@ -8,11 +8,12 @@
 
 import SnapKit
 
-class CJUIKitBaseScrollViewController: CJUIKitBaseViewController {
+//@objc // CQDemoKit OC版中已有此类，所以此类不再用于 objc ，避免重复定义
+public class CJUIKitBaseScrollViewController: CJUIKitBaseViewController {
     fileprivate var scrollView: UIScrollView!
     fileprivate var containerView: UIView!
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let scrollView: UIScrollView = UIScrollView()

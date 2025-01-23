@@ -123,7 +123,10 @@ Pod::Spec.new do |s|
     ss.dependency 'CQDemoKit/BaseUIKit'   # 因为 CQTSRipeButton 需要使用 CQTSButtonFactory
     ss.dependency 'CQDemoKit/Demo_Resource'
   end
-  
+
+  s.subspec 'Auxiliary' do |ss|
+    ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
+  end
   
   s.subspec 'Monitor' do |ss|
     ss.source_files = "CQDemoKit/Monitor/**/*.{h,m}"

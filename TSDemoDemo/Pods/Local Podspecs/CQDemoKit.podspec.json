@@ -31,60 +31,44 @@
     {
       "name": "BaseVC",
       "dependencies": {
-        "CQDemoKit/Helper": [
-
-        ]
+        "CQDemoKit/Helper": []
       },
       "subspecs": [
         {
           "name": "Base",
           "source_files": "CQDemoKit/BaseVC/Base/**/*.{h,m}",
           "dependencies": {
-            "Masonry": [
-
-            ],
-            "CQDemoKit/BaseUIKit": [
-
-            ]
+            "Masonry": [],
+            "CQDemoKit/BaseUIKit": []
           }
         },
         {
           "name": "ScrollView",
           "source_files": "CQDemoKit/BaseVC/ScrollView/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": [
-
-            ]
+            "CQDemoKit/BaseVC/Base": []
           }
         },
         {
           "name": "TableView",
           "source_files": "CQDemoKit/BaseVC/TableView/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": [
-
-            ]
+            "CQDemoKit/BaseVC/Base": []
           }
         },
         {
           "name": "Collection",
           "source_files": "CQDemoKit/BaseVC/Collection/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": [
-
-            ]
+            "CQDemoKit/BaseVC/Base": []
           }
         },
         {
           "name": "TextView",
           "source_files": "CQDemoKit/BaseVC/TextView/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": [
-
-            ],
-            "CQDemoKit/BaseUtil": [
-
-            ]
+            "CQDemoKit/BaseVC/Base": [],
+            "CQDemoKit/BaseUtil": []
           }
         },
         {
@@ -100,9 +84,7 @@
       "name": "BaseUIKit",
       "source_files": "CQDemoKit/BaseUIKit/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ]
+        "Masonry": []
       }
     },
     {
@@ -113,28 +95,22 @@
       "name": "Demo_Resource",
       "source_files": "CQDemoKit/Demo_Resource/**/*.{h,m}",
       "dependencies": {
-        "CQDemoKit/Helper": [
-
-        ],
-        "CQDemoKit/BaseUIKit": [
-
-        ]
+        "CQDemoKit/Helper": [],
+        "CQDemoKit/BaseUIKit": []
       }
     },
     {
       "name": "Demo_RipeView",
       "source_files": "CQDemoKit/Demo_RipeView/**/*.{h,m}",
       "dependencies": {
-        "CQDemoKit/BaseUtil": [
-
-        ],
-        "CQDemoKit/BaseUIKit": [
-
-        ],
-        "CQDemoKit/Demo_Resource": [
-
-        ]
+        "CQDemoKit/BaseUtil": [],
+        "CQDemoKit/BaseUIKit": [],
+        "CQDemoKit/Demo_Resource": []
       }
+    },
+    {
+      "name": "Auxiliary",
+      "source_files": "CQDemoKit/Auxiliary/**/*.{h,m}"
     },
     {
       "name": "Monitor",
