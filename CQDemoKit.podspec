@@ -1,13 +1,30 @@
 Pod::Spec.new do |s|
   #查看本地已同步的pod库：pod repo
-  #验证方法：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings
-  #上传方法：pod trunk push CQDemoKit.podspec --allow-warnings
   #清除缓存：pod cache clean CQDemoKit
+
+  # 旧方法（本库不依赖swift库的时候）
+  # 上传到私有库 gitee上的私有项目: dvlproadSpecs
+  #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
+  #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings
+  #提交方法(私有库)： pod repo push dvlproad CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
+
+  # 上传到开源库 gitee上的公开项目: Specs
+  #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/Specs' --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CQDemoKit.podspec --sources=master,dvlproadPublicSpec --allow-warnings --use-libraries --verbose
+  #提交方法(私有库)： pod repo push dvlproadPublicSpec CQDemoKit.podspec --sources=master,dvlproadPublicSpec --allow-warnings --use-libraries --verbose
+
+  # 含swift文件时候上传到私有库的方法（本类要依赖swift库的时候）将--use-libraries去掉，或者改成--use-modular-headers
+  #验证方法1(含Swift的时候）：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-modular-headers --verbose
+  #验证方法2(含Swift的时候）：pod lib lint CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
+  #提交方法 (含Swift的时候）：pod repo push dvlproad CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-modular-headers --verbose
+
+
   # 关于resource：
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.6.9"
+  s.version      = "0.7.0"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -35,7 +52,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.6.9" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.0" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -46,7 +63,7 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
   # s.resources = "CQDemoKit/**/*.{png,xib}"
   s.resource_bundle = {
-    'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg}', 'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
+    'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg}', 'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
   }
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
@@ -126,6 +143,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Auxiliary' do |ss|
     ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
+    ss.dependency 'Masonry'
   end
   
   s.subspec 'Monitor' do |ss|
