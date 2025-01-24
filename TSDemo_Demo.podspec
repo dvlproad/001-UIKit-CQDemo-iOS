@@ -52,5 +52,8 @@ Pod::Spec.new do |s|
   #多个依赖就写多行
   s.dependency 'CQDemoKit'
 #  s.dependency 'CQDemoKit-Swift'
+  s.dependency 'SSZipArchive'     # 模拟下载 zip 到沙盒的示例
+
+
   
 end

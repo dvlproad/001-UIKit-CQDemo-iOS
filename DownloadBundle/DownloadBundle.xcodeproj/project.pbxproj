@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9711D2152D43285500BEA78D /* symbol_svg_inAssetDataSet.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D2132D43285500BEA78D /* symbol_svg_inAssetDataSet.svg */; };
+		9711D2162D43285500BEA78D /* png_inMainBundle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9711D2122D43285500BEA78D /* png_inMainBundle.png */; };
+		9711D2172D43285500BEA78D /* normal_svg_inMainBundle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D2102D43285500BEA78D /* normal_svg_inMainBundle.svg */; };
+		9711D2182D43285500BEA78D /* fistBump.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D20F2D43285500BEA78D /* fistBump.svg */; };
+		9711D2192D43285500BEA78D /* emoji9_FFA5BE_byPath.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D20E2D43285500BEA78D /* emoji9_FFA5BE_byPath.svg */; };
+		9711D21A2D43285500BEA78D /* parent-clip.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D2112D43285500BEA78D /* parent-clip.svg */; };
+		9711D21B2D43285500BEA78D /* symbol_svg_inMainBundle.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D2142D43285500BEA78D /* symbol_svg_inMainBundle.svg */; };
+		9711D2212D432AEA00BEA78D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9711D2202D432AEA00BEA78D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9711D2072D43274800BEA78D /* DownloadBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DownloadBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9711D20E2D43285500BEA78D /* emoji9_FFA5BE_byPath.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = emoji9_FFA5BE_byPath.svg; sourceTree = "<group>"; };
+		9711D20F2D43285500BEA78D /* fistBump.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fistBump.svg; sourceTree = "<group>"; };
+		9711D2102D43285500BEA78D /* normal_svg_inMainBundle.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = normal_svg_inMainBundle.svg; sourceTree = "<group>"; };
+		9711D2112D43285500BEA78D /* parent-clip.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "parent-clip.svg"; sourceTree = "<group>"; };
+		9711D2122D43285500BEA78D /* png_inMainBundle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = png_inMainBundle.png; sourceTree = "<group>"; };
+		9711D2132D43285500BEA78D /* symbol_svg_inAssetDataSet.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = symbol_svg_inAssetDataSet.svg; sourceTree = "<group>"; };
+		9711D2142D43285500BEA78D /* symbol_svg_inMainBundle.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = symbol_svg_inMainBundle.svg; sourceTree = "<group>"; };
+		9711D2202D432AEA00BEA78D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9711D2042D43274800BEA78D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9711D1FE2D43274800BEA78D = {
+			isa = PBXGroup;
+			children = (
+				9711D20E2D43285500BEA78D /* emoji9_FFA5BE_byPath.svg */,
+				9711D20F2D43285500BEA78D /* fistBump.svg */,
+				9711D2102D43285500BEA78D /* normal_svg_inMainBundle.svg */,
+				9711D2112D43285500BEA78D /* parent-clip.svg */,
+				9711D2122D43285500BEA78D /* png_inMainBundle.png */,
+				9711D2132D43285500BEA78D /* symbol_svg_inAssetDataSet.svg */,
+				9711D2142D43285500BEA78D /* symbol_svg_inMainBundle.svg */,
+				9711D2202D432AEA00BEA78D /* Assets.xcassets */,
+				9711D2082D43274800BEA78D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9711D2082D43274800BEA78D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9711D2072D43274800BEA78D /* DownloadBundle.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9711D2062D43274800BEA78D /* DownloadBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9711D20B2D43274800BEA78D /* Build configuration list for PBXNativeTarget "DownloadBundle" */;
+			buildPhases = (
+				9711D2032D43274800BEA78D /* Sources */,
+				9711D2042D43274800BEA78D /* Frameworks */,
+				9711D2052D43274800BEA78D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DownloadBundle;
+			packageProductDependencies = (
+			);
+			productName = DownloadBundle;
+			productReference = 9711D2072D43274800BEA78D /* DownloadBundle.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9711D1FF2D43274800BEA78D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					9711D2062D43274800BEA78D = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 9711D2022D43274800BEA78D /* Build configuration list for PBXProject "DownloadBundle" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9711D1FE2D43274800BEA78D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9711D1FE2D43274800BEA78D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9711D2062D43274800BEA78D /* DownloadBundle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9711D2052D43274800BEA78D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9711D2152D43285500BEA78D /* symbol_svg_inAssetDataSet.svg in Resources */,
+				9711D2162D43285500BEA78D /* png_inMainBundle.png in Resources */,
+				9711D2172D43285500BEA78D /* normal_svg_inMainBundle.svg in Resources */,
+				9711D2182D43285500BEA78D /* fistBump.svg in Resources */,
+				9711D2192D43285500BEA78D /* emoji9_FFA5BE_byPath.svg in Resources */,
+				9711D21A2D43285500BEA78D /* parent-clip.svg in Resources */,
+				9711D2212D432AEA00BEA78D /* Assets.xcassets in Resources */,
+				9711D21B2D43285500BEA78D /* symbol_svg_inMainBundle.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9711D2032D43274800BEA78D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9711D2092D43274800BEA78D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9711D20A2D43274800BEA78D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9711D20C2D43274800BEA78D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DownloadBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		9711D20D2D43274800BEA78D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.DownloadBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9711D2022D43274800BEA78D /* Build configuration list for PBXProject "DownloadBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9711D2092D43274800BEA78D /* Debug */,
+				9711D20A2D43274800BEA78D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9711D20B2D43274800BEA78D /* Build configuration list for PBXNativeTarget "DownloadBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9711D20C2D43274800BEA78D /* Debug */,
+				9711D20D2D43274800BEA78D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9711D1FF2D43274800BEA78D /* Project object */;
+}

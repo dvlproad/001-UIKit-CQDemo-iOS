@@ -12,6 +12,7 @@
 
 #import "TSAuxiliaryHomeViewController.h"
 #import "TSAuxiliaryViewController.h"
+#import "TSCopyMainBunldeFileViewController.h"
 #import "TSResourceCollectionViewController.h"
 #import "TSResourceViewController.h"
 #import "TSRipeButtonCollectionViewController.h"

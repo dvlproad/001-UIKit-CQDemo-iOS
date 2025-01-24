@@ -8,6 +8,7 @@
 
 #import "TSAuxiliaryHomeViewController.h"
 #import "TSAuxiliaryViewController.h"
+#import "TSCopyMainBunldeFileViewController.h"
 
 @interface TSAuxiliaryHomeViewController () {
     
@@ -26,7 +27,7 @@
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
-    // Button、Container、Switch
+    // Auxiliary
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"测试 Auxiliary 等";
@@ -34,6 +35,18 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Auxiliary";
             module.classEntry = [TSAuxiliaryViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 沙盒文件 等";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"CopyMainBunldeFile";
+            module.classEntry = [TSCopyMainBunldeFileViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

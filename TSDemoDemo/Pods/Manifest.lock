@@ -55,8 +55,10 @@ PODS:
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - SSZipArchive (2.4.3)
   - TSDemo_Demo (0.5.2):
     - CQDemoKit
+    - SSZipArchive
 
 DEPENDENCIES:
   - CJBaseHelper/HookCJHelper (~> 0.1.7)
@@ -71,6 +73,7 @@ SPEC REPOS:
     - FBRetainCycleDetector
     - Masonry
     - MLeaksFinder
+    - SSZipArchive
 
 EXTERNAL SOURCES:
   CQDemoKit:
@@ -84,7 +87,8 @@ SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
-  TSDemo_Demo: f4a124fda912f3341d9761c758966f0dfd1d0214
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+  TSDemo_Demo: 0927ece8249b70a6c9ea6ef9cd91d0121d8cb79c
 
 PODFILE CHECKSUM: 2fcde93d25bc601e20874d8aec0c3e9255b75e30
 
