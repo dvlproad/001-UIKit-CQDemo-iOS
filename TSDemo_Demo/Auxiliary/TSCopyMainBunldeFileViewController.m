@@ -108,7 +108,7 @@
                                                                         checkIfExist:YES];
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:absoluteFilePath];
                 if (downloadBundle != nil) {
-                    UIImage *image = [UIImage imageNamed:@"icon_control_katong_5" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    UIImage *image = [UIImage imageNamed:@"cqts_bundle_symbolsvg_1" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
                 }
             };
@@ -158,7 +158,7 @@
                 
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
                 if (downloadBundle != nil) {
-                    UIImage *image = [UIImage imageNamed:@"icon_control_katong_6" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    UIImage *image = [UIImage imageNamed:@"cqts_bundle_symbolsvg_2" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
                 }
             };

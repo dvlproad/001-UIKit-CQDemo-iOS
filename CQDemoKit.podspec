@@ -1,12 +1,20 @@
 Pod::Spec.new do |s|
   #查看本地已同步的pod库：pod repo
   #清除缓存：pod cache clean CQDemoKit
+  
+#  pod trunk register 邮箱地址 '用户名' --description='描述信息'
+#  pod trunk register dvlproad@163.com 'dvlproad' --description='homeMac'
+#  pod trunk me
 
   # 旧方法（本库不依赖swift库的时候）
+  # 上传到github公有库:
+  #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings --use-libraries --verbose
+  #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings
+  
   # 上传到私有库 gitee上的私有项目: dvlproadSpecs
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
   #验证方法2：pod lib lint CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
-  #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings
   #提交方法(私有库)： pod repo push dvlproad CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
 
   # 上传到开源库 gitee上的公开项目: Specs
@@ -24,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.7.0"
+  s.version      = "0.7.1"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -52,7 +60,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.1" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -62,6 +70,16 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
   # s.resources = "CQDemoKit/**/*.{png,xib}"
+  
+  # s.resource_bundle 指定一个目录下的所有png图片为一个资源包
+  # s.resource_bundle = {
+  #   'MapBox' => 'MapView/Map/Resources/*.png'
+  # }
+  # s.resource_bundles 指定多个资源包
+  # s.resource_bundles = {
+  #    'MapBox' => ['MapView/Map/Resources/*.png'],
+  #    'OtherResources' => ['MapView/Map/OtherResources/*.png']
+  #  }
   s.resource_bundle = {
     'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg}', 'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
   }
