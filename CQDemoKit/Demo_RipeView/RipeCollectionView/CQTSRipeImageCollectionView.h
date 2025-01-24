@@ -46,12 +46,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 /* 初始化示例
 CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithScrollDirection:UICollectionViewScrollDirectionVertical perMaxCount:3];
-[collectionView setupSectionRowCounts:@[@1, @3, @6, @8] useNetworkImage:YES];
+[collectionView setupSectionRowCounts:@[@1, @3, @6, @8] ripeImageSource:CQTSRipeImageSourceImageNetwork];
 collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
 collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
     bCell.contentView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
     bCell.backgroundColor = [UIColor colorWithWhite:1 alpha:0.8];
 };
+[self.view addSubview:collectionView];
+[collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.left.right.top.mas_equalTo(self.view);
+    make.height.mas_equalTo(200);
+}];
 */
 
 @end
