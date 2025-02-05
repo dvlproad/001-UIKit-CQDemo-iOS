@@ -1,5 +1,5 @@
 //
-//  CQTSSandboxUtil.h
+//  CQTSSandboxPathUtil.h
 //  CQDemoKit
 //
 //  Created by lcQian on 2020/4/7.
@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, CQTSSandboxType) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CQTSSandboxUtil : NSObject
+@interface CQTSSandboxPathUtil : NSObject
 
 /// 将相对路径补全为绝对路径
 ///

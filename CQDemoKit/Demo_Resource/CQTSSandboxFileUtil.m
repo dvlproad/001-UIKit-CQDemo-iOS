@@ -1,15 +1,16 @@
 //
-//  CQTSSandboxSimulateUtil.m
+//  CQTSSandboxFileUtil.m
 //  CQDemoKit
 //
 //  Created by lcQian on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
 
-#import "CQTSSandboxSimulateUtil.h"
+#import "CQTSSandboxFileUtil.h"
 #import "CQTSResourceUtil.h"
+#import "NSError+CQTSErrorString.h"
 
-@implementation CQTSSandboxSimulateUtil
+@implementation CQTSSandboxFileUtil
 
 #pragma mark - Copy Bundle File
 /// 拷贝主工程中的文件到沙盒中
@@ -47,7 +48,7 @@
     NSString *newFileName = [NSString stringWithFormat:@"%@.%@", fileName, fileExtension];
     relativePath = [relativePath stringByAppendingPathComponent:newFileName];
     // 绝对路径
-    NSString *sandboxPath = [CQTSSandboxUtil sandboxPath:sandboxType];
+    NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:sandboxType];
     NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
     NSURL *destinationURL = [sandboxURL URLByAppendingPathComponent:relativePath];
 
@@ -86,5 +87,73 @@
         @"relativeFilePath": relativePath
     };
 }
+
+
++ (void)downloadFileWithUrl:(NSString *)fileUrl
+              toSandboxType:(CQTSSandboxType)sandboxType
+               subDirectory:(nullable NSString *)subDirectory
+                   fileName:(nullable NSString *)fileNameWithExtension
+                    success:(void (^)(NSDictionary *fileDictionary))success
+                    failure:(void (^)(NSString *errorMessage))failure
+{
+    NSURL *fileURL = [NSURL URLWithString:fileUrl];
+    if (!fileURL) {
+        failure(@"fileUrl错误");
+        return;
+    }
+    
+    NSURLSessionDownloadTask *downloadTask = [[NSURLSession sharedSession] downloadTaskWithURL:fileURL completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        if (!location || !response || error || ((NSHTTPURLResponse *)response).statusCode != 200) {
+            failure(error.cqtsErrorString);
+            return;
+        }
+        
+        NSError *fileError = nil;
+        NSData *data = [NSData dataWithContentsOfURL:location options:0 error:&fileError];
+        if (!data || fileError) {
+            failure(fileError.cqtsErrorString);
+            return;
+        }
+        
+        NSDictionary *result;
+        if (fileNameWithExtension == nil) {
+            NSString *lastPathComponent = fileUrl.lastPathComponent;
+            result = [CQTSResourceUtil extractFileNameAndExtensionFromFileName:lastPathComponent];
+        } else {
+            result = [CQTSResourceUtil extractFileNameAndExtensionFromFileName:fileNameWithExtension];
+        }
+        NSString *fileName = result[@"fileName"];
+        NSString *fileExtension = result[@"fileExtension"];
+        
+        // 创建目标路径（共享资源目录下的目标文件路径）:相对路径
+        NSString *relativePath = @"";
+        if (subDirectory != nil && subDirectory.length > 0) {
+            relativePath = subDirectory;
+        }
+        NSString *newFileName = [NSString stringWithFormat:@"%@.%@", fileName, fileExtension];
+        relativePath = [relativePath stringByAppendingPathComponent:newFileName];
+        // 绝对路径
+        NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:sandboxType];
+        NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
+        NSURL *destinationURL = [sandboxURL URLByAppendingPathComponent:relativePath];
+        
+        [data writeToFile:destinationURL.path options:0 error:&fileError];
+        if (fileError) {
+            failure(fileError.cqtsErrorString);
+            
+        } else {
+            NSLog(@"File download to shared directory: %@", destinationURL.path);
+            success(@{
+                @"fileName": fileName,
+                @"fileExtension": fileExtension,
+                @"absoluteFilePath": destinationURL.path,
+                @"relativeFilePath": relativePath
+            });
+        }
+    }];
+    
+    [downloadTask resume];
+}
+
 
 @end

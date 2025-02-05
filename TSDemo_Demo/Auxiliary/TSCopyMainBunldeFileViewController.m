@@ -7,9 +7,10 @@
 //
 
 #import "TSCopyMainBunldeFileViewController.h"
+#import <CQDemoKit/CJUIKitAlertUtil.h>
 #import <CQDemoKit/CQTSResourceUtil.h>
-#import <CQDemoKit/CQTSSandboxUtil.h>
-#import <CQDemoKit/CQTSSandboxSimulateUtil.h>
+#import <CQDemoKit/CQTSSandboxPathUtil.h>
+#import <CQDemoKit/CQTSSandboxFileUtil.h>
 #import <SSZipArchive/SSZipArchive.h>
 
 @interface TSCopyMainBunldeFileViewController () {
@@ -17,6 +18,7 @@
 }
 @property (nonatomic, copy, nullable) NSString *downloadBundleRelativePath;
 @property (nonatomic, copy, nullable) NSString *downloadZipRelativePath;
+@property (nonatomic, copy, nullable) NSString *realDownloadZipRelativePath;
 @property (nonatomic, strong) UIImageView *imageView;
 
 @end
@@ -42,8 +44,8 @@
             module.title = @"Copy .jpg";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_jpg_01.jpg";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxUtil documentsDirectory]];
-                NSDictionary *dict = [CQTSSandboxSimulateUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
+                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
+                NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments subDirectory:nil];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
@@ -59,8 +61,8 @@
             module.content = @"动画显示需接三方 FLAnimatedImage 库";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_gif_01.gif";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxUtil documentsDirectory]];
-                NSDictionary *dict = [CQTSSandboxSimulateUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
+                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
+                NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments subDirectory:nil];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
@@ -84,9 +86,9 @@
             module.content = @"请先点击，以模拟下载 .bundle 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.bundle";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxUtil documentsDirectory]];
+                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
                 
-                NSDictionary *dict = [CQTSSandboxSimulateUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
+                NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments
                                                           subDirectory:@"downloadBundle"];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
@@ -103,7 +105,7 @@
             module.content = @"请先模拟下载 .bundle 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.bundle";
-                NSString *absoluteFilePath = [CQTSSandboxUtil makeupAbsoluteFilePath:weakSelf.downloadBundleRelativePath
+                NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.downloadBundleRelativePath
                                                                        toSandboxType:CQTSSandboxTypeDocuments
                                                                         checkIfExist:YES];
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:absoluteFilePath];
@@ -128,9 +130,9 @@
             module.content = @"请先点击，以模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.zip";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxUtil documentsDirectory]];
+                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
                 
-                NSDictionary *dict = [CQTSSandboxSimulateUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
+                NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments
                                                           subDirectory:@"downloadZip"];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
@@ -146,20 +148,81 @@
             module.title = @"读取 .zip 中内容";
             module.content = @"请先模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
-                NSString *copyFile = @"DownloadBundle.zip";
-                NSString *absoluteFilePath = [CQTSSandboxUtil makeupAbsoluteFilePath:weakSelf.downloadZipRelativePath
+                NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.downloadZipRelativePath
                                                                        toSandboxType:CQTSSandboxTypeDocuments
                                                                         checkIfExist:YES];
                 // Unzip
                 NSString *zipPath = absoluteFilePath;
                 NSString *unzipPath = [absoluteFilePath stringByDeletingLastPathComponent];
                 [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipPath];
-                NSString *unzipBundlePath = [unzipPath stringByAppendingPathComponent:@"DownloadBundle.bundle"];
+                //NSString *unzipFileName = [absoluteFilePath.lastPathComponent stringByDeletingPathExtension];
+                NSString *unzipFileName = @"DownloadBundle.bundle";
+                NSString *unzipBundlePath = [unzipPath stringByAppendingPathComponent:unzipFileName];
                 
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
                 if (downloadBundle != nil) {
                     UIImage *image = [UIImage imageNamed:@"cqts_bundle_symbolsvg_2" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
+                } else {
+                    NSString *errorMessage = @"downloadBundle 获取失败";
+                    [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
+                }
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // Download .zip
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 Download .zip 等";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Download .zip";
+            module.content = @"请先点击，以正式下载 .zip 到沙盒中";
+            module.actionBlock = ^{
+                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
+                
+                NSString *Url = @"http://shs4ggs0e.hd-bkt.clouddn.com/symbol/TestDownloadBundle.bundle.zip";
+                [CQTSSandboxFileUtil downloadFileWithUrl:Url toSandboxType:CQTSSandboxTypeDocuments
+                                                subDirectory:@"downloadZip" fileName:nil success:^(NSDictionary *dict) {
+                    NSString *absoluteFilePath = dict[@"absoluteFilePath"];
+                    NSString *relativeFilePath = dict[@"relativeFilePath"];
+                    weakSelf.realDownloadZipRelativePath = relativeFilePath;
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [weakSelf updateAllRealZipModelContent];
+                    });
+                    
+                } failure:^(NSString *errorMessage){
+                    [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
+                }];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"读取 .zip 中内容";
+            module.content = @"请先正式下载 .zip 到沙盒中";
+            module.actionBlock = ^{
+                NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.realDownloadZipRelativePath
+                                                                       toSandboxType:CQTSSandboxTypeDocuments
+                                                                        checkIfExist:YES];
+                // Unzip
+                NSString *zipPath = absoluteFilePath;
+                NSString *unzipPath = [absoluteFilePath stringByDeletingLastPathComponent];
+                [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipPath];
+                NSString *unzipFileName = [absoluteFilePath.lastPathComponent stringByDeletingPathExtension];
+                NSString *unzipBundlePath = [unzipPath stringByAppendingPathComponent:unzipFileName];
+                
+                NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
+                if (downloadBundle != nil) {
+                    UIImage *image = [UIImage imageNamed:@"icon_control_katong_5" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    weakSelf.imageView.image = image;
+                } else {
+                    NSString *errorMessage = @"downloadBundle 获取失败";
+                    [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
                 }
             };
             [sectionDataModel.values addObject:module];
@@ -223,6 +286,28 @@
                 module.content = @"已模拟下载 .zip 到沙盒中，可点击直接读取";
             } else {
                 module.content = @"请先模拟下载 .zip 到沙盒中";
+            }
+        }
+    }
+    [self.tableView reloadData];
+}
+
+/// 更新所有测试模拟下载 .zip 的 model 的 content
+- (void)updateAllRealZipModelContent {
+    NSMutableArray *values = self.sectionDataModels[3].values;
+    for (int index = 0; index < values.count; index++) {
+        CQDMModuleModel *module = values[index];
+        if (index == 0) {
+            if (self.realDownloadZipRelativePath != nil) {
+                module.content = @"已正式下载 .zip 到沙盒中";
+            } else {
+                module.content = @"请先点击，以正式下载 .zip 到沙盒中";
+            }
+        } else {
+            if (self.realDownloadZipRelativePath != nil) {
+                module.content = @"已正式下载 .zip 到沙盒中，可点击直接读取";
+            } else {
+                module.content = @"请先正式下载 .zip 到沙盒中";
             }
         }
     }

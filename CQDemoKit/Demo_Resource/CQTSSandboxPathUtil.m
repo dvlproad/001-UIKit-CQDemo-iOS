@@ -1,14 +1,14 @@
 //
-//  CQTSSandboxUtil.m
+//  CQTSSandboxPathUtil.m
 //  CQDemoKit
 //
 //  Created by lcQian on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
 
-#import "CQTSSandboxUtil.h"
+#import "CQTSSandboxPathUtil.h"
 
-@implementation CQTSSandboxUtil
+@implementation CQTSSandboxPathUtil
 
 /// 将相对路径补全为绝对路径
 ///
@@ -21,7 +21,7 @@
                                 toSandboxType:(CQTSSandboxType)sandboxType
                                  checkIfExist:(BOOL)checkIfExist
 {
-    NSString *sandboxPath = [CQTSSandboxUtil sandboxPath:sandboxType];
+    NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:sandboxType];
     NSString *absoluteFilePath = [sandboxPath stringByAppendingPathComponent:relativeFilePath];
     
     if (checkIfExist) {

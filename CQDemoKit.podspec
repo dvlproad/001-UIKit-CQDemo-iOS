@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.7.1"
+  s.version      = "0.7.2"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.2" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -147,7 +147,7 @@ Pod::Spec.new do |s|
   # Demo 工程中基本都需要的 DemoResource
   s.subspec 'Demo_Resource' do |ss|
     ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
-    ss.dependency 'CQDemoKit/Helper'
+    ss.dependency 'CQDemoKit/Helper'    # 需要使用到 NSError+CQTSErrorString.h
     ss.dependency 'CQDemoKit/BaseUIKit' # 需要使用到 CQTSImageLoader.h 和 UIImageView+CQTSBaseUtil.h
   end
 
