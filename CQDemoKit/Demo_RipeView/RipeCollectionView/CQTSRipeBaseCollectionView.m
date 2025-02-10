@@ -7,7 +7,7 @@
 //
 
 #import "CQTSRipeBaseCollectionView.h"
-#import <CQDemoKit/CQTSLocImagesUtil.h>
+#import "CQTSLocImagesUtil.h"
 #import "CQTSRipeBaseCollectionViewDelegate.h"
 #import "CQTSRipeBaseCollectionViewDataSource.h"
 

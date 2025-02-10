@@ -1,60 +1,61 @@
 PODS:
   - CJBaseHelper/HookCJHelper (0.1.7)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.7)
-  - CQDemoKit (0.7.2):
-    - CQDemoKit/Auxiliary (= 0.7.2)
-    - CQDemoKit/BaseUIKit (= 0.7.2)
-    - CQDemoKit/BaseUtil (= 0.7.2)
-    - CQDemoKit/BaseVC (= 0.7.2)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.2)
-    - CQDemoKit/Demo_Resource (= 0.7.2)
-    - CQDemoKit/Demo_RipeView (= 0.7.2)
-    - CQDemoKit/Helper (= 0.7.2)
-    - CQDemoKit/Monitor (= 0.7.2)
-  - CQDemoKit/Auxiliary (0.7.2):
+  - CQDemoKit (0.7.3):
+    - CQDemoKit/Auxiliary (= 0.7.3)
+    - CQDemoKit/BaseUIKit (= 0.7.3)
+    - CQDemoKit/BaseUtil (= 0.7.3)
+    - CQDemoKit/BaseVC (= 0.7.3)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.3)
+    - CQDemoKit/Demo_Resource (= 0.7.3)
+    - CQDemoKit/Demo_RipeView (= 0.7.3)
+    - CQDemoKit/Helper (= 0.7.3)
+    - CQDemoKit/Monitor (= 0.7.3)
+  - CQDemoKit/Auxiliary (0.7.3):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.7.2):
+  - CQDemoKit/BaseUIKit (0.7.3):
     - Masonry
-  - CQDemoKit/BaseUtil (0.7.2)
-  - CQDemoKit/BaseVC (0.7.2):
-    - CQDemoKit/BaseVC/Base (= 0.7.2)
-    - CQDemoKit/BaseVC/Collection (= 0.7.2)
-    - CQDemoKit/BaseVC/ScrollView (= 0.7.2)
-    - CQDemoKit/BaseVC/TabBar (= 0.7.2)
-    - CQDemoKit/BaseVC/TableView (= 0.7.2)
-    - CQDemoKit/BaseVC/TextView (= 0.7.2)
+  - CQDemoKit/BaseUtil (0.7.3)
+  - CQDemoKit/BaseVC (0.7.3):
+    - CQDemoKit/BaseVC/Base (= 0.7.3)
+    - CQDemoKit/BaseVC/Collection (= 0.7.3)
+    - CQDemoKit/BaseVC/ScrollView (= 0.7.3)
+    - CQDemoKit/BaseVC/TabBar (= 0.7.3)
+    - CQDemoKit/BaseVC/TableView (= 0.7.3)
+    - CQDemoKit/BaseVC/TextView (= 0.7.3)
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/Base (0.7.2):
+  - CQDemoKit/BaseVC/Base (0.7.3):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.7.2):
+  - CQDemoKit/BaseVC/Collection (0.7.3):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/ScrollView (0.7.2):
+  - CQDemoKit/BaseVC/ScrollView (0.7.3):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TabBar (0.7.2):
+  - CQDemoKit/BaseVC/TabBar (0.7.3):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.7.2):
+  - CQDemoKit/BaseVC/TableView (0.7.3):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TextView (0.7.2):
+  - CQDemoKit/BaseVC/TextView (0.7.3):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.2):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.3):
     - CQDemoKit/BaseVC
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Demo_Resource (0.7.2):
+  - CQDemoKit/Demo_Resource (0.7.3):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.7.2):
+  - CQDemoKit/Demo_RipeView (0.7.3):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
+    - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.7.2)
-  - CQDemoKit/Monitor (0.7.2)
+  - CQDemoKit/Helper (0.7.3)
+  - CQDemoKit/Monitor (0.7.3)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
@@ -87,7 +88,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
-  CQDemoKit: 2f4bb232c2f9d3a7fde39f1e7983a4c1366fb6e3
+  CQDemoKit: d0e868647a5331c3ca84f9d7573248e9abe15ab9
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
