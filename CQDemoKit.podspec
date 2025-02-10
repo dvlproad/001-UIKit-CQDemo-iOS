@@ -159,6 +159,15 @@ Pod::Spec.new do |s|
     ss.dependency 'CQDemoKit/Demo_Resource'
   end
 
+  # 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
+  s.subspec 'Demo_DataSourceAndDelegate' do |ss|
+    ss.source_files = "CQDemoKit/Demo_DataSourceAndDelegate/**/*.{h,m}"
+    # ss.dependency 'CQDemoKit/BaseUtil'    # 因为 CQTSRipeButton 需要使用 CJUIKitToastUtil
+    # ss.dependency 'CQDemoKit/BaseUIKit'   # 因为 CQTSRipeButton 需要使用 CQTSButtonFactory
+    ss.dependency 'CQDemoKit/BaseVC'
+    ss.dependency 'CQDemoKit/Demo_Resource'
+  end
+
   s.subspec 'Auxiliary' do |ss|
     ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
     ss.dependency 'Masonry'

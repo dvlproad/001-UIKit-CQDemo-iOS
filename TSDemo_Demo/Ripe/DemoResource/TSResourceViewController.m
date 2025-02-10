@@ -13,6 +13,8 @@
 
 @interface TSResourceViewController ()
 
+@property (nonatomic, strong) UIImageView *imageView2;
+
 @end
 
 @implementation TSResourceViewController
@@ -23,6 +25,8 @@
     self.navigationItem.title = NSLocalizedString(@"测试本地图片、网络图片", nil);
     self.view.backgroundColor = [UIColor greenColor];
     
+    __weak typeof(self) weakSelf = self;
+    
     UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView1.contentMode = UIViewContentModeScaleAspectFill;
     imageView1.layer.masksToBounds = YES;
@@ -30,6 +34,7 @@
     UIImageView *imageView2 = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView2.contentMode = UIViewContentModeScaleAspectFill;
     imageView2.layer.masksToBounds = YES;
+    self.imageView2 = imageView2;
     
     UIImageView *imageView3 = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView3.contentMode = UIViewContentModeScaleAspectFill;
@@ -75,7 +80,7 @@
         UIImage *networkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:networkImageUrl]]];
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            imageView2.image = networkImage;
+            weakSelf.imageView2.image = networkImage;
         });
     });
     
