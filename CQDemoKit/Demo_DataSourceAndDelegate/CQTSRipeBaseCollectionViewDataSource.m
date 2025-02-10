@@ -14,7 +14,6 @@
 @interface CQTSRipeBaseCollectionViewDataSource () {
     
 }
-@property (nonatomic, strong) NSArray<CQDMSectionDataModel *> *sectionDataModels;    /**< 每个section的数据 */
 
 @property (nonatomic, copy, readonly) void(^cellAtIndexPathConfigBlock)(UICollectionViewCell *bCollectionViewCell, NSIndexPath *bIndexPath); /**< 绘制指定indexPath的cell */
 
@@ -74,7 +73,7 @@
 {
     self = [super init];
     if (self) {
-        self.sectionDataModels = sectionDataModels;
+        _sectionDataModels = sectionDataModels;
     }
     return self;
 }
