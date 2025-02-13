@@ -44,7 +44,6 @@
             module.title = @"Copy .jpg";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_jpg_01.jpg";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments subDirectory:nil];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
@@ -61,7 +60,6 @@
             module.content = @"动画显示需接三方 FLAnimatedImage 库";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_gif_01.gif";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments subDirectory:nil];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
@@ -86,8 +84,6 @@
             module.content = @"请先点击，以模拟下载 .bundle 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.bundle";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
-                
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments
                                                           subDirectory:@"downloadBundle"];
@@ -130,8 +126,6 @@
             module.content = @"请先点击，以模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.zip";
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
-                
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                          toSandboxType:CQTSSandboxTypeDocuments
                                                           subDirectory:@"downloadZip"];
@@ -182,8 +176,6 @@
             module.title = @"Download .zip";
             module.content = @"请先点击，以正式下载 .zip 到沙盒中";
             module.actionBlock = ^{
-                NSURL *toDirectoryURL = [NSURL fileURLWithPath:[CQTSSandboxPathUtil documentsDirectory]];
-                
                 NSString *Url = @"http://shs4ggs0e.hd-bkt.clouddn.com/symbol/TestDownloadBundle.bundle.zip";
                 [CQTSSandboxFileUtil downloadFileWithUrl:Url toSandboxType:CQTSSandboxTypeDocuments
                                                 subDirectory:@"downloadZip" fileName:nil success:^(NSDictionary *dict) {

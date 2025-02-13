@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.7.3"
+  s.version      = "0.7.4"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.3" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.4" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -81,7 +81,7 @@ Pod::Spec.new do |s|
   #    'OtherResources' => ['MapView/Map/OtherResources/*.png']
   #  }
   s.resource_bundle = {
-    'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg}', 'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
+    'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg,mp4}', 'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
   }
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
