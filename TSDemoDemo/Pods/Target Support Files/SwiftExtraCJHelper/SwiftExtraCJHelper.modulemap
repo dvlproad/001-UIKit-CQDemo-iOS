@@ -1,0 +1,6 @@
+framework module SwiftExtraCJHelper {
+  umbrella header "SwiftExtraCJHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

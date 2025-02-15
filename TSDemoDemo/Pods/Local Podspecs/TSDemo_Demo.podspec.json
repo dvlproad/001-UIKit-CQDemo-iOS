@@ -23,6 +23,7 @@
   "source_files": "TSDemo_Demo/**/*.{h,m}",
   "dependencies": {
     "CQDemoKit": [],
-    "SSZipArchive": []
+    "SSZipArchive": [],
+    "SwiftExtraCJHelper": []
   }
 }

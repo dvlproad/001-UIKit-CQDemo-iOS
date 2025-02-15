@@ -9,6 +9,9 @@
 #import "UIWindow+RootSetting.h"
 #import <CQDemoKit/CQTSFPSView.h>
 
+#import <CQDemoKit/CQDMModuleModel.h>
+#import "TSDemoDemo-Swift.h"
+
 @implementation UIWindow (RootSetting)
 
 - (void)settingRoot {
@@ -16,6 +19,18 @@
     // 只直接测试某个页面
 //    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"BaseUIHomeViewController") alloc] init]];
     UIViewController *rootViewController = [[NSClassFromString(@"TSTabBarViewController") alloc] init];
+    
+    /*
+    // 测试 SwiftUI
+    UIViewController *swiftuiViewController;
+    if (@available(iOS 15.0, *)) {
+        UIView *tsView = [[TSTSUIView alloc] init];
+        swiftuiViewController = [CQDMModuleModel viewControllWithTitle:@"测试SwiftUI" tsview:tsView];
+    } else {
+        swiftuiViewController = [[UIViewController alloc] init];
+    }
+    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:swiftuiViewController];
+    */
     
     self.rootViewController = rootViewController;
     [self makeKeyAndVisible];

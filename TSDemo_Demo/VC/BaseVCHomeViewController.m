@@ -7,6 +7,9 @@
 //
 
 #import "BaseVCHomeViewController.h"
+#import <CQDemoKit/UIView+CQAuxiliaryText.h>
+#import <SwiftExtraCJHelper/SwiftExtraCJHelper-Swift.h>
+
 #import "TSSingleLineTextViewController.h"
 #import "TSMultilineTextViewController.h"
 
@@ -40,6 +43,29 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Cell视图【多行排列】";
             module.classEntry = [TSMultilineTextViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 SwiftUI 的 View";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"测试 SwiftUI 的 View";
+            module.viewGetterHandle = ^UIView * _Nonnull{
+//                UIView *tsview = [NSClassFromStringCJHelper controllerFormStringWithClassName:@"TSTSUIView" isOC:NO nameSpace:@"TSDemoDemo"];
+                Class tsClass = NSClassFromString(@"TSTSUIView");
+                if (tsClass) {
+                    UIView *tsview = [[tsClass alloc] init];
+                    return tsview;
+                } else {
+                    UIView *tsview = [[UIView alloc] init];
+                    [tsview cqdemo_addPromptText:@"❌: TSTSUIView 视图生成失败,请检查" layout:CQAuxiliaryAlignmentCenter];
+                    return tsview;
+                }
+            };
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
