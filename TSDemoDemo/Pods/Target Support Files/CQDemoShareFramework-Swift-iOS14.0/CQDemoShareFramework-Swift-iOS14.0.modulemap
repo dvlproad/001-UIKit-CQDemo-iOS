@@ -1,0 +1,6 @@
+framework module CQDemoShareFramework_Swift {
+  umbrella header "CQDemoShareFramework-Swift-iOS14.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

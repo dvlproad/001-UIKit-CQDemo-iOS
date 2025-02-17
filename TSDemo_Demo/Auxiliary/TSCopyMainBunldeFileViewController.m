@@ -7,10 +7,13 @@
 //
 
 #import "TSCopyMainBunldeFileViewController.h"
+#import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
 #import <CQDemoKit/CQTSResourceUtil.h>
 #import <CQDemoKit/CQTSSandboxPathUtil.h>
 #import <CQDemoKit/CQTSSandboxFileUtil.h>
+#import <CQDemoKit/NSError+CQTSErrorString.h>
+#import <CQDemoShareFramework_Swift/CQDemoShareFramework_Swift-Swift.h>
 #import <SSZipArchive/SSZipArchive.h>
 
 @interface TSCopyMainBunldeFileViewController () {
@@ -167,13 +170,13 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
-    // Download .zip
+    // Download .zip 到 Sandbox
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Download .zip 等";
+        sectionDataModel.theme = @"测试 Download .zip 到 Sandbox";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Download .zip";
+            module.title = @"Download .zip 到 Sandbox";
             module.content = @"请先点击，以正式下载 .zip 到沙盒中";
             module.actionBlock = ^{
                 NSString *Url = @"http://shs4ggs0e.hd-bkt.clouddn.com/symbol/TestDownloadBundle.bundle.zip";
@@ -183,9 +186,7 @@
                     NSString *relativeFilePath = dict[@"relativeFilePath"];
                     weakSelf.realDownloadZipRelativePath = relativeFilePath;
                     
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [weakSelf updateAllRealZipModelContent];
-                    });
+                    [weakSelf updateAllRealZipModelContent];
                     
                 } failure:^(NSString *errorMessage){
                     [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
@@ -195,27 +196,108 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"读取 .zip 中内容";
+            module.title = @"读取 Sandbox 里 .zip 中内容";
             module.content = @"请先正式下载 .zip 到沙盒中";
             module.actionBlock = ^{
+                if (weakSelf.realDownloadZipRelativePath == nil) {
+                    [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:@"请先点击 Download .zip ，以正式下载 .zip 到沙盒中" iKnowBlock:nil];
+                    return;
+                }
                 NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.realDownloadZipRelativePath
                                                                        toSandboxType:CQTSSandboxTypeDocuments
                                                                         checkIfExist:YES];
                 // Unzip
                 NSString *zipPath = absoluteFilePath;
-                NSString *unzipPath = [absoluteFilePath stringByDeletingLastPathComponent];
-                [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipPath];
-                NSString *unzipFileName = [absoluteFilePath.lastPathComponent stringByDeletingPathExtension];
-                NSString *unzipBundlePath = [unzipPath stringByAppendingPathComponent:unzipFileName];
+                NSString *unzipDirectoryPath = [absoluteFilePath stringByDeletingLastPathComponent];
+                [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipDirectoryPath overwrite:YES password:nil progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {
+                    
+                } completionHandler:^(NSString * _Nonnull path, BOOL succeeded, NSError * _Nullable error) {
+                    if (succeeded != YES) {
+                        NSString *errorMessage = error.cqtsErrorString;
+                        [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
+                        return;
+                    }
+                    
+                    NSString *unzipFileName = [absoluteFilePath.lastPathComponent stringByDeletingPathExtension];
+                    NSString *unzipBundlePath = [unzipDirectoryPath stringByAppendingPathComponent:unzipFileName];
+                    
+                    NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
+                    if (downloadBundle != nil) {
+                        UIImage *image = [UIImage imageNamed:@"icon_control_katong_5" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                        weakSelf.imageView.image = image;
+                    } else {
+                        NSString *errorMessage = @"downloadBundle 获取失败";
+                        [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
+                    }
+                }];
                 
-                NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    
+    // Download .zip 到 AppGroup
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 Download .zip 到 AppGroup";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Download .zip 到 AppGroup";
+            module.content = @"请先点击，以正式下载 .zip 到沙盒中";
+            module.actionBlock = ^{
+                NSString *Url = @"http://shs4ggs0e.hd-bkt.clouddn.com/symbol/TestDownloadBundle.bundle.zip";
+                NSString *zipFileName = [Url lastPathComponent];                        // xxx.bundle.zip
+                NSString *unzipFileName = [zipFileName stringByDeletingPathExtension];  // xxx.bundle
+                
+                NSURL *directoryURL = [TSWidgetExtensionDataUtil getDownloadSymbolDirURL];
+                [TSWidgetExtensionDataUtil downloadFileWithFileUrl:Url directoryURL:directoryURL saveWithFileName:zipFileName success:^(NSURL * _Nonnull cacheURL) {
+                    NSString *zipPath = cacheURL.path;
+                    NSString *unzipDirectoryPath = directoryURL.path;
+                    [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipDirectoryPath overwrite:YES password:nil progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {
+                        
+                    } completionHandler:^(NSString * _Nonnull path, BOOL succeeded, NSError * _Nullable error) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            if (succeeded != YES) {
+                                NSString *errorMessage = error.cqtsErrorString;
+                                [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
+                                return;
+                            }
+                            
+                            [TSWidgetExtensionDataUtil updateSymbolsBundleRelativePath:unzipFileName];
+                            [weakSelf updateAllRealZipModelContent_inAppGroup];
+                        });
+                    }];
+                    
+                } failure:^(NSString * _Nonnull errorMessage) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
+                    });
+                }];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"读取 AppGroup 里 .zip 中内容";
+            module.content = @"请先正式下载 .zip 到沙盒中";
+            module.actionBlock = ^{
+                NSString *symbolsBundleRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
+                if (symbolsBundleRelativePath == nil) {
+                    [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:@"请先点击 Download .zip 到 AppGroup ，以正式下载 .zip 到沙盒中" iKnowBlock:nil];
+                    return;
+                }
+                
+                NSBundle *downloadBundle = [TSWidgetExtensionDataUtil getSymbolBundle];
                 if (downloadBundle != nil) {
-                    UIImage *image = [UIImage imageNamed:@"icon_control_katong_5" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    UIImage *image = [UIImage imageNamed:@"icon_control_katong_6" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
                 } else {
                     NSString *errorMessage = @"downloadBundle 获取失败";
                     [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:errorMessage iKnowBlock:nil];
                 }
+                
             };
             [sectionDataModel.values addObject:module];
         }
@@ -237,6 +319,9 @@
         make.height.mas_equalTo(144);
     }];
     self.imageView = imageView;
+    
+    // App Group
+    [self updateAllRealZipModelContent_inAppGroup];
     
 }
 
@@ -297,6 +382,29 @@
             }
         } else {
             if (self.realDownloadZipRelativePath != nil) {
+                module.content = @"已正式下载 .zip 到沙盒中，可点击直接读取";
+            } else {
+                module.content = @"请先正式下载 .zip 到沙盒中";
+            }
+        }
+    }
+    [self.tableView reloadData];
+}
+
+/// 更新所有测试模拟下载 .zip 的 model 的 content
+- (void)updateAllRealZipModelContent_inAppGroup {
+    NSMutableArray *values = self.sectionDataModels[4].values;
+    for (int index = 0; index < values.count; index++) {
+        CQDMModuleModel *module = values[index];
+        NSString *symbolsBundleRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
+        if (index == 0) {
+            if (symbolsBundleRelativePath != nil) {
+                module.content = @"已正式下载 .zip 到沙盒中";
+            } else {
+                module.content = @"请先点击，以正式下载 .zip 到沙盒中";
+            }
+        } else {
+            if (symbolsBundleRelativePath != nil) {
                 module.content = @"已正式下载 .zip 到沙盒中，可点击直接读取";
             } else {
                 module.content = @"请先正式下载 .zip 到沙盒中";

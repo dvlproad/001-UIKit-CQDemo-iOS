@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1100"
+   LastUpgradeVersion = "1600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AAC1AA156F8D03E66524B1C17710D766"
-               BuildableName = "CQDemoKit.bundle"
-               BlueprintName = "CQDemoKit-CQDemoKit"
+               BlueprintIdentifier = "D9A7AE9FB51C67CD04A54A773A04A56C"
+               BuildableName = "CQDemoShareFramework_Swift.framework"
+               BlueprintName = "CQDemoShareFramework-Swift-iOS14.0"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

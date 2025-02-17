@@ -15,13 +15,41 @@
 		15B5D7B524512AC300108658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B5D7B324512AC300108658 /* LaunchScreen.storyboard */; };
 		15B5D7B824512AC300108658 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B5D7B724512AC300108658 /* main.m */; };
 		15B5D7C024512B1700108658 /* UIWindow+RootSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B5D7BF24512B1700108658 /* UIWindow+RootSetting.m */; };
+		76EDCE256402700BE0BAB998 /* Pods_TSDemoDemoWidgetExtensionExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B82EC32383F15C0B343761 /* Pods_TSDemoDemoWidgetExtensionExtension.framework */; };
 		8F710C0A8661A45263A4B2FE /* Pods_TSDemoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705BE48F2E7F25B0E6771D16 /* Pods_TSDemoDemo.framework */; };
 		9711D4312D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */; };
 		9711D4342D433FF900BEA78D /* cqts_mainbundle_gif_01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */; };
 		9711D4392D436BB000BEA78D /* DownloadBundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4382D436BB000BEA78D /* DownloadBundle.zip */; };
 		976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */; };
 		97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */; };
+		97D157ED2D631A3A000D03DC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D157EC2D631A3A000D03DC /* WidgetKit.framework */; };
+		97D157EF2D631A3A000D03DC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D157EE2D631A3A000D03DC /* SwiftUI.framework */; };
+		97D158002D631A3C000D03DC /* TSDemoDemoWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97D157FE2D631A3C000D03DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15B5D79A24512AC200108658 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97D157EA2D631A3A000D03DC;
+			remoteInfo = TSDemoDemoWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		97D158012D631A3C000D03DC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				97D158002D631A3C000D03DC /* TSDemoDemoWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		15B5D7A224512AC200108658 /* TSDemoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSDemoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,15 +67,37 @@
 		15B5D7BE24512B1700108658 /* UIWindow+RootSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+RootSetting.h"; sourceTree = "<group>"; };
 		15B5D7BF24512B1700108658 /* UIWindow+RootSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+RootSetting.m"; sourceTree = "<group>"; };
 		324F0C85AFCC118ACB2EF79D /* Pods-TSDemoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSDemoDemo.debug.xcconfig"; path = "Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		42B82EC32383F15C0B343761 /* Pods_TSDemoDemoWidgetExtensionExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TSDemoDemoWidgetExtensionExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		705BE48F2E7F25B0E6771D16 /* Pods_TSDemoDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TSDemoDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDAF8061A10ACD5EBAA2CB4 /* Pods-TSDemoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSDemoDemo.release.xcconfig"; path = "Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cqts_mainbundle_gif_01.gif; sourceTree = "<group>"; };
 		9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cqts_mainbundle_jpg_01.jpg; sourceTree = "<group>"; };
 		9711D4382D436BB000BEA78D /* DownloadBundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DownloadBundle.zip; sourceTree = "<group>"; };
+		971523352D632F9D0017AAAC /* TSDemoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemo.entitlements; sourceTree = "<group>"; };
+		971523362D632FB80017AAAC /* TSDemoDemoWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemoWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 		976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DownloadBundle.bundle; sourceTree = "<group>"; };
 		97A380132D5F342600A3BC7D /* TSDemoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSDemoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTSSwiftUIView.swift; sourceTree = "<group>"; };
+		97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TSDemoDemoWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D157EC2D631A3A000D03DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		97D157EE2D631A3A000D03DC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B19C67617FB33744A37957CC /* Pods-TSDemoDemoWidgetExtensionExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSDemoDemoWidgetExtensionExtension.release.xcconfig"; path = "Target Support Files/Pods-TSDemoDemoWidgetExtensionExtension/Pods-TSDemoDemoWidgetExtensionExtension.release.xcconfig"; sourceTree = "<group>"; };
+		FEE3D78644A0551A63F4D218 /* Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig"; path = "Target Support Files/Pods-TSDemoDemoWidgetExtensionExtension/Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		97D158042D631A3C000D03DC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 97D157EA2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (97D158042D631A3C000D03DC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TSDemoDemoWidgetExtension; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		15B5D79F24512AC200108658 /* Frameworks */ = {
@@ -55,6 +105,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F710C0A8661A45263A4B2FE /* Pods_TSDemoDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97D157E82D631A3A000D03DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97D157EF2D631A3A000D03DC /* SwiftUI.framework in Frameworks */,
+				97D157ED2D631A3A000D03DC /* WidgetKit.framework in Frameworks */,
+				76EDCE256402700BE0BAB998 /* Pods_TSDemoDemoWidgetExtensionExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +126,8 @@
 			children = (
 				324F0C85AFCC118ACB2EF79D /* Pods-TSDemoDemo.debug.xcconfig */,
 				7DDAF8061A10ACD5EBAA2CB4 /* Pods-TSDemoDemo.release.xcconfig */,
+				FEE3D78644A0551A63F4D218 /* Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig */,
+				B19C67617FB33744A37957CC /* Pods-TSDemoDemoWidgetExtensionExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -73,7 +135,9 @@
 		15B5D79924512AC200108658 = {
 			isa = PBXGroup;
 			children = (
+				971523362D632FB80017AAAC /* TSDemoDemoWidgetExtensionExtension.entitlements */,
 				15B5D7A424512AC200108658 /* TSDemoDemo */,
+				97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */,
 				15B5D7A324512AC200108658 /* Products */,
 				09E274414C8392561E8D6A34 /* Pods */,
 				7FA5A7EF0CD281D27960F655 /* Frameworks */,
@@ -84,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				15B5D7A224512AC200108658 /* TSDemoDemo.app */,
+				97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +156,7 @@
 		15B5D7A424512AC200108658 /* TSDemoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				971523352D632F9D0017AAAC /* TSDemoDemo.entitlements */,
 				15B5D7A524512AC200108658 /* AppDelegate.h */,
 				15B5D7A624512AC200108658 /* AppDelegate.m */,
 				15B5D7A824512AC200108658 /* SceneDelegate.h */,
@@ -115,6 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				705BE48F2E7F25B0E6771D16 /* Pods_TSDemoDemo.framework */,
+				97D157EC2D631A3A000D03DC /* WidgetKit.framework */,
+				97D157EE2D631A3A000D03DC /* SwiftUI.framework */,
+				42B82EC32383F15C0B343761 /* Pods_TSDemoDemoWidgetExtensionExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,15 +211,38 @@
 				15B5D79F24512AC200108658 /* Frameworks */,
 				15B5D7A024512AC200108658 /* Resources */,
 				B197A510D3EBCF22CDB430E5 /* [CP] Embed Pods Frameworks */,
+				97D158012D631A3C000D03DC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				97D157FF2D631A3C000D03DC /* PBXTargetDependency */,
 			);
 			name = TSDemoDemo;
 			productName = TSDemoDemo;
 			productReference = 15B5D7A224512AC200108658 /* TSDemoDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		97D157EA2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97D158052D631A3C000D03DC /* Build configuration list for PBXNativeTarget "TSDemoDemoWidgetExtensionExtension" */;
+			buildPhases = (
+				B7A4FB055CAD12547191DE3B /* [CP] Check Pods Manifest.lock */,
+				97D157E72D631A3A000D03DC /* Sources */,
+				97D157E82D631A3A000D03DC /* Frameworks */,
+				97D157E92D631A3A000D03DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */,
+			);
+			name = TSDemoDemoWidgetExtensionExtension;
+			productName = TSDemoDemoWidgetExtensionExtension;
+			productReference = 97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -158,12 +250,16 @@
 		15B5D79A24512AC200108658 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = dvlproad;
 				TargetAttributes = {
 					15B5D7A124512AC200108658 = {
 						CreatedOnToolsVersion = 11.3;
 						LastSwiftMigration = 1610;
+					};
+					97D157EA2D631A3A000D03DC = {
+						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
@@ -181,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				15B5D7A124512AC200108658 /* TSDemoDemo */,
+				97D157EA2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -197,6 +294,13 @@
 				15B5D7B224512AC300108658 /* Assets.xcassets in Resources */,
 				9711D4392D436BB000BEA78D /* DownloadBundle.zip in Resources */,
 				15B5D7B024512AC200108658 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97D157E92D631A3A000D03DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +346,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B7A4FB055CAD12547191DE3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TSDemoDemoWidgetExtensionExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,7 +384,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97D157E72D631A3A000D03DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97D157FF2D631A3C000D03DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97D157EA2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension */;
+			targetProxy = 97D157FE2D631A3C000D03DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		15B5D7AE24512AC200108658 /* Main.storyboard */ = {
@@ -396,6 +537,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TSDemoDemo/TSDemoDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8PA5WCJPR;
 				INFOPLIST_FILE = TSDemoDemo/Info.plist;
@@ -419,6 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TSDemoDemo/TSDemoDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8PA5WCJPR;
 				INFOPLIST_FILE = TSDemoDemo/Info.plist;
@@ -431,6 +574,81 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TSDemoDemo/TSDemoDemo-Bridging-Header.h";
 				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97D158022D631A3C000D03DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE3D78644A0551A63F4D218 /* Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = TSDemoDemoWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8PA5WCJPR;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TSDemoDemoWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TSDemoDemoWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 dvlproad. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSDemoDemo.TSDemoDemoWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97D158032D631A3C000D03DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19C67617FB33744A37957CC /* Pods-TSDemoDemoWidgetExtensionExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = TSDemoDemoWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U8PA5WCJPR;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TSDemoDemoWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TSDemoDemoWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2025 dvlproad. All rights reserved.";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSDemoDemo.TSDemoDemoWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -452,6 +670,15 @@
 			buildConfigurations = (
 				15B5D7BC24512AC300108658 /* Debug */,
 				15B5D7BD24512AC300108658 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97D158052D631A3C000D03DC /* Build configuration list for PBXNativeTarget "TSDemoDemoWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97D158022D631A3C000D03DC /* Debug */,
+				97D158032D631A3C000D03DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

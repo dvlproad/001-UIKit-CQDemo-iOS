@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework
 ${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework
+${BUILT_PRODUCTS_DIR}/CQDemoShareFramework-Swift-iOS9.0/CQDemoShareFramework_Swift.framework
 ${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
 ${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework

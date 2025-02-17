@@ -172,6 +172,8 @@ Pod::Spec.new do |s|
   s.subspec 'Auxiliary' do |ss|
     ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
     ss.dependency 'Masonry'
+    
+    ss.dependency 'CQDemoShareFramework-Swift/WidgetExtension'  # 测试控制中心加载远程图标的时候需要使用
   end
   
   s.subspec 'Monitor' do |ss|

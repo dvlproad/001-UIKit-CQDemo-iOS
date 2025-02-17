@@ -121,7 +121,8 @@
       "name": "Auxiliary",
       "source_files": "CQDemoKit/Auxiliary/**/*.{h,m}",
       "dependencies": {
-        "Masonry": []
+        "Masonry": [],
+        "CQDemoShareFramework-Swift/WidgetExtension": []
       }
     },
     {

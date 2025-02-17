@@ -31,7 +31,14 @@ source 'https://gitee.com/dvlproad/dvlproadSpecs'  #这里要增加的是这条�
 
 inhibit_all_warnings! #inhibit_warnings参数能够有效的抑制CocoaPods引入的第三方代码库产生的warning。
 
+# 定义共享依赖
+def shared_pods
+  pod 'CQDemoShareFramework-Swift/WidgetExtension',          :path => '../'
+end
+
 target 'TSDemoDemo' do
+  shared_pods
+  
   pod 'TSDemo_Demo',        :path => '../'
   pod 'CQDemoKit',        	:path => '../'
 #  pod 'CQDemoKit-Swift',    :path => '../'
@@ -51,3 +58,9 @@ end
 #    platform :ios, '9.0'
     
 #end
+
+target 'TSDemoDemoWidgetExtensionExtension' do
+  platform :ios, '14.0'
+  
+  shared_pods
+end
