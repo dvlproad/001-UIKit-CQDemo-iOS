@@ -76,6 +76,111 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
+    // Get .bundle
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 加密 .bundle ";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"加密 .bundle ，写入到 DownloadBundle.dat 中";
+            module.actionBlock = ^{
+                NSString *downloadBundlePath = [[NSBundle mainBundle] pathForResource:@"DownloadBundle" ofType:@"bundle"];
+                if (downloadBundlePath == nil) {
+                    NSLog(@"❌DownloadBundle.bundle 不存在");
+                    return;
+                }
+                NSData *downloadBundleData = [NSData dataWithContentsOfFile:downloadBundlePath];
+                if (downloadBundleData == nil) {
+                    NSLog(@"❌读取整个bundle数据失败");
+                    
+//                    遍历 DownloadBundle.bundle 中的所有文件，读取每个文件的数据并合并为一个 NSData 对象。
+                    NSFileManager *fileManager = [NSFileManager defaultManager];
+                    NSDirectoryEnumerator *enumerator = [fileManager enumeratorAtPath:downloadBundlePath];
+
+                    NSMutableData *combinedData = [NSMutableData data]; // 用于存储所有文件的合并数据
+
+                    NSString *filePath;
+                    while ((filePath = [enumerator nextObject])) {
+                        // 获取文件的完整路径
+                        NSString *fullFilePath = [downloadBundlePath stringByAppendingPathComponent:filePath];
+                        
+                        // 读取文件数据
+                        NSData *fileData = [NSData dataWithContentsOfFile:fullFilePath];
+                        if (fileData) {
+                            [combinedData appendData:fileData]; // 将文件数据追加到合并数据中
+                        } else {
+                            NSLog(@"无法读取文件: %@", fullFilePath);
+                        }
+                    }
+                    
+                    //将合并后的数据写入指定的目标文件。
+                    // 目标文件路径（例如沙盒中的 Documents 目录）
+                    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+                    NSString *destinationFilePath = [documentsPath stringByAppendingPathComponent:@"CombinedBundleData.dat"];
+
+                    // 写入数据
+                    BOOL success = [combinedData writeToFile:destinationFilePath atomically:YES];
+                    if (success) {
+                        NSLog(@"✅数据成功写入到: %@", destinationFilePath);
+                    } else {
+                        NSLog(@"❌数据写入失败");
+                    }
+                    
+                    return;
+                }
+                NSString *sandboxDirPath = [CQTSSandboxPathUtil sandboxPath:CQTSSandboxTypeDocuments];
+                
+                // 判断 sandboxPath 是否存在，不存在则创建
+                NSFileManager *fileManager = [NSFileManager defaultManager];
+                BOOL isDirectory;
+                if (![fileManager fileExistsAtPath:sandboxDirPath isDirectory:&isDirectory]) {
+                    NSError *error;
+                    BOOL success = [fileManager createDirectoryAtPath:sandboxDirPath withIntermediateDirectories:YES attributes:nil error:&error];
+                    if (!success) {
+                        NSLog(@"❌创建目录失败: %@", error.localizedDescription);
+                        return;
+                    }
+                }
+                
+                // 拼接文件路径
+                NSString *sandboxFilePath = [sandboxDirPath stringByAppendingPathComponent:@"DownloadBundle.dat"];
+                // 写入数据
+                BOOL writeSuccess = [downloadBundleData writeToFile:sandboxFilePath atomically:YES];
+                if (writeSuccess) {
+                    NSLog(@"✅写入地址: %@", sandboxFilePath);
+                } else {
+                    NSLog(@"❌写入失败");
+                }
+                
+//                NSString *copyFile = @"cqts_mainbundle_jpg_01.jpg";
+//                NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
+//                                                         toSandboxType:CQTSSandboxTypeDocuments subDirectory:nil];
+//                NSString *absoluteFilePath = dict[@"absoluteFilePath"];
+//                NSString *relativeFilePath = dict[@"relativeFilePath"];
+//                
+//                UIImage *image = [[UIImage alloc] initWithContentsOfFile:absoluteFilePath];
+//                weakSelf.imageView.image = image;
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"读取加密的 .bundle 中内容";
+            module.actionBlock = ^{
+                NSString *downloadBundlePath = [[NSBundle mainBundle] pathForResource:@"DownloadBundle" ofType:@"dat"];
+                
+                NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:downloadBundlePath];
+                if (downloadBundle != nil) {
+                    UIImage *image = [UIImage imageNamed:@"cqts_bundle_symbolsvg_1" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    weakSelf.imageView.image = image;
+                }
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    
     // Copy .bundle
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];

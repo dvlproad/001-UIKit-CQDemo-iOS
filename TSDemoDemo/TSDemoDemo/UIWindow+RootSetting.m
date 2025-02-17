@@ -20,6 +20,7 @@
 //    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"BaseUIHomeViewController") alloc] init]];
     UIViewController *rootViewController = [[NSClassFromString(@"TSTabBarViewController") alloc] init];
     
+//    UIViewController *rootViewController = [[TSPackViewController alloc] init];
     /*
     // 测试 SwiftUI
     UIViewController *swiftuiViewController;

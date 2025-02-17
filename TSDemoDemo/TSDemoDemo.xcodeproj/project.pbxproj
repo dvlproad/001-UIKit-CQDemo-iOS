@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,13 @@
 		9711D4342D433FF900BEA78D /* cqts_mainbundle_gif_01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */; };
 		9711D4392D436BB000BEA78D /* DownloadBundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4382D436BB000BEA78D /* DownloadBundle.zip */; };
 		976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */; };
+		978A9D792D636FA3005CF8C6 /* AssetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978A9D782D636FA3005CF8C6 /* AssetManager.swift */; };
+		978A9D7B2D636FB9005CF8C6 /* AssetPackager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978A9D7A2D636FB9005CF8C6 /* AssetPackager.swift */; };
+		978A9D7D2D637382005CF8C6 /* TSPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978A9D7C2D637382005CF8C6 /* TSPackViewController.swift */; };
+		978A9D7F2D637539005CF8C6 /* assets.dat in Resources */ = {isa = PBXBuildFile; fileRef = 978A9D7E2D637539005CF8C6 /* assets.dat */; };
+		978A9D832D6375C2005CF8C6 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 978A9D812D6375C2005CF8C6 /* data.json */; };
+		978A9D842D6375C2005CF8C6 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 978A9D822D6375C2005CF8C6 /* image1.png */; };
+		978A9DA22D6388C8005CF8C6 /* CombinedBundleData.dat in Resources */ = {isa = PBXBuildFile; fileRef = 978A9DA12D6388C8005CF8C6 /* CombinedBundleData.dat */; };
 		97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */; };
 		97D157ED2D631A3A000D03DC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D157EC2D631A3A000D03DC /* WidgetKit.framework */; };
 		97D157EF2D631A3A000D03DC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D157EE2D631A3A000D03DC /* SwiftUI.framework */; };
@@ -76,6 +83,13 @@
 		971523352D632F9D0017AAAC /* TSDemoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemo.entitlements; sourceTree = "<group>"; };
 		971523362D632FB80017AAAC /* TSDemoDemoWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemoWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 		976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DownloadBundle.bundle; sourceTree = "<group>"; };
+		978A9D782D636FA3005CF8C6 /* AssetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManager.swift; sourceTree = "<group>"; };
+		978A9D7A2D636FB9005CF8C6 /* AssetPackager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPackager.swift; sourceTree = "<group>"; };
+		978A9D7C2D637382005CF8C6 /* TSPackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSPackViewController.swift; sourceTree = "<group>"; };
+		978A9D7E2D637539005CF8C6 /* assets.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = assets.dat; sourceTree = "<group>"; };
+		978A9D812D6375C2005CF8C6 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		978A9D822D6375C2005CF8C6 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		978A9DA12D6388C8005CF8C6 /* CombinedBundleData.dat */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CombinedBundleData.dat; sourceTree = "<group>"; };
 		97A380132D5F342600A3BC7D /* TSDemoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSDemoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTSSwiftUIView.swift; sourceTree = "<group>"; };
 		97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TSDemoDemoWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +179,10 @@
 				15B5D7BF24512B1700108658 /* UIWindow+RootSetting.m */,
 				15B5D7AB24512AC200108658 /* ViewController.h */,
 				15B5D7AC24512AC200108658 /* ViewController.m */,
+				978A9D782D636FA3005CF8C6 /* AssetManager.swift */,
+				978A9D7A2D636FB9005CF8C6 /* AssetPackager.swift */,
+				978A9D7C2D637382005CF8C6 /* TSPackViewController.swift */,
+				978A9D802D637590005CF8C6 /* Assets */,
 				97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */,
 				15B5D7AE24512AC200108658 /* Main.storyboard */,
 				15B5D7B324512AC300108658 /* LaunchScreen.storyboard */,
@@ -191,12 +209,23 @@
 		9711D42E2D433FF900BEA78D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				978A9DA12D6388C8005CF8C6 /* CombinedBundleData.dat */,
+				978A9D7E2D637539005CF8C6 /* assets.dat */,
 				9711D4382D436BB000BEA78D /* DownloadBundle.zip */,
 				976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */,
 				9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */,
 				9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		978A9D802D637590005CF8C6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				978A9D812D6375C2005CF8C6 /* data.json */,
+				978A9D822D6375C2005CF8C6 /* image1.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +316,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978A9DA22D6388C8005CF8C6 /* CombinedBundleData.dat in Resources */,
 				9711D4312D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg in Resources */,
+				978A9D832D6375C2005CF8C6 /* data.json in Resources */,
+				978A9D842D6375C2005CF8C6 /* image1.png in Resources */,
 				976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */,
 				9711D4342D433FF900BEA78D /* cqts_mainbundle_gif_01.gif in Resources */,
 				15B5D7B524512AC300108658 /* LaunchScreen.storyboard in Resources */,
+				978A9D7F2D637539005CF8C6 /* assets.dat in Resources */,
 				15B5D7B224512AC300108658 /* Assets.xcassets in Resources */,
 				9711D4392D436BB000BEA78D /* DownloadBundle.zip in Resources */,
 				15B5D7B024512AC200108658 /* Main.storyboard in Resources */,
@@ -379,8 +412,11 @@
 				15B5D7AD24512AC200108658 /* ViewController.m in Sources */,
 				15B5D7C024512B1700108658 /* UIWindow+RootSetting.m in Sources */,
 				15B5D7A724512AC200108658 /* AppDelegate.m in Sources */,
+				978A9D7B2D636FB9005CF8C6 /* AssetPackager.swift in Sources */,
 				15B5D7B824512AC300108658 /* main.m in Sources */,
 				15B5D7AA24512AC200108658 /* SceneDelegate.m in Sources */,
+				978A9D792D636FA3005CF8C6 /* AssetManager.swift in Sources */,
+				978A9D7D2D637382005CF8C6 /* TSPackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
