@@ -18,8 +18,8 @@
 @interface TSCopyMainBunldeFileViewController () {
     
 }
-@property (nonatomic, copy, nullable) NSString *downloadBundleRelativePath;
-@property (nonatomic, copy, nullable) NSString *downloadZipRelativePath;
+@property (nonatomic, copy, nullable) NSString *myCopyBundleRelativePath;
+@property (nonatomic, copy, nullable) NSString *myCopyZipRelativePath;
 @property (nonatomic, copy, nullable) NSString *realDownloadZipRelativePath;
 @property (nonatomic, strong) UIImageView *imageView;
 
@@ -98,7 +98,7 @@
                                                           subDirectory:@"downloadBundle"];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
-                weakSelf.downloadBundleRelativePath = relativeFilePath;
+                weakSelf.myCopyBundleRelativePath = relativeFilePath;
                 
                 [weakSelf updateAllBundleModelContent];
             };
@@ -109,8 +109,12 @@
             module.title = @"读取 Sandbox 里 .bundle 中内容";
             module.content = @"请先模拟下载 .bundle 到沙盒中";
             module.actionBlock = ^{
+                if (weakSelf.myCopyBundleRelativePath == nil) {
+                    [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:@"请先点击 Copy .bundle 到 Sandbox ，以模拟下载 .bundle 到沙盒中" iKnowBlock:nil];
+                    return;
+                }
                 NSString *copyFile = @"DownloadBundle.bundle";
-                NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.downloadBundleRelativePath
+                NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.myCopyBundleRelativePath
                                                                        toSandboxType:CQTSSandboxTypeDocuments
                                                                         checkIfExist:YES];
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:absoluteFilePath];
@@ -143,9 +147,9 @@
                                                       subDirectory:@"downloadZip"];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
-                weakSelf.downloadZipRelativePath = relativeFilePath;
+                weakSelf.myCopyZipRelativePath = relativeFilePath;
                 
-                [weakSelf updateAllZipModelContent];
+                [weakSelf updateAllCopyZipModelContent_inAppGroup];
             };
             [sectionDataModel.values addObject:module];
         }
@@ -154,7 +158,7 @@
             module.title = @"读取 AppGroup 里 .zip 中内容";
             module.content = @"请先模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
-                NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.downloadZipRelativePath
+                NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.myCopyZipRelativePath
 //                                                                       toSandboxType:CQTSSandboxTypeDocuments
                                                                             toAppGroupId:@"group.com.dvlproad.TSDemoDemo"
                                                                         checkIfExist:YES];
@@ -166,7 +170,7 @@
                 NSString *unzipFileName = @"DownloadBundle.bundle";
                 NSString *unzipBundlePath = [unzipPath stringByAppendingPathComponent:unzipFileName];
                 
-                NSString *unzipRelativePath = [weakSelf.downloadZipRelativePath stringByDeletingPathExtension];
+                NSString *unzipRelativePath = [weakSelf.myCopyZipRelativePath stringByDeletingPathExtension];
                 [TSWidgetExtensionDataUtil updateSymbolsBundleRelativePath:unzipRelativePath];
                 
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
@@ -336,7 +340,9 @@
     self.imageView = imageView;
     
     // App Group
-    [self updateAllZipModelContent];
+    self.myCopyZipRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
+    [self updateAllCopyZipModelContent_inAppGroup];
+    
     [self updateAllRealZipModelContent_inAppGroup];
     
 }
@@ -347,13 +353,13 @@
     for (int index = 0; index < values.count; index++) {
         CQDMModuleModel *module = values[index];
         if (index == 0) {
-            if (self.downloadBundleRelativePath != nil) {
+            if (self.myCopyBundleRelativePath != nil) {
                 module.content = @"已模拟下载 .bundle 到沙盒中";
             } else {
                 module.content = @"请先点击，以模拟下载 .bundle 到沙盒中";
             }
         } else {
-            if (self.downloadBundleRelativePath != nil) {
+            if (self.myCopyBundleRelativePath != nil) {
                 module.content = @"已模拟下载 .bundle 到沙盒中，可点击直接读取";
             } else {
                 module.content = @"请先模拟下载 .bundle 到沙盒中";
@@ -364,20 +370,18 @@
 }
 
 /// 更新所有测试模拟下载 .zip 的 model 的 content
-- (void)updateAllZipModelContent {
-    self.downloadZipRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
-    
+- (void)updateAllCopyZipModelContent_inAppGroup {
     NSMutableArray *values = self.sectionDataModels[2].values;
     for (int index = 0; index < values.count; index++) {
         CQDMModuleModel *module = values[index];
         if (index == 0) {
-            if (self.downloadZipRelativePath != nil) {
+            if (self.myCopyZipRelativePath != nil) {
                 module.content = @"已模拟下载 .zip 到沙盒中";
             } else {
                 module.content = @"请先点击，以模拟下载 .zip 到沙盒中";
             }
         } else {
-            if (self.downloadZipRelativePath != nil) {
+            if (self.myCopyZipRelativePath != nil) {
                 module.content = @"已模拟下载 .zip 到沙盒中，可点击直接读取";
             } else {
                 module.content = @"请先模拟下载 .zip 到沙盒中";
