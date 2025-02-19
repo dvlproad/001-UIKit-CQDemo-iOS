@@ -20,7 +20,7 @@ struct TSDemoDemoWidgetExtensionControl: ControlWidget {
             provider: Provider()
         ) { value in
             ControlWidgetToggle(
-                "Start Timer",
+                "TSDemoDemo",
                 isOn: value.isRunning,
                 action: StartTimerIntent(value.name)
             ) { isRunning in
@@ -35,9 +35,9 @@ struct TSDemoDemoWidgetExtensionControl: ControlWidget {
 //                        .foregroundStyle(.yellow)
                     // 自定义SF图标
                     let downloadBundle: Bundle? = TSWidgetExtensionDataUtil.getSymbolBundle()
-                    let uiimage: UIImage? = UIImage(named: "icon_control_katong_6", in: downloadBundle, compatibleWith: nil)
-                    Image(uiImage: uiimage ?? UIImage())
-//                    Image("icon_control_katong_6", bundle: downloadBundle)
+                    let uiimage: UIImage? = UIImage(named: "emoji9_FFA5BE", in: downloadBundle, compatibleWith: nil)
+//                    Image(uiImage: uiimage ?? UIImage())
+                    Image("emoji9_FFA5BE", bundle: downloadBundle)
                     
 //                    Image("cqts_bundle_symbolsvg_1")
 //                        .resizable()

@@ -18,13 +18,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// @param fileNameWithExtension        要拷贝的文件
 /// @param inBundle                                     从项目中的哪个bundle中拷贝（nil时候为 [NSBundle mainBundle] ）
-/// @param sandboxType                               要放到的沙盒位置
+/// @param sandboxURL                                要放到的沙盒位置
 /// @param subDirectory                             要放到的沙盒的子目录
 ///
 /// @return 返回存放后的文件路径信息（存放失败，返回nil）
 + (nullable NSDictionary *)copyFile:(NSString *)fileNameWithExtension
                            inBundle:(nullable NSBundle *)bundle
-                      toSandboxType:(CQTSSandboxType)sandboxType
+                       toSandboxURL:(nonnull NSURL *)sandboxURL
                        subDirectory:(nullable NSString *)subDirectory;
 
 /// 从后台下载文件到沙盒中

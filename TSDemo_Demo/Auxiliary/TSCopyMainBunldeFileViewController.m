@@ -47,8 +47,11 @@
             module.title = @"Copy .jpg";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_jpg_01.jpg";
+                
+                NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:CQTSSandboxTypeDocuments];
+                NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
-                                                         toSandboxType:CQTSSandboxTypeDocuments subDirectory:nil];
+                                                      toSandboxURL:sandboxURL subDirectory:nil];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
                 
@@ -63,8 +66,10 @@
             module.content = @"动画显示需接三方 FLAnimatedImage 库";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_gif_01.gif";
+                NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:CQTSSandboxTypeDocuments];
+                NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
-                                                         toSandboxType:CQTSSandboxTypeDocuments subDirectory:nil];
+                                                      toSandboxURL:sandboxURL subDirectory:nil];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
                 
@@ -87,8 +92,10 @@
             module.content = @"请先点击，以模拟下载 .bundle 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.bundle";
+                NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:CQTSSandboxTypeDocuments];
+                NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
-                                                         toSandboxType:CQTSSandboxTypeDocuments
+                                                      toSandboxURL:sandboxURL
                                                           subDirectory:@"downloadBundle"];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
@@ -128,13 +135,18 @@
             module.title = @"Copy .zip";
             module.content = @"请先点击，以模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
-                NSString *copyFile = @"DownloadBundle.zip";
+                NSString *copyFile = @"DownloadBundle.bundle.zip";
+//                NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:CQTSSandboxTypeDocuments];
+//                NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
+                NSURL *sandboxURL = [CQTSSandboxPathUtil sandboxURLWithAppGroupId:@"group.com.dvlproad.TSDemoDemo"];
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
-                                                         toSandboxType:CQTSSandboxTypeDocuments
+                                                      toSandboxURL:sandboxURL
                                                           subDirectory:@"downloadZip"];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
                 weakSelf.downloadZipRelativePath = relativeFilePath;
+                
+                
                 
                 [weakSelf updateAllZipModelContent];
             };
@@ -146,7 +158,8 @@
             module.content = @"请先模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
                 NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.downloadZipRelativePath
-                                                                       toSandboxType:CQTSSandboxTypeDocuments
+//                                                                       toSandboxType:CQTSSandboxTypeDocuments
+                                                                            toAppGroupId:@"group.com.dvlproad.TSDemoDemo"
                                                                         checkIfExist:YES];
                 // Unzip
                 NSString *zipPath = absoluteFilePath;
@@ -156,9 +169,12 @@
                 NSString *unzipFileName = @"DownloadBundle.bundle";
                 NSString *unzipBundlePath = [unzipPath stringByAppendingPathComponent:unzipFileName];
                 
+                NSString *unzipRelativePath = [weakSelf.downloadZipRelativePath stringByDeletingPathExtension];
+                [TSWidgetExtensionDataUtil updateSymbolsBundleRelativePath:unzipRelativePath];
+                
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
                 if (downloadBundle != nil) {
-                    UIImage *image = [UIImage imageNamed:@"cqts_bundle_symbolsvg_2" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    UIImage *image = [UIImage imageNamed:@"emoji9_FFA5BE" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
                 } else {
                     NSString *errorMessage = @"downloadBundle 获取失败";

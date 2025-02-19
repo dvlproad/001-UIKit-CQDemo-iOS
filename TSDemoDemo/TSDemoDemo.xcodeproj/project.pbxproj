@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,8 +19,8 @@
 		8F710C0A8661A45263A4B2FE /* Pods_TSDemoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705BE48F2E7F25B0E6771D16 /* Pods_TSDemoDemo.framework */; };
 		9711D4312D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */; };
 		9711D4342D433FF900BEA78D /* cqts_mainbundle_gif_01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */; };
-		9711D4392D436BB000BEA78D /* DownloadBundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4382D436BB000BEA78D /* DownloadBundle.zip */; };
 		976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */; };
+		9768BDFA2D65F8C6007AF7ED /* DownloadBundle.bundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */; };
 		97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */; };
 		97D157ED2D631A3A000D03DC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D157EC2D631A3A000D03DC /* WidgetKit.framework */; };
 		97D157EF2D631A3A000D03DC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D157EE2D631A3A000D03DC /* SwiftUI.framework */; };
@@ -72,10 +72,10 @@
 		7DDAF8061A10ACD5EBAA2CB4 /* Pods-TSDemoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSDemoDemo.release.xcconfig"; path = "Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cqts_mainbundle_gif_01.gif; sourceTree = "<group>"; };
 		9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cqts_mainbundle_jpg_01.jpg; sourceTree = "<group>"; };
-		9711D4382D436BB000BEA78D /* DownloadBundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DownloadBundle.zip; sourceTree = "<group>"; };
 		971523352D632F9D0017AAAC /* TSDemoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemo.entitlements; sourceTree = "<group>"; };
 		971523362D632FB80017AAAC /* TSDemoDemoWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemoWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 		976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DownloadBundle.bundle; sourceTree = "<group>"; };
+		9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DownloadBundle.bundle.zip; sourceTree = "<group>"; };
 		97A380132D5F342600A3BC7D /* TSDemoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSDemoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTSSwiftUIView.swift; sourceTree = "<group>"; };
 		97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TSDemoDemoWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,7 +191,7 @@
 		9711D42E2D433FF900BEA78D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9711D4382D436BB000BEA78D /* DownloadBundle.zip */,
+				9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */,
 				976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */,
 				9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */,
 				9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */,
@@ -291,8 +291,8 @@
 				976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */,
 				9711D4342D433FF900BEA78D /* cqts_mainbundle_gif_01.gif in Resources */,
 				15B5D7B524512AC300108658 /* LaunchScreen.storyboard in Resources */,
+				9768BDFA2D65F8C6007AF7ED /* DownloadBundle.bundle.zip in Resources */,
 				15B5D7B224512AC300108658 /* Assets.xcassets in Resources */,
-				9711D4392D436BB000BEA78D /* DownloadBundle.zip in Resources */,
 				15B5D7B024512AC200108658 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
