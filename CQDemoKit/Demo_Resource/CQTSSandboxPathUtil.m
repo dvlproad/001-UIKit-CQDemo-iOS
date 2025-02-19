@@ -40,15 +40,16 @@
     NSURL *destinationURL = [sandboxURL URLByAppendingPathComponent:relativePath];
 
     if (shouldCreateIntermediateDirectories) {
-        NSError *error = nil;
-        NSFileManager *fileManager = [NSFileManager defaultManager];
         // 检查并创建目标路径的父目录（一次性创建所有中间目录）
-        NSURL *parentDirectory = [destinationURL URLByDeletingLastPathComponent];
-        if (![fileManager fileExistsAtPath:parentDirectory.path]) {
-            if (![fileManager createDirectoryAtURL:parentDirectory
-                       withIntermediateDirectories:YES attributes:nil error:&error])
+        NSURL *parentDirectoryURL = [destinationURL URLByDeletingLastPathComponent];
+        BOOL isDirectory;
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if (![fileManager fileExistsAtPath:parentDirectoryURL.path isDirectory:&isDirectory] || !isDirectory) {
+            NSError *createDirError;
+            if (![fileManager createDirectoryAtURL:parentDirectoryURL
+                       withIntermediateDirectories:YES attributes:nil error:&createDirError])
             {
-                NSLog(@"Failed to create directory: %@", error.localizedDescription);
+                NSLog(@"Failed to create directory: %@", createDirError.localizedDescription);
                 return nil;
             }
         }
@@ -120,6 +121,11 @@
 }
 
 /// 获取指定类型的沙盒目录路径
++ (NSURL *)sandboxURL:(CQTSSandboxType)sandboxType {
+    NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:sandboxType];
+    NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
+    return sandboxURL;
+}
 + (NSString *)sandboxPath:(CQTSSandboxType)sandboxType {
     NSString *sandboxPath;
     

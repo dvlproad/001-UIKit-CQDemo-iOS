@@ -61,6 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSURL *)sandboxURLWithAppGroupId:(nonnull NSString *)appGroupId;
 
 /// 获取指定类型的沙盒目录路径
++ (NSURL *)sandboxURL:(CQTSSandboxType)sandboxType;
 + (NSString *)sandboxPath:(CQTSSandboxType)sandboxType;
 
 /// 获取沙盒主目录路径

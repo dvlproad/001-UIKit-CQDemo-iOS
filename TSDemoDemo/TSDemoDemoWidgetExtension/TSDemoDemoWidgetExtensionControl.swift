@@ -20,7 +20,7 @@ struct TSDemoDemoWidgetExtensionControl: ControlWidget {
             provider: Provider()
         ) { value in
             ControlWidgetToggle(
-                "TSDemoDemo",
+                "Start Timer",
                 isOn: value.isRunning,
                 action: StartTimerIntent(value.name)
             ) { isRunning in
@@ -45,11 +45,11 @@ struct TSDemoDemoWidgetExtensionControl: ControlWidget {
 //                        .aspectRatio(contentMode: .fit)
 //                        .frame(width: 30, height: 30)
                 }
-                .tint(Color.red)  // 设定开启状态的图标颜色
             }
         }
-        .displayName("Timer")
+        .displayName("TSDemo组件")
         .description("A an example control that runs a timer.")
+        //.promptsForUserConfiguration()
     }
 }
 

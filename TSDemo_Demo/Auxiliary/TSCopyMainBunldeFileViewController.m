@@ -9,7 +9,6 @@
 #import "TSCopyMainBunldeFileViewController.h"
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
-#import <CQDemoKit/CQTSResourceUtil.h>
 #import <CQDemoKit/CQTSSandboxPathUtil.h>
 #import <CQDemoKit/CQTSSandboxFileUtil.h>
 #import <CQDemoKit/NSError+CQTSErrorString.h>
@@ -38,13 +37,13 @@
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
     __weak typeof(self) weakSelf = self;
-    // Copy .gif
+    // Copy .gif 到 Sandbox
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Copy .png/.jpg/.gif 等";
+        sectionDataModel.theme = @"测试 Copy .png/.jpg/.gif 等到 Sandbox";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Copy .jpg";
+            module.title = @"Copy .jpg 到 Sandbox";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_jpg_01.jpg";
                 
@@ -62,7 +61,7 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Copy .gif";
+            module.title = @"Copy .gif 到 Sandbox";
             module.content = @"动画显示需接三方 FLAnimatedImage 库";
             module.actionBlock = ^{
                 NSString *copyFile = @"cqts_mainbundle_gif_01.gif";
@@ -81,14 +80,14 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
-    // Copy .bundle
+    // Copy .bundle 到 Sandbox
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Copy .bundle 等";
+        sectionDataModel.theme = @"测试 Copy .bundle 到 Sandbox";
         {
             // [iOS生成Bundle包及使用](https://www.cnblogs.com/huangzs/p/8037642.html)
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Copy .bundle";
+            module.title = @"Copy .bundle 到 Sandbox";
             module.content = @"请先点击，以模拟下载 .bundle 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.bundle";
@@ -107,7 +106,7 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"读取 .bundle 中内容";
+            module.title = @"读取 Sandbox 里 .bundle 中内容";
             module.content = @"请先模拟下载 .bundle 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.bundle";
@@ -126,13 +125,13 @@
     }
     
     
-    // Copy .zip
+    // Copy .zip 到 AppGroup
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 Copy .zip 等";
+        sectionDataModel.theme = @"测试 Copy .zip 到 AppGroup";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Copy .zip";
+            module.title = @"Copy .zip 到 AppGroup";
             module.content = @"请先点击，以模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
                 NSString *copyFile = @"DownloadBundle.bundle.zip";
@@ -141,12 +140,10 @@
                 NSURL *sandboxURL = [CQTSSandboxPathUtil sandboxURLWithAppGroupId:@"group.com.dvlproad.TSDemoDemo"];
                 NSDictionary *dict = [CQTSSandboxFileUtil copyFile:copyFile inBundle:[NSBundle mainBundle]
                                                       toSandboxURL:sandboxURL
-                                                          subDirectory:@"downloadZip"];
+                                                      subDirectory:@"downloadZip"];
                 NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                 NSString *relativeFilePath = dict[@"relativeFilePath"];
                 weakSelf.downloadZipRelativePath = relativeFilePath;
-                
-                
                 
                 [weakSelf updateAllZipModelContent];
             };
@@ -154,7 +151,7 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"读取 .zip 中内容";
+            module.title = @"读取 AppGroup 里 .zip 中内容";
             module.content = @"请先模拟下载 .zip 到沙盒中";
             module.actionBlock = ^{
                 NSString *absoluteFilePath = [CQTSSandboxPathUtil makeupAbsoluteFilePath:weakSelf.downloadZipRelativePath
@@ -196,7 +193,9 @@
             module.content = @"请先点击，以正式下载 .zip 到沙盒中";
             module.actionBlock = ^{
                 NSString *Url = @"http://shs4ggs0e.hd-bkt.clouddn.com/symbol/TestDownloadBundle.bundle.zip";
-                [CQTSSandboxFileUtil downloadFileWithUrl:Url toSandboxType:CQTSSandboxTypeDocuments
+                NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:CQTSSandboxTypeDocuments];
+                NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
+                [CQTSSandboxFileUtil downloadFileWithUrl:Url toSandboxURL:sandboxURL
                                                 subDirectory:@"downloadZip" fileName:nil success:^(NSDictionary *dict) {
                     NSString *absoluteFilePath = dict[@"absoluteFilePath"];
                     NSString *relativeFilePath = dict[@"relativeFilePath"];
@@ -337,6 +336,7 @@
     self.imageView = imageView;
     
     // App Group
+    [self updateAllZipModelContent];
     [self updateAllRealZipModelContent_inAppGroup];
     
 }
@@ -365,6 +365,8 @@
 
 /// 更新所有测试模拟下载 .zip 的 model 的 content
 - (void)updateAllZipModelContent {
+    self.downloadZipRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
+    
     NSMutableArray *values = self.sectionDataModels[2].values;
     for (int index = 0; index < values.count; index++) {
         CQDMModuleModel *module = values[index];

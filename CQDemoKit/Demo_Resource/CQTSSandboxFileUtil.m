@@ -7,7 +7,7 @@
 //
 
 #import "CQTSSandboxFileUtil.h"
-#import "CQTSResourceUtil.h"
+#import "CQTSSandboxPathUtil.h"
 #import "NSError+CQTSErrorString.h"
 
 @implementation CQTSSandboxFileUtil
@@ -75,7 +75,7 @@
 
 
 + (void)downloadFileWithUrl:(NSString *)fileUrl
-              toSandboxType:(CQTSSandboxType)sandboxType
+               toSandboxURL:(NSURL *)sandboxURL
                subDirectory:(nullable NSString *)subDirectory
                    fileName:(nullable NSString *)fileNameWithExtension
                     success:(void (^)(NSDictionary *fileDictionary))success
@@ -84,7 +84,7 @@
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [weakSelf _downloadFileWithUrl:fileUrl
-                        toSandboxType:sandboxType
+                          toSandboxURL:sandboxURL
                          subDirectory:subDirectory
                              fileName:fileNameWithExtension
                               success:^(NSDictionary * _Nonnull fileDictionary) {
@@ -101,7 +101,7 @@
 
 
 + (void)_downloadFileWithUrl:(NSString *)fileUrl
-              toSandboxType:(CQTSSandboxType)sandboxType
+                toSandboxURL:(NSURL *)sandboxURL
                subDirectory:(nullable NSString *)subDirectory
                    fileName:(nullable NSString *)fileNameWithExtension
                     success:(void (^)(NSDictionary *fileDictionary))success
@@ -126,50 +126,22 @@
             return;
         }
         
-        NSDictionary *result;
-        if (fileNameWithExtension == nil) {
-            NSString *lastPathComponent = fileUrl.lastPathComponent;
-            result = [CQTSResourceUtil extractFileNameAndExtensionFromFileName:lastPathComponent];
-        } else {
-            result = [CQTSResourceUtil extractFileNameAndExtensionFromFileName:fileNameWithExtension];
-        }
-        NSString *fileName = result[@"fileName"];
-        NSString *fileExtension = result[@"fileExtension"];
+        NSString *lastFileNameWithExtension = fileNameWithExtension == nil ? fileUrl.lastPathComponent : fileNameWithExtension;
+
         
-        // 创建目标路径（共享资源目录下的目标文件路径）:相对路径
-        NSString *relativePath = @"";
-        if (subDirectory != nil && subDirectory.length > 0) {
-            relativePath = subDirectory;
+        NSDictionary *pathInfo = [CQTSSandboxPathUtil pathInfoWithHostSandboxURL:sandboxURL subDirectory:subDirectory fileNameWithExtension:lastFileNameWithExtension shouldCreateIntermediateDirectories:YES];
+        if (pathInfo == nil) {
+            failure(@"获取路径信息失败");
+            return;
         }
-        NSString *newFileName = [NSString stringWithFormat:@"%@.%@", fileName, fileExtension];
-        relativePath = [relativePath stringByAppendingPathComponent:newFileName];
-        // 绝对路径
-        NSString *sandboxPath = [CQTSSandboxPathUtil sandboxPath:sandboxType];
-        NSURL *sandboxURL = [NSURL fileURLWithPath:sandboxPath];
-        NSURL *destinationURL = [sandboxURL URLByAppendingPathComponent:relativePath];
-        NSString *directory = [destinationURL.URLByDeletingLastPathComponent path];
-        BOOL isDirectory;
-        if (![[NSFileManager defaultManager] fileExistsAtPath:directory isDirectory:&isDirectory] || !isDirectory) {
-            NSError *createDirError;
-            [[NSFileManager defaultManager] createDirectoryAtPath:directory withIntermediateDirectories:YES attributes:nil error:&createDirError];
-            if (createDirError) {
-                failure(createDirError.cqtsErrorString);
-                return;
-            }
-        }
-        
-        [data writeToFile:destinationURL.path options:0 error:&fileError];
+        NSString *destinationPath = pathInfo[@"absoluteFilePath"];
+        [data writeToFile:destinationPath options:0 error:&fileError];
         if (fileError) {
             failure(fileError.cqtsErrorString);
             
         } else {
-            NSLog(@"File download to directory: %@", destinationURL.path);
-            success(@{
-                @"fileName": fileName,
-                @"fileExtension": fileExtension,
-                @"absoluteFilePath": destinationURL.path,
-                @"relativeFilePath": relativePath
-            });
+            NSLog(@"File success download to directory: %@", destinationPath);
+            success(pathInfo);
         }
     }];
     
