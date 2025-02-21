@@ -12,7 +12,7 @@
   },
   "description": "-、演示示例\n\n                   A longer description of TSDemo_Demo in Markdown format.\n\n                   * Think: Why did you write this? What is the focus? What does it do?\n                   * CocoaPods will be using this to generate tags, and improve search results.\n                   * Try to keep it short, snappy and to the point.\n                   * Finally, don't worry about the indent, CocoaPods strips it!",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source": {
     "git": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git",
@@ -25,13 +25,13 @@
     "CQDemoKit": [
 
     ],
-    "CQDemoKit-Swift": [
-
-    ],
     "SSZipArchive": [
 
     ],
     "SwiftExtraCJHelper": [
+
+    ],
+    "TSDemo_Demo-Swift": [
 
     ]
   }

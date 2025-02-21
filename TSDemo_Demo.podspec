@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
                    DESC
   
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
  
   s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "TSDemo_Demo_0.5.2" }
   #s.source_files  = "CJDemoCommon/*.{h,m}"
@@ -51,10 +51,9 @@ Pod::Spec.new do |s|
   # }
   #多个依赖就写多行
   s.dependency 'CQDemoKit'
-  s.dependency 'CQDemoKit-Swift'
-#  s.dependency 'CQDemoKit-Swift'
   s.dependency 'SSZipArchive'     # 模拟下载 zip 到沙盒的示例
   s.dependency 'SwiftExtraCJHelper'
 
+  s.dependency 'TSDemo_Demo-Swift'
   
 end

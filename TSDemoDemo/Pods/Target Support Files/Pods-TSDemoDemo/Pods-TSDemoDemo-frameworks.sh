@@ -186,6 +186,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftExtraCJHelper/SwiftExtraCJHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Demo/TSDemo_Demo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Demo-Swift/TSDemo_Demo_Swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework"
@@ -197,6 +198,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftExtraCJHelper/SwiftExtraCJHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Demo/TSDemo_Demo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Demo-Swift/TSDemo_Demo_Swift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

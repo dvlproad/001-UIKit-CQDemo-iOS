@@ -12,6 +12,7 @@
 
 #import "TSSingleLineTextViewController.h"
 #import "TSMultilineTextViewController.h"
+#import <TSDemo_Demo_Swift/TSDemo_Demo_Swift-Swift.h>
 
 @interface BaseVCHomeViewController () {
     
@@ -55,8 +56,7 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"测试 SwiftUI 的 View";
             module.viewGetterHandle = ^UIView * _Nonnull{
-//                UIView *tsview = [NSClassFromStringCJHelper controllerFormStringWithClassName:@"TSTSUIView" isOC:NO nameSpace:@"TSDemoDemo"];
-                Class tsClass = NSClassFromString(@"TSTSUIView");
+                Class tsClass = [NSClassFromStringCJHelper swiftClassFrom:@"TSSFUIView" nameSpace:@"TSDemo_Demo-Swift"];
                 if (tsClass) {
                     UIView *tsview = [[tsClass alloc] init];
                     return tsview;
@@ -66,6 +66,22 @@
                     return tsview;
                 }
             };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"测试 CQDemoSwiftUIBaseUIView";
+            module.content = @"将 SwiftUI 的视图转为 UIKit 的 UIView";
+            module.viewGetterHandle = ^UIView * _Nonnull{
+                return [[TSSFUIView alloc] init];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"测试 CQDemoSwiftUIBaseUIViewController";
+            module.content = @"将 SwiftUI 的视图转为 UIKit 的 UIViewController";
+            module.classEntry = [TSSFUIViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

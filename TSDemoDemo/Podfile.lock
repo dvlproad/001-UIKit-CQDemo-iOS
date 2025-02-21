@@ -71,14 +71,18 @@ PODS:
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - SSZipArchive (2.4.3)
-  - SwiftExtraCJHelper (0.1.0):
-    - SwiftExtraCJHelper/Base (= 0.1.0)
-  - SwiftExtraCJHelper/Base (0.1.0)
+  - SwiftExtraCJHelper (0.1.2):
+    - SwiftExtraCJHelper/Base (= 0.1.2)
+  - SwiftExtraCJHelper/Base (0.1.2)
   - TSDemo_Demo (0.5.2):
     - CQDemoKit
-    - CQDemoKit-Swift
     - SSZipArchive
     - SwiftExtraCJHelper
+    - TSDemo_Demo-Swift
+  - TSDemo_Demo-Swift (0.0.1):
+    - TSDemo_Demo-Swift/SwiftUI (= 0.0.1)
+  - TSDemo_Demo-Swift/SwiftUI (0.0.1):
+    - CQDemoKit-Swift
 
 DEPENDENCIES:
   - CJBaseHelper/HookCJHelper (~> 0.1.7)
@@ -88,6 +92,7 @@ DEPENDENCIES:
   - CQDemoShareFramework-Swift/WidgetExtension (from `../`)
   - MLeaksFinder
   - TSDemo_Demo (from `../`)
+  - TSDemo_Demo-Swift (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -107,6 +112,8 @@ EXTERNAL SOURCES:
     :path: "../"
   TSDemo_Demo:
     :path: "../"
+  TSDemo_Demo-Swift:
+    :path: "../"
 
 SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
@@ -117,9 +124,10 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
-  SwiftExtraCJHelper: 08327687925a21f8f52fe86cf30b2b7f67ef5791
-  TSDemo_Demo: ec026da78626c0259ded7decdb11f4e0a82d500f
+  SwiftExtraCJHelper: ec1ec1fc172a06de1ae1e7230dd958d1a873bfcb
+  TSDemo_Demo: abd48acf8b0076da5c2a7aaf0e1f2977f4112333
+  TSDemo_Demo-Swift: 82f7335871f39a0543ef8190d8bb46ddaff57417
 
-PODFILE CHECKSUM: 91fde5161f21b9dadee9bef24a9b15fb1be75db5
+PODFILE CHECKSUM: 7f176ed5bfa75e243560080158e6c3f546adfcf0
 
 COCOAPODS: 1.16.2

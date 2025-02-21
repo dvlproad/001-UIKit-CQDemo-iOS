@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   # 上传到github公有库 含swift文件时候上传到私有库的方法（本类要依赖swift库的时候）将--use-libraries去掉，或者改成--use-modular-headers:
   #验证方法1：pod lib lint CQDemoKit-Swift.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --verbose
   #验证方法2：pod lib lint CQDemoKit-Swift.podspec --sources=master --allow-warnings --verbose
-  #提交方法(github公有库)： pod trunk push CQDemoKit-Swift.podspec --allow-warnings
+  #提交方法(github公有库)： pod trunk push CQDemoKit-Swift.podspec --allow-warnings --verbose
   
   # 上传到私有库 gitee上的私有项目: dvlproadSpecs
   #验证方法1：pod lib lint CQDemoKit-Swift.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose

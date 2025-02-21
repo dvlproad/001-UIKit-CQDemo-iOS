@@ -12,14 +12,14 @@ import CQDemoKit_Swift
 
 @available(iOS 14.0, *)
 @objc public class TSTSUIView: CQDemoSwiftUIBaseUIView {
-    public init() {
+    @objc public init() {
         super.init(swiftUIView: TSTSSwiftUIView())
     }
 }
 
 @available(iOS 14.0, *)
 @objc public class TSTSUIViewController: CQDemoSwiftUIBaseUIViewController {
-    public init() {
+    @objc public init() {
         super.init(swiftUIView: TSTSSwiftUIView())
     }
 }

@@ -41,6 +41,7 @@ target 'TSDemoDemo' do
   
   pod 'TSDemo_Demo',        :path => '../'
   pod 'CQDemoKit',        	:path => '../'
+  pod 'TSDemo_Demo-Swift',  :path => '../'
   pod 'CQDemoKit-Swift',    :path => '../'
   
 #  pod 'CQDemoKit-Swift',    :path => '../'
