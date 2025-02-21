@@ -11,6 +11,14 @@ PODS:
     - CQDemoKit/Demo_RipeView (= 0.7.4)
     - CQDemoKit/Helper (= 0.7.4)
     - CQDemoKit/Monitor (= 0.7.4)
+  - CQDemoKit-Swift (0.0.1):
+    - CQDemoKit
+    - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.1)
+    - CQDemoKit-Swift/SwiftUI (= 0.0.1)
+  - CQDemoKit-Swift/CQDemoKit-OC (0.0.1):
+    - CQDemoKit
+  - CQDemoKit-Swift/SwiftUI (0.0.1):
+    - CQDemoKit
   - CQDemoKit/Auxiliary (0.7.4):
     - CQDemoShareFramework-Swift/WidgetExtension
     - Masonry
@@ -68,6 +76,7 @@ PODS:
   - SwiftExtraCJHelper/Base (0.1.0)
   - TSDemo_Demo (0.5.2):
     - CQDemoKit
+    - CQDemoKit-Swift
     - SSZipArchive
     - SwiftExtraCJHelper
 
@@ -75,6 +84,7 @@ DEPENDENCIES:
   - CJBaseHelper/HookCJHelper (~> 0.1.7)
   - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.7)
   - CQDemoKit (from `../`)
+  - CQDemoKit-Swift (from `../`)
   - CQDemoShareFramework-Swift/WidgetExtension (from `../`)
   - MLeaksFinder
   - TSDemo_Demo (from `../`)
@@ -91,6 +101,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   CQDemoKit:
     :path: "../"
+  CQDemoKit-Swift:
+    :path: "../"
   CQDemoShareFramework-Swift:
     :path: "../"
   TSDemo_Demo:
@@ -98,15 +110,16 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
-  CQDemoKit: f5abd30a2a60a886b38c2117c835118af8dbb4f3
+  CQDemoKit: 15667d15bfeccbbd4174b90a94e7bb1b637451c7
+  CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
   CQDemoShareFramework-Swift: acab164277cddb79177ce015b6e87a835cfe3ce1
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SwiftExtraCJHelper: 08327687925a21f8f52fe86cf30b2b7f67ef5791
-  TSDemo_Demo: 71298f6065ac0e78ad1b5487883ef06f064c35ef
+  TSDemo_Demo: ec026da78626c0259ded7decdb11f4e0a82d500f
 
-PODFILE CHECKSUM: 625a32ba15d9a78f445a094d259c5d12b6f5128f
+PODFILE CHECKSUM: 91fde5161f21b9dadee9bef24a9b15fb1be75db5
 
 COCOAPODS: 1.16.2

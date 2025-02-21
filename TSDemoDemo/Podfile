@@ -41,6 +41,8 @@ target 'TSDemoDemo' do
   
   pod 'TSDemo_Demo',        :path => '../'
   pod 'CQDemoKit',        	:path => '../'
+  pod 'CQDemoKit-Swift',    :path => '../'
+  
 #  pod 'CQDemoKit-Swift',    :path => '../'
   pod 'CJBaseHelper',       '~> 0.1.7',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
 
