@@ -156,9 +156,9 @@ struct TSTSSwiftUIView: View {
 }
 
 
-// MARK: 预览 BaseControlWidgetAnimationViewInApp
+// MARK: 预览 TSTSSwiftUIView
 @available(iOS 15.0, *)
-struct BaseControlWidgetAnimationViewInApp_Previews: PreviewProvider {
+struct TSTSSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         TSTSSwiftUIView()
     }
