@@ -157,9 +157,6 @@
       "dependencies": {
         "Masonry": [
 
-        ],
-        "CQDemoShareFramework-Swift/WidgetExtension": [
-
         ]
       }
     },

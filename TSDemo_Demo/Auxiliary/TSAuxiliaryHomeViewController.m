@@ -46,6 +46,7 @@
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"CopyMainBunldeFile";
+            module.content = @"包含拷贝到 AppGroup";
             module.classEntry = [TSCopyMainBunldeFileViewController class];
             [sectionDataModel.values addObject:module];
         }

@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.7.4"
+  s.version      = "0.7.5"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.4" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.5" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -172,8 +172,6 @@ Pod::Spec.new do |s|
   s.subspec 'Auxiliary' do |ss|
     ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
     ss.dependency 'Masonry'
-    
-    ss.dependency 'CQDemoShareFramework-Swift/WidgetExtension'  # 测试控制中心加载远程图标的时候需要使用
   end
   
   s.subspec 'Monitor' do |ss|

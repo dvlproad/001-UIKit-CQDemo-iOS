@@ -1,5 +1,6 @@
 Pod::Spec.new do |s|
-  #验证方法：pod lib lint CQDemoShareFramework-Swift.podspec --allow-warnings --use-libraries --verbose
+  #验证方法：pod lib lint CQDemoShareFramework-Swift.podspec --allow-warnings --verbose
+  #提交方法(github公有库)： pod trunk push CQDemoShareFramework-Swift.podspec --allow-warnings --verbose
   s.name         = "CQDemoShareFramework-Swift"
   s.version      = "0.0.1"
   s.summary      = "主工程和其他Target某些工程下(WidgetExtension等)都需要依赖的库"

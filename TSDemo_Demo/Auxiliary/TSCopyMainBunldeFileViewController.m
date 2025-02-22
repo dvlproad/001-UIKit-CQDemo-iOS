@@ -171,7 +171,7 @@
                 NSString *unzipBundlePath = [unzipPath stringByAppendingPathComponent:unzipFileName];
                 
                 NSString *unzipRelativePath = [weakSelf.myCopyZipRelativePath stringByDeletingPathExtension];
-                [TSWidgetExtensionDataUtil updateSymbolsBundleRelativePath:unzipRelativePath];
+                [CQDemoWidgetExtensionDataUtil updateSymbolsBundleRelativePath:unzipRelativePath];
                 
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
                 if (downloadBundle != nil) {
@@ -270,8 +270,8 @@
                 NSString *zipFileName = [Url lastPathComponent];                        // xxx.bundle.zip
                 NSString *unzipFileName = [zipFileName stringByDeletingPathExtension];  // xxx.bundle
                 
-                NSURL *directoryURL = [TSWidgetExtensionDataUtil getDownloadSymbolDirURL];
-                [TSWidgetExtensionDataUtil downloadFileWithFileUrl:Url directoryURL:directoryURL saveWithFileName:zipFileName success:^(NSURL * _Nonnull cacheURL) {
+                NSURL *directoryURL = [CQDemoWidgetExtensionDataUtil getDownloadSymbolDirURL];
+                [CQDemoWidgetExtensionDataUtil downloadFileWithFileUrl:Url directoryURL:directoryURL saveWithFileName:zipFileName success:^(NSURL * _Nonnull cacheURL) {
                     NSString *zipPath = cacheURL.path;
                     NSString *unzipDirectoryPath = directoryURL.path;
                     [SSZipArchive unzipFileAtPath:zipPath toDestination:unzipDirectoryPath overwrite:YES password:nil progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {
@@ -284,7 +284,7 @@
                                 return;
                             }
                             
-                            [TSWidgetExtensionDataUtil updateSymbolsBundleRelativePath:unzipFileName];
+                            [CQDemoWidgetExtensionDataUtil updateSymbolsBundleRelativePath:unzipFileName];
                             [weakSelf updateAllRealZipModelContent_inAppGroup];
                         });
                     }];
@@ -302,13 +302,13 @@
             module.title = @"读取 AppGroup 里 .zip 中内容";
             module.content = @"请先正式下载 .zip 到沙盒中";
             module.actionBlock = ^{
-                NSString *symbolsBundleRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
+                NSString *symbolsBundleRelativePath = [CQDemoWidgetExtensionDataUtil getSymbolsBundleRelativePath];
                 if (symbolsBundleRelativePath == nil) {
                     [CJUIKitAlertUtil showIKnowAlertInViewController:weakSelf withTitle:@"请先点击 Download .zip 到 AppGroup ，以正式下载 .zip 到沙盒中" iKnowBlock:nil];
                     return;
                 }
                 
-                NSBundle *downloadBundle = [TSWidgetExtensionDataUtil getSymbolBundle];
+                NSBundle *downloadBundle = [CQDemoWidgetExtensionDataUtil getSymbolBundle];
                 if (downloadBundle != nil) {
                     UIImage *image = [UIImage imageNamed:@"icon_control_katong_6" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
@@ -340,7 +340,7 @@
     self.imageView = imageView;
     
     // App Group
-    self.myCopyZipRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
+    self.myCopyZipRelativePath = [CQDemoWidgetExtensionDataUtil getSymbolsBundleRelativePath];
     [self updateAllCopyZipModelContent_inAppGroup];
     
     [self updateAllRealZipModelContent_inAppGroup];
@@ -418,7 +418,7 @@
     NSMutableArray *values = self.sectionDataModels[4].values;
     for (int index = 0; index < values.count; index++) {
         CQDMModuleModel *module = values[index];
-        NSString *symbolsBundleRelativePath = [TSWidgetExtensionDataUtil getSymbolsBundleRelativePath];
+        NSString *symbolsBundleRelativePath = [CQDemoWidgetExtensionDataUtil getSymbolsBundleRelativePath];
         if (index == 0) {
             if (symbolsBundleRelativePath != nil) {
                 module.content = @"已正式下载 .zip 到沙盒中";

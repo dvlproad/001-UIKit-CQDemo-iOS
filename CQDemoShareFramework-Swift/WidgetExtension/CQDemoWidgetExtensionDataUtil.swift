@@ -1,6 +1,6 @@
 //
-//  TSWidgetExtensionDataUtil.swift
-//  CJUIKitDemo
+//  CQDemoWidgetExtensionDataUtil.swift
+//  CQDemoShareFramework-Swift
 //
 //  Created by qian on 2024/12/3.
 //  Copyright © 2024 dvlproad. All rights reserved.
@@ -11,6 +11,14 @@ import Foundation
 @objc open class CQDemoAppGroupCacheUtil: NSObject {
     // 确保需要的那些 Target 都添加了 App Group
     @objc public static let ApplicationGroupName = "group.com.dvlproad.TSDemoDemo"
+    
+    @objc public static func getAppGroupDirectoryURL() -> URL? {
+        let paths = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: ApplicationGroupName)
+        if paths != nil{
+            return paths!
+        }
+        return nil
+    }
     
     @objc public static func dataForKey(_ key: String) -> Data? {
         if let userDefaults = UserDefaults(suiteName: ApplicationGroupName) {
@@ -43,7 +51,7 @@ import Foundation
 }
 
 
-@objc open class TSWidgetExtensionDataUtil: NSObject {
+@objc open class CQDemoWidgetExtensionDataUtil: NSObject {
     // 图标资源相对路径
     @objc public static func updateSymbolsBundleRelativePath(_ relativePath: String) {
         CQDemoAppGroupCacheUtil.set(relativePath, forKey: "CQDemoAppGroupCacheUtil_symbolsBundleRelativePath")
@@ -55,46 +63,37 @@ import Foundation
     }
     
     @objc public static func getSymbolBundle() -> Bundle? {
+        var downloadSymbolDirURL: URL? = getDownloadSymbolDirURL()
+        guard let downloadSymbolDirURL = downloadSymbolDirURL else {
+            return nil
+        }
         var symbolsBundleRelativePath = getSymbolsBundleRelativePath()
-        return getSymbolsBundle(from: symbolsBundleRelativePath)
+        return getSymbolsBundle(from: downloadSymbolDirURL, downloadBundleRelativePath: symbolsBundleRelativePath)
         
+        /*
         var downloadBundle: Bundle?
         let mainBundle: Bundle = Bundle.main
-        if let downloadBundlePath = mainBundle.path(forResource: "WidgetDownloadSymbol", ofType: ".bundle") {
+        if let downloadBundlePath = mainBundle.path(forResource: "DownloadSymbol", ofType: ".bundle") {
             downloadBundle = Bundle(path: downloadBundlePath)
         }
         return downloadBundle
+        */
     }
     
     @objc public static func getDownloadSymbolDirURL() -> URL? {
-        return getAppGroupDirectoryURL()
-//        return FileManager.default.urls(for:.cachesDirectory, in:.userDomainMask).first!
-        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        return documentDirectory
+        return CQDemoAppGroupCacheUtil.getAppGroupDirectoryURL()
     }
     
-    @objc public static func getSymbolsBundle(from downloadBundleRelativePath: String?) -> Bundle? {
+    @objc public static func getSymbolsBundle(from directoryURL: URL, downloadBundleRelativePath: String?) -> Bundle? {
         // 获取沙盒的路径（假设文件在应用的文档目录下）
         guard let unzipFileName = downloadBundleRelativePath else {
             return nil
         }
         
-        guard let directoryURL = getDownloadSymbolDirURL() else {
-            return nil
-        }
         let unzipDirectoryPath = directoryURL.path
         let unzipBundlePath = (unzipDirectoryPath as NSString).appendingPathComponent(unzipFileName)
         let downloadBundle: Bundle? = Bundle.init(path: unzipBundlePath)
         return downloadBundle
-    }
-    
-    
-    @objc public static func getAppGroupDirectoryURL() -> URL? {
-        let paths = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: CQDemoAppGroupCacheUtil.ApplicationGroupName)
-        if paths != nil{
-            return paths!
-        }
-        return nil
     }
     
     @objc public static func downloadFile(

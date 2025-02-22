@@ -34,7 +34,7 @@ struct TSDemoDemoWidgetExtensionControl: ControlWidget {
 //                    Image(systemName: "timer")
 //                        .foregroundStyle(.yellow)
                     // 自定义SF图标
-                    let downloadBundle: Bundle? = TSWidgetExtensionDataUtil.getSymbolBundle()
+                    let downloadBundle: Bundle? = CQDemoWidgetExtensionDataUtil.getSymbolBundle()
                     let uiimage: UIImage? = UIImage(named: "emoji9_FFA5BE", in: downloadBundle, compatibleWith: nil)
 //                    Image(uiImage: uiimage ?? UIImage())
                     Image("emoji9_FFA5BE", bundle: downloadBundle)

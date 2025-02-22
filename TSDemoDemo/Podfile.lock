@@ -20,7 +20,6 @@ PODS:
   - CQDemoKit-Swift/SwiftUI (0.0.1):
     - CQDemoKit
   - CQDemoKit/Auxiliary (0.7.4):
-    - CQDemoShareFramework-Swift/WidgetExtension
     - Masonry
   - CQDemoKit/BaseUIKit (0.7.4):
     - Masonry
@@ -76,6 +75,7 @@ PODS:
   - SwiftExtraCJHelper/Base (0.1.2)
   - TSDemo_Demo (0.5.2):
     - CQDemoKit
+    - CQDemoShareFramework-Swift/WidgetExtension
     - SSZipArchive
     - SwiftExtraCJHelper
     - TSDemo_Demo-Swift
@@ -117,7 +117,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
-  CQDemoKit: 15667d15bfeccbbd4174b90a94e7bb1b637451c7
+  CQDemoKit: 2df9632969710cb3c8b8090746985247208145f0
   CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
   CQDemoShareFramework-Swift: acab164277cddb79177ce015b6e87a835cfe3ce1
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
@@ -125,7 +125,7 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SwiftExtraCJHelper: ec1ec1fc172a06de1ae1e7230dd958d1a873bfcb
-  TSDemo_Demo: abd48acf8b0076da5c2a7aaf0e1f2977f4112333
+  TSDemo_Demo: 9abae0e03191abcb5ac02fd6b5b423230f0b5688
   TSDemo_Demo-Swift: 82f7335871f39a0543ef8190d8bb46ddaff57417
 
 PODFILE CHECKSUM: 7f176ed5bfa75e243560080158e6c3f546adfcf0
