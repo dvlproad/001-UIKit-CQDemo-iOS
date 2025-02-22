@@ -1,16 +1,16 @@
 PODS:
   - CJBaseHelper/HookCJHelper (0.1.7)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.7)
-  - CQDemoKit (0.7.4):
-    - CQDemoKit/Auxiliary (= 0.7.4)
-    - CQDemoKit/BaseUIKit (= 0.7.4)
-    - CQDemoKit/BaseUtil (= 0.7.4)
-    - CQDemoKit/BaseVC (= 0.7.4)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.4)
-    - CQDemoKit/Demo_Resource (= 0.7.4)
-    - CQDemoKit/Demo_RipeView (= 0.7.4)
-    - CQDemoKit/Helper (= 0.7.4)
-    - CQDemoKit/Monitor (= 0.7.4)
+  - CQDemoKit (0.7.5):
+    - CQDemoKit/Auxiliary (= 0.7.5)
+    - CQDemoKit/BaseUIKit (= 0.7.5)
+    - CQDemoKit/BaseUtil (= 0.7.5)
+    - CQDemoKit/BaseVC (= 0.7.5)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.5)
+    - CQDemoKit/Demo_Resource (= 0.7.5)
+    - CQDemoKit/Demo_RipeView (= 0.7.5)
+    - CQDemoKit/Helper (= 0.7.5)
+    - CQDemoKit/Monitor (= 0.7.5)
   - CQDemoKit-Swift (0.0.1):
     - CQDemoKit
     - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.1)
@@ -19,51 +19,51 @@ PODS:
     - CQDemoKit
   - CQDemoKit-Swift/SwiftUI (0.0.1):
     - CQDemoKit
-  - CQDemoKit/Auxiliary (0.7.4):
+  - CQDemoKit/Auxiliary (0.7.5):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.7.4):
+  - CQDemoKit/BaseUIKit (0.7.5):
     - Masonry
-  - CQDemoKit/BaseUtil (0.7.4)
-  - CQDemoKit/BaseVC (0.7.4):
-    - CQDemoKit/BaseVC/Base (= 0.7.4)
-    - CQDemoKit/BaseVC/Collection (= 0.7.4)
-    - CQDemoKit/BaseVC/ScrollView (= 0.7.4)
-    - CQDemoKit/BaseVC/TabBar (= 0.7.4)
-    - CQDemoKit/BaseVC/TableView (= 0.7.4)
-    - CQDemoKit/BaseVC/TextView (= 0.7.4)
+  - CQDemoKit/BaseUtil (0.7.5)
+  - CQDemoKit/BaseVC (0.7.5):
+    - CQDemoKit/BaseVC/Base (= 0.7.5)
+    - CQDemoKit/BaseVC/Collection (= 0.7.5)
+    - CQDemoKit/BaseVC/ScrollView (= 0.7.5)
+    - CQDemoKit/BaseVC/TabBar (= 0.7.5)
+    - CQDemoKit/BaseVC/TableView (= 0.7.5)
+    - CQDemoKit/BaseVC/TextView (= 0.7.5)
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/Base (0.7.4):
+  - CQDemoKit/BaseVC/Base (0.7.5):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.7.4):
+  - CQDemoKit/BaseVC/Collection (0.7.5):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/ScrollView (0.7.4):
+  - CQDemoKit/BaseVC/ScrollView (0.7.5):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TabBar (0.7.4):
+  - CQDemoKit/BaseVC/TabBar (0.7.5):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.7.4):
+  - CQDemoKit/BaseVC/TableView (0.7.5):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TextView (0.7.4):
+  - CQDemoKit/BaseVC/TextView (0.7.5):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.4):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.5):
     - CQDemoKit/BaseVC
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Demo_Resource (0.7.4):
+  - CQDemoKit/Demo_Resource (0.7.5):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.7.4):
+  - CQDemoKit/Demo_RipeView (0.7.5):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.7.4)
-  - CQDemoKit/Monitor (0.7.4)
+  - CQDemoKit/Helper (0.7.5)
+  - CQDemoKit/Monitor (0.7.5)
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
@@ -117,9 +117,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
-  CQDemoKit: 2df9632969710cb3c8b8090746985247208145f0
+  CQDemoKit: 1c1e5b27b6a973ab0b6535f4c3df3164e6c82285
   CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
-  CQDemoShareFramework-Swift: acab164277cddb79177ce015b6e87a835cfe3ce1
+  CQDemoShareFramework-Swift: c9610e35ac4785686fbbe201fdd2c5264b8d3b7c
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0

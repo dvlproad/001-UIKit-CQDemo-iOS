@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   # 上传到github公有库:
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
   #验证方法2：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings --use-libraries --verbose
-  #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings
+  #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings --verbose
   
   # 上传到私有库 gitee上的私有项目: dvlproadSpecs
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
