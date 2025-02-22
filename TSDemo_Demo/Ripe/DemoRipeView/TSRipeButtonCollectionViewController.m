@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeButtonCollectionView", nil);
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSLocImagesUtil cjts_localImage3]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSLocImagesUtil cjts_localImageAtIndex:2]];
     [self.view addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
