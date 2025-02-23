@@ -43,6 +43,7 @@
 #import "CQTSRipeBaseCollectionViewDataSource.h"
 #import "CQTSRipeBaseCollectionViewDelegate.h"
 #import "CQTSRipeSectionDataUtil.h"
+#import "CQTSPhotoUtil.h"
 #import "CQTSResourceEnum.h"
 #import "CQTSResourceUtil.h"
 #import "CQTSSandboxFileUtil.h"
