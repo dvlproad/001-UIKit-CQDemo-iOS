@@ -81,7 +81,11 @@ Pod::Spec.new do |s|
   #    'OtherResources' => ['MapView/Map/OtherResources/*.png']
   #  }
   s.resource_bundle = {
-    'CQDemoKit' => ['CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg,mp4}', 'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'] # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
+    'CQDemoKit' => [      # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
+      'CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg,mp4}', 
+      'CQDemoKit/Demo_Resource/**/*.{xcassets}', 
+      'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'
+    ]
   }
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
