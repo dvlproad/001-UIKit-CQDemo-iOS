@@ -76,76 +76,42 @@
                                      success:(void (^)(void))success
                                      failure:(void (^)(NSString *errorMessage))failure
 {
-    // 请求相册权限
-    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-        if (status != PHAuthorizationStatusAuthorized) {
-            failure(@"没有相册权限");
-            return;
-        }
-        
-        NSString *fileExtension = [mediaLocalURL pathExtension].lowercaseString;    // 获取文件扩展名
-        if (fileExtension == nil || fileExtension.length == 0) {
-            failure(@"获取文件扩展名失败");
-            return;
-        }
-        
-        UIImage *watiToSaveImage = nil;
-        if ([self isImageFileExtension:fileExtension]) {    // 如果是图片
-            watiToSaveImage = [UIImage imageWithContentsOfFile:mediaLocalURL.path];
-            if (watiToSaveImage == nil) {
-                NSString *errorMessage = [NSString stringWithFormat:@"图片数据获取失败"];
-                failure(errorMessage);
-                return;
-            }
-            
-        } else if ([self isVideoFileExtension:fileExtension]) {
-            
-        } else {
-            NSString *errorMessage = [NSString stringWithFormat:@"暂时不支持的文件类型: %@", fileExtension];
-            failure(errorMessage);
-            return;
-        }
-        
-        
-        NSError *error = nil;
-        [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
-            if (watiToSaveImage != nil) {   // 如果是图片
-                [PHAssetChangeRequest creationRequestForAssetFromImage:watiToSaveImage];
-                
-            } else if ([self isVideoFileExtension:fileExtension]) { // 如果是视频
-                [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:mediaLocalURL];
-            }
-            
-        } error:&error];
-        
-        if (error) {
-            NSString *errorMessage = [NSString stringWithFormat:@"保存失败: %@", error.localizedDescription];
-            failure(errorMessage);
-            // 判断当前是否是主线程
-//            if ([NSThread isMainThread]) {
-//                [CJUIKitToastUtil showMessage:errorMessage];
-//            } else {
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [CJUIKitToastUtil showMessage:errorMessage];
-//                });
-//            }
-        } else {
-            success();
-        }
-    }];
+    NSString *fileExtension = [mediaLocalURL pathExtension].lowercaseString;    // 获取文件扩展名
+    if (fileExtension == nil || fileExtension.length == 0) {
+        failure(@"获取文件扩展名失败");
+        return;
+    }
+    
+    UIImage *watiToSaveImage = nil;
+    CQFileType fileType = [self fileTypeForFilePathOrUrl:fileExtension];
+    if (fileType == CQFileTypeImage) {    // 如果是图片
+        [self saveImageToPhotoAlbum:mediaLocalURL success:success failure:failure];
+
+    } else if (fileType == CQFileTypeVideo) {
+        [self saveVideoToPhotoAlbum:mediaLocalURL success:success failure:failure];
+
+    } else {
+        NSString *errorMessage = [NSString stringWithFormat:@"暂时不支持的文件类型: %@", fileExtension];
+        failure(errorMessage);
+    }
 }
 
 
-+ (BOOL)isImageFileExtension:(NSString *)extension {
-    NSArray *imageExtensions = @[@"jpg", @"jpeg", @"png", @"gif", @"bmp"];
-    return [imageExtensions containsObject:extension];
-}
-
-+ (BOOL)isVideoFileExtension:(NSString *)extension {
++ (CQFileType)fileTypeForFilePathOrUrl:(NSString *)pathOrUrl {
+    NSString *extension = [pathOrUrl pathExtension].lowercaseString;
+    NSArray *imageExtensions = @[@"jpg", @"jpeg", @"png", @"gif", @"bmp", @"webp"];
+    NSArray *audioExtensions = @[@"mp3", @"wav", @"m4a", @"aac", @"ogg"];
     NSArray *videoExtensions = @[@"mp4", @"mov", @"avi", @"mkv", @"flv"];
-    return [videoExtensions containsObject:extension];
+    if ([imageExtensions containsObject:extension]) {
+        return CQFileTypeImage;
+    } else if ([audioExtensions containsObject:extension]) {
+        return CQFileTypeAudio;
+    } else if ([videoExtensions containsObject:extension]) {
+        return CQFileTypeVideo;
+    } else {
+        return CQFileTypeUnknown;
+    }
 }
-
 
 
 @end
