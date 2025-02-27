@@ -7,6 +7,7 @@
 //
 
 #import "CQTSLocImagesUtil.h"
+#import "CQTSResourceUtil.h"
 
 @implementation CQTSLocImagesUtil
 
@@ -131,7 +132,18 @@
         //        }
         
         if (changeImageNameToNetworkUrl) {
-            NSString *imageUrl = [NSString stringWithFormat:@"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/616ceb45522fd6c11d03237d5e2eb24a5d3a85d5/CQDemoKit/Demo_Resource/LocDataModel/Resources/%@?raw=true", imageName];
+            NSString *resourceDir = @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/616ceb45522fd6c11d03237d5e2eb24a5d3a85d5/CQDemoKit/Demo_Resource/LocDataModel/Resources";
+            NSString *fileExtension = [imageName pathExtension].lowercaseString;    // 获取文件扩展名
+            if (fileExtension == @"mp4") {
+                [resourceDir stringByAppendingPathComponent:@"mp4"];
+            } else if (fileExtension == @"gif") {
+                [resourceDir stringByAppendingPathComponent:@"GIF"];
+            } else if (fileExtension == @"svg") {
+                [resourceDir stringByAppendingPathComponent:@"SVG"];
+            } else {
+                [resourceDir stringByAppendingPathComponent:@""];
+            }
+            NSString *imageUrl = [NSString stringWithFormat:@"%@/%@?raw=true", resourceDir, imageName];
             dataModel.name = [NSString stringWithFormat:@"%02zd %@", i+1, imageName];
             dataModel.imageName = imageUrl;
         } else {

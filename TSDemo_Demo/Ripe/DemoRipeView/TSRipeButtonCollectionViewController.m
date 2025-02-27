@@ -30,7 +30,7 @@
     }];
     
     NSArray<NSString *> *buttonTitles = @[@"按钮01", @"按钮02", @"按钮03", @"按钮04", @"按钮05", @"按钮06", @"按钮07", @"按钮08", @"按钮09", @"按钮10"];
-    CQTSRipeButtonCollectionView *horizontalCollectionView = [[CQTSRipeButtonCollectionView alloc] initWithTitles:buttonTitles scrollDirection:UICollectionViewScrollDirectionHorizontal didSelectItemAtIndexHandle:^(NSInteger index) {
+    CQTSRipeButtonCollectionView *horizontalCollectionView = [[CQTSRipeButtonCollectionView alloc] initWithTitles:buttonTitles perMaxCount:1 scrollDirection:UICollectionViewScrollDirectionHorizontal didSelectItemAtIndexHandle:^(NSInteger index) {
         NSString *title = buttonTitles[index];
         NSLog(@"点击了“%@”", title);
     }];
@@ -61,7 +61,7 @@
     }];
     
     
-    CQTSRipeButtonCollectionView *verticalCollectionView = [[CQTSRipeButtonCollectionView alloc] initWithTitles:buttonTitles scrollDirection:UICollectionViewScrollDirectionVertical didSelectItemAtIndexHandle:^(NSInteger index) {
+    CQTSRipeButtonCollectionView *verticalCollectionView = [[CQTSRipeButtonCollectionView alloc] initWithTitles:buttonTitles perMaxCount:1 scrollDirection:UICollectionViewScrollDirectionVertical didSelectItemAtIndexHandle:^(NSInteger index) {
         NSString *title = buttonTitles[index];
         NSLog(@"点击了“%@”", title);
     }];

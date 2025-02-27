@@ -7,8 +7,8 @@
 //
 
 #import "CQTSPhotoUtil.h"
-#import <CQDemoKit/CJUIKitToastUtil.h>
 #import <Photos/Photos.h>
+#import "CQTSResourceUtil.h"
 
 @implementation CQTSPhotoUtil
 
@@ -83,11 +83,11 @@
     }
     
     UIImage *watiToSaveImage = nil;
-    CQFileType fileType = [self fileTypeForFilePathOrUrl:fileExtension];
-    if (fileType == CQFileTypeImage) {    // 如果是图片
+    CQTSFileType fileType = [CQTSResourceUtil fileTypeForFilePathOrUrl:fileExtension];
+    if (fileType == CQTSFileTypeImage) {    // 如果是图片
         [self saveImageToPhotoAlbum:mediaLocalURL success:success failure:failure];
 
-    } else if (fileType == CQFileTypeVideo) {
+    } else if (fileType == CQTSFileTypeVideo) {
         [self saveVideoToPhotoAlbum:mediaLocalURL success:success failure:failure];
 
     } else {
@@ -95,23 +95,5 @@
         failure(errorMessage);
     }
 }
-
-
-+ (CQFileType)fileTypeForFilePathOrUrl:(NSString *)pathOrUrl {
-    NSString *extension = [pathOrUrl pathExtension].lowercaseString;
-    NSArray *imageExtensions = @[@"jpg", @"jpeg", @"png", @"gif", @"bmp", @"webp"];
-    NSArray *audioExtensions = @[@"mp3", @"wav", @"m4a", @"aac", @"ogg"];
-    NSArray *videoExtensions = @[@"mp4", @"mov", @"avi", @"mkv", @"flv"];
-    if ([imageExtensions containsObject:extension]) {
-        return CQFileTypeImage;
-    } else if ([audioExtensions containsObject:extension]) {
-        return CQFileTypeAudio;
-    } else if ([videoExtensions containsObject:extension]) {
-        return CQFileTypeVideo;
-    } else {
-        return CQFileTypeUnknown;
-    }
-}
-
 
 @end

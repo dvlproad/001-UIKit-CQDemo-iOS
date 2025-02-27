@@ -27,6 +27,7 @@
 #import "CJUIKitBaseViewController.h"
 #import "CQDMModuleModel.h"
 #import "CQDMSectionDataModel.h"
+#import "CJUIKitCollectionViewHeader.h"
 #import "CJUIKitBaseCollectionHomeViewController.h"
 #import "CJUIKitCollectionViewCell.h"
 #import "CJUIKitBaseScrollViewController.h"
