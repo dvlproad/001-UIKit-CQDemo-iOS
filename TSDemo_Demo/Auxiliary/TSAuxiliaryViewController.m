@@ -36,11 +36,11 @@
     
     
     UIView *buttonsView2 = [CQTSContainerViewFactory threeButtonsViewAlongAxis:MASAxisTypeHorizontal title1:@"添加上辅助" actionBlock1:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_addPromptText:@"这是【上】辅助文本" layout:CQAuxiliaryAlignmentTop];
+        [buttonsView cqdemo_addPromptText:@"这是【上】辅助文本" layout:CQAuxiliaryAlignmentTop height:20];
     } title2:@"添加中辅助" actionBlock2:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_addPromptText:@"这是【中】辅助文本" layout:CQAuxiliaryAlignmentCenter];
+        [buttonsView cqdemo_addPromptText:@"这是【中】辅助文本" layout:CQAuxiliaryAlignmentCenter height:20];
     } title3:@"添加下辅助" actionBlock3:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_addPromptText:@"这是【下】辅助文本" layout:CQAuxiliaryAlignmentBottom];
+        [buttonsView cqdemo_addPromptText:@"这是【下】辅助文本" layout:CQAuxiliaryAlignmentBottom height:20];
     }];
     [self.view addSubview:buttonsView2];
     [buttonsView2 mas_makeConstraints:^(MASConstraintMaker *make) {

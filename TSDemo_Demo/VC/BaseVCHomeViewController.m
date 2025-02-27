@@ -62,7 +62,7 @@
                     return tsview;
                 } else {
                     UIView *tsview = [[UIView alloc] init];
-                    [tsview cqdemo_addPromptText:@"❌: TSTSUIView 视图生成失败,请检查" layout:CQAuxiliaryAlignmentCenter];
+                    [tsview cqdemo_addPromptText:@"❌: TSTSUIView 视图生成失败,请检查" layout:CQAuxiliaryAlignmentCenter  height:20];
                     return tsview;
                 }
             };

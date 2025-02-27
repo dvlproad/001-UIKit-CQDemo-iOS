@@ -29,7 +29,7 @@
         make.bottom.mas_equalTo(self.mas_bottomLayoutGuide);
     }];
     
-    CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithScrollDirection:UICollectionViewScrollDirectionVertical perMaxCount:3];
+    CQTSRipeImageCollectionView *collectionView = [[CQTSRipeImageCollectionView alloc] initWithScrollDirection:UICollectionViewScrollDirectionVertical perMaxCount:3  widthHeightRatio:1.0];
     [collectionView setupSectionRowCounts:@[@1, @3, @6, @8] ripeImageSource:CQTSRipeImageSourceImageNetwork];
     collectionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.5];
     collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
