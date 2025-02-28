@@ -1,16 +1,16 @@
 PODS:
   - CJBaseHelper/HookCJHelper (0.1.7)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.7)
-  - CQDemoKit (0.7.5):
-    - CQDemoKit/Auxiliary (= 0.7.5)
-    - CQDemoKit/BaseUIKit (= 0.7.5)
-    - CQDemoKit/BaseUtil (= 0.7.5)
-    - CQDemoKit/BaseVC (= 0.7.5)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.5)
-    - CQDemoKit/Demo_Resource (= 0.7.5)
-    - CQDemoKit/Demo_RipeView (= 0.7.5)
-    - CQDemoKit/Helper (= 0.7.5)
-    - CQDemoKit/Monitor (= 0.7.5)
+  - CQDemoKit (0.7.6):
+    - CQDemoKit/Auxiliary (= 0.7.6)
+    - CQDemoKit/BaseUIKit (= 0.7.6)
+    - CQDemoKit/BaseUtil (= 0.7.6)
+    - CQDemoKit/BaseVC (= 0.7.6)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.6)
+    - CQDemoKit/Demo_Resource (= 0.7.6)
+    - CQDemoKit/Demo_RipeView (= 0.7.6)
+    - CQDemoKit/Helper (= 0.7.6)
+    - CQDemoKit/Monitor (= 0.7.6)
   - CQDemoKit-Swift (0.0.1):
     - CQDemoKit
     - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.1)
@@ -19,51 +19,45 @@ PODS:
     - CQDemoKit
   - CQDemoKit-Swift/SwiftUI (0.0.1):
     - CQDemoKit
-  - CQDemoKit/Auxiliary (0.7.5):
+  - CQDemoKit/Auxiliary (0.7.6):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.7.5):
+  - CQDemoKit/BaseUIKit (0.7.6):
     - Masonry
-  - CQDemoKit/BaseUtil (0.7.5)
-  - CQDemoKit/BaseVC (0.7.5):
-    - CQDemoKit/BaseVC/Base (= 0.7.5)
-    - CQDemoKit/BaseVC/Collection (= 0.7.5)
-    - CQDemoKit/BaseVC/ScrollView (= 0.7.5)
-    - CQDemoKit/BaseVC/TabBar (= 0.7.5)
-    - CQDemoKit/BaseVC/TableView (= 0.7.5)
-    - CQDemoKit/BaseVC/TextView (= 0.7.5)
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/Base (0.7.5):
+  - CQDemoKit/BaseUtil (0.7.6)
+  - CQDemoKit/BaseVC (0.7.6):
+    - CQDemoKit/BaseVC/Base (= 0.7.6)
+    - CQDemoKit/BaseVC/Collection (= 0.7.6)
+    - CQDemoKit/BaseVC/ScrollView (= 0.7.6)
+    - CQDemoKit/BaseVC/TabBar (= 0.7.6)
+    - CQDemoKit/BaseVC/TableView (= 0.7.6)
+    - CQDemoKit/BaseVC/TextView (= 0.7.6)
+  - CQDemoKit/BaseVC/Base (0.7.6):
     - CQDemoKit/BaseUIKit
-    - CQDemoKit/Helper
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.7.5):
+  - CQDemoKit/BaseVC/Collection (0.7.6):
     - CQDemoKit/BaseVC/Base
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/ScrollView (0.7.5):
+  - CQDemoKit/BaseVC/ScrollView (0.7.6):
     - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TabBar (0.7.6):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TabBar (0.7.5):
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.7.5):
+  - CQDemoKit/BaseVC/TableView (0.7.6):
     - CQDemoKit/BaseVC/Base
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TextView (0.7.5):
+  - CQDemoKit/BaseVC/TextView (0.7.6):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-    - CQDemoKit/Helper
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.5):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.6):
     - CQDemoKit/BaseVC
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Demo_Resource (0.7.5):
+  - CQDemoKit/Demo_Resource (0.7.6):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.7.5):
+  - CQDemoKit/Demo_RipeView (0.7.6):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.7.5)
-  - CQDemoKit/Monitor (0.7.5)
+  - CQDemoKit/Helper (0.7.6)
+  - CQDemoKit/Monitor (0.7.6)
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
@@ -117,16 +111,16 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
-  CQDemoKit: 8df09c26e83b381593be32daa734d01877914609
-  CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
+  CQDemoKit: 43310591de3b41c4ca10746af3989ca4fd4aad13
+  CQDemoKit-Swift: 24444c9b408edd22ce713981ed9649486d7326c3
   CQDemoShareFramework-Swift: c9610e35ac4785686fbbe201fdd2c5264b8d3b7c
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SwiftExtraCJHelper: ec1ec1fc172a06de1ae1e7230dd958d1a873bfcb
-  TSDemo_Demo: 9abae0e03191abcb5ac02fd6b5b423230f0b5688
-  TSDemo_Demo-Swift: 82f7335871f39a0543ef8190d8bb46ddaff57417
+  TSDemo_Demo: 7a378c95bd208b02881c4ab650f1281220221849
+  TSDemo_Demo-Swift: 2e9903c2469644747a80b5744b0c366cf9fc3d78
 
 PODFILE CHECKSUM: 7f176ed5bfa75e243560080158e6c3f546adfcf0
 

@@ -19,9 +19,7 @@
   "frameworks": "UIKit",
   "requires_arc": true,
   "dependencies": {
-    "CQDemoKit": [
-
-    ]
+    "CQDemoKit": []
   },
   "subspecs": [
     {

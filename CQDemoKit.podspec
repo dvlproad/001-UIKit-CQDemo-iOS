@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.7.6"
+  s.version      = "0.7.7"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.6" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.7.7" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -82,8 +82,9 @@ Pod::Spec.new do |s|
   #  }
   s.resource_bundle = {
     'CQDemoKit' => [      # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
-      'CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg,mp4}', 
-      'CQDemoKit/Demo_Resource/**/*.{xcassets}', 
+      'CQDemoKit/Demo_Resource/**/*.{png,jpg,jpeg,gif,svg,mov,mp4}',
+      'CQDemoKit/Demo_Resource/**/*.{heic}',
+      'CQDemoKit/Demo_Resource/**/*.{xcassets}',
       'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'
     ]
   }
@@ -128,7 +129,7 @@ Pod::Spec.new do |s|
     ss.subspec 'TabBar' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TabBar/**/*.{h,m}"
       sss.resources = ['CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,jpeg}']
-      ss.dependency 'CQDemoKit/Helper'
+      sss.dependency 'CQDemoKit/Helper'
       # s.resources = 会拷贝到mainBundle下
       # s.resource_bundle = 会放在指定的customBundle下
     end
