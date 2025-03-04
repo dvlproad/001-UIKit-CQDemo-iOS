@@ -14,6 +14,7 @@ struct TSDemoDemoWidgetExtensionBundle: WidgetBundle {
     var body: some Widget {
         TSDemoDemoWidgetExtension()
         TSDemoDemoWidgetExtensionControl()
+        TSDemoDemoWidgetExtensionStaticControl()
         TSDemoDemoWidgetExtensionLiveActivity()
     }
 }

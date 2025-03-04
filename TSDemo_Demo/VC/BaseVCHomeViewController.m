@@ -73,7 +73,7 @@
             module.title = @"测试 CQDemoSwiftUIBaseUIView";
             module.content = @"将 SwiftUI 的视图转为 UIKit 的 UIView";
             module.viewGetterHandle = ^UIView * _Nonnull{
-                return [[TSSFUIView alloc] init];
+                return [[TSSUHomeUIView alloc] init];
             };
             [sectionDataModel.values addObject:module];
         }
@@ -81,7 +81,7 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"测试 CQDemoSwiftUIBaseUIViewController";
             module.content = @"将 SwiftUI 的视图转为 UIKit 的 UIViewController";
-            module.classEntry = [TSSFUIViewController class];
+            module.classEntry = [TSSUHomeUIViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

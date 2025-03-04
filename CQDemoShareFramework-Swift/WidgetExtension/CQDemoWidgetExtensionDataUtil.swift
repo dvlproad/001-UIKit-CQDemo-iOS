@@ -70,14 +70,16 @@ import Foundation
         var symbolsBundleRelativePath = getSymbolsBundleRelativePath()
         return getSymbolsBundle(from: downloadSymbolDirURL, downloadBundleRelativePath: symbolsBundleRelativePath)
         
-        /*
+        //return getSymbolBundleInMain()
+    }
+    
+    @objc public static func getSymbolBundleInMain() -> Bundle? {
         var downloadBundle: Bundle?
         let mainBundle: Bundle = Bundle.main
-        if let downloadBundlePath = mainBundle.path(forResource: "DownloadSymbol", ofType: ".bundle") {
+        if let downloadBundlePath = mainBundle.path(forResource: "DownloadBundle", ofType: ".bundle") {
             downloadBundle = Bundle(path: downloadBundlePath)
         }
         return downloadBundle
-        */
     }
     
     @objc public static func getDownloadSymbolDirURL() -> URL? {

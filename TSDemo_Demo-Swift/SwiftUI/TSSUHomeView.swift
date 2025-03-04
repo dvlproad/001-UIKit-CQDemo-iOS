@@ -1,5 +1,5 @@
 //
-//  TSSFSwiftUIView.swift
+//  TSSFSwiftUIHomeView.swift
 //  TSDemoDemo
 //
 //  Created by ciyouzen on 2020/2/14.
@@ -11,23 +11,23 @@ import UIKit
 import CQDemoKit_Swift
 
 @available(iOS 14.0, *)
-@objc public class TSSFUIView: CQDemoSwiftUIBaseUIView {
+@objc public class TSSUHomeUIView: CQDemoSwiftUIBaseUIView {
     @objc public init() {
-        super.init(swiftUIView: TSSFSwiftUIView())
+        super.init(swiftUIView: TSSUHomeView())
     }
 }
 
 @available(iOS 14.0, *)
-@objc public class TSSFUIViewController: CQDemoSwiftUIBaseUIViewController {
+@objc public class TSSUHomeUIViewController: CQDemoSwiftUIBaseUIViewController {
     @objc public init() {
-        super.init(swiftUIView: TSSFSwiftUIView())
+        super.init(swiftUIView: TSSUHomeView())
     }
 }
 
 
 
 @available(iOS 14.0, *)
-public struct TSSFSwiftUIView: View {
+public struct TSSUHomeView: View {
     public var body: some View {
         CJUIKitBaseHomeView(
             title: "SwiftUI",
@@ -46,6 +46,14 @@ public struct TSSFSwiftUIView: View {
                         CQDMModuleModel(title: "Module 2", actionBlock: {
                             debugPrint("点击")
                         })
+                    ]
+                ),
+                CQDMSectionDataModel(
+                    theme: "语法问题",
+                    values: [
+                        CQDMModuleModel(title: "类型擦除（Type Erasure）", classEntry: {
+                            AnyView(TSSFExceDiffTypeView())
+                        }),
                     ]
                 )
             ]
@@ -78,10 +86,10 @@ struct TestView2: View {
     }
 }
 
-// MARK: 预览 TSSFSwiftUIView
+// MARK: 预览 TSSUHomeView
 @available(iOS 14.0, *)
 struct TSTSSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        TSSFSwiftUIView()
+        TSSUHomeView()
     }
 }
