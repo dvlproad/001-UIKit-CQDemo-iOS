@@ -11,6 +11,7 @@
 // DemoRipeString
 #import <CQDemoKit/CJUIKitRandomUtil.h>
 #import <CQDemoKit/CJUIKitToastUtil.h>
+#import <CQDemoKit/UIViewController+CQNavigationBar.h>
 
 // DemoRipeResource
 #import "TSResourceViewController.h"
@@ -22,9 +23,14 @@
 #import "TSRipeCollectionViewController.h"
 #import "TSRipeButtonCollectionViewController.h"
 
+// 从相册中选择视频
+#import "CQTSMediaPickerViewController.h"
+#import <AVKit/AVKit.h>
+
 @interface RipeViewHomeViewController () {
     
 }
+@property (nonatomic, strong) CQTSMediaPickerViewController *mediaPickerVC;
 
 @end
 
@@ -35,6 +41,17 @@
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = NSLocalizedString(@"Ripe首页", nil);
+    __weak typeof(self) weakSelf = self;
+    
+    CQTSPhotoMediaOption options = CQTSPhotoMediaOptionImage | CQTSPhotoMediaOptionVideo;
+    CQTSMediaPickerViewController *mediaPickerVC = [[CQTSMediaPickerViewController alloc] initWithOptions:options imageSuccess:^(UIImage *image) {
+        [weakSelf showImage:image];
+    } videoSuccess:^(NSURL *videoURL) {
+        [weakSelf playVideoWithAVPlayerLayer:videoURL];
+    } failure:^(NSError *error) {
+        [CJUIKitToastUtil showMessage:error.localizedDescription];
+    }];
+    self.mediaPickerVC = mediaPickerVC;
     
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
@@ -183,9 +200,67 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"从相册中选择视频";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"从相册中选择视频";
+            module.actionBlock = ^{
+                [weakSelf.mediaPickerVC chooseVideoFromSystem:weakSelf];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
     self.sectionDataModels = sectionDataModels;
 }
 
+- (void)showImage:(UIImage *)image {
+    UIViewController *vc = [[UIViewController alloc] init];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.frame = vc.view.bounds;
+    [vc.view addSubview:imageView];
+    
+    // 设置导航栏
+    __weak typeof(vc) weakViewController = vc;
+    vc.view.backgroundColor = UIColor.blackColor;
+    [vc setupNavigationBarColor:UIColor.blackColor title:nil backButtonTitle:@"返回" backButtonAction:^(UIButton * _Nonnull button) {
+        [weakViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:^{
+        [imageView setImage:image];
+    }];
+}
+
+- (void)playVideoWithAVPlayerLayer:(NSURL *)videoURL {
+    UIViewController *vc = [[UIViewController alloc] init];
+    
+    AVPlayer *player = [AVPlayer playerWithURL:videoURL];
+    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
+    playerLayer.frame = vc.view.bounds;
+    playerLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+    [vc.view.layer addSublayer:playerLayer];
+    
+    // 设置导航栏
+    __weak typeof(vc) weakViewController = vc;
+    vc.view.backgroundColor = UIColor.blackColor;
+    [vc setupNavigationBarColor:UIColor.blackColor title:nil backButtonTitle:@"返回" backButtonAction:^(UIButton * _Nonnull button) {
+        [weakViewController dismissViewControllerAnimated:YES completion:nil];
+    }];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:^{
+        [player play];
+    }];
+}
+
+#pragma mark - 返回上一级
+- (void)backAction {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - Touch
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

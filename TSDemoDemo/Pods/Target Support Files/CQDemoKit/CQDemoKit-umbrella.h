@@ -11,6 +11,7 @@
 #endif
 
 #import "UIView+CQAuxiliaryText.h"
+#import "UIViewController+CQNavigationBar.h"
 #import "CQTSBorderStateButton.h"
 #import "CQTSButtonFactory.h"
 #import "CQTSContainerViewFactory.h"
@@ -56,6 +57,7 @@
 #import "CQTSNetImageDataModel.h"
 #import "CQTSNetImagesUtil.h"
 #import "CJUIKitRandomUtil.h"
+#import "CQTSMediaPickerViewController.h"
 #import "CQTSRipeButton.h"
 #import "CQTSRipeTableView.h"
 #import "CQTSRipeButtonCollectionView.h"

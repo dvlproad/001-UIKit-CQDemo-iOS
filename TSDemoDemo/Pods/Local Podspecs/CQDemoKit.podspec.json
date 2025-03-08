@@ -37,37 +37,51 @@
           "name": "Base",
           "source_files": "CQDemoKit/BaseVC/Base/**/*.{h,m}",
           "dependencies": {
-            "Masonry": [],
-            "CQDemoKit/BaseUIKit": []
+            "Masonry": [
+
+            ],
+            "CQDemoKit/BaseUIKit": [
+
+            ]
           }
         },
         {
           "name": "ScrollView",
           "source_files": "CQDemoKit/BaseVC/ScrollView/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": []
+            "CQDemoKit/BaseVC/Base": [
+
+            ]
           }
         },
         {
           "name": "TableView",
           "source_files": "CQDemoKit/BaseVC/TableView/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": []
+            "CQDemoKit/BaseVC/Base": [
+
+            ]
           }
         },
         {
           "name": "Collection",
           "source_files": "CQDemoKit/BaseVC/Collection/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": []
+            "CQDemoKit/BaseVC/Base": [
+
+            ]
           }
         },
         {
           "name": "TextView",
           "source_files": "CQDemoKit/BaseVC/TextView/**/*.{h,m}",
           "dependencies": {
-            "CQDemoKit/BaseVC/Base": [],
-            "CQDemoKit/BaseUtil": []
+            "CQDemoKit/BaseVC/Base": [
+
+            ],
+            "CQDemoKit/BaseUtil": [
+
+            ]
           }
         },
         {
@@ -77,7 +91,9 @@
             "CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,jpeg}"
           ],
           "dependencies": {
-            "CQDemoKit/Helper": []
+            "CQDemoKit/Helper": [
+
+            ]
           }
         }
       ]
@@ -86,7 +102,9 @@
       "name": "BaseUIKit",
       "source_files": "CQDemoKit/BaseUIKit/**/*.{h,m}",
       "dependencies": {
-        "Masonry": []
+        "Masonry": [
+
+        ]
       }
     },
     {
@@ -97,33 +115,51 @@
       "name": "Demo_Resource",
       "source_files": "CQDemoKit/Demo_Resource/**/*.{h,m}",
       "dependencies": {
-        "CQDemoKit/Helper": [],
-        "CQDemoKit/BaseUIKit": []
+        "CQDemoKit/Helper": [
+
+        ],
+        "CQDemoKit/BaseUIKit": [
+
+        ]
       }
     },
     {
       "name": "Demo_RipeView",
       "source_files": "CQDemoKit/Demo_RipeView/**/*.{h,m}",
       "dependencies": {
-        "CQDemoKit/BaseUtil": [],
-        "CQDemoKit/BaseUIKit": [],
-        "CQDemoKit/Demo_Resource": [],
-        "CQDemoKit/Demo_DataSourceAndDelegate": []
+        "CQDemoKit/BaseUtil": [
+
+        ],
+        "CQDemoKit/BaseUIKit": [
+
+        ],
+        "CQDemoKit/Demo_Resource": [
+
+        ],
+        "CQDemoKit/Demo_DataSourceAndDelegate": [
+
+        ]
       }
     },
     {
       "name": "Demo_DataSourceAndDelegate",
       "source_files": "CQDemoKit/Demo_DataSourceAndDelegate/**/*.{h,m}",
       "dependencies": {
-        "CQDemoKit/BaseVC": [],
-        "CQDemoKit/Demo_Resource": []
+        "CQDemoKit/BaseVC": [
+
+        ],
+        "CQDemoKit/Demo_Resource": [
+
+        ]
       }
     },
     {
       "name": "Auxiliary",
       "source_files": "CQDemoKit/Auxiliary/**/*.{h,m}",
       "dependencies": {
-        "Masonry": []
+        "Masonry": [
+
+        ]
       }
     },
     {
