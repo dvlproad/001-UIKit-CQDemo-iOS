@@ -7,7 +7,7 @@
 //
 //  Cell视图【单行排列】的文本列表控制器的使用示例
 
-#import "CJUIKitBaseTextViewController.h"
+#import <CQDemoKit/CJUIKitBaseTextViewController.h>
 
 @interface TSSingleLineTextViewController : CJUIKitBaseTextViewController
 

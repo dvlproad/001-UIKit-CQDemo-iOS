@@ -58,6 +58,7 @@ PODS:
     - CQDemoKit/Demo_Resource
   - CQDemoKit/Helper (0.7.7)
   - CQDemoKit/Monitor (0.7.7)
+  - CQDemoResource (0.1.0)
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
   - Masonry (1.1.0)
@@ -69,6 +70,7 @@ PODS:
   - SwiftExtraCJHelper/Base (0.1.2)
   - TSDemo_Demo (0.5.2):
     - CQDemoKit
+    - CQDemoResource
     - CQDemoShareFramework-Swift/WidgetExtension
     - SSZipArchive
     - SwiftExtraCJHelper
@@ -83,6 +85,7 @@ DEPENDENCIES:
   - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.7)
   - CQDemoKit (from `../`)
   - CQDemoKit-Swift (from `../`)
+  - CQDemoResource (from `../`)
   - CQDemoShareFramework-Swift/WidgetExtension (from `../`)
   - MLeaksFinder
   - TSDemo_Demo (from `../`)
@@ -102,6 +105,8 @@ EXTERNAL SOURCES:
     :path: "../"
   CQDemoKit-Swift:
     :path: "../"
+  CQDemoResource:
+    :path: "../"
   CQDemoShareFramework-Swift:
     :path: "../"
   TSDemo_Demo:
@@ -113,15 +118,16 @@ SPEC CHECKSUMS:
   CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
   CQDemoKit: 6d8cda4fd4dd4d798a6507a656141278f6b22d30
   CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
+  CQDemoResource: 9801eb7545e13207c1e5aa4db49fe4d1210f37e2
   CQDemoShareFramework-Swift: c9610e35ac4785686fbbe201fdd2c5264b8d3b7c
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SwiftExtraCJHelper: ec1ec1fc172a06de1ae1e7230dd958d1a873bfcb
-  TSDemo_Demo: 9abae0e03191abcb5ac02fd6b5b423230f0b5688
+  TSDemo_Demo: 555864f6468d2ce33970cbe0ce9ece6620403fe6
   TSDemo_Demo-Swift: 82f7335871f39a0543ef8190d8bb46ddaff57417
 
-PODFILE CHECKSUM: 7f176ed5bfa75e243560080158e6c3f546adfcf0
+PODFILE CHECKSUM: 28c7633c0efee70325c319b93ff29a44759fa6a7
 
 COCOAPODS: 1.16.2

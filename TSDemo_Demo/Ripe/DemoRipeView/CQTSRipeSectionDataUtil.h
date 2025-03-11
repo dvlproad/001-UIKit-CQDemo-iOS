@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CQDMSectionDataModel.h"
-#import "CQTSLocImageDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

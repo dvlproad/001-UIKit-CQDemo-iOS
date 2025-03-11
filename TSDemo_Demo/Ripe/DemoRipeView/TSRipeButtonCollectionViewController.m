@@ -7,8 +7,8 @@
 //
 
 #import "TSRipeButtonCollectionViewController.h"
-#import <CQDemoKit/CQTSRipeButtonCollectionView.h>
-#import <CQDemoKit/CQTSLocImagesUtil.h>
+#import "CQTSRipeButtonCollectionView.h"
+#import <CQDemoResource/CQTSLocImagesUtil.h>
 
 @interface TSRipeButtonCollectionViewController ()
 

@@ -7,7 +7,6 @@
 //
 
 #import "CQTSLocImagesUtil.h"
-#import "CQTSResourceUtil.h"
 
 @implementation CQTSLocImagesUtil
 

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJUIKitBaseScrollViewController.h"
+#import <CQDemoKit/CJUIKitBaseScrollViewController.h>
 
 @interface TSButtonHomeViewController : CJUIKitBaseScrollViewController {
     

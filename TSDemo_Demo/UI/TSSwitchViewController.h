@@ -6,7 +6,7 @@
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJUIKitBaseViewController.h"
+#import <CQDemoKit/CJUIKitBaseViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

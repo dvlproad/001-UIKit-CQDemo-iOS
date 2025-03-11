@@ -9,7 +9,7 @@
 #import "TSResourceCollectionViewController.h"
 
 #import <CQDemoKit/CQTSIconsUtil.h>
-#import <CQDemoKit/CQTSLocImagesUtil.h>
+#import <CQDemoResource/CQTSLocImagesUtil.h>
 #import <CQDemoKit/CQTSNetImagesUtil.h>
 
 

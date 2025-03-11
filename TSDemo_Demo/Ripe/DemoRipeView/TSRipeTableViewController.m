@@ -8,7 +8,7 @@
 
 #import "TSRipeTableViewController.h"
 #import <CQDemoKit/CQTSRipeTableView.h>
-#import <CQDemoKit/CQTSLocImagesUtil.h>
+#import <CQDemoResource/CQTSLocImagesUtil.h>
 
 @interface TSRipeTableViewController ()
 

@@ -7,7 +7,7 @@
 //
 //  测试 为了快速构建完整 Demo 工程提供的一些DemoView之CQTSRipeTableView
 
-#import "CJUIKitBaseViewController.h"
+#import <CQDemoKit/CJUIKitBaseViewController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
