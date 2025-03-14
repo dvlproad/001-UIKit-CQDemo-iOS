@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -89,14 +89,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		97D158042D631A3C000D03DC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		97D158042D631A3C000D03DC /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemoWidgetExtensionExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
 			target = 97D157EA2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension */;
 		};
-		97DDA0562D76F4F300D012D6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		97DDA0562D76F4F300D012D6 /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemo" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ControlWidget/OpenURLIntentIOS180.swift,
@@ -107,7 +107,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (97DDA0562D76F4F300D012D6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 97D158042D631A3C000D03DC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = TSDemoDemoWidgetExtension; sourceTree = "<group>"; };
+		97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				97DDA0562D76F4F300D012D6 /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemo" target */,
+				97D158042D631A3C000D03DC /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemoWidgetExtensionExtension" target */,
+			);
+			path = TSDemoDemoWidgetExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,7 +284,6 @@
 				};
 			};
 			buildConfigurationList = 15B5D79D24512AC200108658 /* Build configuration list for PBXProject "TSDemoDemo" */;
-			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -284,6 +291,7 @@
 				Base,
 			);
 			mainGroup = 15B5D79924512AC200108658;
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 15B5D7A324512AC200108658 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -555,6 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8PA5WCJPR;
 				INFOPLIST_FILE = TSDemoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -579,6 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U8PA5WCJPR;
 				INFOPLIST_FILE = TSDemoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

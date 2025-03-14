@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '11.0'
 use_frameworks!
 inhibit_all_warnings!
 # pod的本地索引文件：~/Library/Caches/CocoaPods/search_index.json
@@ -38,6 +38,8 @@ end
 
 target 'TSDemoDemo' do
   shared_pods
+  
+#  pod 'InjectHotReload'
   
   pod 'TSDemo_Demo',        :path => '../'
   pod 'CQDemoKit',        	:path => '../'
