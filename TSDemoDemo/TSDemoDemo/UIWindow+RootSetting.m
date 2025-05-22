@@ -12,7 +12,10 @@
 #import <TSDemo_Demo_Swift/TSDemo_Demo_Swift-Swift.h>
 
 #import <CQDemoKit/CQDMModuleModel.h>
+#import <InjectHotReload/InjectHotReload-Swift.h>
 #import "TSDemoDemo-Swift.h"
+
+#import "ViewController.h"
 
 @implementation UIWindow (RootSetting)
 
@@ -27,7 +30,9 @@
 //    }
 //    UIViewController *viewController = [[NSClassFromString(@"BaseUIHomeViewController") alloc] init];
 //    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    UIViewController *rootViewController = [[NSClassFromString(@"TSTabBarViewController") alloc] init];
+//    UIViewController *rootViewController = [[NSClassFromString(@"TSTabBarViewController") alloc] init];
+//    UIViewController *rootViewController = [[TSTabBarViewController alloc] init];
+    UIViewController *rootViewController = [[ViewController alloc] init];
     
     /*
     // 测试 SwiftUI
@@ -40,7 +45,14 @@
     }
     UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:swiftuiViewController];
     */
+//    [InjectHelper setupInjection];
     
+    #if DEBUG
+        [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
+    #endif
+    rootViewController.view.backgroundColor = [UIColor redColor];
+    
+//    rootViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     self.rootViewController = rootViewController;
     [self makeKeyAndVisible];
     

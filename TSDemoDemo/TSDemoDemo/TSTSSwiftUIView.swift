@@ -9,6 +9,7 @@
 import SwiftUI
 import UIKit
 import CQDemoKit_Swift
+import InjectHotReload
 
 @available(iOS 14.0, *)
 @objc public class TSTSUIView: CQDemoSwiftUIBaseUIView {

@@ -19,6 +19,7 @@
 		8F710C0A8661A45263A4B2FE /* Pods_TSDemoDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705BE48F2E7F25B0E6771D16 /* Pods_TSDemoDemo.framework */; };
 		9711D4312D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */; };
 		9711D4342D433FF900BEA78D /* cqts_mainbundle_gif_01.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9711D4272D433FF900BEA78D /* cqts_mainbundle_gif_01.gif */; };
+		9746F61E2D846A6600896793 /* InjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746F61D2D846A6600896793 /* InjectHelper.swift */; };
 		976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */; };
 		9768BDFA2D65F8C6007AF7ED /* DownloadBundle.bundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */; };
 		97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */; };
@@ -76,6 +77,7 @@
 		9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cqts_mainbundle_jpg_01.jpg; sourceTree = "<group>"; };
 		971523352D632F9D0017AAAC /* TSDemoDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemo.entitlements; sourceTree = "<group>"; };
 		971523362D632FB80017AAAC /* TSDemoDemoWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TSDemoDemoWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
+		9746F61D2D846A6600896793 /* InjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectHelper.swift; sourceTree = "<group>"; };
 		976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DownloadBundle.bundle; sourceTree = "<group>"; };
 		9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DownloadBundle.bundle.zip; sourceTree = "<group>"; };
 		97A380132D5F342600A3BC7D /* TSDemoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSDemoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				15B5D7AB24512AC200108658 /* ViewController.h */,
 				15B5D7AC24512AC200108658 /* ViewController.m */,
 				97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */,
+				9746F61D2D846A6600896793 /* InjectHelper.swift */,
 				15B5D7AE24512AC200108658 /* Main.storyboard */,
 				15B5D7B324512AC300108658 /* LaunchScreen.storyboard */,
 				15B5D7B124512AC300108658 /* Assets.xcassets */,
@@ -399,6 +402,7 @@
 			files = (
 				97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */,
 				15B5D7AD24512AC200108658 /* ViewController.m in Sources */,
+				9746F61E2D846A6600896793 /* InjectHelper.swift in Sources */,
 				15B5D7C024512B1700108658 /* UIWindow+RootSetting.m in Sources */,
 				15B5D7A724512AC200108658 /* AppDelegate.m in Sources */,
 				15B5D7B824512AC300108658 /* main.m in Sources */,
@@ -497,6 +501,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;

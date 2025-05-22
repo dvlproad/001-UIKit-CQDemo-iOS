@@ -61,6 +61,7 @@ PODS:
   - CQDemoResource (0.1.0)
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
+  - InjectHotReload (1.2.2)
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
@@ -87,6 +88,7 @@ DEPENDENCIES:
   - CQDemoKit-Swift (from `../`)
   - CQDemoResource (from `../`)
   - CQDemoShareFramework-Swift/WidgetExtension (from `../`)
+  - InjectHotReload
   - MLeaksFinder
   - TSDemo_Demo (from `../`)
   - TSDemo_Demo-Swift (from `../`)
@@ -95,6 +97,7 @@ SPEC REPOS:
   trunk:
     - CJBaseHelper
     - FBRetainCycleDetector
+    - InjectHotReload
     - Masonry
     - MLeaksFinder
     - SSZipArchive
@@ -121,6 +124,7 @@ SPEC CHECKSUMS:
   CQDemoResource: 5b3e69161b38d59b9ae5a0e7f8ab0536870af6d8
   CQDemoShareFramework-Swift: c9610e35ac4785686fbbe201fdd2c5264b8d3b7c
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
@@ -128,6 +132,6 @@ SPEC CHECKSUMS:
   TSDemo_Demo: 555864f6468d2ce33970cbe0ce9ece6620403fe6
   TSDemo_Demo-Swift: 82f7335871f39a0543ef8190d8bb46ddaff57417
 
-PODFILE CHECKSUM: c1df145ba6f51bcf4f48bed4d8e41490c51b9ac4
+PODFILE CHECKSUM: 157e4f41e5c079e6bd70bcba1a08e2713b219ef8
 
 COCOAPODS: 1.16.2

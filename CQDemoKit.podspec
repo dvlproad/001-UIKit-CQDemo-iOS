@@ -80,6 +80,9 @@ Pod::Spec.new do |s|
   #    'MapBox' => ['MapView/Map/Resources/*.png'],
   #    'OtherResources' => ['MapView/Map/OtherResources/*.png']
   #  }
+    s.resource_bundles = {
+      'CQDemoKit_Privacy' => ['CQDemoKit/PrivacyInfo.xcprivacy'],
+    }
   # s.resource_bundle = {
   #   'CQDemoKit' => [      # CQDemoKit 为生成boudle的名称，可以随便起，但要记住，库里要用
   #     'CQDemoKit/BaseVC/**/*.{png,jpg,jpeg}'

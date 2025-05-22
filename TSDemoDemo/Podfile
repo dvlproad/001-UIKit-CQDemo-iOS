@@ -39,7 +39,7 @@ end
 target 'TSDemoDemo' do
   shared_pods
   
-#  pod 'InjectHotReload'
+  pod 'InjectHotReload'
   
   pod 'TSDemo_Demo',        :path => '../'
   pod 'CQDemoKit',        	:path => '../'
