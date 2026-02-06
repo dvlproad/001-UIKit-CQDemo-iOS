@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.8.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.8.0_1" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -128,7 +128,7 @@ Pod::Spec.new do |s|
 
     ss.subspec 'TabBar' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TabBar/**/*.{h,m}"
-      sss.resources = ['CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,jpeg}']
+      #sss.resources = ['CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,jpeg}']
       sss.dependency 'CQDemoKit/Helper'
       # s.resources = 会拷贝到mainBundle下
       # s.resource_bundle = 会放在指定的customBundle下
