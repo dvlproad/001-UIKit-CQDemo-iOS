@@ -15,6 +15,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIViewControllerCJHelper : NSObject
 
 #pragma mark - FindCurrentShowingViewController
@@ -34,4 +36,7 @@
 #pragma mark - FindBelongViewControllerForView
 + (nullable UIViewController *)findBelongViewControllerForView:(UIView *)view;
 
+
 @end
+
+NS_ASSUME_NONNULL_END

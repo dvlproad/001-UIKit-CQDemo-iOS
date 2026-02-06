@@ -1,6 +1,6 @@
 PODS:
-  - CJBaseHelper/HookCJHelper (0.1.7)
-  - CJBaseHelper/UIViewControllerCJHelper (0.1.7)
+  - CJBaseHelper/HookCJHelper (0.1.8)
+  - CJBaseHelper/UIViewControllerCJHelper (0.1.8)
   - CQDemoKit (0.8.0):
     - CQDemoKit/Auxiliary (= 0.8.0)
     - CQDemoKit/BaseUIKit (= 0.8.0)
@@ -118,8 +118,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
-  CQDemoKit: 03fde6dbbad6946fa8910a134e397321271197ee
+  CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
+  CQDemoKit: c2c7c3fda8375c58dd0b7890f1912acaf55c2b29
   CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
   CQDemoResource: 5b3e69161b38d59b9ae5a0e7f8ab0536870af6d8
   CQDemoShareFramework-Swift: c9610e35ac4785686fbbe201fdd2c5264b8d3b7c

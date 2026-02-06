@@ -11,6 +11,7 @@
 #endif
 
 #import "HookCJHelper.h"
+#import "UIViewCJHelper.h"
 #import "UIViewControllerCJHelper.h"
 
 FOUNDATION_EXPORT double CJBaseHelperVersionNumber;
