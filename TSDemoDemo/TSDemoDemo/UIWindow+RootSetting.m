@@ -31,8 +31,8 @@
 //    UIViewController *viewController = [[NSClassFromString(@"BaseUIHomeViewController") alloc] init];
 //    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
 //    UIViewController *rootViewController = [[NSClassFromString(@"TSTabBarViewController") alloc] init];
-//    UIViewController *rootViewController = [[TSTabBarViewController alloc] init];
-    UIViewController *rootViewController = [[ViewController alloc] init];
+    UIViewController *rootViewController = [[TSTabBarViewController alloc] init];
+//    UIViewController *rootViewController = [[ViewController alloc] init];
     
     /*
     // 测试 SwiftUI

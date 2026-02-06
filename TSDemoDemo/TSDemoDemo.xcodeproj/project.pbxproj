@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -90,36 +90,6 @@
 		FEE3D78644A0551A63F4D218 /* Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig"; path = "Target Support Files/Pods-TSDemoDemoWidgetExtensionExtension/Pods-TSDemoDemoWidgetExtensionExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		97D158042D631A3C000D03DC /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemoWidgetExtensionExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 97D157EA2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension */;
-		};
-		97DDA0562D76F4F300D012D6 /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemo" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				ControlWidget/OpenURLIntentIOS180.swift,
-				ControlWidget/OpenURLIntentIOS181.swift,
-			);
-			target = 15B5D7A124512AC200108658 /* TSDemoDemo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				97DDA0562D76F4F300D012D6 /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemo" target */,
-				97D158042D631A3C000D03DC /* Exceptions for "TSDemoDemoWidgetExtension" folder in "TSDemoDemoWidgetExtensionExtension" target */,
-			);
-			path = TSDemoDemoWidgetExtension;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		15B5D79F24512AC200108658 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -158,7 +128,6 @@
 			children = (
 				971523362D632FB80017AAAC /* TSDemoDemoWidgetExtensionExtension.entitlements */,
 				15B5D7A424512AC200108658 /* TSDemoDemo */,
-				97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */,
 				15B5D7A324512AC200108658 /* Products */,
 				09E274414C8392561E8D6A34 /* Pods */,
 				7FA5A7EF0CD281D27960F655 /* Frameworks */,
@@ -259,9 +228,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				97D157F02D631A3A000D03DC /* TSDemoDemoWidgetExtension */,
-			);
 			name = TSDemoDemoWidgetExtensionExtension;
 			productName = TSDemoDemoWidgetExtensionExtension;
 			productReference = 97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */;
@@ -287,6 +253,7 @@
 				};
 			};
 			buildConfigurationList = 15B5D79D24512AC200108658 /* Build configuration list for PBXProject "TSDemoDemo" */;
+			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -294,7 +261,6 @@
 				Base,
 			);
 			mainGroup = 15B5D79924512AC200108658;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 15B5D7A324512AC200108658 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -359,12 +325,37 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework",
+				"${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework",
+				"${BUILT_PRODUCTS_DIR}/CQDemoShareFramework-Swift-iOS11.0/CQDemoShareFramework_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/InjectHotReload/InjectHotReload.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftExtraCJHelper/SwiftExtraCJHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/TSDemo_Demo/TSDemo_Demo.framework",
+				"${BUILT_PRODUCTS_DIR}/TSDemo_Demo-Swift/TSDemo_Demo_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoResource.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoShareFramework_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InjectHotReload.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftExtraCJHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Demo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Demo_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -581,7 +572,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TSDemoDemo/TSDemoDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -605,7 +596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.TSDemoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TSDemoDemo/TSDemoDemo-Bridging-Header.h";
-				SWIFT_VERSION = 6.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

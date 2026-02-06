@@ -17,6 +17,11 @@
   },
   "frameworks": "UIKit",
   "requires_arc": true,
+  "resource_bundles": {
+    "CQDemoKit_Privacy": [
+      "CQDemoKit/PrivacyInfo.xcprivacy"
+    ]
+  },
   "subspecs": [
     {
       "name": "Helper",
