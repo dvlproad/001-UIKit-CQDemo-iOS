@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,16 @@
 		9746F61E2D846A6600896793 /* InjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746F61D2D846A6600896793 /* InjectHelper.swift */; };
 		976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */; };
 		9768BDFA2D65F8C6007AF7ED /* DownloadBundle.bundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */; };
+		97872FA22F9F641C004573D2 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9A2F9F641C004573D2 /* AppIntent.swift */; };
+		97872FA32F9F641C004573D2 /* OpenURLIntentIOS181.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F972F9F641C004573D2 /* OpenURLIntentIOS181.swift */; };
+		97872FA42F9F641C004573D2 /* TSDemoDemoWidgetExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9E2F9F641C004573D2 /* TSDemoDemoWidgetExtensionBundle.swift */; };
+		97872FA52F9F641C004573D2 /* TSDemoDemoWidgetExtensionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9F2F9F641C004573D2 /* TSDemoDemoWidgetExtensionControl.swift */; };
+		97872FA62F9F641C004573D2 /* OpenURLIntentIOS180.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F962F9F641C004573D2 /* OpenURLIntentIOS180.swift */; };
+		97872FA72F9F641C004573D2 /* TSDemoDemoWidgetExtensionStaticControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F982F9F641C004573D2 /* TSDemoDemoWidgetExtensionStaticControl.swift */; };
+		97872FA82F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9D2F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift */; };
+		97872FA92F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872FA02F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift */; };
+		97872FAA2F9F641C004573D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97872F9B2F9F641C004573D2 /* Assets.xcassets */; };
+		97872FAB2F9F641C004573D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97872F9C2F9F641C004573D2 /* Info.plist */; };
 		97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */; };
 		97A8955F2D772F5A00C63D43 /* ShareAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */; };
 		97A895602D772F5A00C63D43 /* ShareAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */; };
@@ -80,6 +90,16 @@
 		9746F61D2D846A6600896793 /* InjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectHelper.swift; sourceTree = "<group>"; };
 		976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DownloadBundle.bundle; sourceTree = "<group>"; };
 		9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DownloadBundle.bundle.zip; sourceTree = "<group>"; };
+		97872F962F9F641C004573D2 /* OpenURLIntentIOS180.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLIntentIOS180.swift; sourceTree = "<group>"; };
+		97872F972F9F641C004573D2 /* OpenURLIntentIOS181.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLIntentIOS181.swift; sourceTree = "<group>"; };
+		97872F982F9F641C004573D2 /* TSDemoDemoWidgetExtensionStaticControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtensionStaticControl.swift; sourceTree = "<group>"; };
+		97872F9A2F9F641C004573D2 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		97872F9B2F9F641C004573D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97872F9C2F9F641C004573D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97872F9D2F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtension.swift; sourceTree = "<group>"; };
+		97872F9E2F9F641C004573D2 /* TSDemoDemoWidgetExtensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtensionBundle.swift; sourceTree = "<group>"; };
+		97872F9F2F9F641C004573D2 /* TSDemoDemoWidgetExtensionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtensionControl.swift; sourceTree = "<group>"; };
+		97872FA02F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtensionLiveActivity.swift; sourceTree = "<group>"; };
 		97A380132D5F342600A3BC7D /* TSDemoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSDemoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTSSwiftUIView.swift; sourceTree = "<group>"; };
 		97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShareAssets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				971523362D632FB80017AAAC /* TSDemoDemoWidgetExtensionExtension.entitlements */,
+				97872FA12F9F641C004573D2 /* TSDemoDemoWidgetExtension */,
 				15B5D7A424512AC200108658 /* TSDemoDemo */,
 				15B5D7A324512AC200108658 /* Products */,
 				09E274414C8392561E8D6A34 /* Pods */,
@@ -189,6 +210,31 @@
 				9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		97872F992F9F641C004573D2 /* ControlWidget */ = {
+			isa = PBXGroup;
+			children = (
+				97872F962F9F641C004573D2 /* OpenURLIntentIOS180.swift */,
+				97872F972F9F641C004573D2 /* OpenURLIntentIOS181.swift */,
+				97872F982F9F641C004573D2 /* TSDemoDemoWidgetExtensionStaticControl.swift */,
+			);
+			path = ControlWidget;
+			sourceTree = "<group>";
+		};
+		97872FA12F9F641C004573D2 /* TSDemoDemoWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				97872F992F9F641C004573D2 /* ControlWidget */,
+				97872F9A2F9F641C004573D2 /* AppIntent.swift */,
+				97872F9B2F9F641C004573D2 /* Assets.xcassets */,
+				97872F9C2F9F641C004573D2 /* Info.plist */,
+				97872F9D2F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift */,
+				97872F9E2F9F641C004573D2 /* TSDemoDemoWidgetExtensionBundle.swift */,
+				97872F9F2F9F641C004573D2 /* TSDemoDemoWidgetExtensionControl.swift */,
+				97872FA02F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift */,
+			);
+			path = TSDemoDemoWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97872FAA2F9F641C004573D2 /* Assets.xcassets in Resources */,
 				97A8955F2D772F5A00C63D43 /* ShareAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +452,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97872FA22F9F641C004573D2 /* AppIntent.swift in Sources */,
+				97872FA32F9F641C004573D2 /* OpenURLIntentIOS181.swift in Sources */,
+				97872FA42F9F641C004573D2 /* TSDemoDemoWidgetExtensionBundle.swift in Sources */,
+				97872FA52F9F641C004573D2 /* TSDemoDemoWidgetExtensionControl.swift in Sources */,
+				97872FA62F9F641C004573D2 /* OpenURLIntentIOS180.swift in Sources */,
+				97872FA72F9F641C004573D2 /* TSDemoDemoWidgetExtensionStaticControl.swift in Sources */,
+				97872FA82F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift in Sources */,
+				97872FA92F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,23 +22,11 @@
   "requires_arc": true,
   "source_files": "TSDemo_Demo/**/*.{h,m}",
   "dependencies": {
-    "CQDemoKit": [
-
-    ],
-    "CQDemoResource": [
-
-    ],
-    "SSZipArchive": [
-
-    ],
-    "SwiftExtraCJHelper": [
-
-    ],
-    "CQDemoShareFramework-Swift/WidgetExtension": [
-
-    ],
-    "TSDemo_Demo-Swift": [
-
-    ]
+    "CQDemoKit": [],
+    "CQDemoResource": [],
+    "SSZipArchive": [],
+    "SwiftExtraCJHelper": [],
+    "CQDemoShareFramework-Swift/WidgetExtension": [],
+    "TSDemo_Demo-Swift": []
   }
 }

@@ -82,8 +82,8 @@ PODS:
     - CQDemoKit-Swift
 
 DEPENDENCIES:
-  - CJBaseHelper/HookCJHelper (~> 0.1.7)
-  - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.7)
+  - CJBaseHelper/HookCJHelper (~> 0.1.8)
+  - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.8)
   - CQDemoKit (from `../`)
   - CQDemoKit-Swift (from `../`)
   - CQDemoResource (from `../`)
@@ -119,8 +119,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
-  CQDemoKit: c2c7c3fda8375c58dd0b7890f1912acaf55c2b29
-  CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
+  CQDemoKit: 9c4f5d7c5805e193816e358a393ce8b701b12c34
+  CQDemoKit-Swift: 24444c9b408edd22ce713981ed9649486d7326c3
   CQDemoResource: 5b3e69161b38d59b9ae5a0e7f8ab0536870af6d8
   CQDemoShareFramework-Swift: c9610e35ac4785686fbbe201fdd2c5264b8d3b7c
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
@@ -129,9 +129,9 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SwiftExtraCJHelper: ec1ec1fc172a06de1ae1e7230dd958d1a873bfcb
-  TSDemo_Demo: 555864f6468d2ce33970cbe0ce9ece6620403fe6
-  TSDemo_Demo-Swift: 82f7335871f39a0543ef8190d8bb46ddaff57417
+  TSDemo_Demo: f0216597949fbdf25138d917d0072ad59ede55c6
+  TSDemo_Demo-Swift: 2e9903c2469644747a80b5744b0c366cf9fc3d78
 
-PODFILE CHECKSUM: 157e4f41e5c079e6bd70bcba1a08e2713b219ef8
+PODFILE CHECKSUM: 0a63c6f9cca89f7662587f02f2a262facbccdc8d
 
 COCOAPODS: 1.16.2

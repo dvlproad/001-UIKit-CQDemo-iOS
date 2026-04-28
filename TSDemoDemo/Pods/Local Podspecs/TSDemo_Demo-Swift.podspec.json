@@ -23,9 +23,7 @@
       "name": "SwiftUI",
       "source_files": "TSDemo_Demo-Swift/SwiftUI/**/*.{swift}",
       "dependencies": {
-        "CQDemoKit-Swift": [
-
-        ]
+        "CQDemoKit-Swift": []
       }
     }
   ],
