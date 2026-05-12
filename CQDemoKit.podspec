@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
                  • CQDemoKit/Demo_Resource - Demo 工程中基本都需要的 DemoResource
                  • CQDemoKit/Demo_RipeView - 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
                  • CQDemoKit/Demo_DataSourceAndDelegate - 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
-                 • CQDemoKit/Auxiliary - 辅助模块
+                 • CQDemoKit/Auxiliary - 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)
                  • CQDemoKit/Monitor - 监控
 
                  每个子库可独立引入，详见各子库描述。
@@ -193,7 +193,7 @@ Pod::Spec.new do |s|
     ss.dependency 'CQDemoKit/Demo_Resource'
   end
 
-  # 辅助模块
+  # 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)
   s.subspec 'Auxiliary' do |ss|
     ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
     ss.dependency 'Masonry'
