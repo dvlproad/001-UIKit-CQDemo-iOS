@@ -33,19 +33,29 @@ Pod::Spec.new do |s|
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
   s.version      = "0.8.0"
-  s.summary      = "Demo"
+  s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
-                 - CQDemoKit/xxx：Demo最基础类
+                 Demo，可按需独立引入：
+                 • CQDemoKit/Helper - 本库中的资源获取帮助类
+                 • CQDemoKit/BaseVC - 基础模块VC
+                 • CQDemoKit/BaseVC/Base - 基础模块
+                 • CQDemoKit/BaseVC/ScrollView - 滚动视图
+                 • CQDemoKit/BaseVC/TableView - 表格视图
+                 • CQDemoKit/BaseVC/Collection - 集合视图
+                 • CQDemoKit/BaseVC/TextView - 文本视图
+                 • CQDemoKit/BaseVC/TabBar - TabBar
+                 • CQDemoKit/BaseUIKit - 基础模块UIKit
+                 • CQDemoKit/BaseUtil - 基础工具
+                 • CQDemoKit/Demo_Resource - Demo 工程中基本都需要的 DemoResource
+                 • CQDemoKit/Demo_RipeView - 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
+                 • CQDemoKit/Demo_DataSourceAndDelegate - 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
+                 • CQDemoKit/Auxiliary - 辅助模块
+                 • CQDemoKit/Monitor - 监控
 
-                   A longer description of CJHook in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
+                 每个子库可独立引入，详见各子库描述。
+                 DESC
   
 
   #s.license      = {
@@ -98,34 +108,41 @@ Pod::Spec.new do |s|
     ss.source_files = "CQDemoKit/Helper/**/*.{h,m}"  # 包含UIImage+CQDemoKit
   end
 
+  # 基础模块VC
   s.subspec 'BaseVC' do |ss|
+    # 基础模块
     ss.subspec 'Base' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/Base/**/*.{h,m}"
       sss.dependency 'Masonry'
       sss.dependency 'CQDemoKit/BaseUIKit'  # 因为 CJUIKitBaseViewController 需要使用到 CQTSButtonFactory
     end
 
+    # 滚动视图
     ss.subspec 'ScrollView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/ScrollView/**/*.{h,m}"
       sss.dependency 'CQDemoKit/BaseVC/Base'
     end
 
+    # 表格视图
     ss.subspec 'TableView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TableView/**/*.{h,m}"
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
     end
 
+    # 集合视图
     ss.subspec 'Collection' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/Collection/**/*.{h,m}"
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
     end
 
+    # 文本视图
     ss.subspec 'TextView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TextView/**/*.{h,m}"
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
       sss.dependency 'CQDemoKit/BaseUtil'
     end
 
+    # TabBar
     ss.subspec 'TabBar' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TabBar/**/*.{h,m}"
       #sss.resources = ['CQDemoKit/BaseVC/TabBar/Resources/**/*.{png,jpg,jpeg}']
@@ -135,6 +152,7 @@ Pod::Spec.new do |s|
     end
   end
 
+  # 基础模块UIKit
   s.subspec 'BaseUIKit' do |ss|
     ss.source_files = "CQDemoKit/BaseUIKit/**/*.{h,m}"
     ss.dependency 'Masonry'
@@ -145,6 +163,7 @@ Pod::Spec.new do |s|
   #   ss.source_files = "CQDemoKit/BaseWindow/**/*.{h,m}"
   # end
 
+  # 基础工具
   s.subspec 'BaseUtil' do |ss|
     ss.source_files = "CQDemoKit/BaseUtil/**/*.{h,m}"
   end
@@ -174,11 +193,13 @@ Pod::Spec.new do |s|
     ss.dependency 'CQDemoKit/Demo_Resource'
   end
 
+  # 辅助模块
   s.subspec 'Auxiliary' do |ss|
     ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
     ss.dependency 'Masonry'
   end
   
+  # 监控
   s.subspec 'Monitor' do |ss|
     ss.source_files = "CQDemoKit/Monitor/**/*.{h,m}"
   end

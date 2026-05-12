@@ -33,20 +33,16 @@ Pod::Spec.new do |s|
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit-Swift"
   s.version      = "0.0.1"
-  s.summary      = "Demo"
+  s.summary      = "CQDemoKit Swift 版 - 为CQDemoKit补充使用swift语言实现的其他功能(包含纯OC的 CQDemoKit)"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
-                 - CQDemoKit-Swift/xxx：Demo最基础类
-                 - CQDemoKit-Swift/SwiftUI：SwiftUI Demo最基础类
+                 CQDemoKit Swift 版，可按需独立引入：
+                 • CQDemoKit-Swift/CQDemoKit-OC：等价于直接依赖纯OC的 CQDemoKit
+                 • CQDemoKit-Swift/SwiftUI：为CQDemoKit补充使用swift语言实现的UI界面
 
-                   A longer description of CJHook in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
+                 每个子库可独立引入，详见各子库描述。
+                 DESC
   
 
   #s.license      = {
@@ -86,10 +82,12 @@ Pod::Spec.new do |s|
 #    # end
 #  end
   
+  # 等价于直接依赖纯OC的 CQDemoKit
   s.subspec 'CQDemoKit-OC' do |ss|
     s.dependency "CQDemoKit"
   end
 
+  # 为CQDemoKit补充使用swift语言实现的UI界面
   s.subspec 'SwiftUI' do |ss|
     ss.source_files = "CQDemoKit-Swift/SwiftUI/**/*.{swift}"
   end

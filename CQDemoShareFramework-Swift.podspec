@@ -9,13 +9,11 @@ Pod::Spec.new do |s|
   s.author       = "dvlproad"
 
   s.description  = <<-DESC
-                   A longer description of CQDemoShareFramework-Swift in Markdown format.
+                 主工程和其他Target某些工程下(WidgetExtension等)都需要依赖的库，可按需独立引入：
+                 • CQDemoShareFramework-Swift/WidgetExtension - 桌面组件
 
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
+                 每个子库可独立引入，详见各子库描述。
+                 DESC
 
   # s.social_media_url   = "http://twitter.com/dvlproad"
 

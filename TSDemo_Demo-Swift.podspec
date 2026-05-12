@@ -33,20 +33,15 @@ Pod::Spec.new do |s|
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "TSDemo_Demo-Swift"
   s.version      = "0.0.1"
-  s.summary      = "Demo"
+  s.summary      = "TSDemo_Demo Swift 版 - 补充使用swift语言实现的UI界面"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
-                 - TSDemo_Demo-Swift/xxx：Demo最基础类
-                 - TSDemo_Demo-Swift/SwiftUI：SwiftUI Demo最基础类
+                 Demo，可按需独立引入：
+                 • TSDemo_Demo-Swift/SwiftUI - 补充使用swift语言实现的UI界面
 
-                   A longer description of CJHook in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
+                 每个子库可独立引入，详见各子库描述。
+                 DESC
   
 
   #s.license      = {
@@ -74,6 +69,7 @@ Pod::Spec.new do |s|
   # s.resources = "CJHook/**/*.{png,xib}"
   # s.frameworks = "MediaPlayer"
 
+  # 补充使用swift语言实现的UI界面
   s.subspec 'SwiftUI' do |ss|
     ss.source_files = "TSDemo_Demo-Swift/SwiftUI/**/*.{swift}"
     ss.dependency 'CQDemoKit-Swift'
