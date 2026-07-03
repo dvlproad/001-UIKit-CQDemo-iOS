@@ -1,0 +1,31 @@
+{
+  "name": "CQDemoResource-Swift",
+  "version": "0.0.1",
+  "summary": "CQDemoResource Swift 版 - 为CQDemoResource补充使用swift语言实现的其他功能(包含纯OC的 CQDemoResource)",
+  "homepage": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS",
+  "description": "CQDemoResource Swift 版，可按需独立引入：\n• CQDemoResource-Swift/CQDemoResource-OC：等价于直接依赖纯OC的 CQDemoResource\n• CQDemoResource-Swift/SwiftUI：为CQDemoResource补充使用swift语言实现的UI界面\n\n每个子库可独立引入，详见各子库描述。",
+  "license": "MIT",
+  "authors": {
+    "dvlproad": ""
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git",
+    "tag": "CQDemoResource-Swift_0.0.1"
+  },
+  "swift_versions": "5.0",
+  "frameworks": "UIKit",
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "SwiftUI",
+      "source_files": "CQDemoResource-Swift/**/*.{swift}",
+      "dependencies": {
+        "SwiftExtraCJHelper": []
+      }
+    }
+  ],
+  "swift_version": "5.0"
+}

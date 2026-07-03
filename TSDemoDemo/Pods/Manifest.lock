@@ -59,6 +59,10 @@ PODS:
   - CQDemoKit/Helper (0.8.0)
   - CQDemoKit/Monitor (0.8.0)
   - CQDemoResource (0.1.0)
+  - CQDemoResource-Swift (0.0.1):
+    - CQDemoResource-Swift/SwiftUI (= 0.0.1)
+  - CQDemoResource-Swift/SwiftUI (0.0.1):
+    - SwiftExtraCJHelper
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
   - InjectHotReload (1.2.2)
@@ -87,6 +91,7 @@ DEPENDENCIES:
   - CQDemoKit (from `../`)
   - CQDemoKit-Swift (from `../`)
   - CQDemoResource (from `../`)
+  - CQDemoResource-Swift (from `../`)
   - CQDemoShareFramework-Swift/WidgetExtension (from `../`)
   - InjectHotReload
   - MLeaksFinder
@@ -110,6 +115,8 @@ EXTERNAL SOURCES:
     :path: "../"
   CQDemoResource:
     :path: "../"
+  CQDemoResource-Swift:
+    :path: "../"
   CQDemoShareFramework-Swift:
     :path: "../"
   TSDemo_Demo:
@@ -119,10 +126,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
-  CQDemoKit: 9c4f5d7c5805e193816e358a393ce8b701b12c34
-  CQDemoKit-Swift: 24444c9b408edd22ce713981ed9649486d7326c3
+  CQDemoKit: 2de39f74a4fa584ca5ee0aee0227baab91513c56
+  CQDemoKit-Swift: b865190115b188f2ed736a9a703d69706540bc99
   CQDemoResource: 5b3e69161b38d59b9ae5a0e7f8ab0536870af6d8
-  CQDemoShareFramework-Swift: c9610e35ac4785686fbbe201fdd2c5264b8d3b7c
+  CQDemoResource-Swift: 77bd16bd678b2d2189d45928059196946cc8aaaa
+  CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -130,8 +138,8 @@ SPEC CHECKSUMS:
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   SwiftExtraCJHelper: ec1ec1fc172a06de1ae1e7230dd958d1a873bfcb
   TSDemo_Demo: f0216597949fbdf25138d917d0072ad59ede55c6
-  TSDemo_Demo-Swift: 2e9903c2469644747a80b5744b0c366cf9fc3d78
+  TSDemo_Demo-Swift: 755382850e4a40a1f1b789f50ac99b12cb4233ae
 
-PODFILE CHECKSUM: 0a63c6f9cca89f7662587f02f2a262facbccdc8d
+PODFILE CHECKSUM: 23dc8bef18e89cfce807bd3aaa81e633dc8d8e57
 
 COCOAPODS: 1.16.2

@@ -31,7 +31,6 @@
 		97872FA82F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9D2F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift */; };
 		97872FA92F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872FA02F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift */; };
 		97872FAA2F9F641C004573D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97872F9B2F9F641C004573D2 /* Assets.xcassets */; };
-		97872FAB2F9F641C004573D2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97872F9C2F9F641C004573D2 /* Info.plist */; };
 		97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */; };
 		97A8955F2D772F5A00C63D43 /* ShareAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */; };
 		97A895602D772F5A00C63D43 /* ShareAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */; };
@@ -378,6 +377,7 @@
 				"${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework",
+				"${BUILT_PRODUCTS_DIR}/CQDemoResource-Swift/CQDemoResource_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoShareFramework-Swift-iOS11.0/CQDemoShareFramework_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/InjectHotReload/InjectHotReload.framework",
@@ -394,6 +394,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoResource.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoResource_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoShareFramework_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InjectHotReload.framework",

@@ -1,9 +1,9 @@
 {
   "name": "CQDemoKit",
   "version": "0.8.0",
-  "summary": "Demo",
+  "summary": "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、Monitor 等通用 Demo 组件",
   "homepage": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS",
-  "description": "- CQDemoKit/xxx：Demo最基础类\n\n  A longer description of CJHook in Markdown format.\n\n  * Think: Why did you write this? What is the focus? What does it do?\n  * CocoaPods will be using this to generate tags, and improve search results.\n  * Try to keep it short, snappy and to the point.\n  * Finally, don't worry about the indent, CocoaPods strips it!",
+  "description": "Demo，可按需独立引入：\n• CQDemoKit/Helper - 本库中的资源获取帮助类\n• CQDemoKit/BaseVC - 基础模块VC\n• CQDemoKit/BaseVC/Base - 基础模块\n• CQDemoKit/BaseVC/ScrollView - 滚动视图\n• CQDemoKit/BaseVC/TableView - 表格视图\n• CQDemoKit/BaseVC/Collection - 集合视图\n• CQDemoKit/BaseVC/TextView - 文本视图\n• CQDemoKit/BaseVC/TabBar - TabBar\n• CQDemoKit/BaseUIKit - 基础模块UIKit\n• CQDemoKit/BaseUtil - 基础工具\n• CQDemoKit/Demo_Resource - Demo 工程中基本都需要的 DemoResource\n• CQDemoKit/Demo_RipeView - 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)\n• CQDemoKit/Demo_DataSourceAndDelegate - 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)\n• CQDemoKit/Auxiliary - 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)\n• CQDemoKit/Monitor - 监控\n\n每个子库可独立引入，详见各子库描述。",
   "license": "MIT",
   "authors": {
     "dvlproad": ""

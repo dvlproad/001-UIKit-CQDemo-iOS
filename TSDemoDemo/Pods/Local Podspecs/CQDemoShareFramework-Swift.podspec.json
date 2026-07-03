@@ -5,7 +5,7 @@
   "homepage": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git",
   "license": "MIT",
   "authors": "dvlproad",
-  "description": "A longer description of CQDemoShareFramework-Swift in Markdown format.\n\n* Think: Why did you write this? What is the focus? What does it do?\n* CocoaPods will be using this to generate tags, and improve search results.\n* Try to keep it short, snappy and to the point.\n* Finally, don't worry about the indent, CocoaPods strips it!",
+  "description": "主工程和其他Target某些工程下(WidgetExtension等)都需要依赖的库，可按需独立引入：\n• CQDemoShareFramework-Swift/WidgetExtension - 桌面组件\n\n每个子库可独立引入，详见各子库描述。",
   "platforms": {
     "ios": "9.0"
   },

@@ -41,11 +41,12 @@ target 'TSDemoDemo' do
   
   pod 'InjectHotReload'
   
-  pod 'TSDemo_Demo',        :path => '../'
-  pod 'CQDemoKit',        	:path => '../'
-  pod 'TSDemo_Demo-Swift',  :path => '../'
-  pod 'CQDemoKit-Swift',    :path => '../'
-  pod 'CQDemoResource',     :path => '../'
+  pod 'TSDemo_Demo',          :path => '../'
+  pod 'TSDemo_Demo-Swift',    :path => '../'
+  pod 'CQDemoKit',        	  :path => '../'
+  pod 'CQDemoKit-Swift',      :path => '../'
+  pod 'CQDemoResource',       :path => '../'
+  pod 'CQDemoResource-Swift', :path => '../'
   
 #  pod 'CQDemoKit-Swift',    :path => '../'
   pod 'CJBaseHelper',       '~> 0.1.8',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
