@@ -64,10 +64,12 @@
     viewController.navigationItem.title = tabBarModel.title;
     viewController.tabBarItem.title = tabBarModel.title;
     UIImage *tabbarImage = tabBarModel.normalImage;
+    /*
     if (tabbarImage == nil) {
         NSBundle *imageBundle = [NSBundle bundleForClass:NSClassFromString(@"CJUIKitBaseTabBarViewController")];
         tabbarImage = [UIImage imageNamed:@"icons8-calendar" inBundle:imageBundle compatibleWithTraitCollection:nil];
     }
+    */
     viewController.tabBarItem.image = [tabbarImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
     return rootViewController;;
