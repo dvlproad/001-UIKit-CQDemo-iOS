@@ -25,7 +25,10 @@ static NSCache *imageCache = nil;
     imageCache.countLimit = 100;
 }
 
-// 用于检查reuse的问题url属性
+// 2.防止旧下载完成时，把已被复用的 cell 的 imageView 上的正确图片覆盖掉
+// imageView 当前期望展示的图片 URL（通过 runtime 关联，不依赖 cell）
+// 作用：当后台下载完成回到主线程时，比对 imageView 当前的期望 URL 是否已变化，
+//       若已变化说明 cell 已被复用，丢弃本次结果，防止旧下载覆盖新图片
 - (NSString *)cqdmCheckReuseImageUrl {
     return objc_getAssociatedObject(self, @selector(cqdmCheckReuseImageUrl));
 }
@@ -60,7 +63,8 @@ static NSCache *imageCache = nil;
     
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if ([imageUrl isEqualToString:[weakSelf cqdmCheckReuseImageUrl]] == NO) {   // 防止重用
+        // 2.防止旧下载完成时，把已被复用的 cell 的 imageView 上的正确图片覆盖掉
+        if ([imageUrl isEqualToString:[weakSelf cqdmCheckReuseImageUrl]] == NO) {
             NSLog(@"happen reuse111======\n realImageUrl:%@,\n reuseImageUrl:%@", imageUrl, [weakSelf cqdmCheckReuseImageUrl]);
             return;
         }
@@ -68,7 +72,8 @@ static NSCache *imageCache = nil;
         UIImage *newImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]]];
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            if ([imageUrl isEqualToString:[weakSelf cqdmCheckReuseImageUrl]]) {   // 防止重用
+            // 2.防止旧下载完成时，把已被复用的 cell 的 imageView 上的正确图片覆盖掉
+            if ([imageUrl isEqualToString:[weakSelf cqdmCheckReuseImageUrl]]) {
                 if (newImage != nil) { // 3.图片缓存处理，解决滑出去后再滑回，会重新加载的问题
                     [imageCache setObject:newImage forKey:imageUrl];
                 }
