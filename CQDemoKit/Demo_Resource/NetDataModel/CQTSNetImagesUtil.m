@@ -112,27 +112,128 @@
     return dataModels;
 }
 
+#pragma mark network Github ImageUrl
+/// 我自己 github 上的 JPG 图片
++ (NSArray<NSString *> *)cjts_imageURLs_github {
+    NSString *githubUrl = @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources";
+    NSString *githubFolderName = @"jpg";
+    NSArray<NSString *> *githubImagesNames = @[
+        @"cqts_1.jpg",
+        @"cqts_2.jpg",
+        @"cqts_3.jpg",
+        @"cqts_4.jpg",
+        @"cqts_5.jpg",
+        @"cqts_6.jpg",
+        @"cqts_7.jpg",
+        @"cqts_8.jpg",
+        @"cqts_9.jpg",
+        @"cqts_10.jpg",
+        @"cqts_long_horizontal_1.jpg",
+        @"cqts_long_vertical_1.jpg",
+        @"cqts_bgCar@2x.jpg",
+        @"cqts_bgSky@2x.jpg",
+        @"cqts_big_15M.jpg",
+        @"cqts_big_22M.jpg",
+    ];
+    NSArray<NSString *> *imageUrls_github = [self cjts_imageURLsFromGithubURL:githubUrl folderName:githubFolderName imageNames:githubImagesNames];
+    return imageUrls_github;
+}
 
+//https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources/jpg/cqts_1.jpg
+//转成
+//https://raw.githubusercontent.com/dvlproad/001-UIKit-CQDemo-iOS/master/CQDemoResource/LocDataModel/Resources/jpg/cqts_1.jpg
+/**
+ * 从Github中获取指定文件夹下的指定图片名数组的图片 RAW URL 数组
+ *
+ * @param githubUrl GitHub 仓库的基础 URL，可以是 blob 或 raw 地址
+ *                  例如: @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources"
+ * @param folderName 图片所在文件夹名称，例如: @"jpg"
+ * @param imageNames 图片名称数组，例如: @[@"cqts_1.jpg", @"cqts_2", @"cqts_3.png"]
+ *                   如果带后缀则保留，不带后缀则不加
+ *
+ * @return 完整的图片 URL 字符串数组
+ */
++ (NSArray<NSString *> *)cjts_imageURLsFromGithubURL:(NSString *)githubUrl
+                                          folderName:(NSString *)folderName
+                                          imageNames:(NSArray<NSString *> *)imageNames
+                                           {
+    if (!imageNames || imageNames.count == 0) {
+        NSLog(@"警告：图片名称数组为空");
+        return @[];
+    }
+    
+    if (!folderName || folderName.length == 0) {
+        NSLog(@"警告：文件夹名称为空");
+        return @[];
+    }
+    
+    if (!githubUrl || githubUrl.length == 0) {
+        NSLog(@"警告：GitHub URL 为空");
+        return @[];
+    }
+    
+    // 自动将 blob 地址转换为 raw 地址
+    NSString *baseRawURL = [self _convertBlobToRawUrl:githubUrl];
+    
+    NSMutableArray<NSString *> *imageURLs = [NSMutableArray arrayWithCapacity:imageNames.count];
+    
+    for (NSString *imageName in imageNames) {
+        // 完全保留原始图片名，不添加任何后缀
+        NSString *fullURL = [NSString stringWithFormat:@"%@/%@/%@",
+                             baseRawURL,
+                             folderName,
+                             imageName];
+        [imageURLs addObject:fullURL];
+    }
+    
+    //NSLog(@"成功生成 %lu 个图片 URL", (unsigned long)imageURLs.count);
+    //NSLog(@"使用的基础地址: %@", baseRawURL);
+    return [imageURLs copy];
+}
+
+/**
+ * 将 GitHub blob 地址转换为 raw 地址
+ *
+ * @param githubUrl GitHub 的 blob 地址，例如: https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources
+ *
+ * @return 转换后的 raw 地址，例如: https://raw.githubusercontent.com/dvlproad/001-UIKit-CQDemo-iOS/master/CQDemoResource/LocDataModel/Resources
+ */
++ (NSString *)_convertBlobToRawUrl:(NSString *)githubUrl {
+    if (!githubUrl || githubUrl.length == 0) {
+        return githubUrl;
+    }
+    
+    // 如果已经是 raw 地址，直接返回
+    if ([githubUrl containsString:@"raw.githubusercontent.com"]) {
+        return githubUrl;
+    }
+    
+    // 如果不是 github.com 的地址，直接返回
+    if (![githubUrl containsString:@"github.com"]) {
+        return githubUrl;
+    }
+    
+    // 直接替换整个前缀
+    // https://github.com/.../blob/... -> https://raw.githubusercontent.com/.../...
+    NSString *rawURL = [githubUrl stringByReplacingOccurrencesOfString:@"https://github.com"
+                                                            withString:@"https://raw.githubusercontent.com"];
+    rawURL = [rawURL stringByReplacingOccurrencesOfString:@"/blob/"
+                                                withString:@"/"];
+    
+    return rawURL;
+}
 
 #pragma mark network ImageUrl
 /// 所有的网络测试图片地址
 + (NSArray<NSString *> *)cjts_imageUrls {
-    NSArray<NSString *> *imageUrls = @[
+    NSMutableArray *imageUrls = [[NSMutableArray alloc] init];
+    [imageUrls addObjectsFromArray:[self cjts_imageURLs_github]];
+    [imageUrls addObjectsFromArray:@[
         #pragma mark 以下网络图片从 https://stock.tuchong.com 中获取
-        @"https://cdn3-banquan.ituchong.com/weili/l/903088213443084399.jpeg",
-        @"https://cdn3-banquan.ituchong.com/weili/l/902924454934609986.jpeg",
-        @"https://cdn9-banquan.ituchong.com/weili/l/914495302984269898.jpeg",
         @"https://cdn6-banquan.ituchong.com/weili/l/1113166746308968471.jpeg",
-        @"https://cdn9-banquan.ituchong.com/weili/l/1113170740519632955.jpeg",
-        @"https://cdn3-banquan.ituchong.com/weili/l/1068890057315319833.jpeg",
-        @"https://cdn9-banquan.ituchong.com/weili/l/1016768155267367042.jpeg",
-        @"https://cdn9-banquan.ituchong.com/weili/l/1026741765014028478.jpeg",
-        @"https://cdn9-banquan.ituchong.com/weili/l/967833239214751792.jpeg",
         @"https://cdn6-banquan.ituchong.com/weili/l/966827220441759777.jpeg",
-        
         @"https://cdn6-banquan.ituchong.com/weili/l/919795258271596547.jpeg",
-        @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=355970603,3245667099&fm=26&gp=0.jpg",
-        @"https://cdn3-banquan.ituchong.com/weili/l/1073188615191658529.jpeg",
+        
         @"https://cdn6-banquan.ituchong.com/weili/l/57461353849430061.jpeg",
         @"https://cdn6-banquan.ituchong.com/weili/l/1017308169985458197.jpeg",
         #pragma mark 以下网络图片从 https://www.droitstock.com/ 中获取
@@ -151,8 +252,7 @@
         #pragma mark 以下网络图片从 https://www.veer.com 中获取
         @"https://alifei04.cfp.cn/creative/vcg/veer/800water/veer-163722653.jpg",
         @"https://alifei01.cfp.cn/creative/vcg/veer/800water/veer-132426620.jpg"
-        
-    ];
+    ]];
     
     return imageUrls;
 }
