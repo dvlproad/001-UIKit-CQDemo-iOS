@@ -195,6 +195,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     CQDMModuleModel *moduleModel = [dataModels objectAtIndex:indexPath.row];
     
     CJUIKitCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    //cell.imageView.image = nil;   // 1.解决图片重用问题(建议换在cell内部处理）
     
     if (moduleModel.imageUrl.length > 0) {
         [cell.imageView cqdm_setImageWithUrl:moduleModel.imageUrl completed:nil];

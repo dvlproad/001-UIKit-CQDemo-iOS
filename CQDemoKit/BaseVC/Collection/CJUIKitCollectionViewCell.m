@@ -45,6 +45,13 @@
     self.textLabel = textLabel;
 }
 
+// 1.解决图片重用问题(是推荐方法）
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    self.imageView.image = nil;
+    self.textLabel.text = nil;
+}
+
 - (void)setSelected:(BOOL)selected {
     [super setSelected:selected];
     
