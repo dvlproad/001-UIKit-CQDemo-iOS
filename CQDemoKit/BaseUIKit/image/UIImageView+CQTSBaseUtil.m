@@ -16,7 +16,14 @@
 
 @end
 
+static NSCache *imageCache = nil;
+
 @implementation UIImageView (CQTSBaseUtil)
+
++ (void)load {
+    imageCache = [[NSCache alloc] init];
+    imageCache.countLimit = 100;
+}
 
 // 用于检查reuse的问题url属性
 - (NSString *)cqdmCheckReuseImageUrl {
@@ -42,8 +49,15 @@
 {
     [self setCqdmCheckReuseImageUrl:imageUrl];
     
-    //UIImage *placeholderImage = [CQPlaceholderImageSource placeholdeImageForImageUseType:imageUseType];
+    //UIImage *placeholderImage = [CQPlaceholderImageSource placeholdeImageForImageUseType:imageUseType]; // CQImageKit
     //self.image = placeholderImage;
+    UIImage *cachedImage = [imageCache objectForKey:imageUrl];
+    if (cachedImage) {  // 3.图片缓存处理，解决滑出去后再滑回，会重新加载的问题
+        self.image = cachedImage;
+        !completedBlock ?: completedBlock(cachedImage, [NSURL URLWithString:imageUrl]);
+        return;
+    }
+    
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         if ([imageUrl isEqualToString:[weakSelf cqdmCheckReuseImageUrl]] == NO) {   // 防止重用
@@ -55,6 +69,10 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([imageUrl isEqualToString:[weakSelf cqdmCheckReuseImageUrl]]) {   // 防止重用
+                if (newImage != nil) { // 3.图片缓存处理，解决滑出去后再滑回，会重新加载的问题
+                    [imageCache setObject:newImage forKey:imageUrl];
+                }
+                
                 //if (newImage == nil) {    // 如果获取图片失败，则显示默认的失败图片
                 //    UIImage *errorImage = [CQPlaceholderImageSource errorImageForImageUseType:imageUseType];
                 //    weakSelf.image = errorImage;// 图片错乱根源:用户在滑动的过程中，因为cell的重用，第11行的cell可能使用的是第0行的cell，即self位置可能变了

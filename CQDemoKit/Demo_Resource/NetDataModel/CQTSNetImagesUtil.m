@@ -233,25 +233,11 @@
         @"https://cdn6-banquan.ituchong.com/weili/l/1113166746308968471.jpeg",
         @"https://cdn6-banquan.ituchong.com/weili/l/966827220441759777.jpeg",
         @"https://cdn6-banquan.ituchong.com/weili/l/919795258271596547.jpeg",
-        
         @"https://cdn6-banquan.ituchong.com/weili/l/57461353849430061.jpeg",
-        @"https://cdn6-banquan.ituchong.com/weili/l/1017308169985458197.jpeg",
-        #pragma mark 以下网络图片从 https://www.droitstock.com/ 中获取
-        @"https://img1.droitstock.com/middleW/0a/3c/373880000.jpg",
-        @"https://img1.droitstock.com/middleW/76/d4/324995286.jpg",
-        @"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1892357736,3979425284&fm=26&gp=0.jpg",
-        @"https://img1.droitstock.com/middleW/bd/f0/241894345.jpg",
-        @"https://img1.droitstock.com/middleW/41/4f/134317211.jpg",
         
-        @"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3155622504,3922873140&fm=26&gp=0.jpg",
-        @"https://img1.droitstock.com/middleW/5b/9c/824812856.jpg",
-        @"https://img1.droitstock.com/middleW/5a/8d/381503287.jpg",
-        @"https://img1.droitstock.com/middleW/b6/22/164126642.jpg",
-        @"https://img1.droitstock.com/middleW/df/26/271782228.jpg",
+        #pragma mark 以下网络图片从 https://www.droitstock.com/ 中获取
         
         #pragma mark 以下网络图片从 https://www.veer.com 中获取
-        @"https://alifei04.cfp.cn/creative/vcg/veer/800water/veer-163722653.jpg",
-        @"https://alifei01.cfp.cn/creative/vcg/veer/800water/veer-132426620.jpg"
     ]];
     
     return imageUrls;
