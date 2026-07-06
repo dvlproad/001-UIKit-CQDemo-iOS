@@ -46,9 +46,8 @@ target 'TSDemoDemo' do
   pod 'CQDemoKit',        	  :path => '../'
   pod 'CQDemoKit-Swift',      :path => '../'
   pod 'CQDemoResource',       :path => '../'
-  pod 'CQDemoResource-Swift', :path => '../'
+#  pod 'CJBaseUtil-Swift',     :subspecs => ['FrameworkCJHelper'],   :path => '../../CJUIKit'
   
-#  pod 'CQDemoKit-Swift',    :path => '../'
   pod 'CJBaseHelper',       '~> 0.1.8',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
 
   # [XCode14升级MLeaksFinder报错](https://blog.csdn.net/zcl369369/article/details/130828740)

@@ -1,68 +1,65 @@
 PODS:
   - CJBaseHelper/HookCJHelper (0.1.8)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.8)
-  - CQDemoKit (0.8.0):
-    - CQDemoKit/Auxiliary (= 0.8.0)
-    - CQDemoKit/BaseUIKit (= 0.8.0)
-    - CQDemoKit/BaseUtil (= 0.8.0)
-    - CQDemoKit/BaseVC (= 0.8.0)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.8.0)
-    - CQDemoKit/Demo_Resource (= 0.8.0)
-    - CQDemoKit/Demo_RipeView (= 0.8.0)
-    - CQDemoKit/Helper (= 0.8.0)
-    - CQDemoKit/Monitor (= 0.8.0)
-  - CQDemoKit-Swift (0.0.1):
+  - CJBaseUtil-Swift/FrameworkCJHelper (0.1.1)
+  - CQDemoKit (0.8.1):
+    - CQDemoKit/Auxiliary (= 0.8.1)
+    - CQDemoKit/BaseUIKit (= 0.8.1)
+    - CQDemoKit/BaseUtil (= 0.8.1)
+    - CQDemoKit/BaseVC (= 0.8.1)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.8.1)
+    - CQDemoKit/Demo_Resource (= 0.8.1)
+    - CQDemoKit/Demo_RipeView (= 0.8.1)
+    - CQDemoKit/Helper (= 0.8.1)
+    - CQDemoKit/Monitor (= 0.8.1)
+  - CQDemoKit-Swift (0.0.2):
     - CQDemoKit
-    - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.1)
-    - CQDemoKit-Swift/SwiftUI (= 0.0.1)
-  - CQDemoKit-Swift/CQDemoKit-OC (0.0.1):
+    - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.2)
+    - CQDemoKit-Swift/SwiftUI (= 0.0.2)
+  - CQDemoKit-Swift/CQDemoKit-OC (0.0.2):
     - CQDemoKit
-  - CQDemoKit-Swift/SwiftUI (0.0.1):
+  - CQDemoKit-Swift/SwiftUI (0.0.2):
     - CQDemoKit
-  - CQDemoKit/Auxiliary (0.8.0):
+  - CQDemoKit/Auxiliary (0.8.1):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.8.0):
+  - CQDemoKit/BaseUIKit (0.8.1):
     - Masonry
-  - CQDemoKit/BaseUtil (0.8.0)
-  - CQDemoKit/BaseVC (0.8.0):
-    - CQDemoKit/BaseVC/Base (= 0.8.0)
-    - CQDemoKit/BaseVC/Collection (= 0.8.0)
-    - CQDemoKit/BaseVC/ScrollView (= 0.8.0)
-    - CQDemoKit/BaseVC/TabBar (= 0.8.0)
-    - CQDemoKit/BaseVC/TableView (= 0.8.0)
-    - CQDemoKit/BaseVC/TextView (= 0.8.0)
-  - CQDemoKit/BaseVC/Base (0.8.0):
+  - CQDemoKit/BaseUtil (0.8.1)
+  - CQDemoKit/BaseVC (0.8.1):
+    - CQDemoKit/BaseVC/Base (= 0.8.1)
+    - CQDemoKit/BaseVC/Collection (= 0.8.1)
+    - CQDemoKit/BaseVC/ScrollView (= 0.8.1)
+    - CQDemoKit/BaseVC/TabBar (= 0.8.1)
+    - CQDemoKit/BaseVC/TableView (= 0.8.1)
+    - CQDemoKit/BaseVC/TextView (= 0.8.1)
+  - CQDemoKit/BaseVC/Base (0.8.1):
     - CQDemoKit/BaseUIKit
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.8.0):
+  - CQDemoKit/BaseVC/Collection (0.8.1):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.8.0):
+  - CQDemoKit/BaseVC/ScrollView (0.8.1):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TabBar (0.8.0):
+  - CQDemoKit/BaseVC/TabBar (0.8.1):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.8.0):
+  - CQDemoKit/BaseVC/TableView (0.8.1):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TextView (0.8.0):
+  - CQDemoKit/BaseVC/TextView (0.8.1):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.8.0):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.8.1):
     - CQDemoKit/BaseVC
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Demo_Resource (0.8.0):
+  - CQDemoKit/Demo_Resource (0.8.1):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.8.0):
+  - CQDemoKit/Demo_RipeView (0.8.1):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.8.0)
-  - CQDemoKit/Monitor (0.8.0)
-  - CQDemoResource (0.1.0)
-  - CQDemoResource-Swift (0.0.1):
-    - CQDemoResource-Swift/SwiftUI (= 0.0.1)
-  - CQDemoResource-Swift/SwiftUI (0.0.1):
-    - SwiftExtraCJHelper
+  - CQDemoKit/Helper (0.8.1)
+  - CQDemoKit/Monitor (0.8.1)
+  - CQDemoResource (0.1.1)
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
   - InjectHotReload (1.2.2)
@@ -70,15 +67,12 @@ PODS:
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - SSZipArchive (2.4.3)
-  - SwiftExtraCJHelper (0.1.2):
-    - SwiftExtraCJHelper/Base (= 0.1.2)
-  - SwiftExtraCJHelper/Base (0.1.2)
   - TSDemo_Demo (0.5.2):
+    - CJBaseUtil-Swift/FrameworkCJHelper
     - CQDemoKit
     - CQDemoResource
     - CQDemoShareFramework-Swift/WidgetExtension
     - SSZipArchive
-    - SwiftExtraCJHelper
     - TSDemo_Demo-Swift
   - TSDemo_Demo-Swift (0.0.1):
     - TSDemo_Demo-Swift/SwiftUI (= 0.0.1)
@@ -91,7 +85,6 @@ DEPENDENCIES:
   - CQDemoKit (from `../`)
   - CQDemoKit-Swift (from `../`)
   - CQDemoResource (from `../`)
-  - CQDemoResource-Swift (from `../`)
   - CQDemoShareFramework-Swift/WidgetExtension (from `../`)
   - InjectHotReload
   - MLeaksFinder
@@ -101,12 +94,12 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CJBaseHelper
+    - CJBaseUtil-Swift
     - FBRetainCycleDetector
     - InjectHotReload
     - Masonry
     - MLeaksFinder
     - SSZipArchive
-    - SwiftExtraCJHelper
 
 EXTERNAL SOURCES:
   CQDemoKit:
@@ -114,8 +107,6 @@ EXTERNAL SOURCES:
   CQDemoKit-Swift:
     :path: "../"
   CQDemoResource:
-    :path: "../"
-  CQDemoResource-Swift:
     :path: "../"
   CQDemoShareFramework-Swift:
     :path: "../"
@@ -126,20 +117,19 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
-  CQDemoKit: 2de39f74a4fa584ca5ee0aee0227baab91513c56
-  CQDemoKit-Swift: b865190115b188f2ed736a9a703d69706540bc99
-  CQDemoResource: 5b3e69161b38d59b9ae5a0e7f8ab0536870af6d8
-  CQDemoResource-Swift: 77bd16bd678b2d2189d45928059196946cc8aaaa
+  CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
+  CQDemoKit: e3804d4280693472ecfb6f70aa70aef5cf170b7a
+  CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
+  CQDemoResource: 50bc116ed3bcbaaa8d1369a9a089d0214a387219
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
-  SwiftExtraCJHelper: ec1ec1fc172a06de1ae1e7230dd958d1a873bfcb
-  TSDemo_Demo: f0216597949fbdf25138d917d0072ad59ede55c6
-  TSDemo_Demo-Swift: 755382850e4a40a1f1b789f50ac99b12cb4233ae
+  TSDemo_Demo: 8052c2ad315d46bd50d36e97b843f59df6bd365c
+  TSDemo_Demo-Swift: 3a7ba09817923ed0e48c2f93c5af48aacb46ceb5
 
-PODFILE CHECKSUM: 23dc8bef18e89cfce807bd3aaa81e633dc8d8e57
+PODFILE CHECKSUM: 5365c292a795e9e924ba45ae96ff8d830377758e
 
 COCOAPODS: 1.16.2

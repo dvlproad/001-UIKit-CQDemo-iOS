@@ -1,6 +1,0 @@
-framework module CQDemoResource_Swift {
-  umbrella header "CQDemoResource-Swift-umbrella.h"
-
-  export *
-  module * { export * }
-}

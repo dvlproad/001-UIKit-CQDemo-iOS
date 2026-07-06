@@ -8,7 +8,7 @@
 
 #import "BaseVCHomeViewController.h"
 #import <CQDemoKit/UIView+CQAuxiliaryText.h>
-#import <SwiftExtraCJHelper/SwiftExtraCJHelper-Swift.h>
+#import <CJBaseUtil_Swift/CJBaseUtil_Swift-Swift.h>
 
 #import "TSSingleLineTextViewController.h"
 #import "TSMultilineTextViewController.h"

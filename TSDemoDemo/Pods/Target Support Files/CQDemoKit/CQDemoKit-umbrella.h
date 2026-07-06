@@ -53,6 +53,7 @@
 #import "CQTSNetImageDataModel.h"
 #import "CQTSNetImagesUtil.h"
 #import "CJUIKitRandomUtil.h"
+#import "CQTSGitUtil.h"
 #import "CQTSMediaPickerViewController.h"
 #import "CQTSRipeButton.h"
 #import "CQTSRipeTableView.h"

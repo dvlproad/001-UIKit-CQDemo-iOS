@@ -11,35 +11,35 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>CQDemoKit-CQDemoKit_Privacy.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>CQDemoKit-Swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>CQDemoKit.xcscheme</key>
+		<key>CJBaseUtil-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>CQDemoResource-CQDemoResource.xcscheme</key>
+		<key>CQDemoKit-CQDemoKit_Privacy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>4</integer>
 		</dict>
-		<key>CQDemoResource-Swift.xcscheme</key>
+		<key>CQDemoKit-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>CQDemoKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>CQDemoResource-CQDemoResource.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -51,7 +51,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>CQDemoShareFramework-Swift-iOS11.0.xcscheme</key>
 		<dict>
@@ -116,26 +116,19 @@
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
-		<key>SwiftExtraCJHelper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>17</integer>
-		</dict>
 		<key>TSDemo_Demo-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>18</integer>
 		</dict>
 		<key>TSDemo_Demo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>17</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double CQDemoResource_SwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char CQDemoResource_SwiftVersionString[];
+FOUNDATION_EXPORT double CJBaseUtil_SwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char CJBaseUtil_SwiftVersionString[];
 

@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
                    DESC
   
 
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "11.0"
  
   s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "TSDemo_Demo_0.5.2" }
   #s.source_files  = "CJDemoCommon/*.{h,m}"
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   s.dependency 'CQDemoKit'
   s.dependency 'CQDemoResource'
   s.dependency 'SSZipArchive'     # 模拟下载 zip 到沙盒的示例
-  s.dependency 'SwiftExtraCJHelper'
+  s.dependency 'CJBaseUtil-Swift/FrameworkCJHelper'
 
   s.dependency 'CQDemoShareFramework-Swift/WidgetExtension'  # 测试控制中心加载远程图标的时候需要使用
   
