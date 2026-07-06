@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 从Github中获取指定文件夹下的指定图片名数组的图片 RAW URL 数组
  *
- * @param githubURL GitHub 仓库的基础 URL，可以是 blob 或 raw 地址
+ * @param githubUrl GitHub 仓库的基础 URL，可以是 blob 或 raw 地址
  *                  例如: @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources"
  * @param folderName 图片所在文件夹名称，例如: @"jpg"
  * @param imageNames 图片名称数组，例如: @[@"cqts_1.jpg", @"cqts_2", @"cqts_3.png"]
