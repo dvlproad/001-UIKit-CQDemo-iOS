@@ -1,149 +1,21 @@
 //
 //  CQTSNetImagesUtil.m
-//  CJComplexUIKitDemo
+//  CQDemoResource
 //
 //  Created by lcQian on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
 
 #import "CQTSNetImagesUtil.h"
-#import "CQTSGitUtil.h"
+#import "CQTSAssetSourceUtil.h"
 
 @implementation CQTSNetImagesUtil
-
-/// 获取测试用的数据(image为网络图片)
-+ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModels {
-    NSMutableArray<CQTSNetImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"1X透社";
-        dataModel.imageUrl =  self.cjts_imageUrls[0];
-        dataModel.badgeCount = 0;
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"2新鲜事";
-        dataModel.imageUrl = self.cjts_imageUrls[1];
-        dataModel.badgeCount = 1;
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"3XX信";
-        dataModel.imageUrl = self.cjts_imageUrls[2];
-        dataModel.badgeCount = 0;
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"4X角信";
-        dataModel.badgeCount = 9;
-        dataModel.imageUrl = self.cjts_imageUrls[3];
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"5蓝精灵";
-        dataModel.imageUrl = self.cjts_imageUrls[4];
-        dataModel.badgeCount = 10;
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"6年轻范";
-        dataModel.badgeCount = 99;
-        dataModel.imageUrl = self.cjts_imageUrls[5];
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"7XX福";
-        dataModel.imageUrl = self.cjts_imageUrls[6];
-        dataModel.badgeCount = 1;
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"8X之语";
-        dataModel.badgeCount = 888;
-        dataModel.imageUrl = self.cjts_imageUrls[7];
-        [dataModels addObject:dataModel];
-    }
-    {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        dataModel.name = @"我是6个字";
-        dataModel.badgeCount = 888;
-        dataModel.imageUrl = self.cjts_imageUrls[8];
-        [dataModels addObject:dataModel];
-    }
-    
-    return dataModels;
-}
-
-/// 获取测试用的数据(image为网络图片地址)
-///
-/// @param count        图片个数
-/// @param randomOrder  顺序是否随机
-///
-/// @return 返回图片数据
-+ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModelsWithCount:(NSInteger)count randomOrder:(BOOL)randomOrder {
-    NSArray<NSString *> *selStrings = [self __cjts_imageUrlSelStrings];
-    
-    NSMutableArray<CQTSNetImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
-    
-    for (NSInteger i = 0; i < count; i++) {
-        CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
-        
-        NSInteger maySelIndex = randomOrder ? random() : i;
-        NSInteger lastSelIndex = maySelIndex%selStrings.count;
-        
-        NSString *selString = [selStrings objectAtIndex:lastSelIndex];
-        SEL sel = NSSelectorFromString(selString);
-        dataModel.imageUrl = [CQTSNetImagesUtil performSelector:sel];
-        //dataModel.imageUrl = self.cjts_imageUrls[selIndex];
-        dataModel.name = [NSString stringWithFormat:@"%zd:%@", i, selString];
-        dataModel.badgeCount = i;
-        
-        [dataModels addObject:dataModel];
-    }
-    
-    return dataModels;
-}
-
-#pragma mark network Github ImageUrl
-/// 我自己 github 上的 JPG 图片
-+ (NSArray<NSString *> *)cjts_imageURLs_github {
-    NSString *githubUrl = @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources";
-    NSString *githubFolderName = @"jpg";
-    // 来源 CQDemoResource库 中的 + (NSArray<NSString *> *)cjts_localFileNames:(NSArray<NSString *> *)fileExtensions;
-    NSArray<NSString *> *githubImagesNames = @[
-        @"cqts_1.jpg",
-        @"cqts_2.jpg",
-        @"cqts_3.jpg",
-        @"cqts_4.jpg",
-        @"cqts_5.jpg",
-        @"cqts_6.jpg",
-        @"cqts_7.jpg",
-        @"cqts_8.jpg",
-        @"cqts_9.jpg",
-        @"cqts_10.jpg",
-        @"cqts_long_horizontal_1.jpg",
-        @"cqts_long_vertical_1.jpg",
-        @"cqts_bgCar@2x.jpg",
-        @"cqts_bgSky@2x.jpg",
-        @"cqts_big_15M.jpg",
-        @"cqts_big_22M.jpg",
-    ];
-    NSArray<NSString *> *imageUrls_github = [CQTSGitUtil githubImageURLsFromBaseUrl:githubUrl folderName:githubFolderName imageNames:githubImagesNames];
-    return imageUrls_github;
-}
 
 #pragma mark network ImageUrl
 /// 所有的网络测试图片地址
 + (NSArray<NSString *> *)cjts_imageUrls {
     NSMutableArray *imageUrls = [[NSMutableArray alloc] init];
-    [imageUrls addObjectsFromArray:[self cjts_imageURLs_github]];
+    [imageUrls addObjectsFromArray:[CQTSAssetSourceUtil networkFileUrls:@[@"jpg"]]];
     [imageUrls addObjectsFromArray:@[
         #pragma mark 以下网络图片从 https://stock.tuchong.com 中获取
         @"https://cdn6-banquan.ituchong.com/weili/l/1113166746308968471.jpeg",

@@ -7,23 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CQTSIconDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CQTSIconsUtil : NSObject
-
-
-/// 获取测试用的数据(image为icon图片)
-///
-/// @param count                图片个数
-/// @param randomOrder  顺序是否随机
-///
-/// @return 返回图片数据
-+ (NSMutableArray<CQTSIconDataModel *> *)__getTestIconImageDataModelsWithCount:(NSInteger)count randomOrder:(BOOL)randomOrder;
-/// 获取测试用的数据(image为网络图片)
-+ (NSMutableArray<CQTSIconDataModel *> *)__getTestIconImageDataModels;
-
+/*
 #pragma mark - icon Image
 + (UIImage *)cjts_iconImage1;
 + (UIImage *)cjts_iconImage2;
@@ -33,12 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)cjts_iconImage6;
 + (UIImage *)cjts_iconImage7;
 + (UIImage *)cjts_iconImage8;
-
+*/
 
 #pragma mark icon ImageUrl
-/// 所有的网络测试icon图片地址
-+ (NSArray<NSString *> *)cjts_iconUrls;
-
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
 + (NSString *)cjts_iconUrlAtIndex:(NSInteger)selIndex;
 

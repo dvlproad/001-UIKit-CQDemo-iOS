@@ -9,58 +9,55 @@
 #import "CQTSGitUtil.h"
 
 @implementation CQTSGitUtil
+/*
+对
+https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources/jpg/cqts_1.jpg
 
-//https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources/jpg/cqts_1.jpg
-//转成
-//https://raw.githubusercontent.com/dvlproad/001-UIKit-CQDemo-iOS/master/CQDemoResource/LocDataModel/Resources/jpg/cqts_1.jpg
-/**
- * 从Github中获取指定文件夹下的指定图片名数组的图片 RAW URL 数组
+转成样式2:
+https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources/jpg/cqts_1.jpg?raw=true    (即末尾加上 ?raw=true )
+NSString *imageUrl = [NSString stringWithFormat:@"%@/%@?raw=true", resourceDir, imageNameOrUrl];
+
+转成样式1：(当前代码的实现逻辑)
+https://raw.githubusercontent.com/dvlproad/001-UIKit-CQDemo-iOS/master/CQDemoResource/LocDataModel/Resources/jpg/cqts_1.jpg
+*/
+/*
+ * 从Github中获取指定文件夹下的指定资源名的资源 RAW URL
  *
  * @param githubUrl GitHub 仓库的基础 URL，可以是 blob 或 raw 地址
  *                  例如: @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources"
  * @param folderName 图片所在文件夹名称，例如: @"jpg"
- * @param imageNames 图片名称数组，例如: @[@"cqts_1.jpg", @"cqts_2", @"cqts_3.png"]
+ * @param imageName  图片名称，例如: @"cqts_1.jpg"
  *                   如果带后缀则保留，不带后缀则不加
  *
- * @return 完整的图片 URL 字符串数组
+ * @return 完整的资源 URL 字符串数组
  */
-+ (NSArray<NSString *> *)githubImageURLsFromBaseUrl:(NSString *)githubUrl
-                                         folderName:(NSString *)folderName
-                                         imageNames:(NSArray<NSString *> *)imageNames
-                                           {
-    if (!imageNames || imageNames.count == 0) {
-        NSLog(@"警告：图片名称数组为空");
-        return @[];
-    }
-    
-    if (!folderName || folderName.length == 0) {
-        NSLog(@"警告：文件夹名称为空");
-        return @[];
-    }
-    
++ (nullable NSString *)githubAssetUrlFromBaseUrl:(NSString *)githubUrl
+                                      folderName:(nullable NSString *)folderName
+                                       imageName:(nullable NSString *)imageName
+{
     if (!githubUrl || githubUrl.length == 0) {
-        NSLog(@"警告：GitHub URL 为空");
-        return @[];
+        return nil;
+    }
+    
+    if (!imageName || imageName.length == 0) {
+        return nil;
     }
     
     // 自动将 blob 地址转换为 raw 地址
-    NSString *baseRawURL = [self _convertBlobToRawUrl:githubUrl];
+    NSString *baseRawUrl = [self _convertBlobToRawUrl:githubUrl];
     
-    NSMutableArray<NSString *> *imageURLs = [NSMutableArray arrayWithCapacity:imageNames.count];
     
-    for (NSString *imageName in imageNames) {
-        // 完全保留原始图片名，不添加任何后缀
-        NSString *fullURL = [NSString stringWithFormat:@"%@/%@/%@",
-                             baseRawURL,
-                             folderName,
-                             imageName];
-        [imageURLs addObject:fullURL];
+    // 完全保留原始图片名，不添加任何后缀
+    NSMutableArray *pathComponents = [NSMutableArray arrayWithObject:baseRawUrl];
+    if (folderName.length > 0) {
+        [pathComponents addObject:folderName];
     }
+    [pathComponents addObject:imageName];
     
-    //NSLog(@"成功生成 %lu 个图片 URL", (unsigned long)imageURLs.count);
-    //NSLog(@"使用的基础地址: %@", baseRawURL);
-    return [imageURLs copy];
+    NSString *fullUrl = [pathComponents componentsJoinedByString:@"/"];
+    return fullUrl;
 }
+
 
 /**
  * 将 GitHub blob 地址转换为 raw 地址
@@ -93,6 +90,5 @@
     
     return rawURL;
 }
-
 
 @end

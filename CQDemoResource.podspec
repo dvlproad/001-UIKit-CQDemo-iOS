@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.1.1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.0" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -93,6 +93,12 @@ Pod::Spec.new do |s|
   # s.frameworks = "MediaPlayer"
 
   s.source_files = "CQDemoResource/**/*.{h,m}"
+  
+  # 因为 CQTSAssetModelGetter.m 需要使用 CQTSLocImageDataModel\CQTSNetImageDataModel\CQTSIconDataModel
+  # 因为 CQTSAssetSourceUtil.m 需要使用 CQTSGitUtil
+  s.dependency 'CQDemoKit/Demo_Resource'
+  # s.dependency 'CQDemoKit/BaseUIKit'  # 因为 CQTSIconsUtil.m 需要使用 CQTSImageLoader
+  
   # Demo 工程中基本都需要的 DemoResource
   # s.subspec 'Demo_Resource' do |ss|
   #   ss.source_files = "CQDemoResource/Demo_Resource/**/*.{h,m}"

@@ -1,33 +1,16 @@
 //
 //  CQTSNetImagesUtil.h
-//  CJComplexUIKitDemo
+//  CQDemoResource
 //
 //  Created by lcQian on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "CQTSNetImageDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CQTSNetImagesUtil : NSObject
-
-/// 获取测试用的数据(image为网络图片)
-+ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModels;
-
-/// 获取测试用的数据(image为网络图片地址)
-///
-/// @param count        图片个数
-/// @param randomOrder  顺序是否随机
-///
-/// @return 返回图片数据
-+ (NSMutableArray<CQTSNetImageDataModel *> *)__getTestNetImageDataModelsWithCount:(NSInteger)count randomOrder:(BOOL)randomOrder;
-
-
-#pragma mark network Github ImageUrl
-/// 我自己 github 上的 JPG 图片
-+ (NSArray<NSString *> *)cjts_imageURLs_github;
 
 #pragma mark network ImageUrl
 /// 所有的网络测试图片地址

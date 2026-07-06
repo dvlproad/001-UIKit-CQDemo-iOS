@@ -7,10 +7,11 @@
 //
 
 #import "CQTSRipeButtonCollectionView.h"
-#import "CQTSRipeBaseCollectionViewDelegate.h"
-#import "CQTSRipeBaseCollectionViewDataSource.h"
+#import <CQDemoKit/CQTSRipeBaseCollectionViewDelegate.h>
+#import <CQDemoKit/CQTSRipeBaseCollectionViewDataSource.h>
+#import <CQDemoKit/CQTSRipeButtonCollectionViewCell.h>
+#import <CQDemoKit/CQTSLocImageDataModel.h>
 
-#import "CQTSRipeButtonCollectionViewCell.h"
 #import "CQTSRipeSectionDataUtil.h"
 
 @interface CQTSRipeButtonCollectionView () {
@@ -59,7 +60,8 @@
         _ripeCollectionViewDataSource = [[CQTSRipeBaseCollectionViewDataSource alloc] initWithSectionDataModels:sectionDataModels registerHandler:^{
             [weakSelf registerClass:[CQTSRipeButtonCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
             
-        } cellForItemAtIndexPath:^UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull bCollectionView, NSIndexPath * _Nonnull bIndexPath, CQTSLocImageDataModel * _Nonnull dataModel) {
+        } cellForItemAtIndexPath:^UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull bCollectionView, NSIndexPath * _Nonnull bIndexPath, id bDataModel) {
+            CQTSLocImageDataModel *dataModel = (CQTSLocImageDataModel *)bDataModel;
             CQTSRipeButtonCollectionViewCell *cell = [bCollectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:bIndexPath];
             
             NSString *title = buttonTitles[bIndexPath.item];

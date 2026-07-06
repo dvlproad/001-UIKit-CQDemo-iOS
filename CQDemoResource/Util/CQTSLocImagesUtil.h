@@ -1,13 +1,12 @@
 //
 //  CQTSLocImagesUtil.h
-//  CJComplexUIKitDemo
+//  CQDemoResource
 //
 //  Created by ciyouzen on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "CQTSLocImageDataModel.h"
 #import "UIImage+CQDemoKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -49,21 +48,6 @@ typedef NS_OPTIONS(NSInteger, CQTSLocalFileOption) {
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
 + (UIImage *)cjts_localImageAtIndex:(NSInteger)selIndex;
 
-
-#pragma mark - test Files
-/// 获取测试用的数据
-/// （为本地图片名时候，UIImage *image = [UIImage cqdemokit_xcassetImageNamed:imageName]; ）
-///
-/// @param fileExtensions                                    要获取哪些文件后缀的文件
-/// @param count                                                        文件个数
-/// @param randomOrder                                          顺序是否随机
-/// @param changeImageNameToNetworkUrl      是否将本地图片名转为其所在的网络地址
-///
-/// @return 返回图片数据
-+ (NSMutableArray<CQTSLocImageDataModel *> *)fileModelsWithExtensions:(NSArray<NSString *> *)fileExtensions
-                                                                count:(NSInteger)count
-                                                          randomOrder:(BOOL)randomOrder
-                                          changeImageNameToNetworkUrl:(BOOL)changeImageNameToNetworkUrl;
 
 @end
 

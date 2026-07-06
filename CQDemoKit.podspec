@@ -9,7 +9,7 @@
   # 上传到github公有库:
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
   #验证方法2：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings --use-libraries --verbose
-  #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings --verbose
+  #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings --use-libraries --verbose   # 临时添加 --use-libraries 用来解决没错，还是报错的问题
   
   # 上传到私有库 gitee上的私有项目: dvlproadSpecs
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.8.1"
+  s.version      = "0.9.0"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -69,7 +69,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.8.1_1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.0" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -186,10 +186,9 @@ Pod::Spec.new do |s|
   # 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
   s.subspec 'Demo_DataSourceAndDelegate' do |ss|
     ss.source_files = "CQDemoKit/Demo_DataSourceAndDelegate/**/*.{h,m}"
-    # ss.dependency 'CQDemoKit/BaseUtil'    # 因为 CQTSRipeButton 需要使用 CJUIKitToastUtil
-    # ss.dependency 'CQDemoKit/BaseUIKit'   # 因为 CQTSRipeButton 需要使用 CQTSButtonFactory
-    ss.dependency 'CQDemoKit/BaseVC'
-    ss.dependency 'CQDemoKit/Demo_Resource'
+    
+    ss.dependency 'CQDemoKit/BaseVC'        # 因为 CQTSRipeBaseCollectionViewDataSource 需要使用 CQDMSectionDataModel
+#    ss.dependency 'CQDemoKit/Demo_Resource' # 因为 CQTSRipeBaseCollectionViewDataSource 需要使用 CQTSLocImageDataModel
   end
 
   # 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)

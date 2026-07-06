@@ -8,9 +8,10 @@
 
 #import "TSResourceCollectionViewController.h"
 
-#import <CQDemoKit/CQTSIconsUtil.h>
+#import <CQDemoResource/CQTSIconsUtil.h>
 #import <CQDemoResource/CQTSLocImagesUtil.h>
-#import <CQDemoKit/CQTSNetImagesUtil.h>
+#import <CQDemoResource/CQTSNetImagesUtil.h>
+#import <CQDemoResource/CQTSAssetSourceUtil.h>
 
 
 @interface TSResourceCollectionViewController () {
@@ -69,7 +70,7 @@
     CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
     sectionDataModel.theme = @"网络icon";
     
-    NSArray<NSString *> *imageUrls = [CQTSIconsUtil cjts_iconUrls];
+    NSArray<NSString *> *imageUrls = [CQTSAssetSourceUtil iconUrls];
     NSInteger imageCount = imageUrls.count;
     for (int i = 0; i < imageCount; i++) {
         CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
