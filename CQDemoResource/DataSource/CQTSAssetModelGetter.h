@@ -11,7 +11,7 @@
 #import <CQDemoKit/CQTSNetImageDataModel.h> // 在 subspec:Demo_Resource 下
 #import <CQDemoKit/CQTSIconDataModel.h>     // 在 subspec:Demo_Resource 下
 
-#import "UIImage+CQDemoKit.h"
+#import "UIImage+CQDemoResource.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -2,16 +2,16 @@ PODS:
   - CJBaseHelper/HookCJHelper (0.1.8)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.8)
   - CJBaseUtil-Swift/FrameworkCJHelper (0.1.1)
-  - CQDemoKit (0.9.0):
-    - CQDemoKit/Auxiliary (= 0.9.0)
-    - CQDemoKit/BaseUIKit (= 0.9.0)
-    - CQDemoKit/BaseUtil (= 0.9.0)
-    - CQDemoKit/BaseVC (= 0.9.0)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.9.0)
-    - CQDemoKit/Demo_Resource (= 0.9.0)
-    - CQDemoKit/Demo_RipeView (= 0.9.0)
-    - CQDemoKit/Helper (= 0.9.0)
-    - CQDemoKit/Monitor (= 0.9.0)
+  - CQDemoKit (0.9.1):
+    - CQDemoKit/Auxiliary (= 0.9.1)
+    - CQDemoKit/BaseUIKit (= 0.9.1)
+    - CQDemoKit/BaseUtil (= 0.9.1)
+    - CQDemoKit/BaseVC (= 0.9.1)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.9.1)
+    - CQDemoKit/Demo_Resource (= 0.9.1)
+    - CQDemoKit/Demo_RipeView (= 0.9.1)
+    - CQDemoKit/Helper (= 0.9.1)
+    - CQDemoKit/Monitor (= 0.9.1)
   - CQDemoKit-Swift (0.0.2):
     - CQDemoKit
     - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.2)
@@ -20,62 +20,62 @@ PODS:
     - CQDemoKit
   - CQDemoKit-Swift/SwiftUI (0.0.2):
     - CQDemoKit
-  - CQDemoKit/Auxiliary (0.9.0):
+  - CQDemoKit/Auxiliary (0.9.1):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.9.0):
+  - CQDemoKit/BaseUIKit (0.9.1):
     - Masonry
-  - CQDemoKit/BaseUtil (0.9.0)
-  - CQDemoKit/BaseVC (0.9.0):
-    - CQDemoKit/BaseVC/Base (= 0.9.0)
-    - CQDemoKit/BaseVC/Collection (= 0.9.0)
-    - CQDemoKit/BaseVC/ScrollView (= 0.9.0)
-    - CQDemoKit/BaseVC/TabBar (= 0.9.0)
-    - CQDemoKit/BaseVC/TableView (= 0.9.0)
-    - CQDemoKit/BaseVC/TextView (= 0.9.0)
-  - CQDemoKit/BaseVC/Base (0.9.0):
+  - CQDemoKit/BaseUtil (0.9.1)
+  - CQDemoKit/BaseVC (0.9.1):
+    - CQDemoKit/BaseVC/Base (= 0.9.1)
+    - CQDemoKit/BaseVC/Collection (= 0.9.1)
+    - CQDemoKit/BaseVC/ScrollView (= 0.9.1)
+    - CQDemoKit/BaseVC/TabBar (= 0.9.1)
+    - CQDemoKit/BaseVC/TableView (= 0.9.1)
+    - CQDemoKit/BaseVC/TextView (= 0.9.1)
+  - CQDemoKit/BaseVC/Base (0.9.1):
     - CQDemoKit/BaseUIKit
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.9.0):
+  - CQDemoKit/BaseVC/Collection (0.9.1):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.9.0):
+  - CQDemoKit/BaseVC/ScrollView (0.9.1):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TabBar (0.9.0):
+  - CQDemoKit/BaseVC/TabBar (0.9.1):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.9.0):
+  - CQDemoKit/BaseVC/TableView (0.9.1):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TextView (0.9.0):
+  - CQDemoKit/BaseVC/TextView (0.9.1):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.9.0):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.9.1):
     - CQDemoKit/BaseVC
-  - CQDemoKit/Demo_Resource (0.9.0):
+  - CQDemoKit/Demo_Resource (0.9.1):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.9.0):
+  - CQDemoKit/Demo_RipeView (0.9.1):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.9.0)
-  - CQDemoKit/Monitor (0.9.0)
-  - CQDemoResource (0.2.1):
-    - CQDemoResource/Core (= 0.2.1)
-    - CQDemoResource/GIF (= 0.2.1)
-    - CQDemoResource/Images (= 0.2.1)
-    - CQDemoResource/Images_Big (= 0.2.1)
-    - CQDemoResource/SVG (= 0.2.1)
-    - CQDemoResource/Videos (= 0.2.1)
-  - CQDemoResource/Core (0.2.1):
+  - CQDemoKit/Helper (0.9.1)
+  - CQDemoKit/Monitor (0.9.1)
+  - CQDemoResource (0.2.2):
+    - CQDemoResource/Core (= 0.2.2)
+    - CQDemoResource/GIF (= 0.2.2)
+    - CQDemoResource/Images (= 0.2.2)
+    - CQDemoResource/Images_Big (= 0.2.2)
+    - CQDemoResource/SVG (= 0.2.2)
+    - CQDemoResource/Videos (= 0.2.2)
+  - CQDemoResource/Core (0.2.2):
     - CQDemoKit/Demo_Resource
-  - CQDemoResource/GIF (0.2.1):
+  - CQDemoResource/GIF (0.2.2):
     - CQDemoResource/Core
-  - CQDemoResource/Images (0.2.1):
+  - CQDemoResource/Images (0.2.2):
     - CQDemoResource/Core
-  - CQDemoResource/Images_Big (0.2.1):
+  - CQDemoResource/Images_Big (0.2.2):
     - CQDemoResource/Core
-  - CQDemoResource/SVG (0.2.1):
+  - CQDemoResource/SVG (0.2.2):
     - CQDemoResource/Core
-  - CQDemoResource/Videos (0.2.1):
+  - CQDemoResource/Videos (0.2.2):
     - CQDemoResource/Core
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
@@ -135,9 +135,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
-  CQDemoKit: 07a431507426eeb5006b6df3dd2fae9920aa1356
+  CQDemoKit: 536e26b4f8b59a142bd87c9ce544885765364bdc
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
-  CQDemoResource: 5df18876a330bdfbc90d7c2e55ffa77bdd70c6d2
+  CQDemoResource: d1b56ed0d443e8b3259a855c6866600e6cafb8ba
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32

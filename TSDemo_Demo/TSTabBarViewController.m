@@ -12,7 +12,7 @@
 #import "UIUtilHomeViewController.h"
 #import "RipeViewHomeViewController.h"
 #import "TSAuxiliaryHomeViewController.h"
-#import <CQDemoResource/UIImage+CQDemoKit.h>
+#import <CQDemoResource/UIImage+CQDemoResource.h>
 
 
 @interface TSTabBarViewController () {
@@ -31,35 +31,35 @@
     {
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"BaseUI", nil);
-        tabBarModel.normalImage = [UIImage cqdemo_framework_imageNamed:@"icons8-home"];
+        tabBarModel.normalImage = [UIImage cqresource_imageNamed:@"icons8-home"];
         tabBarModel.classEntry = [BaseUIHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     {
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"BaseVC", nil);
-        tabBarModel.normalImage = [UIImage cqdemo_framework_imageNamed:@"icons8-calendar"];
+        tabBarModel.normalImage = [UIImage cqresource_imageNamed:@"icons8-calendar"];
         tabBarModel.classEntry = [BaseVCHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     {
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"UIUtil", nil);
-        tabBarModel.normalImage = [UIImage cqdemo_framework_imageNamed:@"icons8-folder"];
+        tabBarModel.normalImage = [UIImage cqresource_imageNamed:@"icons8-folder"];
         tabBarModel.classEntry = [UIUtilHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     {
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"Ripe", nil);
-        tabBarModel.normalImage = [UIImage cqdemo_framework_imageNamed:@"icons8-menu"];
+        tabBarModel.normalImage = [UIImage cqresource_imageNamed:@"icons8-menu"];
         tabBarModel.classEntry = [RipeViewHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }
     {
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"Auxiliary", nil);
-        tabBarModel.normalImage = [UIImage cqdemo_framework_imageNamed:@"icons8-settings"];
+        tabBarModel.normalImage = [UIImage cqresource_imageNamed:@"icons8-settings"];
         tabBarModel.classEntry = [TSAuxiliaryHomeViewController class];
         [tabBarModels addObject:tabBarModel];
     }

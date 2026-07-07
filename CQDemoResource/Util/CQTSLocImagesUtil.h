@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UIImage+CQDemoKit.h"
+#import "UIImage+CQDemoResource.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

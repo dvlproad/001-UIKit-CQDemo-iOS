@@ -28,7 +28,7 @@
 
 /// 我自己 github 上的 资源图片
 + (NSArray<NSString *> *)networkFileUrls:(NSArray<NSString *> *)folderNames {
-    NSString *githubUrl = @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources";
+    NSString *githubUrl = @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/Resources";
     
     NSArray *resultDictionarys = [CQTSAssetSourceUtil assetDictsWithFolderNames:folderNames];
     
@@ -40,6 +40,7 @@
         NSString *fullUrl = [CQTSGitUtil githubAssetUrlFromBaseUrl:githubUrl
                                                         folderName:folderName
                                                          imageName:imageName];
+        [imageUrls_github addObject:fullUrl];
     }
     return imageUrls_github;
 }
@@ -60,8 +61,8 @@
             @"cqts_10.jpg",
             @"cqts_long_horizontal_1.jpg",
             @"cqts_long_vertical_1.jpg",
-            @"cqts_bgCar@2x.jpg",
-            @"cqts_bgSky@2x.jpg",
+            @"cqts_bgCar.jpg",
+            @"cqts_bgSky.jpg",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{

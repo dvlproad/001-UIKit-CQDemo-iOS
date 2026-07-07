@@ -54,6 +54,7 @@
 #import "CQTSNetImageDataModel.h"
 #import "CJUIKitRandomUtil.h"
 #import "CQTSGitUtil.h"
+#import "UIImage+CQTSInFramework.h"
 #import "CQTSMediaPickerViewController.h"
 #import "CQTSRipeButton.h"
 #import "CQTSRipeTableView.h"

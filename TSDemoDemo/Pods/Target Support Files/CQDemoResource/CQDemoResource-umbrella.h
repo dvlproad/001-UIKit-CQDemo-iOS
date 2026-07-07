@@ -12,7 +12,7 @@
 
 #import "CQTSAssetModelGetter.h"
 #import "CQTSAssetSourceUtil.h"
-#import "UIImage+CQDemoKit.h"
+#import "UIImage+CQDemoResource.h"
 #import "CQTSIconsUtil.h"
 #import "CQTSLocImagesUtil.h"
 #import "CQTSNetImagesUtil.h"

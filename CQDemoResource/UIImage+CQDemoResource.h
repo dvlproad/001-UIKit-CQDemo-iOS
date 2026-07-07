@@ -1,6 +1,6 @@
 //
-//  UIImage+CQDemoKit.h
-//  TSDemoDemo
+//  UIImage+CQDemoResource.h
+//  CQDemoResource
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
@@ -31,27 +31,18 @@ import CJBaseUtil_Swift
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - 没使用 use_frameworks! 时候，资源的获取方式
-@interface UIImage (CQDemoKit)
+@interface UIImage (CQDemoResource)
 
-+ (nullable UIImage *)cqdemokit_imageNamed:(NSString *)name __attribute((deprecated("已废弃，请使用doraemon_xcassetImageNamed")));
+//+ (nullable UIImage *)cqdemokit_imageNamed:(NSString *)name __attribute((deprecated("已废弃，请使用doraemon_xcassetImageNamed")));
 
-+ (nullable UIImage *)cqdemokit_xcassetImageNamed:(NSString *)name;
-+ (nullable UIImage *)cqdemokit_xcassetImageNamed:(NSString *)name withCache:(BOOL)shouldCache;
-
-@end
-
-
-
-
-#pragma mark - 使用 use_frameworks! 时候，资源的获取方式
-@interface UIImage (CQDemoKitFramework)
-
-+ (nullable UIImage *)cqdemo_framework_imageNamed:(NSString *)imageName;
++ (nullable UIImage *)cqresource_imageNamed:(NSString *)name;
++ (nullable UIImage *)cqresource_cache_imageNamed:(NSString *)name;
 
 @end
 
-@interface NSBundle (CQDemoKitFramework)
+
+
+@interface NSBundle (CQDemoResource)
 
 + (nullable NSBundle *)cqdemo_framework_resourceBundle;
 
