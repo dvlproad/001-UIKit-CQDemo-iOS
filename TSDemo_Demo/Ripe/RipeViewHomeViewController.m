@@ -13,9 +13,6 @@
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/UIViewController+CQNavigationBar.h>
 
-// FrameworkResource 的测试
-#import "TSFrameworkResourceViewController.h"
-
 // DemoRipeResource
 #import "TSResourceViewController.h"
 #import "TSResourceCollectionViewController.h"
@@ -127,19 +124,6 @@
                 NSString *message = [NSString stringWithFormat:@"随机名字为：%@", randomString];
                 [CJUIKitToastUtil showMessage:message];
             };
-            [sectionDataModel.values addObject:module];
-        }
-        [sectionDataModels addObject:sectionDataModel];
-    }
-    
-    // FrameworkResource 的测试
-    {
-        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"FrameworkResource 的测试";
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"FrameworkResource 的测试";
-            module.classEntry = [TSFrameworkResourceViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

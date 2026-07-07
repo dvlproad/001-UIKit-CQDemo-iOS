@@ -45,6 +45,8 @@ target 'TSDemoDemo' do
   pod 'TSDemo_Demo-Swift',    :path => '../'
   pod 'CQDemoKit',        	  :path => '../'
   pod 'CQDemoKit-Swift',      :path => '../'
+  
+#  pod 'CQDemoResource',       :path => '../',   :subspecs => ['Images']
   pod 'CQDemoResource',       :path => '../'#,   :subspecs => ['Images', 'Images_Big', 'GIF', 'SVG', 'Videos']
 #  pod 'CJBaseUtil-Swift',     :subspecs => ['FrameworkCJHelper'],   :path => '../../CJUIKit'
   

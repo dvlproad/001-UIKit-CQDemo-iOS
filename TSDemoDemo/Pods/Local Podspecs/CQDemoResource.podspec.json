@@ -1,6 +1,6 @@
 {
   "name": "CQDemoResource",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "summary": "Demo",
   "homepage": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS",
   "description": "DemoResource，可按需独立引入：\n• CQDemoResource/Core - Core - 源码，不含资源\n• CQDemoResource/Images - Images - jpg, png, webp, heic\n• CQDemoResource/Images_Big - Images - jpg_big\n• CQDemoResource/GIF - GIF - GIF\n• CQDemoResource/SVG - SVG - SVG 文件\n• CQDemoResource/Videos - Videos - mp4, mov\n\n每个子库可独立引入，详见各子库描述。",
@@ -13,15 +13,10 @@
   },
   "source": {
     "git": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git",
-    "tag": "CQDemoResource_0.2.2"
+    "tag": "CQDemoResource_0.2.3"
   },
   "frameworks": "UIKit",
   "requires_arc": true,
-  "resource_bundles": {
-    "CQDemoResource": [
-      "CQDemoResource/Resources/*.{xcassets}"
-    ]
-  },
   "subspecs": [
     {
       "name": "Core",
@@ -40,7 +35,8 @@
           "CQDemoResource/Resources/jpg/**/*",
           "CQDemoResource/Resources/png/**/*",
           "CQDemoResource/Resources/webp/**/*",
-          "CQDemoResource/Resources/heic/**/*"
+          "CQDemoResource/Resources/heic/**/*",
+          "CQDemoResource/Resources/**/*.{xcassets}"
         ]
       }
     },
@@ -50,7 +46,7 @@
         "CQDemoResource/Core": []
       },
       "resource_bundles": {
-        "CQDemoResource": [
+        "CQDemoResource_Images_Big": [
           "CQDemoResource/Resources/jpg_big/**/*"
         ]
       }
@@ -61,7 +57,7 @@
         "CQDemoResource/Core": []
       },
       "resource_bundles": {
-        "CQDemoResource": [
+        "CQDemoResource_GIF": [
           "CQDemoResource/Resources/GIF/**/*"
         ]
       }
@@ -72,7 +68,7 @@
         "CQDemoResource/Core": []
       },
       "resource_bundles": {
-        "CQDemoResource": [
+        "CQDemoResource_SVG": [
           "CQDemoResource/Resources/SVG/**/*"
         ]
       }
@@ -83,7 +79,7 @@
         "CQDemoResource/Core": []
       },
       "resource_bundles": {
-        "CQDemoResource": [
+        "CQDemoResource_Videos": [
           "CQDemoResource/Resources/mp4/**/*",
           "CQDemoResource/Resources/mov/**/*"
         ]

@@ -17,15 +17,8 @@
     return image;
 }
 */
+
 + (nullable UIImage *)cqresource_imageNamed:(NSString *)name {
-    return [self cqresource_imageNamed:name withCache:NO];
-}
-
-+ (nullable UIImage *)cqresource_cache_imageNamed:(NSString *)name {
-    return [self cqresource_imageNamed:name withCache:YES];
-}
-
-+ (nullable UIImage *)cqresource_imageNamed:(NSString *)name withCache:(BOOL)shouldCache {
     // bundle 获取
     /*
     NSBundle *bundle = [NSBundle bundleForClass:NSClassFromString(@"CQTSLocImagesUtil")];
@@ -40,7 +33,16 @@
     */
     NSBundle *imageBundle = [NSBundle cqdemo_framework_resourceBundle];
     
-    return [self cqts_imageNamed:name withCache:shouldCache inBundle:imageBundle];
+    UIImage *image = [UIImage imageNamed:name inBundle:imageBundle compatibleWithTraitCollection:nil];
+    return image;
+}
+
+// 不进行缓存，仅限获取 非xcasset内 的图片
++ (nullable UIImage *)cqresource_noCache_imageNamed:(NSString *)name {
+    NSBundle *imageBundle = [NSBundle cqdemo_framework_resourceBundle];
+    
+    UIImage *image = [self cqts_noCache_imageNamed:name inBundle:imageBundle];
+    return image;
 }
 
 @end
@@ -49,8 +51,10 @@
 
 @implementation NSBundle (CQDemoResource)
 
+// 参数 bundleName ，用来处理这个 pod 里有多个 bundle 需要获取的情况
 + (nullable NSBundle *)cqdemo_framework_resourceBundle {
-    return [NSBundle cqts_framework_resourceBundle:@"CQDemoResource" ocClassName:@"CQTSLocImagesUtil"];
+    NSString *bundleName = @"CQDemoResource";
+    return [NSBundle cqts_framework_resourceBundle:bundleName ocClassName:@"CQTSAssetSourceUtil"];
 }
 
 @end

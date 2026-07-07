@@ -5,27 +5,6 @@
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
-/*
-import Foundation
-import CJBaseUtil_Swift
-
-@objc public extension UIImage {
-    @objc public static func cqdemo_framework_imageNamed(_ imageName: String) -> UIImage? {
-        if let bundle = Bundle.cqdemo_framework_resourceBundle() {
-            let image = UIImage(named: imageName, in: bundle, compatibleWith: nil)
-            return image
-        }
-        return nil
-    }
-}
-
-@objc public extension Bundle {
-    @objc public static func cqdemo_framework_resourceBundle() -> Bundle? {
-        return Bundle.frameworkResourceBundle("CQDemoResource", ocClassName: "CQTSLocImagesUtil")
-        
-    }
-}
-*/
 
 #import <UIKit/UIKit.h>
 
@@ -36,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 //+ (nullable UIImage *)cqdemokit_imageNamed:(NSString *)name __attribute((deprecated("已废弃，请使用doraemon_xcassetImageNamed")));
 
 + (nullable UIImage *)cqresource_imageNamed:(NSString *)name;
-+ (nullable UIImage *)cqresource_cache_imageNamed:(NSString *)name;
+
+// 不进行缓存，仅限获取 非xcasset内 的图片
++ (nullable UIImage *)cqresource_noCache_imageNamed:(NSString *)name;
 
 @end
 
@@ -44,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSBundle (CQDemoResource)
 
+// 此方法不提供给其他库使用，避免此方法后续修改
 + (nullable NSBundle *)cqdemo_framework_resourceBundle;
 
 @end

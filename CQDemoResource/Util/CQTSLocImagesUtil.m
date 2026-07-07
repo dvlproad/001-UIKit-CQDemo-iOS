@@ -13,27 +13,27 @@
 
 #pragma mark - placeholder Image
 + (UIImage *)cjts_placeholderImage01 {
-    return [UIImage cqresource_cache_imageNamed:@"cqts_placeholder01.jpg"];
+    return [UIImage cqresource_imageNamed:@"cqts_placeholder01.jpg"];
 }
 
 #pragma mark - local BGImage
 + (UIImage *)cjts_localImageBG1 {
-    return [UIImage cqresource_cache_imageNamed:@"cqts_bgSky.jpg"];
+    return [UIImage cqresource_imageNamed:@"cqts_bgSky.jpg"];
 }
 
 + (UIImage *)cjts_localImageBG2 {
-    return [UIImage cqresource_cache_imageNamed:@"cqts_bgCar.jpg"];
+    return [UIImage cqresource_imageNamed:@"cqts_bgCar.jpg"];
 }
 
 #pragma mark - High Scale
 /// 水平长图
 + (UIImage *)longHorizontal01 {
-    return [UIImage cqresource_cache_imageNamed:@"cqts_long_horizontal_1.jpg"];
+    return [UIImage cqresource_imageNamed:@"cqts_long_horizontal_1.jpg"];
 }
 
 /// 竖直长图
 + (UIImage *)longVertical01 {
-    return [UIImage cqresource_cache_imageNamed:@"cqts_long_vertical_1.jpg"];
+    return [UIImage cqresource_imageNamed:@"cqts_long_vertical_1.jpg"];
 }
 
 
@@ -48,7 +48,7 @@
     NSInteger imageCount = [imageNames count];
     for (int i = 0; i < imageCount; i++) {
         NSString *imageName = [imageNames objectAtIndex:i];
-        UIImage *image = [UIImage cqresource_cache_imageNamed:imageName];
+        UIImage *image = [UIImage cqresource_imageNamed:imageName];
         if (image == nil) {
             image = [[UIImage alloc] init];
         }
@@ -65,7 +65,7 @@
     NSInteger selIndex = random()%imageNames.count;
     NSString *imageName = [imageNames objectAtIndex:selIndex];
     
-    UIImage *image = [UIImage cqresource_cache_imageNamed:imageName];
+    UIImage *image = [UIImage cqresource_imageNamed:imageName];
     return image;
 }
 
@@ -77,7 +77,7 @@
     }
     NSString *imageName = [imageNames objectAtIndex:selIndex];
     
-    UIImage *image = [UIImage cqresource_cache_imageNamed:imageName];
+    UIImage *image = [UIImage cqresource_imageNamed:imageName];
     return image;
 }
 

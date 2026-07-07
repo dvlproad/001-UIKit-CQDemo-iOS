@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.2.2"
+  s.version      = "0.2.3"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.2" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.3" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -72,6 +72,13 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
   # s.resources = "CQDemoResource/**/*.{png,xib}"
   
+  # 注意：在根级别的 resource_bundle，因为不在任何 subspec 中。且 Podfile 在 pod 'CQDemoResource', :subspecs => ['Images'] 时只加载指定 subspec 及其依赖，所以根级资源被忽略，无法加载到Pod中。
+  # 注意：在根级别的 resource_bundle，因为不在任何 subspec 中。且 Podfile 在 pod 'CQDemoResource', :subspecs => ['Images'] 时只加载指定 subspec 及其依赖，所以根级资源被忽略，无法加载到Pod中。
+  # 注意：在根级别的 resource_bundle，因为不在任何 subspec 中。且 Podfile 在 pod 'CQDemoResource', :subspecs => ['Images'] 时只加载指定 subspec 及其依赖，所以根级资源被忽略，无法加载到Pod中。
+  # 所以，若要让某个资源在依赖任何subspec的时候都能够被加载进去，应该将其放到 subspec 中
+  # 所以，若要让某个资源在依赖任何subspec的时候都能够被加载进去，应该将其放到 subspec 中
+  # 所以，若要让某个资源在依赖任何subspec的时候都能够被加载进去，应该将其放到 subspec 中
+
   # s.resource_bundle 指定一个目录下的所有png图片为一个资源包
   # s.resource_bundle = {
   #   'MapBox' => 'MapView/Map/Resources/*.png'
@@ -81,11 +88,6 @@ Pod::Spec.new do |s|
   #    'MapBox' => ['MapView/Map/Resources/*.png'],
   #    'OtherResources' => ['MapView/Map/OtherResources/*.png']
   #  }
-  s.resource_bundle = {
-    'CQDemoResource' => [      # CQDemoResource 为生成boudle的名称，可以随便起，但要记住，库里要用
-      'CQDemoResource/Resources/*.{xcassets}',
-    ]
-  }
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
 
@@ -94,22 +96,37 @@ Pod::Spec.new do |s|
   # Core - 源码，不含资源
   s.subspec 'Core' do |ss|
     ss.source_files = "CQDemoResource/**/*.{h,m}"
-    
+    # CQDemoResource 为生成boudle的名称，可以随便起，但要记住，库里要用
+    # ss.resource_bundle = {
+    #   'CQDemoResource' => [
+    #     'CQDemoResource/Resources/**/*.{xcassets}',
+    #   ]
+    # }
     # 因为 CQTSAssetModelGetter.m 需要使用 CQTSLocImageDataModel\CQTSNetImageDataModel\CQTSIconDataModel
     # 因为 CQTSAssetSourceUtil.m 需要使用 CQTSGitUtil
     ss.dependency 'CQDemoKit/Demo_Resource'
     # ss.dependency 'CQDemoKit/BaseUIKit'  # 因为 CQTSIconsUtil.m 需要使用 CQTSImageLoader
   end
+
+  # 📢 注意：
+  # resource_bundle 下的 bundle 名不能一样，否则容易出现执行 pod install 时，
+  # 因为其中含有相同bundle名(如ss.resource_bundle 下的都是 CQDemoResource) ，出现警告提示 [!] [Xcodeproj] Generated duplicate UUIDs: ，从而导致本来能够加载到的图片突然就加载不到了。
+  # 为了解决这个问题，应该
+  # 方法1(⭐️    )：绝对避免同时加载含相同 bundle 名的 subspec
+  # 方法2(⭐️⭐️  )：删除到所有资源放只用一个 bundle
+  # 方法3(⭐️⭐️⭐️)：把他们的 bundle 名区分开
   
   # Images - jpg, png, webp, heic
   s.subspec 'Images' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
+      # CQDemoResource 为生成boudle的名称，可以随便起，但要记住，库里要用
       'CQDemoResource' => [
         'CQDemoResource/Resources/jpg/**/*',
         'CQDemoResource/Resources/png/**/*',
         'CQDemoResource/Resources/webp/**/*',
         'CQDemoResource/Resources/heic/**/*',
+        'CQDemoResource/Resources/**/*.{xcassets}',
       ]
     }
   end
@@ -118,7 +135,7 @@ Pod::Spec.new do |s|
   s.subspec 'Images_Big' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
-      'CQDemoResource' => [
+      'CQDemoResource_Images_Big' => [
         'CQDemoResource/Resources/jpg_big/**/*',
       ]
     }
@@ -128,7 +145,7 @@ Pod::Spec.new do |s|
   s.subspec 'GIF' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
-      'CQDemoResource' => [
+      'CQDemoResource_GIF' => [
         'CQDemoResource/Resources/GIF/**/*',
       ]
     }
@@ -138,7 +155,7 @@ Pod::Spec.new do |s|
   s.subspec 'SVG' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
-      'CQDemoResource' => [
+      'CQDemoResource_SVG' => [
         'CQDemoResource/Resources/SVG/**/*',
       ]
     }
@@ -148,7 +165,7 @@ Pod::Spec.new do |s|
   s.subspec 'Videos' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
-      'CQDemoResource' => [
+      'CQDemoResource_Videos' => [
         'CQDemoResource/Resources/mp4/**/*',
         'CQDemoResource/Resources/mov/**/*',
       ]

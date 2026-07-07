@@ -11,24 +11,15 @@
 #pragma mark - 没使用 use_frameworks! 时候，资源的获取方式
 @implementation UIImage (CQTSInFramework)
 
-+ (nullable UIImage *)cqts_imageNamed:(nullable NSString *)name
-                            withCache:(BOOL)shouldCache
-                             inBundle:(nullable NSBundle *)imageBundle
+// 不进行缓存，仅限获取 非xcasset内 的图片
++ (nullable UIImage *)cqts_noCache_imageNamed:(nullable NSString *)name
+                                     inBundle:(nullable NSBundle *)imageBundle
 {
-    if(name == nil || [name isEqualToString:@""]) {
-        return nil;
-    }
+    NSString *fileExtension = [name pathExtension];
+    NSString *fileNameWithoutExtension = [[name lastPathComponent] stringByDeletingPathExtension];
+    NSString *imagePath = [imageBundle pathForResource:fileNameWithoutExtension ofType:fileExtension];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
     
-    // image
-    UIImage *image;
-    if (!shouldCache) {
-        NSString *fileExtension = [name pathExtension];
-        NSString *fileNameWithoutExtension = [[name lastPathComponent] stringByDeletingPathExtension];
-        NSString *imagePath = [imageBundle pathForResource:fileNameWithoutExtension ofType:fileExtension];
-        image = [UIImage imageWithContentsOfFile:imagePath];
-    } else {
-        image = [UIImage imageNamed:name inBundle:imageBundle compatibleWithTraitCollection:nil];
-    }
     return image;
 }
 
