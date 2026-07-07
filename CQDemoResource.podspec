@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.3" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.3_1" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"

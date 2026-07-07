@@ -41,7 +41,12 @@
 + (nullable UIImage *)cqresource_noCache_imageNamed:(NSString *)name {
     NSBundle *imageBundle = [NSBundle cqdemo_framework_resourceBundle];
     
-    UIImage *image = [self cqts_noCache_imageNamed:name inBundle:imageBundle];
+    // 来源于 CQDemoKit 的 UIImage *image = [self cqts_noCache_imageNamed:name inBundle:imageBundle];
+    NSString *fileExtension = [name pathExtension];
+    NSString *fileNameWithoutExtension = [[name lastPathComponent] stringByDeletingPathExtension];
+    NSString *imagePath = [imageBundle pathForResource:fileNameWithoutExtension ofType:fileExtension];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+    
     return image;
 }
 
