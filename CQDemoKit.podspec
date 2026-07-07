@@ -188,7 +188,6 @@ Pod::Spec.new do |s|
     ss.source_files = "CQDemoKit/Demo_DataSourceAndDelegate/**/*.{h,m}"
     
     ss.dependency 'CQDemoKit/BaseVC'        # 因为 CQTSRipeBaseCollectionViewDataSource 需要使用 CQDMSectionDataModel
-#    ss.dependency 'CQDemoKit/Demo_Resource' # 因为 CQTSRipeBaseCollectionViewDataSource 需要使用 CQTSLocImageDataModel
   end
 
   # 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)

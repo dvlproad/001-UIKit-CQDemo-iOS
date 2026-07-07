@@ -58,8 +58,25 @@ PODS:
     - CQDemoKit/Demo_Resource
   - CQDemoKit/Helper (0.9.0)
   - CQDemoKit/Monitor (0.9.0)
-  - CQDemoResource (0.2.0):
+  - CQDemoResource (0.2.1):
+    - CQDemoResource/Core (= 0.2.1)
+    - CQDemoResource/GIF (= 0.2.1)
+    - CQDemoResource/Images (= 0.2.1)
+    - CQDemoResource/Images_Big (= 0.2.1)
+    - CQDemoResource/SVG (= 0.2.1)
+    - CQDemoResource/Videos (= 0.2.1)
+  - CQDemoResource/Core (0.2.1):
     - CQDemoKit/Demo_Resource
+  - CQDemoResource/GIF (0.2.1):
+    - CQDemoResource/Core
+  - CQDemoResource/Images (0.2.1):
+    - CQDemoResource/Core
+  - CQDemoResource/Images_Big (0.2.1):
+    - CQDemoResource/Core
+  - CQDemoResource/SVG (0.2.1):
+    - CQDemoResource/Core
+  - CQDemoResource/Videos (0.2.1):
+    - CQDemoResource/Core
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
   - InjectHotReload (1.2.2)
@@ -120,7 +137,7 @@ SPEC CHECKSUMS:
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
   CQDemoKit: 07a431507426eeb5006b6df3dd2fae9920aa1356
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
-  CQDemoResource: 86230efcf3534a62d9a673e06559f6c6b63f7cd2
+  CQDemoResource: 5df18876a330bdfbc90d7c2e55ffa77bdd70c6d2
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32
@@ -130,6 +147,6 @@ SPEC CHECKSUMS:
   TSDemo_Demo: 8052c2ad315d46bd50d36e97b843f59df6bd365c
   TSDemo_Demo-Swift: 3a7ba09817923ed0e48c2f93c5af48aacb46ceb5
 
-PODFILE CHECKSUM: 5365c292a795e9e924ba45ae96ff8d830377758e
+PODFILE CHECKSUM: c0ffaf5cb223bd22993d48c63146f37d6e69ada3
 
 COCOAPODS: 1.16.2

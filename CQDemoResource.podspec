@@ -32,20 +32,21 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
-                 - CQDemoResource/xxx：Demo最基础类
+                 DemoResource，可按需独立引入：
+                 • CQDemoResource/Core - Core - 源码，不含资源
+                 • CQDemoResource/Images - Images - jpg, png, webp, heic
+                 • CQDemoResource/Images_Big - Images - jpg_big
+                 • CQDemoResource/GIF - GIF - GIF
+                 • CQDemoResource/SVG - SVG - SVG 文件
+                 • CQDemoResource/Videos - Videos - mp4, mov
 
-                   A longer description of CJHook in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
+                 每个子库可独立引入，详见各子库描述。
+                 DESC
   
 
   #s.license      = {
@@ -60,7 +61,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.1" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -82,30 +83,76 @@ Pod::Spec.new do |s|
   #  }
   s.resource_bundle = {
     'CQDemoResource' => [      # CQDemoResource 为生成boudle的名称，可以随便起，但要记住，库里要用
-      'CQDemoResource/**/*.{png,jpg,jpeg,gif,svg,mov,mp4}',
-      'CQDemoResource/**/*.{heic}',
-      'CQDemoResource/**/*.{xcassets}'
+      'CQDemoResource/Resources/*.{xcassets}',
     ]
   }
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
 
   # s.frameworks = "MediaPlayer"
-
-  s.source_files = "CQDemoResource/**/*.{h,m}"
   
-  # 因为 CQTSAssetModelGetter.m 需要使用 CQTSLocImageDataModel\CQTSNetImageDataModel\CQTSIconDataModel
-  # 因为 CQTSAssetSourceUtil.m 需要使用 CQTSGitUtil
-  s.dependency 'CQDemoKit/Demo_Resource'
-  # s.dependency 'CQDemoKit/BaseUIKit'  # 因为 CQTSIconsUtil.m 需要使用 CQTSImageLoader
+  # Core - 源码，不含资源
+  s.subspec 'Core' do |ss|
+    ss.source_files = "CQDemoResource/**/*.{h,m}"
+    
+    # 因为 CQTSAssetModelGetter.m 需要使用 CQTSLocImageDataModel\CQTSNetImageDataModel\CQTSIconDataModel
+    # 因为 CQTSAssetSourceUtil.m 需要使用 CQTSGitUtil
+    ss.dependency 'CQDemoKit/Demo_Resource'
+    # ss.dependency 'CQDemoKit/BaseUIKit'  # 因为 CQTSIconsUtil.m 需要使用 CQTSImageLoader
+  end
   
-  # Demo 工程中基本都需要的 DemoResource
-  # s.subspec 'Demo_Resource' do |ss|
-  #   ss.source_files = "CQDemoResource/Demo_Resource/**/*.{h,m}"
-  #   ss.dependency 'CQDemoResource/Helper'    # 需要使用到 NSError+CQTSErrorString.h
-  #   ss.dependency 'CQDemoResource/BaseUIKit' # 需要使用到 CQTSImageLoader.h 和 UIImageView+CQTSBaseUtil.h
-  #   ss.dependency 'CJBaseUtil-Swift/FrameworkCJHelper'
-  # end
+  # Images - jpg, png, webp, heic
+  s.subspec 'Images' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource' => [
+        'CQDemoResource/Resources/jpg/**/*',
+        'CQDemoResource/Resources/png/**/*',
+        'CQDemoResource/Resources/webp/**/*',
+        'CQDemoResource/Resources/heic/**/*',
+      ]
+    }
+  end
 
+  # Images - jpg_big
+  s.subspec 'Images_Big' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource' => [
+        'CQDemoResource/Resources/jpg_big/**/*',
+      ]
+    }
+  end
+
+  # GIF - GIF
+  s.subspec 'GIF' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource' => [
+        'CQDemoResource/Resources/GIF/**/*',
+      ]
+    }
+  end
+
+  # SVG - SVG 文件
+  s.subspec 'SVG' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource' => [
+        'CQDemoResource/Resources/SVG/**/*',
+      ]
+    }
+  end
+  
+  # Videos - mp4, mov
+  s.subspec 'Videos' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource' => [
+        'CQDemoResource/Resources/mp4/**/*',
+        'CQDemoResource/Resources/mov/**/*',
+      ]
+    }
+  end
 
 end

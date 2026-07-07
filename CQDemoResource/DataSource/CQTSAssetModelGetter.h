@@ -23,13 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// @param count                                                        文件个数
 /// @param randomOrder                                          顺序是否随机
-/// @param fileExtensions                                   要获取哪些文件后缀的文件
+/// @param folderNames                                          要获取哪些文件夹下的文件
 /// @param changeImageNameToNetworkUrl      是否将本地图片名转为其所在的网络地址
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSLocImageDataModel *> *)localFileModelsWithCount:(NSInteger)count
                                                           randomOrder:(BOOL)randomOrder
-                                                       fileExtensions:(NSArray<NSString *> *)fileExtensions;
+                                                          folderNames:(NSArray<NSString *> *)folderNames;
 
 
 #pragma mark - 网络资源文件
@@ -37,12 +37,12 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// @param count                                                        文件个数
 /// @param randomOrder                                          顺序是否随机
-/// @param fileExtensions                                   要获取哪些文件后缀的文件
+/// @param folderNames                                          要获取哪些文件夹下的文件
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSNetImageDataModel *> *)networkFileModelsWithCount:(NSInteger)count
                                                             randomOrder:(BOOL)randomOrder
-                                                         fileExtensions:(NSArray<NSString *> *)fileExtensions;
+                                                            folderNames:(NSArray<NSString *> *)folderNames;
 
 
 #pragma mark - Icon资源文件

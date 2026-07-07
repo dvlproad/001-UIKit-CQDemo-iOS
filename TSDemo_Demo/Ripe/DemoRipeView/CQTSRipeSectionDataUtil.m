@@ -16,15 +16,15 @@
 /*
  *  获取 sectionModels
  *
- *  @param fileExtensions               要获取哪些文件后缀的文件
  *  @param sectionRowCounts             每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
  *  @param selectedIndexPaths           选中的indexPath数组
+ *  @param folderNames                  要获取哪些文件夹下的文件
  *
  *  @return sectionModels
  */
-+ (NSMutableArray<CQDMSectionDataModel *> *)sectionModelsWithExtensions:(NSArray<NSString *> *)fileExtensions
-                                                       sectionRowCounts:(NSArray<NSNumber *> *)sectionRowCounts
-                                                    selectedIndexPaths:(nullable NSArray<NSIndexPath *> *)selectedIndexPaths
++ (NSMutableArray<CQDMSectionDataModel *> *)sectionModelsWithCounts:(NSArray<NSNumber *> *)sectionRowCounts
+                                                 selectedIndexPaths:(nullable NSArray<NSIndexPath *> *)selectedIndexPaths
+                                                        folderNames:(NSArray<NSString *> *)folderNames
 {
     NSMutableArray<CQDMSectionDataModel *> *sectionDataModels = [[NSMutableArray alloc] init];
     for (int section = 0; section < sectionRowCounts.count; section++) {
@@ -33,7 +33,7 @@
         
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = [NSString stringWithFormat:@"section %d", section];
-        sectionDataModel.values = [CQTSAssetModelGetter localFileModelsWithCount:iRowCount randomOrder:NO fileExtensions:fileExtensions];
+        sectionDataModel.values = [CQTSAssetModelGetter localFileModelsWithCount:iRowCount randomOrder:NO folderNames:folderNames];
         for (int item = 0; item < iRowCount; item++) {
             CQTSLocImageDataModel *module = [sectionDataModel.values objectAtIndex:item];
             module.name = [NSString stringWithFormat:@"%d-%02zd", section, item];
@@ -45,7 +45,7 @@
     }
     
 //    NSMutableArray<CQDMSectionDataModel *> *sectionDataModels = [self sectionModelsWithCounts:sectionRowCounts selectedIndexPaths:selectedIndexPaths sectionValuesGetter:^NSArray<id> *(NSInteger section, NSInteger valueCount) {
-//        NSArray *values = [CQTSAssetModelGetter localFileModelsWithCount:valueCount randomOrder:NO fileExtensions:fileExtensions];
+//        NSArray *values = [CQTSAssetModelGetter localFileModelsWithCount:valueCount randomOrder:NO folderNames:folderNames];
 //        return values;
 //    }];
         
@@ -62,19 +62,19 @@
  */
 + (NSMutableArray<CQDMSectionDataModel *> *)sectionModelsWithTitles:(NSArray<NSString *> *)buttonTitles
 {
-    NSArray<NSString *> *imageExtensions = @[@"png", @"jpg"];
+    NSArray<NSString *> *folderNames = @[@"png", @"jpg"];
     
     NSNumber *number = [NSNumber numberWithInteger:buttonTitles.count];
     NSArray<NSNumber *> *sectionRowCounts = @[number];
     
-    return [self sectionModelsWithExtensions:imageExtensions sectionRowCounts:sectionRowCounts selectedIndexPaths:nil];
+    return [self sectionModelsWithCounts:sectionRowCounts selectedIndexPaths:nil folderNames:folderNames];
 }
 
 /*
  *  获取 sectionModels
  *
- *  @param fileExtensions               要获取哪些文件后缀的文件
  *  @param sectionRowCounts             每个section的rowCount个数(数组有多少个就多少个section，数组里的元素值为该section的row行数)
+ *  @param selectedIndexPaths           选中的indexPath数组
  *  @param sectionValuesGetter          section 要返回 valueCount 个 value 的 values获取方法
  *
  *  @return sectionModels

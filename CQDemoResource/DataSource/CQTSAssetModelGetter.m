@@ -19,21 +19,21 @@
 ///
 /// @param count                                                        文件个数
 /// @param randomOrder                                          顺序是否随机
-/// @param fileExtensions                                   要获取哪些文件后缀的文件
+/// @param folderNames                                          要获取哪些文件夹下的文件
 /// @param changeImageNameToNetworkUrl      是否将本地图片名转为其所在的网络地址
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSLocImageDataModel *> *)localFileModelsWithCount:(NSInteger)count
                                                           randomOrder:(BOOL)randomOrder
-                                                       fileExtensions:(NSArray<NSString *> *)fileExtensions
+                                                       folderNames:(NSArray<NSString *> *)folderNames
 //                                          changeImageNameToNetworkUrl:(BOOL)changeImageNameToNetworkUrl
 {
     NSArray<NSString *> *titles = @[@"X透社", @"新鲜事", @"XX信", @"X角信", @"蓝精灵", @"年轻范", @"XX福", @"X之语", @"我是6个字哈"];
     NSArray<NSString *> *assetNameOrUrls;
 //    if (changeImageNameToNetworkUrl) {
-//        assetNameOrUrls = [CQTSAssetSourceUtil networkFileUrls:fileExtensions];
+//        assetNameOrUrls = [CQTSAssetSourceUtil networkFileUrls:folderNames];
 //    } else {
-        assetNameOrUrls = [CQTSAssetSourceUtil localFileNames:fileExtensions];
+        assetNameOrUrls = [CQTSAssetSourceUtil localFileNames:folderNames];
 //    }
     
     NSMutableArray<CQTSLocImageDataModel *> *dataModels = [self fileModelsWithTitles:titles assetNameOrUrls:assetNameOrUrls count:count randomOrder:randomOrder];
@@ -87,15 +87,15 @@
 ///
 /// @param count                                                        文件个数
 /// @param randomOrder                                          顺序是否随机
-/// @param fileExtensions                                   要获取哪些文件后缀的文件
+/// @param folderNames                                          要获取哪些文件夹下的文件
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSNetImageDataModel *> *)networkFileModelsWithCount:(NSInteger)count
                                                             randomOrder:(BOOL)randomOrder
-                                                         fileExtensions:(NSArray<NSString *> *)fileExtensions
+                                                         folderNames:(NSArray<NSString *> *)folderNames
 {
     NSArray<NSString *> *titles = @[@"X透社", @"新鲜事", @"XX信", @"X角信", @"蓝精灵", @"年轻范", @"XX福", @"X之语", @"我是6个字哈"];
-    NSArray<NSString *> *assetNameOrUrls = [CQTSAssetSourceUtil networkFileUrls:fileExtensions];
+    NSArray<NSString *> *assetNameOrUrls = [CQTSAssetSourceUtil networkFileUrls:folderNames];
     
     NSMutableArray<CQTSNetImageDataModel *> *dataModels = [self fileModelsWithTitles:titles assetUrls:assetNameOrUrls count:count randomOrder:randomOrder];
     return dataModels;

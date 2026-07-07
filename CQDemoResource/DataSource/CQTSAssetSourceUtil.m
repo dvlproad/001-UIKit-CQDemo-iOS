@@ -12,8 +12,8 @@
 @implementation CQTSAssetSourceUtil
 
 #pragma mark 资源文件名 / 资源文件Url
-+ (NSArray<NSString *> *)localFileNames:(NSArray<NSString *> *)fileExtensions {
-    NSArray *resultDictionarys = [CQTSAssetSourceUtil assetDictsWithFileExtensions:fileExtensions];
++ (NSArray<NSString *> *)localFileNames:(NSArray<NSString *> *)folderNames {
+    NSArray *resultDictionarys = [CQTSAssetSourceUtil assetDictsWithFolderNames:folderNames];
     
     // 创建可变数组存放结果
     NSMutableArray<NSString *> *resultImagesNames = [NSMutableArray array];
@@ -27,10 +27,10 @@
 }
 
 /// 我自己 github 上的 资源图片
-+ (NSArray<NSString *> *)networkFileUrls:(NSArray<NSString *> *)fileExtensions {
++ (NSArray<NSString *> *)networkFileUrls:(NSArray<NSString *> *)folderNames {
     NSString *githubUrl = @"https://github.com/dvlproad/001-UIKit-CQDemo-iOS/blob/master/CQDemoResource/LocDataModel/Resources";
     
-    NSArray *resultDictionarys = [CQTSAssetSourceUtil assetDictsWithFileExtensions:fileExtensions];
+    NSArray *resultDictionarys = [CQTSAssetSourceUtil assetDictsWithFolderNames:folderNames];
     
     // 创建可变数组存放结果
     NSMutableArray<NSString *> *imageUrls_github = [NSMutableArray array];
@@ -44,9 +44,9 @@
     return imageUrls_github;
 }
 
-+ (NSArray<NSDictionary *> *)assetDictsWithFileExtensions:(NSArray<NSString *> *)fileExtensions {
++ (NSArray<NSDictionary *> *)assetDictsWithFolderNames:(NSArray<NSString *> *)folderNames {
     NSMutableArray *resultDictionarys = [[NSMutableArray alloc] init];
-    if ([fileExtensions containsObject:@"jpg"]) {
+    if ([folderNames containsObject:@"jpg"]) {
         NSArray *sourceImageNames = @[
             @"cqts_1.jpg",
             @"cqts_2.jpg",
@@ -62,8 +62,6 @@
             @"cqts_long_vertical_1.jpg",
             @"cqts_bgCar@2x.jpg",
             @"cqts_bgSky@2x.jpg",
-            @"cqts_big_15M.jpg",
-            @"cqts_big_22M.jpg",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
@@ -74,7 +72,21 @@
         }
     }
     
-    if ([fileExtensions containsObject:@"gif"]) {
+    if ([folderNames containsObject:@"jpg_big"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_big_15M.jpg",
+            @"cqts_big_22M.jpg",
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"jpg_big",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
+    if ([folderNames containsObject:@"gif"]) {
         NSArray *sourceImageNames = @[
             @"cqts_01.gif",
             @"cqts_02.gif",
@@ -89,8 +101,8 @@
             [resultDictionarys addObject:dict];
         }
     }
-    /*
-    if ([fileExtensions containsObject:@"webp"]) {
+    
+    if ([folderNames containsObject:@"webp"]) {
         NSArray *sourceImageNames = @[
             @"cqts_wp_1.webp",
         ];
@@ -102,9 +114,8 @@
             [resultDictionarys addObject:dict];
         }
     }
-    */
     
-    if ([fileExtensions containsObject:@"svg"]) {
+    if ([folderNames containsObject:@"svg"]) {
         NSArray *sourceImageNames = @[
             @"cqts_normal_svg_01.svg",
             @"cqts_normal_svg_02.svg",
@@ -120,21 +131,21 @@
         }
     }
     /*
-    if ([fileExtensions containsObject:@"mp3"]) {
+    if ([folderNames containsObject:@"mp3"]) {
         NSArray *sourceImageNames = @[
 //            @"cqts_normal_audio_01.mp3",
 //            @"cqts_normal_audio_02.mp3",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
-                @"folderName": @"jpg",
+                @"folderName": @"mp3",
                 @"assetName": sourceImageName
             };
             [resultDictionarys addObject:dict];
         }
     }
     */
-    if ([fileExtensions containsObject:@"mp4"]) {
+    if ([folderNames containsObject:@"mp4"]) {
         NSArray *sourceImageNames = @[
             @"cqts_normal_video_01.mp4",
             @"cqts_vap_01.mp4",
