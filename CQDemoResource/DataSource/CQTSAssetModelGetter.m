@@ -15,7 +15,7 @@
 
 #pragma mark - 本地资源文件
 /// 获取测试用的本地数据
-/// （为本地图片名时候，UIImage *image = [UIImage cqdemokit_xcassetImageNamed:imageName]; ）
+/// （为本地图片名时候，UIImage *image = [UIImage cqresource_imageNamed:imageName]; ）
 ///
 /// @param count                                                        文件个数
 /// @param randomOrder                                          顺序是否随机
@@ -41,7 +41,7 @@
 }
 
 /// 获取测试用的数据
-/// （为本地图片名时候，UIImage *image = [UIImage cqdemokit_xcassetImageNamed:imageName]; ）
+/// （为本地图片名时候，UIImage *image = [UIImage cqresource_imageNamed:imageName]; ）
 ///
 /// @param titles                                                      标题数组
 /// @param assetNameOrUrls                                  资源文件数组
@@ -69,7 +69,7 @@
         dataModel.name = [NSString stringWithFormat:@"%02zd %@", i+1, title];
         dataModel.imageName = imageNameOrUrl;
         
-//        UIImage *image = [UIImage cqdemokit_xcassetImageNamed:imageNameOrUrl];
+//        UIImage *image = [UIImage cqresource_imageNamed:imageNameOrUrl];
 //        if (image == nil) {
 //            image = [[UIImage alloc] init];
 //        }

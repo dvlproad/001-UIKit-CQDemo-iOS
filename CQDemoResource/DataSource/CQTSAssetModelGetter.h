@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 本地资源文件
 /// 获取测试用的本地数据
-/// （为本地图片名时候，UIImage *image = [UIImage cqdemokit_xcassetImageNamed:imageName]; ）
+/// （为本地图片名时候，UIImage *image = [UIImage cqresource_imageNamed:imageName]; ）
 ///
 /// @param count                                                        文件个数
 /// @param randomOrder                                          顺序是否随机
