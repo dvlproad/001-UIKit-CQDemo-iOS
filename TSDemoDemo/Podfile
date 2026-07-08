@@ -51,6 +51,7 @@ target 'TSDemoDemo' do
 #  pod 'CJBaseUtil-Swift',     :subspecs => ['FrameworkCJHelper'],   :path => '../../CJUIKit'
   
   pod 'CJBaseHelper',       '~> 0.1.8',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
+  pod 'CJPopupAction' # 因为 UIView+CJDemoPopupAction.h 需要使用
 
   # [XCode14升级MLeaksFinder报错](https://blog.csdn.net/zcl369369/article/details/130828740)
   # [CJAlertSwizzedHelper swizzledMLLeakAlert]; // MLeaksFinder 使用 UIAlertView 导致崩溃，需要调用此方法来交换

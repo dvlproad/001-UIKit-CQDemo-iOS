@@ -2,6 +2,7 @@ PODS:
   - CJBaseHelper/HookCJHelper (0.1.8)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.8)
   - CJBaseUtil-Swift/FrameworkCJHelper (0.1.1)
+  - CJPopupAction (1.5.0)
   - CQDemoKit (0.9.2):
     - CQDemoKit/Auxiliary (= 0.9.2)
     - CQDemoKit/BaseUIKit (= 0.9.2)
@@ -99,6 +100,7 @@ PODS:
 DEPENDENCIES:
   - CJBaseHelper/HookCJHelper (~> 0.1.8)
   - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.8)
+  - CJPopupAction
   - CQDemoKit (from `../`)
   - CQDemoKit-Swift (from `../`)
   - CQDemoResource (from `../`)
@@ -112,6 +114,7 @@ SPEC REPOS:
   trunk:
     - CJBaseHelper
     - CJBaseUtil-Swift
+    - CJPopupAction
     - FBRetainCycleDetector
     - InjectHotReload
     - Masonry
@@ -135,6 +138,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
+  CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
   CQDemoKit: 903bdbb9f2bbf215a615c051c00108228eca46f2
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
   CQDemoResource: 0cfd8108a7f4d96dba0a6e09a279f341174e296c
@@ -147,6 +151,6 @@ SPEC CHECKSUMS:
   TSDemo_Demo: 8052c2ad315d46bd50d36e97b843f59df6bd365c
   TSDemo_Demo-Swift: 3a7ba09817923ed0e48c2f93c5af48aacb46ceb5
 
-PODFILE CHECKSUM: 6f151a0ef5ceca17f6916d96d60a6dcb95aa06c6
+PODFILE CHECKSUM: edce59f38e0453724d8bd14e6ba2c29f14a5cf08
 
 COCOAPODS: 1.16.2

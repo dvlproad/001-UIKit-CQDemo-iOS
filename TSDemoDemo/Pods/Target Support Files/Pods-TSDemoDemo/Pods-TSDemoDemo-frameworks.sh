@@ -178,6 +178,7 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUtil-Swift/CJBaseUtil_Swift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"
@@ -193,6 +194,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUtil-Swift/CJBaseUtil_Swift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"

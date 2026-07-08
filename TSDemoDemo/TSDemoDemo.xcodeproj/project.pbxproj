@@ -22,6 +22,8 @@
 		9746F61E2D846A6600896793 /* InjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746F61D2D846A6600896793 /* InjectHelper.swift */; };
 		976481E82D43CF2E00D8B27C /* DownloadBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */; };
 		9768BDFA2D65F8C6007AF7ED /* DownloadBundle.bundle.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */; };
+		976CB3852FFE9EDF000505DD /* UIView+CJDemoPopupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3832FFE9EDF000505DD /* UIView+CJDemoPopupAction.m */; };
+		976CB3862FFE9EDF000505DD /* CJDemoPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3812FFE9EDF000505DD /* CJDemoPopupView.m */; };
 		97872FA22F9F641C004573D2 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9A2F9F641C004573D2 /* AppIntent.swift */; };
 		97872FA32F9F641C004573D2 /* OpenURLIntentIOS181.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F972F9F641C004573D2 /* OpenURLIntentIOS181.swift */; };
 		97872FA42F9F641C004573D2 /* TSDemoDemoWidgetExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9E2F9F641C004573D2 /* TSDemoDemoWidgetExtensionBundle.swift */; };
@@ -89,6 +91,10 @@
 		9746F61D2D846A6600896793 /* InjectHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectHelper.swift; sourceTree = "<group>"; };
 		976481E72D43CF2E00D8B27C /* DownloadBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DownloadBundle.bundle; sourceTree = "<group>"; };
 		9768BDF92D65F8C6007AF7ED /* DownloadBundle.bundle.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = DownloadBundle.bundle.zip; sourceTree = "<group>"; };
+		976CB3802FFE9EDF000505DD /* CJDemoPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJDemoPopupView.h; sourceTree = "<group>"; };
+		976CB3812FFE9EDF000505DD /* CJDemoPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJDemoPopupView.m; sourceTree = "<group>"; };
+		976CB3822FFE9EDF000505DD /* UIView+CJDemoPopupAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CJDemoPopupAction.h"; sourceTree = "<group>"; };
+		976CB3832FFE9EDF000505DD /* UIView+CJDemoPopupAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJDemoPopupAction.m"; sourceTree = "<group>"; };
 		97872F962F9F641C004573D2 /* OpenURLIntentIOS180.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLIntentIOS180.swift; sourceTree = "<group>"; };
 		97872F972F9F641C004573D2 /* OpenURLIntentIOS181.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURLIntentIOS181.swift; sourceTree = "<group>"; };
 		97872F982F9F641C004573D2 /* TSDemoDemoWidgetExtensionStaticControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtensionStaticControl.swift; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 				15B5D7AC24512AC200108658 /* ViewController.m */,
 				97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */,
 				9746F61D2D846A6600896793 /* InjectHelper.swift */,
+				976CB3842FFE9EDF000505DD /* CJDemoPopupView */,
 				15B5D7AE24512AC200108658 /* Main.storyboard */,
 				15B5D7B324512AC300108658 /* LaunchScreen.storyboard */,
 				15B5D7B124512AC300108658 /* Assets.xcassets */,
@@ -209,6 +216,17 @@
 				9711D4292D433FF900BEA78D /* cqts_mainbundle_jpg_01.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		976CB3842FFE9EDF000505DD /* CJDemoPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				976CB3802FFE9EDF000505DD /* CJDemoPopupView.h */,
+				976CB3812FFE9EDF000505DD /* CJDemoPopupView.m */,
+				976CB3822FFE9EDF000505DD /* UIView+CJDemoPopupAction.h */,
+				976CB3832FFE9EDF000505DD /* UIView+CJDemoPopupAction.m */,
+			);
+			path = CJDemoPopupView;
 			sourceTree = "<group>";
 		};
 		97872F992F9F641C004573D2 /* ControlWidget */ = {
@@ -375,6 +393,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-TSDemoDemo/Pods-TSDemoDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework",
 				"${BUILT_PRODUCTS_DIR}/CJBaseUtil-Swift/CJBaseUtil_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework",
@@ -391,6 +410,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseHelper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseUtil_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJPopupAction.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoResource.framework",
@@ -439,6 +459,8 @@
 			files = (
 				97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */,
 				15B5D7AD24512AC200108658 /* ViewController.m in Sources */,
+				976CB3852FFE9EDF000505DD /* UIView+CJDemoPopupAction.m in Sources */,
+				976CB3862FFE9EDF000505DD /* CJDemoPopupView.m in Sources */,
 				9746F61E2D846A6600896793 /* InjectHelper.swift in Sources */,
 				15B5D7C024512B1700108658 /* UIWindow+RootSetting.m in Sources */,
 				15B5D7A724512AC200108658 /* AppDelegate.m in Sources */,
