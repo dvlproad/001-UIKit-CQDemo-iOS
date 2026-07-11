@@ -35,7 +35,24 @@
 @end
 
 @implementation RipeViewHomeViewController
-
+/*
+#pragma mark - Lazy
+- (CQTSMediaPickerViewController *)mediaPickerUtil {
+    if (_mediaPickerUtil == nil) {
+        __weak typeof(self) weakSelf = self;  // 弱引用 self
+        _mediaPickerUtil = [[CQTSMediaPickerViewController alloc] initWithOptions:CQTSPhotoMediaOptionImage imageSuccess:^(UIImage *image) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            [strongSelf showImage:image];
+        } videoSuccess:^(NSURL *videoURL) {
+            
+        } failure:^(NSError *) {
+            
+        }];
+    }
+    return _mediaPickerUtil;
+}
+*/
+#pragma mark - LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -45,9 +62,11 @@
     
     CQTSPhotoMediaOption options = CQTSPhotoMediaOptionImage | CQTSPhotoMediaOptionVideo;
     CQTSMediaPickerViewController *mediaPickerVC = [[CQTSMediaPickerViewController alloc] initWithOptions:options imageSuccess:^(UIImage *image) {
-        [weakSelf showImage:image];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf showImage:image];
     } videoSuccess:^(NSURL *videoURL) {
-        [weakSelf playVideoWithAVPlayerLayer:videoURL];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf playVideoWithAVPlayerLayer:videoURL];
     } failure:^(NSError *error) {
         [CJUIKitToastUtil showMessage:error.localizedDescription];
     }];

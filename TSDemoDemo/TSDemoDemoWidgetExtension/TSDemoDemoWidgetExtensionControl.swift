@@ -35,11 +35,11 @@ struct TSDemoDemoWidgetExtensionControl: ControlWidget {
 //                        .foregroundStyle(.yellow)
                     // 自定义SF图标
                     let downloadBundle: Bundle? = CQDemoWidgetExtensionDataUtil.getSymbolBundle()
-                    let uiimage: UIImage? = UIImage(named: "emoji9_FFA5BE", in: downloadBundle, compatibleWith: nil)
+                    let uiimage: UIImage? = UIImage(named: "cqts_xcasset_symbol_8", in: downloadBundle, compatibleWith: nil)
 //                    Image(uiImage: uiimage ?? UIImage())
-                    Image("emoji9_FFA5BE", bundle: downloadBundle)
+                    Image("cqts_xcasset_symbol_8", bundle: downloadBundle)
                     
-//                    Image("cqts_bundle_symbolsvg_1")
+//                    Image("cqts_xcasset_symbol_1")
 //                        .resizable()
 //                        .symbolEffect(.breathe.pulse.byLayer, options: .repeat(.continuous))
 //                        .aspectRatio(contentMode: .fit)

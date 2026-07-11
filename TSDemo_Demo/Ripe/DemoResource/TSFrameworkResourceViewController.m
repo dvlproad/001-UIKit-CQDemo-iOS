@@ -135,7 +135,7 @@
         [self _addErrorText:@"✅:xcasset内的图片不用后缀(jpeg)" toView:xcassetImageView1];
     }
     
-    UIImage *xcassetImage2 = [UIImage imageNamed:@"cqts_bundle_symbolsvg_1" inBundle:bundle11 compatibleWithTraitCollection:nil];
+    UIImage *xcassetImage2 = [UIImage imageNamed:@"cqts_xcasset_symbol_1" inBundle:bundle11 compatibleWithTraitCollection:nil];
     xcassetImageView2.image = xcassetImage2;
     if (xcassetImage2 != nil) {
         [self _addErrorText:@"✅:xcasset内的图片不用后缀(svg)" toView:xcassetImageView2];

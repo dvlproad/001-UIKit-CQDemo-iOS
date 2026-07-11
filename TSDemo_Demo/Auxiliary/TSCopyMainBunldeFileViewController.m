@@ -119,7 +119,7 @@
                                                                         checkIfExist:YES];
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:absoluteFilePath];
                 if (downloadBundle != nil) {
-                    UIImage *image = [UIImage imageNamed:@"cqts_bundle_symbolsvg_1" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    UIImage *image = [UIImage imageNamed:@"cqts_xcasset_symbol_1" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
                 }
             };
@@ -175,7 +175,7 @@
                 
                 NSBundle *downloadBundle = [[NSBundle alloc] initWithPath:unzipBundlePath];
                 if (downloadBundle != nil) {
-                    UIImage *image = [UIImage imageNamed:@"emoji9_FFA5BE" inBundle:downloadBundle compatibleWithTraitCollection:nil];
+                    UIImage *image = [UIImage imageNamed:@"cqts_xcasset_symbol_8" inBundle:downloadBundle compatibleWithTraitCollection:nil];
                     weakSelf.imageView.image = image;
                 } else {
                     NSString *errorMessage = @"downloadBundle 获取失败";

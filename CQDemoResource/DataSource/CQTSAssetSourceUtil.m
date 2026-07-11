@@ -161,6 +161,18 @@
         }
     }
     
+    if ([folderNames containsObject:@"zip"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_zip_1.zip"
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"zip",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
     
     return resultDictionarys;
 }

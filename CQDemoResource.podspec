@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.2.3"
+  s.version      = "0.2.4"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.3_1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.4" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -168,6 +168,16 @@ Pod::Spec.new do |s|
       'CQDemoResource_Videos' => [
         'CQDemoResource/Resources/mp4/**/*',
         'CQDemoResource/Resources/mov/**/*',
+      ]
+    }
+  end
+
+  # Zip - zip
+  s.subspec 'Zip' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource_Zip' => [
+        'CQDemoResource/Resources/zip/**/*',
       ]
     }
   end
