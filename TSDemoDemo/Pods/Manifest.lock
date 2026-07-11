@@ -3,16 +3,16 @@ PODS:
   - CJBaseHelper/UIViewControllerCJHelper (0.1.8)
   - CJBaseUtil-Swift/FrameworkCJHelper (0.1.1)
   - CJPopupAction (1.5.0)
-  - CQDemoKit (0.9.2):
-    - CQDemoKit/Auxiliary (= 0.9.2)
-    - CQDemoKit/BaseUIKit (= 0.9.2)
-    - CQDemoKit/BaseUtil (= 0.9.2)
-    - CQDemoKit/BaseVC (= 0.9.2)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.9.2)
-    - CQDemoKit/Demo_Resource (= 0.9.2)
-    - CQDemoKit/Demo_RipeView (= 0.9.2)
-    - CQDemoKit/Helper (= 0.9.2)
-    - CQDemoKit/Monitor (= 0.9.2)
+  - CQDemoKit (0.9.3):
+    - CQDemoKit/Auxiliary (= 0.9.3)
+    - CQDemoKit/BaseUIKit (= 0.9.3)
+    - CQDemoKit/BaseUtil (= 0.9.3)
+    - CQDemoKit/BaseVC (= 0.9.3)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.9.3)
+    - CQDemoKit/Demo_Resource (= 0.9.3)
+    - CQDemoKit/Demo_RipeView (= 0.9.3)
+    - CQDemoKit/Helper (= 0.9.3)
+    - CQDemoKit/Monitor (= 0.9.3)
   - CQDemoKit-Swift (0.0.2):
     - CQDemoKit
     - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.2)
@@ -21,44 +21,58 @@ PODS:
     - CQDemoKit
   - CQDemoKit-Swift/SwiftUI (0.0.2):
     - CQDemoKit
-  - CQDemoKit/Auxiliary (0.9.2):
+  - CQDemoKit/Auxiliary (0.9.3):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.9.2):
+  - CQDemoKit/BaseUIKit (0.9.3):
     - Masonry
-  - CQDemoKit/BaseUtil (0.9.2)
-  - CQDemoKit/BaseVC (0.9.2):
-    - CQDemoKit/BaseVC/Base (= 0.9.2)
-    - CQDemoKit/BaseVC/Collection (= 0.9.2)
-    - CQDemoKit/BaseVC/ScrollView (= 0.9.2)
-    - CQDemoKit/BaseVC/TabBar (= 0.9.2)
-    - CQDemoKit/BaseVC/TableView (= 0.9.2)
-    - CQDemoKit/BaseVC/TextView (= 0.9.2)
-  - CQDemoKit/BaseVC/Base (0.9.2):
+  - CQDemoKit/BaseUtil (0.9.3)
+  - CQDemoKit/BaseVC (0.9.3):
+    - CQDemoKit/BaseVC/Base (= 0.9.3)
+    - CQDemoKit/BaseVC/Collection (= 0.9.3)
+    - CQDemoKit/BaseVC/ScrollView (= 0.9.3)
+    - CQDemoKit/BaseVC/TabBar (= 0.9.3)
+    - CQDemoKit/BaseVC/TableView (= 0.9.3)
+    - CQDemoKit/BaseVC/TextView (= 0.9.3)
+  - CQDemoKit/BaseVC/Base (0.9.3):
     - CQDemoKit/BaseUIKit
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.9.2):
+  - CQDemoKit/BaseVC/Collection (0.9.3):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ScrollView (0.9.2):
+  - CQDemoKit/BaseVC/ScrollView (0.9.3):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TabBar (0.9.2):
+  - CQDemoKit/BaseVC/TabBar (0.9.3):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.9.2):
+  - CQDemoKit/BaseVC/TableView (0.9.3):
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/TextView (0.9.2):
+  - CQDemoKit/BaseVC/TextView (0.9.3):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.9.2):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.9.3):
     - CQDemoKit/BaseVC
-  - CQDemoKit/Demo_Resource (0.9.2):
+  - CQDemoKit/Demo_Resource (0.9.3):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.9.2):
+  - CQDemoKit/Demo_RipeView (0.9.3):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.9.2)
-  - CQDemoKit/Monitor (0.9.2)
+    - CQDemoKit/Demo_RipeView/ImagePicker (= 0.9.3)
+    - CQDemoKit/Demo_RipeView/RipeCollectionView (= 0.9.3)
+  - CQDemoKit/Demo_RipeView/ImagePicker (0.9.3):
+    - CQDemoKit/BaseUIKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/Demo_DataSourceAndDelegate
+    - CQDemoKit/Demo_Resource
+    - Masonry
+  - CQDemoKit/Demo_RipeView/RipeCollectionView (0.9.3):
+    - CQDemoKit/BaseUIKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/Demo_DataSourceAndDelegate
+    - CQDemoKit/Demo_Resource
+    - Masonry
+  - CQDemoKit/Helper (0.9.3)
+  - CQDemoKit/Monitor (0.9.3)
   - CQDemoResource (0.2.4):
     - CQDemoResource/Core (= 0.2.4)
     - CQDemoResource/GIF (= 0.2.4)
@@ -142,7 +156,7 @@ SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
-  CQDemoKit: 903bdbb9f2bbf215a615c051c00108228eca46f2
+  CQDemoKit: 364210a81afbec3dfc59765d0f3eae78e9503f47
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
   CQDemoResource: 24d2358c8e801bdfda136154d1a8bdea3799d53a
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887

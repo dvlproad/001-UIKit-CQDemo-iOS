@@ -16,6 +16,10 @@
 // DemoRipeResource
 #import "TSResourceViewController.h"
 #import "TSResourceCollectionViewController.h"
+//#import <CQDemoResource/CQTSIconsUtil.h>
+#import <CQDemoResource/CQTSLocImagesUtil.h>
+//#import <CQDemoResource/CQTSNetImagesUtil.h>
+//#import <CQDemoResource/CQTSAssetSourceUtil.h>
 
 // DemoRipeView
 #import "TSRipeButtonViewController.h"
@@ -160,18 +164,15 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources 所有测试图片(网络图片)";
-            module.actionBlock = ^{
-                UIViewController *viewController = [[TSResourceCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageNetwork];
-                [self.navigationController pushViewController:viewController animated:YES];
-            };
+            module.title = @"Resources 所有测试图片(本地图片)";
+            module.selector = @selector(showAllLocal);
             [sectionDataModel.values addObject:module];
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Resources 所有测试图片(本地图片)";
+            module.title = @"Resources 所有测试图片(网络图片)";
             module.actionBlock = ^{
-                UIViewController *viewController = [[TSResourceCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageLocal];
+                UIViewController *viewController = [[TSResourceCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageNetwork];
                 [self.navigationController pushViewController:viewController animated:YES];
             };
             [sectionDataModel.values addObject:module];
@@ -234,6 +235,30 @@
     }
     
     self.sectionDataModels = sectionDataModels;
+}
+
+- (void)showAllLocal {
+    /* // 封装的代码
+    UIViewController *viewController = [[TSResourceCollectionViewController alloc] initWithRipeImageSource:CQTSRipeImageSourceImageLocal];
+    [self.navigationController pushViewController:viewController animated:YES];
+    return;
+    */
+    // 未封装的代码
+    CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+    sectionDataModel.theme = @"本地图片";
+    
+    NSArray<UIImage *> *images = [CQTSLocImagesUtil cjts_localImages];
+    NSInteger imageCount = images.count;
+    for (int i = 0; i < imageCount; i++) {
+        CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+        module.title = [NSString stringWithFormat:@"本地图片%zd", i];
+        module.normalImage = images[i];
+        [sectionDataModel.values addObject:module];
+    }
+    
+    CJUIKitBaseCollectionHomeViewController *resultVC = [[CJUIKitBaseCollectionHomeViewController alloc] init];
+    resultVC.sectionDataModels = @[sectionDataModel];
+    [self.navigationController  pushViewController:resultVC animated:YES];
 }
 
 - (void)showImage:(UIImage *)image {

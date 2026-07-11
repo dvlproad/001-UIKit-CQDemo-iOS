@@ -8,30 +8,30 @@
   # 旧方法（本库不依赖swift库的时候）
   # 上传到github公有库:
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
-  #验证方法2：pod lib lint CQDemoKit.podspec --sources=master --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CQDemoKit.podspec --sources=cocoapods --allow-warnings --use-libraries --verbose
   #提交方法(github公有库)： pod trunk push CQDemoKit.podspec --allow-warnings --use-libraries --verbose   # 临时添加 --use-libraries 用来解决没错，还是报错的问题
   
   # 上传到私有库 gitee上的私有项目: dvlproadSpecs
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
-  #验证方法2：pod lib lint CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
-  #提交方法(私有库)： pod repo push dvlproad CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CQDemoKit.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
+  #提交方法(私有库)： pod repo push gitee-dvlproad-dvlproadspecs CQDemoKit.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
 
   # 上传到开源库 gitee上的公开项目: Specs
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/Specs' --allow-warnings --use-libraries --verbose
-  #验证方法2：pod lib lint CQDemoKit.podspec --sources=master,dvlproadPublicSpec --allow-warnings --use-libraries --verbose
-  #提交方法(私有库)： pod repo push dvlproadPublicSpec CQDemoKit.podspec --sources=master,dvlproadPublicSpec --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CQDemoKit.podspec --sources=cocoapods,dvlproadPublicSpec --allow-warnings --use-libraries --verbose
+  #提交方法(私有库)： pod repo push dvlproadPublicSpec CQDemoKit.podspec --sources=cocoapods,dvlproadPublicSpec --allow-warnings --use-libraries --verbose
 
   # 含swift文件时候上传到私有库的方法（本类要依赖swift库的时候）将--use-libraries去掉，或者改成--use-modular-headers
   #验证方法1(含Swift的时候）：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-modular-headers --verbose
-  #验证方法2(含Swift的时候）：pod lib lint CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
-  #提交方法 (含Swift的时候）：pod repo push dvlproad CQDemoKit.podspec --sources=master,dvlproad --allow-warnings --use-modular-headers --verbose
+  #验证方法2(含Swift的时候）：pod lib lint CQDemoKit.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
+  #提交方法 (含Swift的时候）：pod repo push gitee-dvlproad-dvlproadspecs CQDemoKit.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-modular-headers --verbose
 
 Pod::Spec.new do |s|
   # 关于resource：
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.2"
+  s.version      = "0.9.3"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -69,7 +69,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.2" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.3" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -176,11 +176,27 @@ Pod::Spec.new do |s|
 
   # 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
   s.subspec 'Demo_RipeView' do |ss|
-    ss.source_files = "CQDemoKit/Demo_RipeView/**/*.{h,m}"
+    ss.source_files = "CQDemoKit/Demo_RipeView/*.{h,m}"
     ss.dependency 'CQDemoKit/BaseUtil'    # 因为 CQTSRipeButton 需要使用 CJUIKitToastUtil
     ss.dependency 'CQDemoKit/BaseUIKit'   # 因为 CQTSRipeButton 需要使用 CQTSButtonFactory
     ss.dependency 'CQDemoKit/Demo_Resource'
     ss.dependency 'CQDemoKit/Demo_DataSourceAndDelegate'  # 使用 DataSource 或 Delegate
+
+    # 集合视图(CQTSRipeButtonCollectionViewCell \ CQTSRipeImageCollectionViewCell)
+    ss.subspec 'RipeCollectionView' do |sss|
+      sss.source_files = "CQDemoKit/Demo_RipeView/RipeCollectionView/**/*.{h,m}"
+      sss.dependency 'Masonry'
+
+      # CQTSRipeButtonCollectionViewCell 需要使用 CQTSButtonFactory.h
+      # CQTSRipeImageCollectionViewCell 需要使用 UIImageView+CQTSBaseUtil.h
+      sss.dependency 'CQDemoKit/BaseUIKit'
+    end
+
+    # 图片选择器
+    ss.subspec 'ImagePicker' do |sss|
+      sss.source_files = "CQDemoKit/Demo_RipeView/ImagePicker/**/*.{h,m}"
+      sss.dependency 'Masonry'
+    end
   end
 
   # 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
