@@ -87,6 +87,21 @@
         }
     }
     
+    if ([folderNames containsObject:@"png"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_icon_01.png",
+            @"cqts_icon_02.png",
+            @"cqts_icon_03.png",
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"png",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
     if ([folderNames containsObject:@"gif"]) {
         NSArray *sourceImageNames = @[
             @"cqts_01.gif",

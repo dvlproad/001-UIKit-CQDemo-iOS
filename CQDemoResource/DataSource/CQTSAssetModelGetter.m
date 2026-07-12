@@ -45,18 +45,21 @@
 ///
 /// @param titles                                                      标题数组
 /// @param assetNameOrUrls                                  资源文件数组
-/// @param count                                                        文件个数
+/// @param requestCount                                        文件个数
 /// @param randomOrder                                          顺序是否随机
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSLocImageDataModel *> *)fileModelsWithTitles:(NSArray<NSString *> *)titles
                                                   assetNameOrUrls:(NSArray<NSString *> *)assetNameOrUrls
-                                                            count:(NSInteger)count
+                                                            count:(NSInteger)requestCount
                                                       randomOrder:(BOOL)randomOrder
 {
-    NSMutableArray<CQTSLocImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    if (assetNameOrUrls.count == 0) {
+        return @[];
+    }
     
-    for (NSInteger i = 0; i < count; i++) {
+    NSMutableArray<CQTSLocImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < requestCount; i++) {
         CQTSLocImageDataModel *dataModel = [[CQTSLocImageDataModel alloc] init];
         NSInteger maySelIndex = randomOrder ? random() : i;
         NSInteger lastImageSelIndex = maySelIndex%assetNameOrUrls.count;
@@ -105,18 +108,21 @@
 ///
 /// @param titles                                                      标题数组
 /// @param assetNameOrUrls                                  网络资源文件数组
-/// @param count                                                        文件个数
+/// @param requestCount                                        文件个数
 /// @param randomOrder                                          顺序是否随机
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSNetImageDataModel *> *)fileModelsWithTitles:(NSArray<NSString *> *)titles
                                                         assetUrls:(NSArray<NSString *> *)assetNameOrUrls
-                                                            count:(NSInteger)count
+                                                            count:(NSInteger)requestCount
                                                       randomOrder:(BOOL)randomOrder
 {
-    NSMutableArray<CQTSNetImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    if (assetNameOrUrls.count == 0) {
+        return @[];
+    }
     
-    for (NSInteger i = 0; i < count; i++) {
+    NSMutableArray<CQTSNetImageDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < requestCount; i++) {
         CQTSNetImageDataModel *dataModel = [[CQTSNetImageDataModel alloc] init];
         NSInteger maySelIndex = randomOrder ? random() : i;
         NSInteger lastImageSelIndex = maySelIndex%assetNameOrUrls.count;
@@ -160,18 +166,21 @@
 ///
 /// @param titles                                                      标题数组
 /// @param assetNameOrUrls                                  Icon资源文件数组
-/// @param count                                                        文件个数
+/// @param requestCount                                        文件个数
 /// @param randomOrder                                          顺序是否随机
 ///
 /// @return 返回图片数据
 + (NSMutableArray<CQTSIconDataModel *> *)fileModelsWithTitles:(NSArray<NSString *> *)titles
                                                      iconUrls:(NSArray<NSString *> *)assetNameOrUrls
-                                                        count:(NSInteger)count
+                                                        count:(NSInteger)requestCount
                                                   randomOrder:(BOOL)randomOrder
 {
-    NSMutableArray<CQTSIconDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    if (assetNameOrUrls.count == 0) {
+        return @[];
+    }
     
-    for (NSInteger i = 0; i < count; i++) {
+    NSMutableArray<CQTSIconDataModel *> *dataModels = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < requestCount; i++) {
         CQTSIconDataModel *dataModel = [[CQTSIconDataModel alloc] init];
         NSInteger maySelIndex = randomOrder ? random() : i;
         NSInteger lastImageSelIndex = maySelIndex%assetNameOrUrls.count;

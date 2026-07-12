@@ -73,27 +73,27 @@ PODS:
     - Masonry
   - CQDemoKit/Helper (0.9.3)
   - CQDemoKit/Monitor (0.9.3)
-  - CQDemoResource (0.2.4):
-    - CQDemoResource/Core (= 0.2.4)
-    - CQDemoResource/GIF (= 0.2.4)
-    - CQDemoResource/Images (= 0.2.4)
-    - CQDemoResource/Images_Big (= 0.2.4)
-    - CQDemoResource/SVG (= 0.2.4)
-    - CQDemoResource/Videos (= 0.2.4)
-    - CQDemoResource/Zip (= 0.2.4)
-  - CQDemoResource/Core (0.2.4):
+  - CQDemoResource (0.2.5):
+    - CQDemoResource/Core (= 0.2.5)
+    - CQDemoResource/GIF (= 0.2.5)
+    - CQDemoResource/Images (= 0.2.5)
+    - CQDemoResource/Images_Big (= 0.2.5)
+    - CQDemoResource/SVG (= 0.2.5)
+    - CQDemoResource/Videos (= 0.2.5)
+    - CQDemoResource/Zip (= 0.2.5)
+  - CQDemoResource/Core (0.2.5):
     - CQDemoKit/Demo_Resource
-  - CQDemoResource/GIF (0.2.4):
+  - CQDemoResource/GIF (0.2.5):
     - CQDemoResource/Core
-  - CQDemoResource/Images (0.2.4):
+  - CQDemoResource/Images (0.2.5):
     - CQDemoResource/Core
-  - CQDemoResource/Images_Big (0.2.4):
+  - CQDemoResource/Images_Big (0.2.5):
     - CQDemoResource/Core
-  - CQDemoResource/SVG (0.2.4):
+  - CQDemoResource/SVG (0.2.5):
     - CQDemoResource/Core
-  - CQDemoResource/Videos (0.2.4):
+  - CQDemoResource/Videos (0.2.5):
     - CQDemoResource/Core
-  - CQDemoResource/Zip (0.2.4):
+  - CQDemoResource/Zip (0.2.5):
     - CQDemoResource/Core
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
@@ -156,9 +156,9 @@ SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
-  CQDemoKit: 364210a81afbec3dfc59765d0f3eae78e9503f47
+  CQDemoKit: a114d73765a70625abb9b271d29f9958102d2547
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
-  CQDemoResource: 24d2358c8e801bdfda136154d1a8bdea3799d53a
+  CQDemoResource: 05ed632200f670bbdf8cd4ead246762e6f58c86b
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32

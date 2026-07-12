@@ -1,10 +1,21 @@
-  #查看本地已同步的pod库：pod repo
-  #清除缓存：pod cache clean CQDemoKit
-  
+# ------------------------------------------------
 #  pod trunk register 邮箱地址 '用户名' --description='描述信息'
 #  pod trunk register dvlproad@163.com 'dvlproad' --description='homeMac'
 #  pod trunk me
 
+# ------------------------------------------------
+# 库的弃用：
+# 弃用库(标记某个版本或整个库为“已弃用”): pod trunk deprecate CQDemoKit
+
+# 库的删除
+# 删除指定版本:                                   pod trunk delete CJMedia 1.0.0
+# 全删除后，验证远程的是否正确删掉了                  pod trunk info CJMedia
+# 清除缓存(解决pod search查本地还搜得到delete的问题): pod cache clean CQDemoKit
+# 在 spec 仓库中查找指定库的缓存位置                 find ~/.cocoapods/repos -name "CQDemoKit" -type f
+
+# ------------------------------------------------
+# 查看本地已同步的pod库：pod repo
+# 库的上传
   # 旧方法（本库不依赖swift库的时候）
   # 上传到github公有库:
   #验证方法1：pod lib lint CQDemoKit.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
@@ -69,7 +80,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.3" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.4" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"

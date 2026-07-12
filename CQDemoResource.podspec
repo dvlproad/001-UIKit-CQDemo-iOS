@@ -1,11 +1,21 @@
-Pod::Spec.new do |s|
-  #查看本地已同步的pod库：pod repo
-  #清除缓存：pod cache clean CQDemoResource
-  
+# ------------------------------------------------
 #  pod trunk register 邮箱地址 '用户名' --description='描述信息'
 #  pod trunk register dvlproad@163.com 'dvlproad' --description='homeMac'
 #  pod trunk me
 
+# ------------------------------------------------
+# 库的弃用：
+# 弃用库(标记某个版本或整个库为“已弃用”): pod trunk deprecate CQDemoKit
+
+# 库的删除
+# 删除指定版本:                                   pod trunk delete CJMedia 1.0.0
+# 全删除后，验证远程的是否正确删掉了                  pod trunk info CJMedia
+# 清除缓存(解决pod search查本地还搜得到delete的问题): pod cache clean CQDemoResource
+# 在 spec 仓库中查找指定库的缓存位置                 find ~/.cocoapods/repos -name "CQDemoResource" -type f
+
+# ------------------------------------------------
+# 查看本地已同步的pod库：pod repo
+# 库的上传
   # 旧方法（本库不依赖swift库的时候）
   # 上传到github公有库:
   #验证方法1：pod lib lint CQDemoResource.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
@@ -24,15 +34,15 @@ Pod::Spec.new do |s|
 
   # 含swift文件时候上传到私有库的方法（本类要依赖swift库的时候）将--use-libraries去掉，或者改成--use-modular-headers
   #验证方法1(含Swift的时候）：pod lib lint CQDemoResource.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-modular-headers --verbose
-  #验证方法2(含Swift的时候）：pod lib lint CQDemoResource.podspec --sources=master,dvlproad --allow-warnings --use-libraries --verbose
-  #提交方法 (含Swift的时候）：pod repo push dvlproad CQDemoResource.podspec --sources=master,dvlproad --allow-warnings --use-modular-headers --verbose
+  #验证方法2(含Swift的时候）：pod lib lint CQDemoResource.podspec --sources=cocoapods,gitee-dvlproad-dvlproadspecs --allow-warnings --use-libraries --verbose
+  #提交方法 (含Swift的时候）：pod repo push gitee-dvlproad-dvlproadspecs CQDemoResource.podspec --sources=master,gitee-dvlproad-dvlproadspecs --allow-warnings --use-modular-headers --verbose
 
-
+Pod::Spec.new do |s|
   # 关于resource：
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.2.4"
+  s.version      = "0.2.5"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -61,7 +71,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.4" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.5" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"

@@ -24,6 +24,7 @@
 #import "TSRipeCollectionViewController.h"
 #import "TSRipeTableViewController.h"
 #import "RipeViewHomeViewController.h"
+#import "TSDemo_Demo_Util.h"
 #import "TSTabBarViewController.h"
 #import "BaseUIHomeViewController.h"
 #import "TSButtonHomeViewController.h"
