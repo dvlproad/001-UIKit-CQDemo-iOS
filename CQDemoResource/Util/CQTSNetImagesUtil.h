@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)cjts_imageUrlRandom;
 
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
-+ (NSString *)cjts_imageUrlAtIndex:(NSInteger)selIndex;
++ (NSString *)cjts_imageUrlAtIndex:(NSInteger)trySelIndex;
 
 + (NSString *)cjts_imageUrl1;
 

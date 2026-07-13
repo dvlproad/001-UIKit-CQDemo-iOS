@@ -73,27 +73,27 @@ PODS:
     - Masonry
   - CQDemoKit/Helper (0.9.3)
   - CQDemoKit/Monitor (0.9.3)
-  - CQDemoResource (0.2.5):
-    - CQDemoResource/Core (= 0.2.5)
-    - CQDemoResource/GIF (= 0.2.5)
-    - CQDemoResource/Images (= 0.2.5)
-    - CQDemoResource/Images_Big (= 0.2.5)
-    - CQDemoResource/SVG (= 0.2.5)
-    - CQDemoResource/Videos (= 0.2.5)
-    - CQDemoResource/Zip (= 0.2.5)
-  - CQDemoResource/Core (0.2.5):
+  - CQDemoResource (0.2.6):
+    - CQDemoResource/Core (= 0.2.6)
+    - CQDemoResource/GIF (= 0.2.6)
+    - CQDemoResource/Images (= 0.2.6)
+    - CQDemoResource/Images_Big (= 0.2.6)
+    - CQDemoResource/SVG (= 0.2.6)
+    - CQDemoResource/Videos (= 0.2.6)
+    - CQDemoResource/Zip (= 0.2.6)
+  - CQDemoResource/Core (0.2.6):
     - CQDemoKit/Demo_Resource
-  - CQDemoResource/GIF (0.2.5):
+  - CQDemoResource/GIF (0.2.6):
     - CQDemoResource/Core
-  - CQDemoResource/Images (0.2.5):
+  - CQDemoResource/Images (0.2.6):
     - CQDemoResource/Core
-  - CQDemoResource/Images_Big (0.2.5):
+  - CQDemoResource/Images_Big (0.2.6):
     - CQDemoResource/Core
-  - CQDemoResource/SVG (0.2.5):
+  - CQDemoResource/SVG (0.2.6):
     - CQDemoResource/Core
-  - CQDemoResource/Videos (0.2.5):
+  - CQDemoResource/Videos (0.2.6):
     - CQDemoResource/Core
-  - CQDemoResource/Zip (0.2.5):
+  - CQDemoResource/Zip (0.2.6):
     - CQDemoResource/Core
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
@@ -158,7 +158,7 @@ SPEC CHECKSUMS:
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
   CQDemoKit: a114d73765a70625abb9b271d29f9958102d2547
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
-  CQDemoResource: 05ed632200f670bbdf8cd4ead246762e6f58c86b
+  CQDemoResource: 94b05cb12c5f94aadc4a392b53d4537aad1d2194
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32

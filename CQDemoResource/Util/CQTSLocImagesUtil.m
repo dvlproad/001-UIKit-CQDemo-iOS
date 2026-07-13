@@ -61,23 +61,22 @@
 
 /// 随机的本地测试图片
 + (UIImage *)cjts_localImageRandom {
-    NSArray<NSString *> *imageNames = [self cjts_localImageNames];
-    NSInteger selIndex = random()%imageNames.count;
-    NSString *imageName = [imageNames objectAtIndex:selIndex];
+    NSInteger trySelIndex = random();
     
-    UIImage *image = [UIImage cqresource_imageNamed:imageName];
+    UIImage *image = [self cjts_localImageAtIndex:trySelIndex];
     return image;
 }
 
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
-+ (UIImage *)cjts_localImageAtIndex:(NSInteger)selIndex {
++ (UIImage *)cjts_localImageAtIndex:(NSInteger)trySelIndex {
     NSArray<NSString *> *imageNames = [self cjts_localImageNames];
-    if (selIndex >= imageNames.count) { //位置太大的时候，固定使用第一张图片
-        selIndex = 0;
-    }
+    NSInteger selIndex = trySelIndex % imageNames.count;    //位置太大的时候，从头循环使用图片
     NSString *imageName = [imageNames objectAtIndex:selIndex];
     
     UIImage *image = [UIImage cqresource_imageNamed:imageName];
+    if (image == nil) {
+        NSLog(@"[%@]:CQDemoResource 加载本地图片失败 image == nil", imageName);
+    }
     return image;
 }
 

@@ -104,10 +104,10 @@
     
     if ([folderNames containsObject:@"gif"]) {
         NSArray *sourceImageNames = @[
-            @"cqts_01.gif",
-            @"cqts_02.gif",
-            @"cqts_03.gif",
-            @"cqts_04.gif",
+            @"cqts_gif_01.gif",
+            @"cqts_gif_02.gif",
+            @"cqts_gif_03.gif",
+            @"cqts_gif_04.gif",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{

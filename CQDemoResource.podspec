@@ -20,7 +20,7 @@
   # 上传到github公有库:
   #验证方法1：pod lib lint CQDemoResource.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
   #验证方法2：pod lib lint CQDemoResource.podspec --sources=master --allow-warnings --use-libraries --verbose
-  #提交方法(github公有库)： pod trunk push CQDemoResource.podspec --allow-warnings --verbose
+  #提交方法(github公有库)： pod trunk push CQDemoResource.podspec --allow-warnings --use-libraries --verbose
   
   # 上传到私有库 gitee上的私有项目: dvlproadSpecs
   #验证方法1：pod lib lint CQDemoResource.podspec --sources='https://github.com/CocoaPods/Specs.git,https://gitee.com/dvlproad/dvlproadSpecs' --allow-warnings --use-libraries --verbose
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.2.5"
+  s.version      = "0.2.6"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.5" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.2.6" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"

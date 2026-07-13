@@ -46,7 +46,7 @@ typedef NS_OPTIONS(NSInteger, CQTSLocalFileOption) {
 /// 随机的本地测试图片
 + (UIImage *)cjts_localImageRandom;
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
-+ (UIImage *)cjts_localImageAtIndex:(NSInteger)selIndex;
++ (UIImage *)cjts_localImageAtIndex:(NSInteger)trySelIndex;
 
 
 @end

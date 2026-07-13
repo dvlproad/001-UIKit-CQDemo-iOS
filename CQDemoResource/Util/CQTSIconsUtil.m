@@ -15,11 +15,9 @@
 
 #pragma mark - icon Image
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
-+ (NSString *)cjts_iconUrlAtIndex:(NSInteger)selIndex {
++ (NSString *)cjts_iconUrlAtIndex:(NSInteger)trySelIndex {
     NSArray<NSString *> *imageUrls = [CQTSAssetSourceUtil iconUrls];
-    if (selIndex >= imageUrls.count) {  //位置太大的时候，固定使用第一张图片
-        selIndex = 0;
-    }
+    NSInteger selIndex = trySelIndex % imageUrls.count;    //位置太大的时候，从头循环使用图片
     NSString *imageUrl = [imageUrls objectAtIndex:selIndex];
     
     return imageUrl;

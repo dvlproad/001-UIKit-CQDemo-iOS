@@ -33,19 +33,16 @@
 
 /// 随机的网络测试图片地址
 + (NSString *)cjts_imageUrlRandom {
-    NSArray<NSString *> *imageUrls = [self cjts_imageUrls];
-    NSInteger selIndex = random()%imageUrls.count;
-    NSString *imageUrl = [imageUrls objectAtIndex:selIndex];
+    NSInteger trySelIndex = random();
+    NSString *imageUrl = [self cjts_imageUrlAtIndex:trySelIndex];
     
     return imageUrl;
 }
 
 /// 获取指定位置的图片(为了cell显示的图片不会一直变化)
-+ (NSString *)cjts_imageUrlAtIndex:(NSInteger)selIndex {
++ (NSString *)cjts_imageUrlAtIndex:(NSInteger)trySelIndex {
     NSArray<NSString *> *imageUrls = [self cjts_imageUrls];
-    if (selIndex >= imageUrls.count) {  //位置太大的时候，固定使用第一张图片
-        selIndex = 0;
-    }
+    NSInteger selIndex = trySelIndex % imageUrls.count;    //位置太大的时候，从头循环使用图片
     NSString *imageUrl = [imageUrls objectAtIndex:selIndex];
     
     return imageUrl;
