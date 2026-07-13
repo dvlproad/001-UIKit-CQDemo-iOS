@@ -47,22 +47,39 @@
 
 + (NSArray<NSDictionary *> *)assetDictsWithFolderNames:(NSArray<NSString *> *)folderNames {
     NSMutableArray *resultDictionarys = [[NSMutableArray alloc] init];
+    
+    if ([folderNames containsObject:@"placeholder"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_placeholder_jpg_01.jpeg",
+            @"cqts_placeholder_jpg_02.jpeg",
+            @"cqts_placeholder_png_01.png",
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"placeholder",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
     if ([folderNames containsObject:@"jpg"]) {
         NSArray *sourceImageNames = @[
-            @"cqts_1.jpg",
-            @"cqts_2.jpg",
-            @"cqts_3.jpg",
-            @"cqts_4.jpg",
-            @"cqts_5.jpg",
-            @"cqts_6.jpg",
-            @"cqts_7.jpg",
-            @"cqts_8.jpg",
-            @"cqts_9.jpg",
-            @"cqts_10.jpg",
-            @"cqts_long_horizontal_1.jpg",
-            @"cqts_long_vertical_1.jpg",
-            @"cqts_bgCar.jpg",
-            @"cqts_bgSky.jpg",
+            @"cqts_jpg_01.jpg",
+            @"cqts_jpg_02.jpg",
+            @"cqts_jpg_03.jpg",
+            @"cqts_jpg_04.jpg",
+            @"cqts_jpg_05.jpg",
+            @"cqts_jpg_06.jpg",
+            @"cqts_jpg_07.jpg",
+            @"cqts_jpg_08.jpg",
+            @"cqts_jpg_09.jpg",
+            @"cqts_jpg_10.jpg",
+            @"cqts_jpg_long_horizontal_1.jpg",
+            @"cqts_jpg_long_vertical_1.jpg",
+            @"cqts_jpg_bgCar.jpg",
+            @"cqts_jpg_bgSky.jpg",
+            @"cqts_jpg_bgRichu.jpg",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
@@ -120,11 +137,24 @@
     
     if ([folderNames containsObject:@"webp"]) {
         NSArray *sourceImageNames = @[
-            @"cqts_wp_1.webp",
+            @"cqts_wp_01.webp",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
                 @"folderName": @"webp",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
+    if ([folderNames containsObject:@"heic"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_heic_01.HEIC",
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"heic",
                 @"assetName": sourceImageName
             };
             [resultDictionarys addObject:dict];
@@ -163,9 +193,9 @@
     */
     if ([folderNames containsObject:@"mp4"]) {
         NSArray *sourceImageNames = @[
-            @"cqts_normal_video_01.mp4",
-            @"cqts_vap_01.mp4",
-            @"cqts_wallpaper_01.mp4",
+            @"cqts_video_mp4_01.mp4",
+            @"cqts_vap_mp4_01.mp4",
+            @"cqts_wallpaper_mp4_01.mp4",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
@@ -176,9 +206,22 @@
         }
     }
     
+    if ([folderNames containsObject:@"mov"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_mov_wallpaper_01.mov",
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"mov",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
     if ([folderNames containsObject:@"zip"]) {
         NSArray *sourceImageNames = @[
-            @"cqts_zip_1.zip"
+            @"cqts_zip_01.zip"
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
