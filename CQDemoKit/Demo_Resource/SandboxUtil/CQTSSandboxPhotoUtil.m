@@ -1,17 +1,18 @@
 //
-//  CQTSPhotoUtil.m
+//  CQTSSandboxPhotoUtil.m
 //  CQDemoKit
 //
 //  Created by ciyouzen on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
 
-#import "CQTSPhotoUtil.h"
+#import "CQTSSandboxPhotoUtil.h"
 #import <Photos/Photos.h>
-#import "CQTSResourceUtil.h"
+#import "CQTSResourceInfoUtil.h"    // 如果要尝试假智能的根据路径的后缀名保存任意媒体文件的时候需要
 
-@implementation CQTSPhotoUtil
+@implementation CQTSSandboxPhotoUtil
 
+#pragma mark - 核心方法(推荐自行判断类型后，调用相应方法)
 + (void)saveImageToPhotoAlbum:(NSURL *)mediaLocalURL
                       success:(void (^)(void))success
                       failure:(void (^)(NSString *errorMessage))failure
@@ -69,9 +70,34 @@
     }];
 }
 
++ (void)saveAudioToPhotoAlbum:(NSURL *)audioLocalURL
+                      success:(void (^)(void))success
+                      failure:(void (^)(NSString *errorMessage))failure
+{
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        if (status != PHAuthorizationStatusAuthorized) {
+            failure(@"没有相册权限");
+            return;
+        }
+        
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            [PHAssetCreationRequest creationRequestForAssetFromVideoAtFileURL:audioLocalURL];
+        } completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
+            if (error != nil) {
+                NSString *errorMessage = [NSString stringWithFormat:@"保存失败，请确认您的文件是不是音频: %@", error.localizedDescription];
+                failure(errorMessage);
+                return;
+            }
+            
+            success();
+        }];
+    }];
+}
 
 
-/// 根据路径的后缀名保存任意视频（此法不推荐，因为很多图片或视频的地址，并不一定是以其后缀名结尾）
+
+#pragma mark - 易出错的"假智能"方法
+/// 根据路径的后缀名保存任意媒体文件（此法不推荐，因为很多图片或视频的地址，并不一定是以其后缀名结尾）
 + (void)saveMediaByFileExtensionToPhotoAlbum:(NSURL *)mediaLocalURL
                                      success:(void (^)(void))success
                                      failure:(void (^)(NSString *errorMessage))failure
@@ -83,12 +109,15 @@
     }
     
     //UIImage *watiToSaveImage = nil;
-    CQTSFileType fileType = [CQTSResourceUtil fileTypeForFilePathOrUrl:fileExtension];
+    CQTSFileType fileType = [CQTSResourceInfoUtil fileTypeForFilePathOrUrl:fileExtension];
     if (fileType == CQTSFileTypeImage) {    // 如果是图片
         [self saveImageToPhotoAlbum:mediaLocalURL success:success failure:failure];
 
     } else if (fileType == CQTSFileTypeVideo) {
         [self saveVideoToPhotoAlbum:mediaLocalURL success:success failure:failure];
+    
+    } else if (fileType == CQTSFileTypeAudio) {
+        [self saveAudioToPhotoAlbum:mediaLocalURL success:success failure:failure];
 
     } else {
         NSString *errorMessage = [NSString stringWithFormat:@"暂时不支持的文件类型: %@", fileExtension];

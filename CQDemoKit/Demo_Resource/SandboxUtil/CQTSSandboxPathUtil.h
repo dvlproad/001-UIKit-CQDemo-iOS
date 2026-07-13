@@ -5,6 +5,7 @@
 //  Created by lcQian on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
+//  获取app沙盒的路径信息(含获取资源在app沙盒中的各种路径信息)
 
 #import <Foundation/Foundation.h>
 

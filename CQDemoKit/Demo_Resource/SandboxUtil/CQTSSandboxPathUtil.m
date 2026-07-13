@@ -7,7 +7,7 @@
 //
 
 #import "CQTSSandboxPathUtil.h"
-#import "CQTSResourceUtil.h"
+#import "CQTSResourceInfoUtil.h"    // 获取文件沙盒路径信息时会额外提供文件名、扩展名信息
 
 @implementation CQTSSandboxPathUtil
 
@@ -25,7 +25,7 @@
                                 fileNameWithExtension:(NSString *)fileNameWithExtension
                   shouldCreateIntermediateDirectories:(BOOL)shouldCreateIntermediateDirectories
 {
-    NSDictionary *result = [CQTSResourceUtil extractFileNameAndExtensionFromFileName:fileNameWithExtension];
+    NSDictionary *result = [CQTSResourceInfoUtil extractFileNameAndExtensionFromFileName:fileNameWithExtension];
     NSString *fileName = result[@"fileName"];
     NSString *fileExtension = result[@"fileExtension"];
     

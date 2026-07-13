@@ -5,6 +5,7 @@
 //  Created by lcQian on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
+//  从主工程中拷贝 / 从后台下载download文件 到app沙盒中
 
 #import <Foundation/Foundation.h>
 

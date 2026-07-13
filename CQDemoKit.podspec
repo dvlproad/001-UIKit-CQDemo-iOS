@@ -42,13 +42,14 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.3"
+  s.version      = "0.9.4"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
                  Demo，可按需独立引入：
                  • CQDemoKit/Helper - 本库中的资源获取帮助类
+                 
                  • CQDemoKit/BaseVC - 基础模块VC
                  • CQDemoKit/BaseVC/Base - 基础模块
                  • CQDemoKit/BaseVC/ScrollView - 滚动视图
@@ -56,9 +57,12 @@ Pod::Spec.new do |s|
                  • CQDemoKit/BaseVC/Collection - 集合视图
                  • CQDemoKit/BaseVC/TextView - 文本视图
                  • CQDemoKit/BaseVC/TabBar - TabBar
+                 
                  • CQDemoKit/BaseUIKit - 基础模块UIKit
                  • CQDemoKit/BaseUtil - 基础工具
+                 
                  • CQDemoKit/Demo_Resource - Demo 工程中基本都需要的 DemoResource
+                 
                  • CQDemoKit/Demo_RipeView - 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
                  • CQDemoKit/Demo_DataSourceAndDelegate - 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
                  • CQDemoKit/Auxiliary - 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)
@@ -180,9 +184,52 @@ Pod::Spec.new do |s|
 
   # Demo 工程中基本都需要的 DemoResource
   s.subspec 'Demo_Resource' do |ss|
-    ss.source_files = "CQDemoKit/Demo_Resource/**/*.{h,m}"
-    ss.dependency 'CQDemoKit/Helper'    # 需要使用到 NSError+CQTSErrorString.h
-    ss.dependency 'CQDemoKit/BaseUIKit' # 需要使用到 CQTSImageLoader.h 和 UIImageView+CQTSBaseUtil.h
+#    ss.dependency 'CQDemoKit/BaseUIKit' # 需要使用到 CQTSImageLoader.h 和 UIImageView+CQTSBaseUtil.h
+    
+    # 获取资源的信息(文件名、扩展名、类型等)
+    ss.subspec 'ResourceInfoUtil' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/CQTSResourceInfoUtil.{h,m}"
+    end
+    
+    # 获取app沙盒的路径信息(含获取资源在app沙盒中的各种路径信息)
+    ss.subspec 'SandboxPathUtil' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/SandboxUtil/CQTSSandboxPathUtil.{h,m}"
+      sss.dependency 'CQDemoKit/Demo_Resource/ResourceInfoUtil' # 获取文件沙盒路径信息时会额外提供文件名、扩展名信息
+    end
+    
+    # 从主工程中拷贝 / 从后台下载download文件 到app沙盒中
+    ss.subspec 'SandboxFileUtil' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/SandboxUtil/CQTSSandboxFileUtil.{h,m}"
+      sss.dependency 'CQDemoKit/Demo_Resource/SandboxPathUtil' # 提供app沙盒的存放位置时候需要
+      sss.dependency 'CQDemoKit/Helper'    # 下载出错打印错误信息时候需要
+    end
+    
+    # 将下载到 app 沙盒中的媒体文件保存到相册中
+    ss.subspec 'SandboxPhotoUtil' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/SandboxUtil/CQTSSandboxPhotoUtil.{h,m}"
+      sss.dependency 'CQDemoKit/Demo_Resource/ResourceInfoUtil' # 如果要尝试假智能的根据路径的后缀名保存任意媒体文件的时候需要
+    end
+    
+    # 将下载到 app 沙盒中的媒体文件保存到相册中
+    ss.subspec 'ImageModel' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/ImageModel/**/*.{h,m}"
+    end
+    
+    # 获取随机值的工具(颜色、字符串、中文名字等)
+    ss.subspec 'RandomUtil' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/String/CJUIKitRandomUtil.{h,m}"
+    end
+    
+    # 从git中获取指定资源Url的工具
+    ss.subspec 'GitUtil' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/String/CQTSGitUtil.{h,m}"
+    end
+    
+    # InFramework中的操作(获取resourceBundle等)
+    ss.subspec 'InFramework' do |sss|
+      sss.source_files = "CQDemoKit/Demo_Resource/UIImage+CQTSInFramework.{h,m}"
+    end
+    
   end
 
   # 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)

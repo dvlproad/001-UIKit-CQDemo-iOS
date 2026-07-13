@@ -1,5 +1,5 @@
 //
-//  CQTSResourceUtil.h
+//  CQTSResourceInfoUtil.h
 //  CQDemoKit
 //
 //  Created by lcQian on 2020/4/7.
@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, CQTSFileType) {
     CQTSFileTypeVideo,            // 视频
 };
 
-@interface CQTSResourceUtil : NSObject
+@interface CQTSResourceInfoUtil : NSObject
 
 #pragma mark - Extract FileName And Extension
 /// 从完整文件名中提取文件名和扩展名

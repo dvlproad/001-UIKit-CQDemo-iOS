@@ -7,8 +7,8 @@
 //
 
 #import "CQTSSandboxFileUtil.h"
-#import "CQTSSandboxPathUtil.h"
-#import "NSError+CQTSErrorString.h"
+#import "CQTSSandboxPathUtil.h"     // 提供app沙盒的存放位置时候需要
+#import "NSError+CQTSErrorString.h" // 下载出错打印错误信息时候需要
 
 @implementation CQTSSandboxFileUtil
 

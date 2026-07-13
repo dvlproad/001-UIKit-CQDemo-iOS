@@ -1,14 +1,14 @@
 //
-//  CQTSResourceUtil.m
+//  CQTSResourceInfoUtil.m
 //  CQDemoKit
 //
 //  Created by lcQian on 2020/4/7.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
 
-#import "CQTSResourceUtil.h"
+#import "CQTSResourceInfoUtil.h"
 
-@implementation CQTSResourceUtil
+@implementation CQTSResourceInfoUtil
 
 #pragma mark - Extract FileName And Extension
 + (NSDictionary<NSString *, id> *)extractFileNameAndExtensionFromFileName:(NSString *)fileName {
