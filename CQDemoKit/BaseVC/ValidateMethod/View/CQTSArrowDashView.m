@@ -7,7 +7,6 @@
 //
 
 #import "CQTSArrowDashView.h"
-#import "UIImage+CQTSInFramework.h"
 
 @interface CQTSArrowDashView () {
     
