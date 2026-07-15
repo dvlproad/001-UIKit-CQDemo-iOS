@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.4"
+  s.version      = "0.9.5"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
                  • CQDemoKit/BaseVC/ScrollView - 滚动视图
                  • CQDemoKit/BaseVC/TableView - 表格视图
                  • CQDemoKit/BaseVC/Collection - 集合视图
-                 • CQDemoKit/BaseVC/TextView - 文本视图
+                 • CQDemoKit/BaseVC/ValidateMethod - 验证方法是否正确的基类(输入支持单行和多行，如测试获取字符串长度的方法、测试获取字符串、日期计算等方法)
                  • CQDemoKit/BaseVC/TabBar - TabBar
                  
                  • CQDemoKit/BaseUIKit - 基础模块UIKit
@@ -84,7 +84,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.4" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.5" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -149,11 +149,11 @@ Pod::Spec.new do |s|
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
     end
 
-    # 文本视图
-    ss.subspec 'TextView' do |sss|
-      sss.source_files = "CQDemoKit/BaseVC/TextView/**/*.{h,m}"
+    # 验证方法是否正确的基类(输入支持单行和多行，如测试获取字符串长度的方法、测试获取字符串、日期计算等方法)
+    ss.subspec 'ValidateMethod' do |sss|
+      sss.source_files = "CQDemoKit/BaseVC/ValidateMethod/**/*.{h,m}"
       sss.resource_bundles = {
-        'CQDemoKit_TextView' => ['CQDemoKit/BaseVC/TextView/Resources/**/*.{png,jpg,jpeg}']
+        'CQDemoKit_TextView' => ['CQDemoKit/BaseVC/ValidateMethod/Resources/**/*.{png,jpg,jpeg}']
       }
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
       sss.dependency 'CQDemoKit/BaseUtil'

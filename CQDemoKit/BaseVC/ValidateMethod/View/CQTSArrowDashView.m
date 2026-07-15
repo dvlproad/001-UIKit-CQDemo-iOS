@@ -35,7 +35,7 @@
         NSBundle *resourceBundle = bundleURL ? [NSBundle bundleWithURL:bundleURL] : nil;
 
         // 箭头图片的AI生成参考本文件尾部
-        UIImage *arrowImage = [UIImage imageNamed:@"arrow_dash.png" inBundle:resourceBundle compatibleWithTraitCollection:nil];
+        UIImage *arrowImage = [UIImage imageNamed:@"arrow_dash_01.png" inBundle:resourceBundle compatibleWithTraitCollection:nil];
         CGFloat leftCap = 20;
         CGFloat rightCap = 20;
         CGFloat topInset = arrowImage.size.height * 0.3;
