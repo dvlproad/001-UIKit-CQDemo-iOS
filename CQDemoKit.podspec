@@ -152,6 +152,9 @@ Pod::Spec.new do |s|
     # 文本视图
     ss.subspec 'TextView' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/TextView/**/*.{h,m}"
+      sss.resource_bundles = {
+        'CQDemoKit_TextView' => ['CQDemoKit/BaseVC/TextView/Resources/**/*.{png,jpg,jpeg}']
+      }
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
       sss.dependency 'CQDemoKit/BaseUtil'
     end
