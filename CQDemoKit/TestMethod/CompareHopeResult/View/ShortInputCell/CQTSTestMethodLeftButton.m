@@ -1,18 +1,18 @@
 //
-//  CJVerticalTextButton.m
+//  CQTSTestMethodLeftButton.m
 //  CQDemoKit
 //
 
-#import "CJVerticalTextButton.h"
+#import "CQTSTestMethodLeftButton.h"
 #import <Masonry/Masonry.h>
 
-@interface CJVerticalTextButton ()
+@interface CQTSTestMethodLeftButton ()
 @property (nonatomic, strong) UILabel *rotatedLabel;
 @property (nonatomic, strong) UIStackView *verticalStack;
 @property (nonatomic, strong) NSArray<UILabel *> *charLabels;
 @end
 
-@implementation CJVerticalTextButton
+@implementation CQTSTestMethodLeftButton
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

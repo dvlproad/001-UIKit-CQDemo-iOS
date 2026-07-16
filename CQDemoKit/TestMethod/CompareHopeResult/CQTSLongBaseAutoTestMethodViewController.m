@@ -1,22 +1,23 @@
 //
-//  CJUIKitBaseTextViewController.m
+//  CQTSLongBaseAutoTestMethodViewController.m
 //  CJFoundationDemo
 //
 //  Created by ciyouzen on 2016/3/26.
 //  Copyright © 2016年 dvlproad. All rights reserved.
 //
 
-#import "CJUIKitBaseTextViewController.h"
-#import "CJValidateStringTableViewCell.h"
+#import "CQTSLongBaseAutoTestMethodViewController.h"
+#import "CQTSTestMethodLongTableViewCell.h"
+#import "CQTSTestMethodTableHeaderView.h"
 #import "CJUIKitToastUtil.h"
 
-@interface CJUIKitBaseTextViewController () <UITableViewDataSource, UITableViewDelegate> {
+@interface CQTSLongBaseAutoTestMethodViewController () <UITableViewDataSource, UITableViewDelegate> {
     
 }
 
 @end
 
-@implementation CJUIKitBaseTextViewController
+@implementation CQTSLongBaseAutoTestMethodViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,7 +26,7 @@
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     //[tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    [tableView registerClass:[CJValidateStringTableViewCell class] forCellReuseIdentifier:@"CJValidateStringTableViewCell"];
+    [tableView registerClass:[CQTSTestMethodLongTableViewCell class] forCellReuseIdentifier:@"CQTSTestMethodLongTableViewCell"];
     tableView.dataSource = self;
     tableView.delegate = self;
     [self.view addSubview:tableView];
@@ -33,6 +34,15 @@
         make.edges.mas_equalTo(self.view);
     }];
     self.tableView = tableView;
+    tableView.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    // --- 结果区颜色图例 ---
+    CGFloat headerWidth = tableView.bounds.size.width;
+    CGFloat headerHeight = [CQTSTestMethodTableHeaderView headerHeightForWidth:headerWidth];
+    CQTSTestMethodTableHeaderView *legendView = [[CQTSTestMethodTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, headerWidth, headerHeight)];
+    tableView.tableHeaderView = legendView;
+    
     
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
@@ -130,27 +140,27 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CQDMSectionDataModel *sectionDataModel = [self.sectionDataModels objectAtIndex:indexPath.section];
     NSArray *dataModels = sectionDataModel.values;
-    CJDealTextModel *dealTextModel = [dataModels objectAtIndex:indexPath.row];
+    CQTSAutoTestMethodModel *dealTextModel = [dataModels objectAtIndex:indexPath.row];
     
-    CJValidateStringTableViewCell *cell = (CJValidateStringTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"CJValidateStringTableViewCell" forIndexPath:indexPath];
+    CQTSTestMethodLongTableViewCell *cell = (CQTSTestMethodLongTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"CQTSTestMethodLongTableViewCell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.fixResultLableWidth = self.fixCellResultLableWidth;
+    cell.fixTextViewHeight = self.fixTextViewHeight;
+    cell.indexPath = indexPath;
     
-    cell.textField.placeholder = dealTextModel.placeholder;
-    cell.textField.text = dealTextModel.text;
-    [cell.validateButton setTitle:dealTextModel.actionTitle forState:UIControlStateNormal];
+    cell.textView.text = dealTextModel.text;
+    [cell configButtonTitle:dealTextModel.actionTitle buttonPosition:CJValidateButtonPositionMiddle];
     __weak typeof(self) weakSelf = self;
-    [cell setValidateHandle:^BOOL(CJValidateStringTableViewCell *mcell, BOOL isAutoExec) {
-        return [weakSelf __dealTextModel:dealTextModel inCell:mcell isAutoExec:isAutoExec];
+    [cell setValidateHandle:^CQTSMethodValidateResult(CQTSTestMethodLongTableViewCell *mcell, CJValidateTriggerType triggerType) {
+        return [weakSelf __dealTextModel:dealTextModel inCell:mcell triggerType:triggerType];
     }];
     // cell上的文本内容改变的时候，自动执行validateButton的点击事件
     __weak typeof(cell)weakCell = cell;
     [cell setTextDidChangeBlock:^(NSString *bText) {
-        return [weakCell validateEvent:NO];
+        return [weakCell validateWithTriggerType:CJValidateTriggerTypeTextChanged];
     }];
     
     if (dealTextModel.autoExec) {
-        [cell validateEvent:YES];
+        [cell validateWithTriggerType:CJValidateTriggerTypeCellInitial];
     }
     
         
@@ -167,40 +177,56 @@
  *
  *  @param dealTextModel    dealTextModel
  *  @param mcell            mcell
- *  @param isAutoExec       是否在cell显示出来的时候自动执行
+ *  @param triggerType      触发验证的来源
  *
- *  @return 处理结果是否正确
+ *  @return 验证结果枚举
  */
-- (BOOL)__dealTextModel:(CJDealTextModel *)dealTextModel
-                 inCell:(CJValidateStringTableViewCell *)mcell
-             isAutoExec:(BOOL)isAutoExec
+- (CQTSMethodValidateResult)__dealTextModel:(CQTSAutoTestMethodModel *)dealTextModel
+                                     inCell:(CQTSTestMethodLongTableViewCell *)mcell
+                                triggerType:(CJValidateTriggerType)triggerType
 {
-    NSString *originNumberString = mcell.textField.text;
-    NSString *lastNumberString = dealTextModel.actionBlock(originNumberString);
-    mcell.resultLabel.text = lastNumberString;
+    NSString *currentText = mcell.textView.text;
     
-    BOOL validateSuccess = NO;
-    if (dealTextModel.hopeResultText.length > 0) {
-        validateSuccess = [lastNumberString isEqualToString:dealTextModel.hopeResultText];
-        
-        if (isAutoExec == NO) {
-            if (validateSuccess == NO) {
-                NSString *errorMessage = [NSString stringWithFormat:@"代码方法错误，执行结果应为:%@", dealTextModel.hopeResultText];
-                [CJUIKitToastUtil showMessage:errorMessage];
-            } else {
-                NSString *successMessage = [NSString stringWithFormat:@"恭喜你，代码方法处理正确！"];
-                [CJUIKitToastUtil showMessage:successMessage];
-            }
-        }
-    } else {
-        if (lastNumberString == nil || lastNumberString.length == 0) {
-            validateSuccess = YES;
-        } else {
-            validateSuccess = NO;
-        }
+    // 判断文本是否被修改
+    BOOL textModified = ![currentText isEqualToString:dealTextModel.text];
+    if (textModified) {
+        // 文本已修改，执行方法并显示结果，但标记为需自行验证
+        NSString *result = dealTextModel.actionBlock(currentText);
+        mcell.resultLabel.text = result;
+        return CQTSMethodValidateResultModified;
     }
     
-    return validateSuccess;
+    // 文本未修改，执行方法并比较结果
+    NSString *result = dealTextModel.actionBlock(currentText);
+    mcell.resultLabel.text = result;
+    
+    // 无希望处理后的text结果值，所以不比较
+    if (dealTextModel.hopeResultText.length == 0) {
+        if (triggerType != CJValidateTriggerTypeCellInitial) {
+            if (result == nil || result.length == 0) {
+                NSString *warningMessage = [NSString stringWithFormat:@"友情提示，您没有提供该方法的hopeResultText，且该方法返回值空了，请自行判断方法的结果[%@]是否正确", result];
+                [CJUIKitToastUtil showMessage:warningMessage];
+            } else {
+                NSString *warningMessage = [NSString stringWithFormat:@"友情提示，您没有提供该方法的hopeResultText，无法进行比较，请自行判断方法的结果[%@]是否正确", result];
+                [CJUIKitToastUtil showMessage:warningMessage];
+            }
+        }
+        
+        return CQTSMethodValidateResultNoHopeResultText;
+    }
+    
+    // 有希望处理后的text结果值，所以进行比较
+    BOOL validateSuccess = [result isEqualToString:dealTextModel.hopeResultText];
+    if (triggerType != CJValidateTriggerTypeCellInitial) {
+        if (validateSuccess == NO) {
+            NSString *errorMessage = [NSString stringWithFormat:@"代码方法错误，执行结果应为:%@", dealTextModel.hopeResultText];
+            [CJUIKitToastUtil showMessage:errorMessage];
+        } else {
+            NSString *successMessage = [NSString stringWithFormat:@"恭喜你，代码方法处理正确！"];
+            [CJUIKitToastUtil showMessage:successMessage];
+        }
+    }
+    return validateSuccess ? CQTSMethodValidateResultMatch : CQTSMethodValidateResultMismatch;
 }
 
 - (void)didReceiveMemoryWarning {

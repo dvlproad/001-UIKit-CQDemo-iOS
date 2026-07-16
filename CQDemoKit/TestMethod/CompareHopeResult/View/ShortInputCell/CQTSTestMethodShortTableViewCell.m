@@ -1,20 +1,20 @@
 //
-//  CJValidateStringTableViewCell.m
+//  CQTSTestMethodShortTableViewCell.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/12/29.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJValidateStringTableViewCell.h"
+#import "CQTSTestMethodShortTableViewCell.h"
 
-@interface CJValidateStringTableViewCell () {
+@interface CQTSTestMethodShortTableViewCell () {
     
 }
 
 @end
 
-@implementation CJValidateStringTableViewCell
+@implementation CQTSTestMethodShortTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -9,7 +9,7 @@
 //  本视图独立封装，而不是放在cell中，是为了后续可能有其他非列表cell里地方需要这个视图的时候，可以直接拿来使用，避免重复开发
 
 #import <UIKit/UIKit.h>
-#import "TestValueChangeModel.h"
+#import "CQTSManualTestMethodModel.h"
 
 @interface CQTSMinusAddView : UIView {
     

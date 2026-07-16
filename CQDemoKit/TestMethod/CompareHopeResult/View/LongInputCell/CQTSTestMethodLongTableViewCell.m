@@ -1,21 +1,21 @@
 //
-//  CJValidateStringBigTableViewCell.m
+//  CQTSTestMethodLongTableViewCell.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/12/29.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CJValidateStringBigTableViewCell.h"
+#import "CQTSTestMethodLongTableViewCell.h"
 #import <Masonry/Masonry.h>
-#import "CQTSArrowDashView.h"
-#import "CJVerticalTextButton.h"
+#import "CQTSTestMethodMiddleButton.h"
+#import "CQTSTestMethodLeftButton.h"
 
-@interface CJValidateStringBigTableViewCell () {
+@interface CQTSTestMethodLongTableViewCell () {
     
 }
-@property (nonatomic, strong) CJVerticalTextButton *leftVerticalButton;
-@property (nonatomic, strong) CQTSArrowDashView *middleValidateButton;
+@property (nonatomic, strong) CQTSTestMethodLeftButton *leftVerticalButton;
+@property (nonatomic, strong) CQTSTestMethodMiddleButton *middleValidateButton;
 
 @property (nonatomic, strong) UIView *accentLine;
 @property (nonatomic, strong) UIView *inputBgView;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation CJValidateStringBigTableViewCell
+@implementation CQTSTestMethodLongTableViewCell
 
 + (NSArray *)accentColors {
     static NSArray *colors;
@@ -156,7 +156,7 @@
     cardContainer.layer.shadowOpacity = 1.0;
     cardContainer.layer.shadowRadius = 8;
     // --- 左侧竖排文字按钮 ---
-    CJVerticalTextButton *leftVerticalButton = [CJVerticalTextButton buttonWithType:UIButtonTypeCustom];
+    CQTSTestMethodLeftButton *leftVerticalButton = [CQTSTestMethodLeftButton buttonWithType:UIButtonTypeCustom];
     [leftVerticalButton addTarget:self action:@selector(verticalButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [cardContainer addSubview:leftVerticalButton];
     [leftVerticalButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -214,7 +214,7 @@
 
     // --- 操作按钮 ---
     // --- 中间区域（虚线箭头贯穿，按钮盖在上面） ---
-    CQTSArrowDashView *middleValidateButton = [[CQTSArrowDashView alloc] initWithTapAction:^{
+    CQTSTestMethodMiddleButton *middleValidateButton = [[CQTSTestMethodMiddleButton alloc] initWithTapAction:^{
         [weakSelf verticalButtonAction];
     }];
     [parentView addSubview:middleValidateButton];

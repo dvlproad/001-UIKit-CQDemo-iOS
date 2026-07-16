@@ -1,5 +1,5 @@
 //
-//  CJVerticalTextButton.h
+//  CQTSTestMethodLeftButton.h
 //  CQDemoKit
 //
 
@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, CJVerticalTextButtonStyle) {
 };
 
 /// 支持旋转90度或竖排显示的按钮
-@interface CJVerticalTextButton : UIButton
+@interface CQTSTestMethodLeftButton : UIButton
 
 @property (nonatomic, assign) CJVerticalTextButtonStyle verticalStyle;
 

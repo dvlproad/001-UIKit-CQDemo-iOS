@@ -1,5 +1,5 @@
 //
-//  TestValueChangeModel.h
+//  CQTSManualTestMethodModel.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 12/7/18.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TestValueChangeModel : NSObject {
+@interface CQTSManualTestMethodModel : NSObject {
     
 }
 @property (nonatomic, copy, readonly) NSString *valueString;

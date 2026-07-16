@@ -97,7 +97,7 @@
 }
 
 #pragma mark - Setter
-- (void)setValueChangeModel:(TestValueChangeModel *)valueChangeModel {
+- (void)setValueChangeModel:(CQTSManualTestMethodModel *)valueChangeModel {
     _valueChangeModel = valueChangeModel;
     
     self.changeExplainLabel.text = valueChangeModel.changeExplain;

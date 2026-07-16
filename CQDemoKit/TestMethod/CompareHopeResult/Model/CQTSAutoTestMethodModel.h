@@ -1,5 +1,5 @@
 //
-//  CJDealTextModel.h
+//  CQTSAutoTestMethodModel.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2019/10/29.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CJDealTextModel : NSObject {
+@interface CQTSAutoTestMethodModel : NSObject {
     
 }
 @property (nonatomic, copy) NSString *text;                     /**< 要处理的text */

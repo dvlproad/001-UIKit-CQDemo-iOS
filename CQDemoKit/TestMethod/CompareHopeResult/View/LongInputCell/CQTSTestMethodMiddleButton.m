@@ -1,14 +1,14 @@
 //
-//  CQTSArrowDashView.m
+//  CQTSTestMethodMiddleButton.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/12/29.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "CQTSArrowDashView.h"
+#import "CQTSTestMethodMiddleButton.h"
 
-@interface CQTSArrowDashView () {
+@interface CQTSTestMethodMiddleButton () {
     
 }
 @property (nonatomic, strong) UIButton *validateButton;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation CQTSArrowDashView
+@implementation CQTSTestMethodMiddleButton
 
 - (instancetype)initWithTapAction:(void(^)(void))tapAction {
     self = [super initWithFrame:CGRectZero];

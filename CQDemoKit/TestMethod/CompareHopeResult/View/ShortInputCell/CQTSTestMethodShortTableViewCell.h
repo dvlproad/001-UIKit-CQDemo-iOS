@@ -1,5 +1,5 @@
 //
-//  CJValidateStringTableViewCell.h
+//  CQTSTestMethodShortTableViewCell.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/12/29.
@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CJValidateStringTableViewCell : UITableViewCell {
+@interface CQTSTestMethodShortTableViewCell : UITableViewCell {
     
 }
 @property (nonatomic, strong) UITextField *textField;
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *resultLabel;
 @property (nonatomic, assign) CGFloat fixResultLableWidth;  /**< 固定result的视图宽度（该值大于20才生效），默认为0<20，表示自适应宽度 */
 
-@property (nonatomic, copy) BOOL (^validateHandle)(CJValidateStringTableViewCell *mcell, BOOL isAutoExec);
+@property (nonatomic, copy) BOOL (^validateHandle)(CQTSTestMethodShortTableViewCell *mcell, BOOL isAutoExec);
 
 @property (nonatomic, copy) void(^textDidChangeBlock)(NSString *bText); /**< 文本框内容变化的回调 */
 

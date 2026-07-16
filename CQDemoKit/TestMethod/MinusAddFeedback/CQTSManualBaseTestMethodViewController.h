@@ -1,5 +1,5 @@
 //
-//  CQTSManualTestMethodBaseViewController.h
+//  CQTSManualBaseTestMethodViewController.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 12/7/18.
@@ -9,9 +9,9 @@
 
 #import "CJUIKitBaseViewController.h"
 #import "CQDMSectionDataModel.h"
-#import "TestValueChangeModel.h"
+#import "CQTSManualTestMethodModel.h"
 
-@interface CQTSManualTestMethodBaseViewController : CJUIKitBaseViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface CQTSManualBaseTestMethodViewController : CJUIKitBaseViewController <UITableViewDataSource, UITableViewDelegate> {
     
 }
 @property (nonatomic, strong) UITableView *tableView;

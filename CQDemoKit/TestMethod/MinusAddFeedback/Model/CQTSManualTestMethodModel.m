@@ -1,14 +1,14 @@
 //
-//  TestValueChangeModel.m
+//  CQTSManualTestMethodModel.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 12/7/18.
 //  Copyright © 2018 dvlproad. All rights reserved.
 //
 
-#import "TestValueChangeModel.h"
+#import "CQTSManualTestMethodModel.h"
 
-@interface TestValueChangeModel () {
+@interface CQTSManualTestMethodModel () {
     
 }
 @property (nonatomic, copy, readonly) id value;
@@ -22,7 +22,7 @@
 @end
 
 
-@implementation TestValueChangeModel
+@implementation CQTSManualTestMethodModel
 
 - (instancetype)initWithValue:(id)value
            textFromValueBlock:(NSString* (^)(id value))textFromValueBlock

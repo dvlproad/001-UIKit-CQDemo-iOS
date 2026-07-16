@@ -1,16 +1,16 @@
 //
-//  CQTSMethodValidateTableHeaderView.m
+//  CQTSTestMethodTableHeaderView.m
 //  CJUIKitDemo
 //
 //  Copyright © 2016 dvlproad. All rights reserved.
 //
 
-#import "CQTSMethodValidateTableHeaderView.h"
+#import "CQTSTestMethodTableHeaderView.h"
 #import <Masonry/Masonry.h>
 
 static NSString * const kLegendDescText = @"1、每张卡片已提供默认输入值和对应的正确结果。\n2、你需要自行实现方法，使得该方法所得的结果与正确结果一致。\n3、你的方法结果与正确结果是否一致，即代表着你实现的方法是否有问题。\n附：结果是否一致，请看结果区颜色：";
 
-@implementation CQTSMethodValidateTableHeaderView
+@implementation CQTSTestMethodTableHeaderView
 
 + (CGFloat)headerHeightForWidth:(CGFloat)width {
     CGFloat titleHeight = 28;

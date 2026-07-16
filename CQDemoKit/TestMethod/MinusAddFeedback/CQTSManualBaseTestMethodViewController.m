@@ -1,19 +1,19 @@
 //
-//  CQTSManualTestMethodBaseViewController.m
+//  CQTSManualBaseTestMethodViewController.m
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 12/7/18.
 //  Copyright © 2018 dvlproad. All rights reserved.
 //
 
-#import "CQTSManualTestMethodBaseViewController.h"
+#import "CQTSManualBaseTestMethodViewController.h"
 #import "TestValueChangeTableViewCell.h"
 
-@interface CQTSManualTestMethodBaseViewController () 
+@interface CQTSManualBaseTestMethodViewController () 
 
 @end
 
-@implementation CQTSManualTestMethodBaseViewController
+@implementation CQTSManualBaseTestMethodViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,7 +60,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CQDMSectionDataModel *sectionDataModel = [self.sectionDataModels objectAtIndex:indexPath.section];
     NSArray *dataModels = sectionDataModel.values;
-    TestValueChangeModel *valueChangeModel = [dataModels objectAtIndex:indexPath.row];
+    CQTSManualTestMethodModel *valueChangeModel = [dataModels objectAtIndex:indexPath.row];
     
     TestValueChangeTableViewCell *cell = (TestValueChangeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TestValueChangeTableViewCell" forIndexPath:indexPath];
     cell.valueChangeModel = valueChangeModel;

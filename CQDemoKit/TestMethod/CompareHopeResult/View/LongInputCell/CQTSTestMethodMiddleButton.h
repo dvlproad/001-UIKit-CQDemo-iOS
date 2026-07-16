@@ -1,5 +1,5 @@
 //
-//  CQTSArrowDashView.h
+//  CQTSTestMethodMiddleButton.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/12/29.
@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CQTSArrowDashView : UIView {
+@interface CQTSTestMethodMiddleButton : UIView {
     
 }
 

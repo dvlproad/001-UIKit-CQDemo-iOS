@@ -1,5 +1,5 @@
 //
-//  CJValidateStringBigTableViewCell.h
+//  CQTSTestMethodLongTableViewCell.h
 //  CJUIKitDemo
 //
 //  Created by ciyouzen on 2017/12/29.
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, CJValidateTriggerType) {
     CJValidateTriggerTypeCellInitial,   /**< cell首次显示自动触发 */
 };
 
-@interface CJValidateStringBigTableViewCell : UITableViewCell <UITextViewDelegate> {
+@interface CQTSTestMethodLongTableViewCell : UITableViewCell <UITextViewDelegate> {
     
 }
 @property (nonatomic, strong) UITextView *textView;
@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger, CJValidateTriggerType) {
 @property (nonatomic, assign) CGFloat fixTextViewHeight;  /**< 固定textView的视图高度（该值大于44才生效），默认固定为44 */
 @property (nonatomic, strong) NSIndexPath *indexPath;      /**< 设置后自动按 section 设置左侧竖线颜色 */
 
-@property (nonatomic, copy) CQTSMethodValidateResult (^validateHandle)(CJValidateStringBigTableViewCell *mcell, CJValidateTriggerType triggerType);
+@property (nonatomic, copy) CQTSMethodValidateResult (^validateHandle)(CQTSTestMethodLongTableViewCell *mcell, CJValidateTriggerType triggerType);
 
 @property (nonatomic, copy) void(^textDidChangeBlock)(NSString *bText); /**< 文本框内容变化的回调 */
 
