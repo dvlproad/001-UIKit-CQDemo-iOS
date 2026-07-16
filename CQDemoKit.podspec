@@ -42,8 +42,8 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.5"
-  s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、Monitor 等通用 Demo 组件"
+  s.version      = "0.9.6"
+  s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、TestMethod、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
@@ -55,7 +55,6 @@ Pod::Spec.new do |s|
                  • CQDemoKit/BaseVC/ScrollView - 滚动视图
                  • CQDemoKit/BaseVC/TableView - 表格视图
                  • CQDemoKit/BaseVC/Collection - 集合视图
-                 • CQDemoKit/BaseVC/ValidateMethod - 验证方法是否正确的基类(输入支持单行和多行，如测试获取字符串长度的方法、测试获取字符串、日期计算等方法)
                  • CQDemoKit/BaseVC/TabBar - TabBar
                  
                  • CQDemoKit/BaseUIKit - 基础模块UIKit
@@ -66,6 +65,7 @@ Pod::Spec.new do |s|
                  • CQDemoKit/Demo_RipeView - 为了快速构建完整 Demo 工程提供的一些成熟的DemoRipeView(已含内容和事件)
                  • CQDemoKit/Demo_DataSourceAndDelegate - 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
                  • CQDemoKit/Auxiliary - 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)
+                 • CQDemoKit/TestMethod - 验证方法是否正确的基类(CompareHopeResult:输入支持单行和多行，如测试获取字符串长度的方法、测试获取字符串、日期计算等方法；MinusAddFeedback:中间是文本框，左侧"-"按钮，右侧"+"按钮 ，下面是方法执行结果的 的方法列表测试视图（常用于时间加减、数值加减))
                  • CQDemoKit/Monitor - 监控
 
                  每个子库可独立引入，详见各子库描述。
@@ -84,7 +84,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "11.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.5_1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.6" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -147,16 +147,6 @@ Pod::Spec.new do |s|
     ss.subspec 'Collection' do |sss|
       sss.source_files = "CQDemoKit/BaseVC/Collection/**/*.{h,m}"
       sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
-    end
-
-    # 验证方法是否正确的基类(输入支持单行和多行，如测试获取字符串长度的方法、测试获取字符串、日期计算等方法)
-    ss.subspec 'ValidateMethod' do |sss|
-      sss.source_files = "CQDemoKit/BaseVC/ValidateMethod/**/*.{h,m}"
-      sss.resource_bundles = {
-        'CQDemoKit_TextView' => ['CQDemoKit/BaseVC/ValidateMethod/Resources/**/*.{png,jpg,jpeg}']
-      }
-      sss.dependency 'CQDemoKit/BaseVC/Base'	# 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
-      sss.dependency 'CQDemoKit/BaseUtil'
     end
 
     # TabBar
@@ -271,6 +261,16 @@ Pod::Spec.new do |s|
   s.subspec 'Auxiliary' do |ss|
     ss.source_files = "CQDemoKit/Auxiliary/**/*.{h,m}"
     ss.dependency 'Masonry'
+  end
+
+  # 验证方法是否正确的基类(CompareHopeResult:输入支持单行和多行，如测试获取字符串长度的方法、测试获取字符串、日期计算等方法；MinusAddFeedback:中间是文本框，左侧"-"按钮，右侧"+"按钮 ，下面是方法执行结果的 的方法列表测试视图（常用于时间加减、数值加减))
+  s.subspec 'TestMethod' do |ss|
+    ss.source_files = "CQDemoKit/TestMethod/**/*.{h,m}"
+    ss.resource_bundles = {
+      'CQDemoKit_TestMethod' => ['CQDemoKit/TestMethod/**/*.{png,jpg,jpeg}']
+    }
+    ss.dependency 'CQDemoKit/BaseVC/Base'  # 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
+    ss.dependency 'CQDemoKit/BaseUtil'
   end
   
   # 监控

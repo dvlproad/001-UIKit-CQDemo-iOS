@@ -13,6 +13,7 @@ PODS:
     - CQDemoKit/Demo_RipeView (= 0.9.5)
     - CQDemoKit/Helper (= 0.9.5)
     - CQDemoKit/Monitor (= 0.9.5)
+    - CQDemoKit/TestMethod (= 0.9.5)
   - CQDemoKit-Swift (0.0.2):
     - CQDemoKit
     - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.2)
@@ -32,7 +33,6 @@ PODS:
     - CQDemoKit/BaseVC/ScrollView (= 0.9.5)
     - CQDemoKit/BaseVC/TabBar (= 0.9.5)
     - CQDemoKit/BaseVC/TableView (= 0.9.5)
-    - CQDemoKit/BaseVC/ValidateMethod (= 0.9.5)
   - CQDemoKit/BaseVC/Base (0.9.5):
     - CQDemoKit/BaseUIKit
     - Masonry
@@ -43,9 +43,6 @@ PODS:
   - CQDemoKit/BaseVC/TabBar (0.9.5):
     - CQDemoKit/Helper
   - CQDemoKit/BaseVC/TableView (0.9.5):
-    - CQDemoKit/BaseVC/Base
-  - CQDemoKit/BaseVC/ValidateMethod (0.9.5):
-    - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
   - CQDemoKit/Demo_DataSourceAndDelegate (0.9.5):
     - CQDemoKit/BaseVC
@@ -91,6 +88,9 @@ PODS:
     - Masonry
   - CQDemoKit/Helper (0.9.5)
   - CQDemoKit/Monitor (0.9.5)
+  - CQDemoKit/TestMethod (0.9.5):
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC/Base
   - CQDemoResource (0.2.9):
     - CQDemoResource/Core (= 0.2.9)
     - CQDemoResource/GIF (= 0.2.9)
@@ -174,7 +174,7 @@ SPEC CHECKSUMS:
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
-  CQDemoKit: b2cfe7abbb24eab387f71dff6c5256ef14b6e6c6
+  CQDemoKit: ec04a63ba5ff5f6686fa33081bd5c4cff0c73b45
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
   CQDemoResource: eb2c2f8f3055ec6288a59e19dbdc8be74c8dca15
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
