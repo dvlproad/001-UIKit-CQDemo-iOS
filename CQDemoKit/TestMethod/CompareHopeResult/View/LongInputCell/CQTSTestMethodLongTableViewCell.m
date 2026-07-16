@@ -267,6 +267,7 @@
         make.left.mas_equalTo(resultBg).mas_offset(12);
         make.right.mas_equalTo(resultBg).mas_offset(-12);
         make.bottom.mas_equalTo(resultBg).mas_offset(-10);
+        make.height.mas_greaterThanOrEqualTo(24);   // 限制最小高度，避免空字符串的时候不显示
     }];
     self.resultLabel = resultLabel;
     
