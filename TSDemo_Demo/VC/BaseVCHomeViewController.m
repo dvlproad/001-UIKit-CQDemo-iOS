@@ -10,8 +10,11 @@
 #import <CQDemoKit/UIView+CQAuxiliaryText.h>
 #import <CJBaseUtil_Swift/CJBaseUtil_Swift-Swift.h>
 
+// 测试方法的列表视图
 #import "TSSingleLineTextViewController.h"
 #import "TSMultilineTextViewController.h"
+#import "TSManualTestMethodViewController.h"
+
 #import <TSDemo_Demo_Swift/TSDemo_Demo_Swift-Swift.h>
 
 @interface BaseVCHomeViewController () {
@@ -30,20 +33,26 @@
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
-    // 文本列表控制器
+    // 【测试方法的列表视图】
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"文本列表控制器";
+        sectionDataModel.theme = @"【测试方法的列表视图】";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Cell视图【单行排列】";
+            module.title = @"输入内容是单行的时候";
             module.classEntry = [TSSingleLineTextViewController class];
             [sectionDataModel.values addObject:module];
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Cell视图【多行排列】";
+            module.title = @"输入内容可能多行的时候";
             module.classEntry = [TSMultilineTextViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"有加减操作的方法";
+            module.classEntry = [TSManualTestMethodViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

@@ -51,11 +51,11 @@
     }];
     
     UIView *removeButtonsView = [CQTSContainerViewFactory threeButtonsViewAlongAxis:MASAxisTypeVertical title1:@"移除辅助(正序：按添加顺序移除)" actionBlock1:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_removePromptText:CQAuxiliaryRemoveOrderPositive];
+        [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveFirstOne];
     } title2:@"移除辅助(逆序：后添加到先移除)" actionBlock2:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_removePromptText:CQAuxiliaryRemoveOrderNegative];
+        [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveLastOne];
     } title3:@"移除辅助(所有的都移除)" actionBlock3:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_removePromptText:CQAuxiliaryRemoveOrderAll];
+        [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveAll];
     }];
     [self.view addSubview:removeButtonsView];
     [removeButtonsView mas_makeConstraints:^(MASConstraintMaker *make) {

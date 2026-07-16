@@ -33,6 +33,7 @@
 #import "TSSwitchViewController.h"
 #import "UIUtilHomeViewController.h"
 #import "BaseVCHomeViewController.h"
+#import "TSManualTestMethodViewController.h"
 #import "TSMultilineTextViewController.h"
 #import "TSSingleLineTextViewController.h"
 

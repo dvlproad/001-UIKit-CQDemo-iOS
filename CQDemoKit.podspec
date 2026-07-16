@@ -11,7 +11,11 @@
 # 删除指定版本:                                   pod trunk delete CJMedia 1.0.0
 # 全删除后，验证远程的是否正确删掉了                  pod trunk info CJMedia
 # 清除缓存(解决pod search查本地还搜得到delete的问题): pod cache clean CQDemoKit
-# 在 spec 仓库中查找指定库的缓存位置                 find ~/.cocoapods/repos -name "CQDemoKit" -type f
+
+# 本地查找(pod repo update trunk不会自动清理本地已下载后，才在远程删除掉的pod)
+# 在本地 spec 仓库中查找指定库的缓存位置
+# 本地精确查找    find ~/.cocoapods/repos/trunk -name "CJMedia.podspec.json" -type f
+# 本地模糊查找    find ~/.cocoapods/repos/trunk -name "CJMedia.*" -type f
 
 # ------------------------------------------------
 # 查看本地已同步的pod库：pod repo
@@ -42,7 +46,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.8"
+  s.version      = "0.9.9"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、TestMethod、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -66,6 +70,9 @@ Pod::Spec.new do |s|
                  • CQDemoKit/Demo_DataSourceAndDelegate - 为了快速构建完整 Demo 工程提供的一些成熟的DataSource和Delegate(已含内容和事件)
                  • CQDemoKit/Auxiliary - 辅助模块(①添加辅助文本(含删除)、添加任意辅助视图；②为 present 出来的视图，添加 NavigationBar)
                  • CQDemoKit/TestMethod - 验证方法是否正确的基类(CompareHopeResult:输入支持单行和多行，如测试获取字符串长度的方法、测试获取字符串、日期计算等方法；MinusAddFeedback:中间是文本框，左侧"-"按钮，右侧"+"按钮 ，下面是方法执行结果的 的方法列表测试视图（常用于时间加减、数值加减))
+                 
+
+                 • CQDemoKit/StateUI - 状态相关的UI(如：没有数据的视图 CQTSDataEmptyView ，没有网络的弹窗 CQTSAlertManager)
                  • CQDemoKit/Monitor - 监控
 
                  每个子库可独立引入，详见各子库描述。
@@ -84,7 +91,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.8" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.9" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -271,6 +278,15 @@ Pod::Spec.new do |s|
     }
     ss.dependency 'CQDemoKit/BaseVC/Base'  # 该库内还已含 CQDMSectionDataModel 和 CQDMModuleModel
     ss.dependency 'CQDemoKit/BaseUtil'
+  end
+  
+
+  # 状态相关的UI(如：没有数据的视图 CQTSDataEmptyView ，没有网络的弹窗 CQTSAlertManager)
+  s.subspec 'StateUI' do |ss|
+    ss.source_files = "CQDemoKit/StateUI/**/*.{h,m}"
+    ss.resource_bundles = {
+      'CQDemoKit_StateUI' => ['CQDemoKit/StateUI/**/*.{png,jpg,jpeg}']
+    }
   end
   
   # 监控

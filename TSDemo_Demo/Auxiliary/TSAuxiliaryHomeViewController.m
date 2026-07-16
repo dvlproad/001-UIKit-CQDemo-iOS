@@ -10,6 +10,10 @@
 #import "TSAuxiliaryViewController.h"
 #import "TSCopyMainBunldeFileViewController.h"
 
+#import <CQDemoKit/UIView+CQAuxiliaryText.h>
+#import <CQDemoKit/CQTSDataEmptyView.h>
+#import <CQDemoKit/CQTSAlertManager.h>
+
 @interface TSAuxiliaryHomeViewController () {
     
 }
@@ -24,7 +28,8 @@
     
     self.navigationItem.title = NSLocalizedString(@"Auxiliary首页", nil); //知识点:使得tabBar中的title可以和显示在顶部的title保持各自
     
-
+    __weak typeof(self) weakSelf = self;
+    
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
     // Auxiliary
@@ -50,6 +55,34 @@
             module.classEntry = [TSCopyMainBunldeFileViewController class];
             [sectionDataModel.values addObject:module];
         }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // StateView - 状态视图(如：没有数据的视图 CQTSDataEmptyView ，没有网络的弹窗 CQTSAlertManager)
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 StateView 等";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"没有数据的视图 CQTSDataEmptyView";
+            module.actionBlock = ^{
+                UIView *emptyView = [[CQTSDataEmptyView alloc] initWithReloadHandle:^(CQTSDataEmptyView *emptyView) {
+                    [weakSelf.view cqdemo_removePrompt:CQAuxiliaryRemoveLastOne];
+                }];
+                emptyView.backgroundColor = [UIColor redColor];
+                [weakSelf.view cqdemo_addPromptView:emptyView layout:CQAuxiliaryAlignmentCenter height:400];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"没有网络的弹窗 CQTSAlertManager";
+            module.actionBlock = ^{
+                [[CQTSAlertManager sharedInstance] showNetworkNoOpenAlert:YES];
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        
         [sectionDataModels addObject:sectionDataModel];
     }
     

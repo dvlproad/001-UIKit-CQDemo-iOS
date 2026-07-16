@@ -7,9 +7,9 @@
 //
 //  Cell视图【多行排列】的文本列表控制器的使用示例
 
-#import <CQDemoKit/CJUIKitBaseBigTextViewController.h>
+#import <CQDemoKit/CQTSLongBaseAutoTestMethodViewController.h>
 
-@interface TSMultilineTextViewController : CJUIKitBaseBigTextViewController
+@interface TSMultilineTextViewController : CQTSLongBaseAutoTestMethodViewController
 
 
 @end
