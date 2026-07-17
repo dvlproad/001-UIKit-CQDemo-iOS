@@ -187,6 +187,9 @@
         "CQDemoKit_StateUI": [
           "CQDemoKit/StateUI/**/*.{png,jpg,jpeg}"
         ]
+      },
+      "dependencies": {
+        "Masonry": []
       }
     },
     {

@@ -31,7 +31,7 @@
             } valueFromTextBlock:^id(NSString *string) {
                 return string;
             } ];
-            [valueChangeModel setupChangeExplain:@"测试<数字字符串>的加减" minusHandle:^id(id oldValue) {
+            [valueChangeModel setupChangeExplain:@"测试<数字字符串>的加减（无结果辅助信息）" minusHandle:^id(id oldValue) {
                 NSString *oldText = (NSString *)oldValue;
                 NSInteger iValue = [oldText integerValue] - 1;
                 NSString *newText = [@(iValue) stringValue];
@@ -41,6 +41,30 @@
                 NSInteger iValue = [oldText integerValue] + 1;
                 NSString *newText = [@(iValue) stringValue];
                 return newText;
+            }];
+            [sectionDataModel.values addObject:valueChangeModel];
+        }
+        {
+            CQTSManualTestMethodModel *valueChangeModel = [[CQTSManualTestMethodModel alloc] initWithValue:@"20" textFromValueBlock:^NSString *(id value) {
+                NSString *text = (NSString *)value;
+                return text;
+            } valueFromTextBlock:^id(NSString *string) {
+                return string;
+            } ];
+            [valueChangeModel setupChangeExplain:@"测试<数字字符串>的加减（有结果辅助信息）" minusHandle:^id(id oldValue) {
+                NSString *oldText = (NSString *)oldValue;
+                NSInteger iValue = [oldText integerValue] - 1;
+                NSString *newText = [@(iValue) stringValue];
+                return newText;
+            } addHandle:^id(id oldValue) {
+                NSString *oldText = (NSString *)oldValue;
+                NSInteger iValue = [oldText integerValue] + 1;
+                NSString *newText = [@(iValue) stringValue];
+                return newText;
+            }];
+            [valueChangeModel setupResultFromValueBlock:^NSString *(id value) {
+                NSString *extarResultString = [NSString stringWithFormat:@"您方法的返回值为：%@", value];
+                return extarResultString;
             }];
             [sectionDataModel.values addObject:valueChangeModel];
         }

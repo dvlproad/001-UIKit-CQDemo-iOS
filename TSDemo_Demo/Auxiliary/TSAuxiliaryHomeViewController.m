@@ -10,6 +10,7 @@
 #import "TSAuxiliaryViewController.h"
 #import "TSCopyMainBunldeFileViewController.h"
 
+#import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/UIView+CQAuxiliaryText.h>
 #import <CQDemoKit/CQTSDataEmptyView.h>
 #import <CQDemoKit/CQTSAlertManager.h>
@@ -65,12 +66,11 @@
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"没有数据的视图 CQTSDataEmptyView";
-            module.actionBlock = ^{
+            module.viewGetterHandle = ^UIView * _Nonnull{
                 UIView *emptyView = [[CQTSDataEmptyView alloc] initWithReloadHandle:^(CQTSDataEmptyView *emptyView) {
-                    [weakSelf.view cqdemo_removePrompt:CQAuxiliaryRemoveLastOne];
+                    [CJUIKitToastUtil showMessage:@"我是刷新"];
                 }];
-                emptyView.backgroundColor = [UIColor redColor];
-                [weakSelf.view cqdemo_addPromptView:emptyView layout:CQAuxiliaryAlignmentCenter height:400];
+                return emptyView;
             };
             [sectionDataModel.values addObject:module];
         }

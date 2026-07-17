@@ -1,6 +1,5 @@
 PODS:
-  - CJBaseHelper/HookCJHelper (0.1.8)
-  - CJBaseHelper/UIViewControllerCJHelper (0.1.8)
+  - CJBaseUIKit-Swift/UIView/as (0.0.2)
   - CJBaseUtil-Swift/FrameworkCJHelper (0.1.1)
   - CJPopupAction (1.5.0)
   - CQDemoKit (0.9.9):
@@ -89,7 +88,8 @@ PODS:
     - Masonry
   - CQDemoKit/Helper (0.9.9)
   - CQDemoKit/Monitor (0.9.9)
-  - CQDemoKit/StateUI (0.9.9)
+  - CQDemoKit/StateUI (0.9.9):
+    - Masonry
   - CQDemoKit/TestMethod (0.9.9):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
@@ -123,6 +123,7 @@ PODS:
     - FBRetainCycleDetector
   - SSZipArchive (2.4.3)
   - TSDemo_Demo (0.5.2):
+    - CJBaseUIKit-Swift/UIView/as
     - CJBaseUtil-Swift/FrameworkCJHelper
     - CQDemoKit
     - CQDemoResource
@@ -135,8 +136,6 @@ PODS:
     - CQDemoKit-Swift
 
 DEPENDENCIES:
-  - CJBaseHelper/HookCJHelper (~> 0.1.8)
-  - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.8)
   - CJPopupAction
   - CQDemoKit (from `../`)
   - CQDemoKit-Swift (from `../`)
@@ -149,7 +148,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - CJBaseHelper
+    - CJBaseUIKit-Swift
     - CJBaseUtil-Swift
     - CJPopupAction
     - FBRetainCycleDetector
@@ -173,10 +172,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
+  CJBaseUIKit-Swift: 432f05b09106994c16a4cf582c6a728c3e59316e
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
-  CQDemoKit: 5da5964f38ea8eeeaa684b5836c7c46a11c3fb52
+  CQDemoKit: b6edf72ac77aa94608172995edab055f654353df
   CQDemoKit-Swift: 5ca66b882255bf93b963dee04ed1bef4d67bf32b
   CQDemoResource: 4738f843adb17db54c2286667df9b7f20fff4faf
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
@@ -185,9 +184,9 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
-  TSDemo_Demo: 8052c2ad315d46bd50d36e97b843f59df6bd365c
+  TSDemo_Demo: c195cf98ec96b9faad882732a3cefaf152ed30ed
   TSDemo_Demo-Swift: 3a7ba09817923ed0e48c2f93c5af48aacb46ceb5
 
-PODFILE CHECKSUM: 6ab7f6b5384b4e57845bdbf595ed493a114ea9ab
+PODFILE CHECKSUM: 3be5036ed1537d2c8a550cb302fad06f2f65825a
 
 COCOAPODS: 1.16.2

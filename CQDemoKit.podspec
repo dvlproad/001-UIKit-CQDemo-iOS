@@ -287,6 +287,7 @@ Pod::Spec.new do |s|
     ss.resource_bundles = {
       'CQDemoKit_StateUI' => ['CQDemoKit/StateUI/**/*.{png,jpg,jpeg}']
     }
+    ss.dependency 'Masonry'
   end
   
   # 监控

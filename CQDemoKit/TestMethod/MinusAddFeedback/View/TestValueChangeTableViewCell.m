@@ -121,6 +121,10 @@
 }
 
 - (void)showExtraResult {
+    if (self.valueChangeModel.resultFromValueBlock == nil) {
+        return;;
+    }
+    
     NSString *extraResultMessage = self.valueChangeModel.extarResultString;
     if (extraResultMessage == nil) {
         self.extraResultLabel.text = @"（方法返回 nil）";

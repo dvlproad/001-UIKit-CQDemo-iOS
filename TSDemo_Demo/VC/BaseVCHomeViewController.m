@@ -79,6 +79,23 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"测试 SwiftUI 的 View(as)";
+            module.viewGetterHandle = ^UIView * _Nonnull{
+                
+                Class tsClass = [NSClassFromStringCJHelper swiftClassFrom:@"TSSFUIView" nameSpace:@"TSDemo_Demo-Swift"];
+                if (tsClass) {
+                    UIView *tsview = [[tsClass alloc] init];
+                    return tsview;
+                } else {
+                    UIView *tsview = [[UIView alloc] init];
+                    [tsview cqdemo_addPromptText:@"❌: TSTSUIView 视图生成失败,请检查" layout:CQAuxiliaryAlignmentCenter  height:20];
+                    return tsview;
+                }
+            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"测试 CQDemoSwiftUIBaseUIView";
             module.content = @"将 SwiftUI 的视图转为 UIKit 的 UIView";
             module.viewGetterHandle = ^UIView * _Nonnull{

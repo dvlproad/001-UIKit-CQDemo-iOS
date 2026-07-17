@@ -53,6 +53,7 @@ Pod::Spec.new do |s|
   s.dependency 'CQDemoKit'
   s.dependency 'CQDemoResource'
   s.dependency 'SSZipArchive'     # 模拟下载 zip 到沙盒的示例
+  s.dependency 'CJBaseUIKit-Swift/UIView/as'
   s.dependency 'CJBaseUtil-Swift/FrameworkCJHelper'
 
   s.dependency 'CQDemoShareFramework-Swift/WidgetExtension'  # 测试控制中心加载远程图标的时候需要使用

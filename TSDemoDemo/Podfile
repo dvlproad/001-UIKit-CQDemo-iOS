@@ -50,7 +50,6 @@ target 'TSDemoDemo' do
   pod 'CQDemoResource',       :path => '../'#,   :subspecs => ['Images', 'Images_Big', 'GIF', 'SVG', 'Videos']
 #  pod 'CJBaseUtil-Swift',     :subspecs => ['FrameworkCJHelper'],   :path => '../../CJUIKit'
   
-  pod 'CJBaseHelper',       '~> 0.1.8',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
   pod 'CJPopupAction' # 因为 UIView+CJDemoPopupAction.h 需要使用
 
   # [XCode14升级MLeaksFinder报错](https://blog.csdn.net/zcl369369/article/details/130828740)
