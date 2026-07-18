@@ -32,26 +32,27 @@ public struct TSSUHomeView: View {
         CJUIKitBaseHomeView(
             title: "SwiftUI",
             sectionDataModels: [
-                CQDMSectionDataModel(
+                CQDMSwiftSectionDataModel(
                     theme: "Section 1",
                     values: [
-                        CQDMModuleModel(title: "Module 1", classEntry: {
+                        CQDMSwiftModuleModel(title: "Module 1", viewGetterHandle: {
                             AnyView(TestView1())
                         }),
-                        CQDMModuleModel(title: "Module 1", content: "Content 1", contentLines: 1, classEntry: { AnyView(TestView1())
+                        CQDMSwiftModuleModel(title: "Module 1", content: "Content 1", contentLines: 1, viewGetterHandle: {
+                            AnyView(TestView1())
                         }),
-                        CQDMModuleModel(title: "Module 2", classEntry: {
+                        CQDMSwiftModuleModel(title: "Module 2", viewGetterHandle: {
                             AnyView(TestView2())
                         }),
-                        CQDMModuleModel(title: "Module 2", actionBlock: {
+                        CQDMSwiftModuleModel(title: "Module 2", actionBlock: {
                             debugPrint("点击")
                         })
                     ]
                 ),
-                CQDMSectionDataModel(
+                CQDMSwiftSectionDataModel(
                     theme: "语法问题",
                     values: [
-                        CQDMModuleModel(title: "类型擦除（Type Erasure）", classEntry: {
+                        CQDMSwiftModuleModel(title: "类型擦除（Type Erasure）", viewGetterHandle: {
                             AnyView(TSSFExceDiffTypeView())
                         }),
                     ]

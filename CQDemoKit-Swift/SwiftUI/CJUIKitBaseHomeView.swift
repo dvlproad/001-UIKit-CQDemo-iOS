@@ -7,49 +7,53 @@
 //
 
 import SwiftUI
+import CQDemoKit
+
+// MARK: - SwiftUI 专用模型（与 ObjC 的 CQDMSectionDataModel / CQDMModuleModel 同名但独立），解决：在 swiftui 里 values 如果是 ObjC 的 NSMutableArray，不能直接用于 ForEach ，需要多一层转换的问题。
 
 @available(iOS 13.0, *)
-public struct CQDMSectionDataModel {
-    var theme: String
-    var values: [CQDMModuleModel]
+public struct CQDMSwiftSectionDataModel {
+    public var theme: String
+    public var values: [CQDMSwiftModuleModel]
     
-    public init(theme: String, values: [CQDMModuleModel]) {
+    public init(theme: String, values: [CQDMSwiftModuleModel]) {
         self.theme = theme
         self.values = values
     }
 }
 
 @available(iOS 13.0, *)
-public struct CQDMModuleModel: Identifiable {
+public struct CQDMSwiftModuleModel: Identifiable {
     public var id = UUID()
-    var title: String
-    var content: String? = nil
-    var contentLines: Int? = nil
-    var actionBlock: (() -> Void)?
-    var classEntry: (() -> AnyView)?
+    public var title: String
+    public var content: String? = nil
+    public var contentLines: Int? = nil
+    public var actionBlock: (() -> Void)?
+    public var viewGetterHandle: (() -> AnyView)?
     
-    public init(id: UUID = UUID(),
+    public init(
          title: String,
          content: String? = nil,
          contentLines: Int? = nil,
-         actionBlock: ( () -> Void)? = nil,
-         classEntry: ( () -> AnyView)? = nil
+         actionBlock: (() -> Void)? = nil,
+         viewGetterHandle: (() -> AnyView)? = nil
     ) {
-        self.id = id
         self.title = title
         self.content = content
         self.contentLines = contentLines
         self.actionBlock = actionBlock
-        self.classEntry = classEntry
+        self.viewGetterHandle = viewGetterHandle
     }
 }
+
+// MARK: - CJUIKitBaseHomeView
 
 @available(iOS 14.0, *)
 public struct CJUIKitBaseHomeView: View {
     private var title: String
-    private var sectionDataModels: [CQDMSectionDataModel] = []
+    private var sectionDataModels: [CQDMSwiftSectionDataModel] = []
     
-    public init(title: String, sectionDataModels: [CQDMSectionDataModel]) {
+    public init(title: String, sectionDataModels: [CQDMSwiftSectionDataModel]) {
         self.title = title
         self.sectionDataModels = sectionDataModels
     }
@@ -101,8 +105,8 @@ public struct CJUIKitBaseHomeView: View {
         }
     }
     
-    private func destinationView(for moduleModel: CQDMModuleModel) -> some View {
-        if let view = moduleModel.classEntry?() {
+    private func destinationView(for moduleModel: CQDMSwiftModuleModel) -> some View {
+        if let view = moduleModel.viewGetterHandle?() {
             return view
         }
         return AnyView(Text("No View Found"))
