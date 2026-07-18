@@ -5,29 +5,12 @@
 //  Created by ciyouzen on 2020/2/14.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
+//  SwiftUI 怎么类型擦除
 
 import SwiftUI
-import UIKit
-import CQDemoKit_Swift
 
 @available(iOS 14.0, *)
-@objc public class TSSFExceDiffTypeUIView: CQTSSwiftUIAsUIView {
-    @objc public init() {
-        super.init(swiftUIView: TSSFExceDiffTypeView())
-    }
-}
-
-@available(iOS 14.0, *)
-@objc public class TSSFExceDiffTypeUIViewController: CQTSSwiftUIAsUIViewController {
-    @objc public init() {
-        super.init(swiftUIView: TSSFExceDiffTypeView())
-    }
-}
-
-
-
-@available(iOS 14.0, *)
-public struct TSSFExceDiffTypeView: View {
+public struct TSSwiftUIExceDiffTypeView: View {
     public var body: some View {
         let isRunning = true
         
@@ -72,10 +55,10 @@ struct TSDiffAction2: TSDiffActionProtocol {
 }
 
 
-// MARK: 预览 TSSFExceDiffTypeView
+// MARK: 预览 TSSwiftUIExceDiffTypeView
 @available(iOS 14.0, *)
 struct TSSFExceDiffTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        TSSFExceDiffTypeView()
+        TSSwiftUIExceDiffTypeView()
     }
 }

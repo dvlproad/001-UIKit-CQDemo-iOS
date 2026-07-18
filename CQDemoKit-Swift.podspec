@@ -91,7 +91,6 @@ Pod::Spec.new do |s|
   # SwiftUI 与 UIKit 互转
   s.subspec 'as' do |ss|
     ss.source_files = "CQDemoKit-Swift/as/**/*.{swift}"
-#    ss.dependency 'CJBaseUIKit-Swift/UIView/as'
   end
 
   # BaseVC

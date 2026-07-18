@@ -134,14 +134,10 @@ PODS:
     - SSZipArchive
   - TSDemo_Demo-Swift (0.0.1):
     - TSDemo_Demo-Swift/SwiftUI (= 0.0.1)
-    - TSDemo_Demo-Swift/UI (= 0.0.1)
     - TSDemo_Demo-Swift/VC (= 0.0.1)
   - TSDemo_Demo-Swift/SwiftUI (0.0.1):
     - CQDemoKit-Swift
-  - TSDemo_Demo-Swift/UI (0.0.1):
-    - CJBaseUIKit-Swift/UIView/as
   - TSDemo_Demo-Swift/VC (0.0.1):
-    - CJBaseUIKit-Swift/UIView/as
     - CJBaseUtil-Swift/FrameworkCJHelper
     - TSDemo_Demo
 
@@ -195,7 +191,7 @@ SPEC CHECKSUMS:
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   TSDemo_Demo: c85b40a0fea827f649d93229b6a9f0fbc302de5d
-  TSDemo_Demo-Swift: add5a4bee1d45c8b32122487ef5d304aa49ca1de
+  TSDemo_Demo-Swift: 94c5699a0986776d2e8f5c8b2d0c52e4ba79d2b5
 
 PODFILE CHECKSUM: 3be5036ed1537d2c8a550cb302fad06f2f65825a
 

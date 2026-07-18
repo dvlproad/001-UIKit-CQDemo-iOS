@@ -5,12 +5,36 @@
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
-//  Swift as UIKit
+//  SwiftUI as UIKit
 
 import UIKit
 import CJBaseUIKit_Swift
 import CQDemoKit_Swift
 import TSDemo_Demo
+
+struct TSSwiftUIAsUIKitHomeView: UIViewControllerRepresentable {
+    
+    // 初始化或传参（如果有）
+    init(someParameter: String = "") {
+        // 可以在这里接收 SwiftUI 传来的参数
+    }
+    
+    // 必须实现：创建 UIKit 控制器实例
+    func makeUIViewController(context: Context) -> TSSwiftUIAsUIKitHomeViewController {
+        // 如果控制器在 Storyboard 中，需要从 Storyboard 加载
+        // 如果是纯代码，直接 return TSSwiftUIAsUIKitHomeViewController()
+        return TSSwiftUIAsUIKitHomeViewController()
+    }
+    
+    // 必须实现：更新控制器（当 SwiftUI 状态变化时调用）
+    func updateUIViewController(_ uiViewController: TSSwiftUIAsUIKitHomeViewController, context: Context) {
+        // 在这里将 SwiftUI 的最新数据传递给 UIKit 控制器
+        // 例如: uiViewController.updateData(newData)
+    }
+    
+    // 可选：如果需要协调器处理代理或事件回传
+    // func makeCoordinator() -> Coordinator { ... }
+}
 
 public class TSSwiftUIAsUIKitHomeViewController: CJUIKitBaseHomeViewController {
 
@@ -42,11 +66,11 @@ public class TSSwiftUIAsUIKitHomeViewController: CJUIKitBaseHomeViewController {
             do {
                 let module = CQDMModuleModel()
                 module.title = "SwiftUI 转 UIKit(CQTSSwiftUIAsUIView 可在oc使用) => UIView"
-                module.content = "let tsview = CQTSSwiftUIAsUIView(swiftUIView: TestView1())\nlet tsview = CQTSSwiftUIAsUIView.init(swiftUIView: TestView1())"
+                module.content = "let tsview = CQTSSwiftUIAsUIView(swiftUIView: CQTSView())\nlet tsview = CQTSSwiftUIAsUIView.init(swiftUIView: CQTSView())"
                 module.contentLines = 4
                 module.viewGetterHandle = {
-                    let tsview = CQTSSwiftUIAsUIView(swiftUIView: TestView1())
-                    //let tsview = CQTSSwiftUIAsUIView.init(swiftUIView: TestView1())
+                    let tsview = CQTSSwiftUIAsUIView(swiftUIView: CQTSView())
+                    //let tsview = CQTSSwiftUIAsUIView.init(swiftUIView: CQTSView())
                     return tsview
                 }
                 sectionDataModel.values.add(module)
@@ -54,10 +78,10 @@ public class TSSwiftUIAsUIKitHomeViewController: CJUIKitBaseHomeViewController {
             do {
                 let module = CQDMModuleModel()
                 module.title = "SwiftUI 转 UIKit(as) => UIView"
-                module.content = "let tsview = TestView1().asUIKit()"
+                module.content = "let tsview = CQTSView().asUIKit()"
                 module.contentLines = 4
                 module.viewGetterHandle = {
-                    let tsview = TestView1().asUIKit()
+                    let tsview = CQTSView().asUIKit()
                     return tsview
                 }
                 sectionDataModel.values.add(module)
@@ -73,27 +97,12 @@ public class TSSwiftUIAsUIKitHomeViewController: CJUIKitBaseHomeViewController {
             do {
                 let module = CQDMModuleModel()
                 module.title = "SwiftUI 转 UIKit 的 ViewController(CQTSSwiftUIAsUIViewController) => UIViewController"
-                module.content = "let viewController = CQTSSwiftUIAsUIViewController(swiftUIView: TSUIKitAsSwiftUIHomePage())"
+                module.content = "let viewController = CQTSSwiftUIAsUIViewController(swiftUIView: TSSwiftUIFeatureHomeView())"
                 module.contentLines = 4
                 module.viewControllerGetterHandle = {
-                    let viewController = CQTSSwiftUIAsUIViewController(swiftUIView: TSUIKitAsSwiftUIHomePage())
+                    let viewController = CQTSSwiftUIAsUIViewController(swiftUIView: TSSwiftUIFeatureHomeView())
                     return viewController
                 }
-                sectionDataModel.values.add(module)
-            }
-            sectionDataModels.append(sectionDataModel)
-        }
-        
-        // 测试 UIKit 转 SwiftUI
-        do {
-            let sectionDataModel = CQDMSectionDataModel()
-            sectionDataModel.theme = "测试 UIKit 转 SwiftUI"
-            do {
-                let module = CQDMModuleModel()
-                module.title = "进入【测试 UIKit 转 SwiftUI】 的 SwiftUI 首页"
-                module.content = "因为【测试 UIKit 转 SwiftUI】要再 SwiftUI 页面中测试"
-                module.contentLines = 4
-                module.classEntry = TSUIKitAsSwiftUIHomeViewController.self
                 sectionDataModel.values.add(module)
             }
             sectionDataModels.append(sectionDataModel)
@@ -106,6 +115,20 @@ public class TSSwiftUIAsUIKitHomeViewController: CJUIKitBaseHomeViewController {
     // MARK: - Touch
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+    }
+}
+
+
+import SwiftUI
+// 模拟的目标视图1
+@available(iOS 13.0, *)
+struct CQTSView: View {
+    var body: some View {
+        VStack {
+            Text("This is CQTSView")
+                .font(.largeTitle)
+                .padding()
+        }
     }
 }
 

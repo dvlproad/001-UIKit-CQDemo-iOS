@@ -36,11 +36,13 @@
     // SwiftUI 与 UI 互转as
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"测试 SwiftUI as UIKit / UIKit as SwiftUI";
+        sectionDataModel.theme = @"测试 SwiftUI 功能";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"SwiftUI as UIKit / UIKit as SwiftUI";
-            module.classEntry = NSClassFromString(@"TSDemo_Demo_Swift.TSSwiftUIAsUIKitHomeViewController");
+            module.title = @"SwiftUI 功能";
+            module.content = @"1.SwiftUI首页 \n2.1SwiftUI as UIKit \n2.2UIKit as SwiftUI \n3.类型擦除";
+            module.contentLines = 4;
+            module.classEntry = NSClassFromString(@"TSDemo_Demo_Swift.TSSwiftUIFeatureHomeViewController");
             [sectionDataModel.values addObject:module];
         }
         
