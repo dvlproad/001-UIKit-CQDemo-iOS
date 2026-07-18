@@ -17,6 +17,8 @@
 
 #import "ViewController.h"
 
+#import <CQDemoKit_Swift/CQDemoKit_Swift-Swift.h>
+
 @implementation UIWindow (RootSetting)
 
 - (void)settingRoot {

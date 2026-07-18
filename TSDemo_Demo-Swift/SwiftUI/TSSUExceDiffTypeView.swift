@@ -11,14 +11,14 @@ import UIKit
 import CQDemoKit_Swift
 
 @available(iOS 14.0, *)
-@objc public class TSSFExceDiffTypeUIView: CQDemoSwiftUIBaseUIView {
+@objc public class TSSFExceDiffTypeUIView: CQTSSwiftUIAsUIView {
     @objc public init() {
         super.init(swiftUIView: TSSFExceDiffTypeView())
     }
 }
 
 @available(iOS 14.0, *)
-@objc public class TSSFExceDiffTypeUIViewController: CQDemoSwiftUIBaseUIViewController {
+@objc public class TSSFExceDiffTypeUIViewController: CQTSSwiftUIAsUIViewController {
     @objc public init() {
         super.init(swiftUIView: TSSFExceDiffTypeView())
     }

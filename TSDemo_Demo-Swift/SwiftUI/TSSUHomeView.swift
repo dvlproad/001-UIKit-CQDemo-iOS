@@ -11,25 +11,25 @@ import UIKit
 import CQDemoKit_Swift
 
 @available(iOS 14.0, *)
-@objc public class TSSUHomeUIView: CQDemoSwiftUIBaseUIView {
+@objc public class TSSUHomeUIView: CQTSSwiftUIAsUIView {
     @objc public init() {
-        super.init(swiftUIView: TSSUHomeView())
+        super.init(swiftUIView: TSSUHomePage())
     }
 }
 
 @available(iOS 14.0, *)
-@objc public class TSSUHomeUIViewController: CQDemoSwiftUIBaseUIViewController {
+@objc public class TSSUHomeUIViewController: CQTSSwiftUIAsUIViewController {
     @objc public init() {
-        super.init(swiftUIView: TSSUHomeView())
+        super.init(swiftUIView: TSSUHomePage())
     }
 }
 
 
 
 @available(iOS 14.0, *)
-public struct TSSUHomeView: View {
+public struct TSSUHomePage: View {
     public var body: some View {
-        CJUIKitBaseHomeView(
+        CQTSSwiftUIBaseHomeView(
             title: "SwiftUI",
             sectionDataModels: [
                 CQDMSwiftSectionDataModel(
@@ -87,10 +87,10 @@ struct TestView2: View {
     }
 }
 
-// MARK: 预览 TSSUHomeView
+// MARK: 预览 TSSUHomePage
 @available(iOS 14.0, *)
 struct TSTSSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        TSSUHomeView()
+        TSSUHomePage()
     }
 }

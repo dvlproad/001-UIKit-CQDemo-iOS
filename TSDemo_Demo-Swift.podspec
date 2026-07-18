@@ -38,6 +38,7 @@ Pod::Spec.new do |s|
 
   s.description  = <<-DESC
                  Demo，可按需独立引入：
+                 • TSDemo_Demo-Swift/UI - SwiftUI 与 UIKit 互转
                  • TSDemo_Demo-Swift/SwiftUI - 补充使用swift语言实现的UI界面
                  • TSDemo_Demo-Swift/VC - 使用swift语言实现的ViewController
 
@@ -69,6 +70,12 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
   # s.resources = "CJHook/**/*.{png,xib}"
   # s.frameworks = "MediaPlayer"
+  
+  # SwiftUI 与 UIKit 互转
+  s.subspec 'UI' do |ss|
+    ss.source_files = "TSDemo_Demo-Swift/UI/**/*.{swift}"
+    ss.dependency 'CJBaseUIKit-Swift/UIView/as'
+  end
 
   # 补充使用swift语言实现的UI界面
   s.subspec 'SwiftUI' do |ss|

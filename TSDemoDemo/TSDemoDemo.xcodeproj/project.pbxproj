@@ -33,7 +33,6 @@
 		97872FA82F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872F9D2F9F641C004573D2 /* TSDemoDemoWidgetExtension.swift */; };
 		97872FA92F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97872FA02F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift */; };
 		97872FAA2F9F641C004573D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97872F9B2F9F641C004573D2 /* Assets.xcassets */; };
-		97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */; };
 		97A8955F2D772F5A00C63D43 /* ShareAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */; };
 		97A895602D772F5A00C63D43 /* ShareAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */; };
 		97D157ED2D631A3A000D03DC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D157EC2D631A3A000D03DC /* WidgetKit.framework */; };
@@ -106,7 +105,6 @@
 		97872F9F2F9F641C004573D2 /* TSDemoDemoWidgetExtensionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtensionControl.swift; sourceTree = "<group>"; };
 		97872FA02F9F641C004573D2 /* TSDemoDemoWidgetExtensionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSDemoDemoWidgetExtensionLiveActivity.swift; sourceTree = "<group>"; };
 		97A380132D5F342600A3BC7D /* TSDemoDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSDemoDemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTSSwiftUIView.swift; sourceTree = "<group>"; };
 		97A8955E2D772F5A00C63D43 /* ShareAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShareAssets.xcassets; sourceTree = "<group>"; };
 		97D157EB2D631A3A000D03DC /* TSDemoDemoWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TSDemoDemoWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D157EC2D631A3A000D03DC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -181,7 +179,6 @@
 				15B5D7BF24512B1700108658 /* UIWindow+RootSetting.m */,
 				15B5D7AB24512AC200108658 /* ViewController.h */,
 				15B5D7AC24512AC200108658 /* ViewController.m */,
-				97A380142D5F342600A3BC7D /* TSTSSwiftUIView.swift */,
 				9746F61D2D846A6600896793 /* InjectHelper.swift */,
 				976CB3842FFE9EDF000505DD /* CJDemoPopupView */,
 				15B5D7AE24512AC200108658 /* Main.storyboard */,
@@ -457,7 +454,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A380152D5F342600A3BC7D /* TSTSSwiftUIView.swift in Sources */,
 				15B5D7AD24512AC200108658 /* ViewController.m in Sources */,
 				976CB3852FFE9EDF000505DD /* UIView+CJDemoPopupAction.m in Sources */,
 				976CB3862FFE9EDF000505DD /* CJDemoPopupView.m in Sources */,

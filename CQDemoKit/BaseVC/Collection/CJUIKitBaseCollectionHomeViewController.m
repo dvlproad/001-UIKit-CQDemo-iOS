@@ -233,18 +233,22 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
         
     } else {
         UIViewController *viewController = nil;
-        Class classEntry = moduleModel.classEntry;
-        NSString *clsString = NSStringFromClass(moduleModel.classEntry);
-        if ([clsString isEqualToString:NSStringFromClass([UIViewController class])]) {
-            viewController = [[classEntry alloc] init];
-            viewController.view.backgroundColor = [UIColor whiteColor];
-            
+        if (moduleModel.viewControllerGetterHandle != nil) {
+            viewController = moduleModel.viewControllerGetterHandle();
         } else {
-            if (moduleModel.isCreateByXib) {
-                NSBundle *xibBundle = moduleModel.xibBundle;
-                viewController = [[classEntry alloc] initWithNibName:clsString bundle:xibBundle];
-            } else {
+            Class classEntry = moduleModel.classEntry;
+            NSString *clsString = NSStringFromClass(moduleModel.classEntry);
+            if ([clsString isEqualToString:NSStringFromClass([UIViewController class])]) {
                 viewController = [[classEntry alloc] init];
+                viewController.view.backgroundColor = [UIColor whiteColor];
+                
+            } else {
+                if (moduleModel.isCreateByXib) {
+                    NSBundle *xibBundle = moduleModel.xibBundle;
+                    viewController = [[classEntry alloc] initWithNibName:clsString bundle:xibBundle];
+                } else {
+                    viewController = [[classEntry alloc] init];
+                }
             }
         }
         

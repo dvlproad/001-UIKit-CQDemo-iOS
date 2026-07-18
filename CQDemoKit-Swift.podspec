@@ -39,7 +39,8 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                  CQDemoKit Swift 版，可按需独立引入：
                  • CQDemoKit-Swift/CQDemoKit-OC：等价于直接依赖纯OC的 CQDemoKit
-                 • CQDemoKit-Swift/SwiftUI：为CQDemoKit补充使用swift语言实现的UI界面
+                 • CQDemoKit-Swift/as：SwiftUI 与 UIKit 互转
+                 • CQDemoKit-Swift/BaseVC：BaseVC
 
                  每个子库可独立引入，详见各子库描述。
                  DESC
@@ -86,10 +87,16 @@ Pod::Spec.new do |s|
   s.subspec 'CQDemoKit-OC' do |ss|
     s.dependency "CQDemoKit"
   end
+  
+  # SwiftUI 与 UIKit 互转
+  s.subspec 'as' do |ss|
+    ss.source_files = "CQDemoKit-Swift/as/**/*.{swift}"
+#    ss.dependency 'CJBaseUIKit-Swift/UIView/as'
+  end
 
-  # 为CQDemoKit补充使用swift语言实现的UI界面
-  s.subspec 'SwiftUI' do |ss|
-    ss.source_files = "CQDemoKit-Swift/SwiftUI/**/*.{swift}"
+  # BaseVC
+  s.subspec 'BaseVC' do |ss|
+    ss.source_files = "CQDemoKit-Swift/BaseVC_Struct/**/*.{swift}"
   end
 
  #  s.subspec 'Auxiliary' do |ss|

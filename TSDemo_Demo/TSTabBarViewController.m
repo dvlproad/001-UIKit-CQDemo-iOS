@@ -38,7 +38,7 @@
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"BaseVC", nil);
         tabBarModel.normalImage = [UIImage cqresource_imageNamed:@"icons8-calendar"];
-        tabBarModel.classEntry = NSClassFromString(@"TSDemo_Demo_Swift.BaseVCHomeViewController");
+        tabBarModel.classEntry = NSClassFromString(@"TSDemo_Demo_Swift.TSBaseVCHomeViewController");
         [tabBarModels addObject:tabBarModel];
     }
     {

@@ -1,5 +1,5 @@
 //
-//  CJUIKitBaseViewController.swift
+//  CQTSSwiftUIAsUIView.swift
 //  CQDemoKit-Swift
 //
 //  Created by ciyouzen on 2020/2/14.
@@ -11,14 +11,14 @@
 import CQDemoKit_Swift
 
 @available(iOS 14.0, *)
-@objc public class TSTSUIView: CQDemoSwiftUIBaseUIView {
+@objc public class TSTSUIView: CQTSSwiftUIAsUIView {
     @objc public init() {
         super.init(swiftUIView: TSTSSwiftUIView())
     }
 }
 
 @available(iOS 14.0, *)
-@objc public class TSTSUIViewController: CQDemoSwiftUIBaseUIViewController {
+@objc public class TSTSUIViewController: CQTSSwiftUIAsUIViewController {
     @objc public init() {
         super.init(swiftUIView: TSTSSwiftUIView())
     }
@@ -26,7 +26,7 @@ import CQDemoKit_Swift
 */
 //
 /*  不推荐的方式：原因是这么定义的话，外部继承时候需要指定 Content ， 从而因为有泛型，继而继续导致无法转为 @objc 。也就失去了意义
-open class CQDemoSwiftUIBaseUIViewController<Content: View>: UIViewController {
+open class CQTSSwiftUIAsUIViewController<Content: View>: UIViewController {
     private var swiftUIView: Content
     
     // 默认值 TSTSSwiftUIView
@@ -39,8 +39,9 @@ open class CQDemoSwiftUIBaseUIViewController<Content: View>: UIViewController {
 
 import SwiftUI
 
+// 即使你为本类加了 @objc，在 Objective-C 中也无法直接使用，因为 SwiftUI 的 View 类型无法在 Objective-C 中表示。还有初始化方法中的泛型方法也无法暴露给 Objective-C。
 @available(iOS 13.0, *)
-open class CQDemoSwiftUIBaseUIView: UIView {
+open class CQTSSwiftUIAsUIView: UIView {
     @available(*, unavailable)
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -33,6 +33,20 @@
 
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     
+    // SwiftUI 与 UI 互转as
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"测试 SwiftUI as UIKit / UIKit as SwiftUI";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"SwiftUI as UIKit / UIKit as SwiftUI";
+            module.classEntry = NSClassFromString(@"TSDemo_Demo_Swift.TSSwiftUIAsUIKitHomeViewController");
+            [sectionDataModel.values addObject:module];
+        }
+        
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
     // Button、Container、Switch
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
