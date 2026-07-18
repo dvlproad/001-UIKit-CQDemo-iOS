@@ -58,6 +58,4 @@ Pod::Spec.new do |s|
 
   s.dependency 'CQDemoShareFramework-Swift/WidgetExtension'  # 测试控制中心加载远程图标的时候需要使用
   
-  s.dependency 'TSDemo_Demo-Swift'
-  
 end

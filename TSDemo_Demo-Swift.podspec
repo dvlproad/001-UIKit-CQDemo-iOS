@@ -39,6 +39,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                  Demo，可按需独立引入：
                  • TSDemo_Demo-Swift/SwiftUI - 补充使用swift语言实现的UI界面
+                 • TSDemo_Demo-Swift/VC - 使用swift语言实现的ViewController
 
                  每个子库可独立引入，详见各子库描述。
                  DESC
@@ -73,6 +74,14 @@ Pod::Spec.new do |s|
   s.subspec 'SwiftUI' do |ss|
     ss.source_files = "TSDemo_Demo-Swift/SwiftUI/**/*.{swift}"
     ss.dependency 'CQDemoKit-Swift'
+  end
+
+  # 使用swift语言实现的ViewController
+  s.subspec 'VC' do |ss|
+    ss.source_files = "TSDemo_Demo-Swift/VC/**/*.{swift}"
+    ss.dependency 'TSDemo_Demo'
+    ss.dependency 'CJBaseUIKit-Swift/UIView/as'
+    ss.dependency 'CJBaseUtil-Swift/FrameworkCJHelper'
   end
 
 

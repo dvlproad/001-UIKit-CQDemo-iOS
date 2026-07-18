@@ -8,7 +8,6 @@
 
 #import "TSTabBarViewController.h"
 #import "BaseUIHomeViewController.h"
-#import "BaseVCHomeViewController.h"
 #import "UIUtilHomeViewController.h"
 #import "RipeViewHomeViewController.h"
 #import "TSAuxiliaryHomeViewController.h"
@@ -39,7 +38,7 @@
         CQDMTabBarModel *tabBarModel = [[CQDMTabBarModel alloc] init];
         tabBarModel.title = NSLocalizedString(@"BaseVC", nil);
         tabBarModel.normalImage = [UIImage cqresource_imageNamed:@"icons8-calendar"];
-        tabBarModel.classEntry = [BaseVCHomeViewController class];
+        tabBarModel.classEntry = NSClassFromString(@"TSDemo_Demo_Swift.BaseVCHomeViewController");
         [tabBarModels addObject:tabBarModel];
     }
     {

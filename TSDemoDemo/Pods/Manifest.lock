@@ -129,11 +129,15 @@ PODS:
     - CQDemoResource
     - CQDemoShareFramework-Swift/WidgetExtension
     - SSZipArchive
-    - TSDemo_Demo-Swift
   - TSDemo_Demo-Swift (0.0.1):
     - TSDemo_Demo-Swift/SwiftUI (= 0.0.1)
+    - TSDemo_Demo-Swift/VC (= 0.0.1)
   - TSDemo_Demo-Swift/SwiftUI (0.0.1):
     - CQDemoKit-Swift
+  - TSDemo_Demo-Swift/VC (0.0.1):
+    - CJBaseUIKit-Swift/UIView/as
+    - CJBaseUtil-Swift/FrameworkCJHelper
+    - TSDemo_Demo
 
 DEPENDENCIES:
   - CJPopupAction
@@ -184,8 +188,8 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
-  TSDemo_Demo: c195cf98ec96b9faad882732a3cefaf152ed30ed
-  TSDemo_Demo-Swift: 3a7ba09817923ed0e48c2f93c5af48aacb46ceb5
+  TSDemo_Demo: c85b40a0fea827f649d93229b6a9f0fbc302de5d
+  TSDemo_Demo-Swift: 6ae2ea0a0dd455f11779afb297ee548956cb13e2
 
 PODFILE CHECKSUM: 3be5036ed1537d2c8a550cb302fad06f2f65825a
 
