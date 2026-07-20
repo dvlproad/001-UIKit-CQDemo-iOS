@@ -78,9 +78,14 @@
 //    [normalSelectedButton4 setTitle:@"提交(选中，不可点)" forState:UIControlStateNormal];
     normalSelectedButton4.selected = true;
     normalSelectedButton4.enabled = false;
-
     
-    UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4] fixedSpacing:10];
+    UIButton *bugButton = [CQTSButtonFactory bugButtonWithBugHappen:YES fixBugHandle:^{
+        [CJUIKitToastUtil showMessage:@"修复bug"];
+    } reproduceBugHandle:^{
+        [CJUIKitToastUtil showMessage:@"重现bgu"];
+    }];
+    
+    UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4, bugButton] fixedSpacing:10];
    [self.view addSubview:normalSelectedButtonView];
    [normalSelectedButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
        make.left.mas_equalTo(buttonsView);

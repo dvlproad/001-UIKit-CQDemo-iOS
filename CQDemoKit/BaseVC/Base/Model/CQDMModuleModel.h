@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CQDMModuleModel : NSObject
 
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) NSInteger titleLines;
 @property (nullable, nonatomic, copy) NSString *content;
 @property (nonatomic, assign) NSInteger contentLines;
 @property (nullable, nonatomic, strong) UIImage *normalImage;

@@ -134,8 +134,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     cell.textLabel.text = moduleModel.title;
+    cell.textLabel.numberOfLines = moduleModel.titleLines;
     cell.detailTextLabel.text = moduleModel.content;
-    cell.detailTextLabel.numberOfLines = moduleModel.contentLines > 1 ? moduleModel.contentLines : 1;
+    cell.detailTextLabel.numberOfLines = moduleModel.contentLines;
     
     return cell;
 }

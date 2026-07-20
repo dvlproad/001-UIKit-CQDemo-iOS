@@ -213,6 +213,9 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     }
     
     cell.textLabel.text = moduleModel.title;
+    cell.textLabel.numberOfLines = moduleModel.titleLines;
+    //cell.detailTextLabel.text = moduleModel.content;
+    //cell.detailTextLabel.numberOfLines = moduleModel.contentLines;
     
     return cell;
 }
