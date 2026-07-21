@@ -33,12 +33,11 @@ Pod::Spec.new do |s|
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit-Swift"
   s.version      = "0.0.2"
-  s.summary      = "CQDemoKit Swift 版 - 为CQDemoKit补充使用swift语言实现的其他功能(包含纯OC的 CQDemoKit)"
+  s.summary      = "CQDemoKit Swift 版 - 为CQDemoKit补充使用swift语言实现的其他功能(不包含纯OC的 CQDemoKit，其会导致此库推送失败)"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
                  CQDemoKit Swift 版，可按需独立引入：
-                 • CQDemoKit-Swift/CQDemoKit-OC：等价于直接依赖纯OC的 CQDemoKit
                  • CQDemoKit-Swift/as：SwiftUI 与 UIKit 互转
                  • CQDemoKit-Swift/BaseVC：BaseVC
 
@@ -56,7 +55,7 @@ Pod::Spec.new do |s|
 
   s.author   = { "dvlproad" => "" }
 
-  s.platform     = :ios, "12.0"
+  s.platform     = :ios, "9.0"
  
   s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit-Swift_0.0.2_1" }
   #s.source_files  = "CQDemoKit-Swift/*.{swift}"
@@ -72,10 +71,10 @@ Pod::Spec.new do |s|
   # s.frameworks = "MediaPlayer"
   
   
-  # 等价于直接依赖纯OC的 CQDemoKit
-  s.subspec 'CQDemoKit-OC' do |ss|
-    s.dependency "CQDemoKit"
-  end
+  # 等价于直接依赖纯OC的 CQDemoKit （此处要注释掉，否则因为CQDemoKit依赖了Masonry，导致pod lib lint失败，无法推送到远程)
+  # s.subspec 'CQDemoKit-OC' do |ss|
+  #   s.dependency "CQDemoKit"
+  # end
   
   # SwiftUI 与 UIKit 互转
   s.subspec 'as' do |ss|
