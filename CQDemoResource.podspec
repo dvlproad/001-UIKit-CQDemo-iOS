@@ -195,6 +195,16 @@ Pod::Spec.new do |s|
     }
   end
 
+  # icon - 后缀为 png 的资源（箭头等图标）
+  s.subspec 'icon' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource_icon' => [
+        'CQDemoResource/Resources/icon/**/*',
+      ]
+    }
+  end
+
   # plist - 后缀为 plist 的资源
   s.subspec 'plist' do |ss|
     ss.dependency 'CQDemoResource/Core'

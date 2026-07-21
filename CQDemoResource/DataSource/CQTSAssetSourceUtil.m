@@ -327,6 +327,19 @@ UIImage *imageUrlRandom = [CQTSAssetSourceUtil imageUrlAtIndex:trySelIndex folde
         }
     }
     
+    if ([folderNames containsObject:@"icon"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_arrowDown_dark.png"
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"icon",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
     if ([folderNames containsObject:@"plist"]) {
         NSArray *sourceImageNames = @[
             @"cqts_area.plist",
