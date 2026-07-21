@@ -7,8 +7,9 @@
 //
 
 #import "TSRipeButtonCollectionViewController.h"
+#import <CQDemoResource/CQTSAssetSourceUtil.h>
+
 #import "CQTSRipeButtonCollectionView.h"
-#import <CQDemoResource/CQTSLocImagesUtil.h>
 
 @interface TSRipeButtonCollectionViewController ()
 
@@ -21,7 +22,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeButtonCollectionView", nil);
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSLocImagesUtil cjts_localImageAtIndex:2]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSAssetSourceUtil localImageAtIndex:2 folderNames:@[@"jpg"]]];
     [self.view addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);

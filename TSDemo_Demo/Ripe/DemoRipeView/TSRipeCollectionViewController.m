@@ -7,8 +7,8 @@
 //
 
 #import "TSRipeCollectionViewController.h"
+#import <CQDemoResource/CQTSAssetSourceUtil.h>
 #import "CQTSRipeImageCollectionView.h"
-#import <CQDemoResource/CQTSLocImagesUtil.h>
 
 @interface TSRipeCollectionViewController ()
 
@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSLocalizedString(@"测试CQTSRipeCollectionView", nil);
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSLocImagesUtil cjts_localImageAtIndex:2]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[CQTSAssetSourceUtil localImageAtIndex:2 folderNames:@[@"jpg"]]];
     [self.view addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);

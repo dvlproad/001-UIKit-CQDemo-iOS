@@ -13,9 +13,6 @@
 #import "CQTSAssetModelGetter.h"
 #import "CQTSAssetSourceUtil.h"
 #import "UIImage+CQDemoResource.h"
-#import "CQTSIconsUtil.h"
-#import "CQTSLocImagesUtil.h"
-#import "CQTSNetImagesUtil.h"
 
 FOUNDATION_EXPORT double CQDemoResourceVersionNumber;
 FOUNDATION_EXPORT const unsigned char CQDemoResourceVersionString[];

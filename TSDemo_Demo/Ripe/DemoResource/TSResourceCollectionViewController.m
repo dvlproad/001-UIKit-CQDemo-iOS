@@ -7,12 +7,7 @@
 //
 
 #import "TSResourceCollectionViewController.h"
-
-#import <CQDemoResource/CQTSIconsUtil.h>
-#import <CQDemoResource/CQTSLocImagesUtil.h>
-#import <CQDemoResource/CQTSNetImagesUtil.h>
 #import <CQDemoResource/CQTSAssetSourceUtil.h>
-
 
 @interface TSResourceCollectionViewController () {
     
@@ -89,7 +84,7 @@
     CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
     sectionDataModel.theme = @"本地图片";
     
-    NSArray<UIImage *> *images = [CQTSLocImagesUtil cjts_localImages];
+    NSArray<UIImage *> *images = [CQTSAssetSourceUtil localImagesInFolderNames:@[@"jpg"]];
     NSInteger imageCount = images.count;
     for (int i = 0; i < imageCount; i++) {
         CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
@@ -106,7 +101,7 @@
     CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
     sectionDataModel.theme = @"网络图片";
     
-    NSArray<NSString *> *imageUrls = [CQTSNetImagesUtil cjts_imageUrls];
+    NSArray<NSString *> *imageUrls = [CQTSAssetSourceUtil networkFileUrls:@[@"jpg"]];
     NSInteger imageCount = imageUrls.count;
     for (int i = 0; i < imageCount; i++) {
         CQDMModuleModel *module = [[CQDMModuleModel alloc] init];

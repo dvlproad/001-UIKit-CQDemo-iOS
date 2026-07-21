@@ -8,9 +8,7 @@
 
 #import "CQTSRipeImageCollectionView.h"
 #import "CQTSRipeImageCollectionViewCell.h"
-#import "CQTSLocImagesUtil.h"
-#import "CQTSNetImagesUtil.h"
-#import "CQTSIconsUtil.h"
+#import <CQDemoResource/CQTSAssetSourceUtil.h>
 
 #import "CQTSRipeBaseCollectionViewDelegate.h"
 
@@ -105,16 +103,16 @@
     
     // image
     if (self.ripeImageSource == CQTSRipeImageSourceImageNetwork) {      // 网络图片
-        NSString *imageUrl = [CQTSNetImagesUtil cjts_imageUrlAtIndex:indexPath.item];
+        NSString *imageUrl = [CQTSAssetSourceUtil imageUrlAtIndex:indexPath.item folderNames:@[@"jpg"]];
         [cell setupImageWithImageUrl:imageUrl];
     } else if (self.ripeImageSource == CQTSRipeImageSourceImageLocal) { // 本地图片
-        UIImage *image = [CQTSLocImagesUtil cjts_localImageAtIndex:indexPath.item];
+        UIImage *image = [CQTSAssetSourceUtil localImageAtIndex:indexPath.item folderNames:@[@"jpg"]];
         [cell setupImageWithImage:image];
     } else if (self.ripeImageSource == CQTSRipeImageSourceIconNetwork) { // 网络icon
-        NSString *imageUrl = [CQTSIconsUtil cjts_iconUrlAtIndex:indexPath.item];
+        NSString *imageUrl = [CQTSAssetSourceUtil iconUrlAtIndex:indexPath.item];
         [cell setupImageWithImageUrl:imageUrl];
     } else {
-        NSString *imageUrl = [CQTSNetImagesUtil cjts_imageUrlAtIndex:indexPath.item];
+        NSString *imageUrl = [CQTSAssetSourceUtil imageUrlAtIndex:indexPath.item folderNames:@[@"jpg"]];
         [cell setupImageWithImageUrl:imageUrl];
     }
     

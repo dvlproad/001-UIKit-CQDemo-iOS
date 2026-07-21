@@ -7,9 +7,8 @@
 //
 
 #import "TSResourceViewController.h"
-#import "CQTSLocImagesUtil.h"
-#import "CQTSNetImagesUtil.h"
 #import <CQDemoKit/CQTSContainerViewFactory.h>
+#import <CQDemoResource/CQTSAssetSourceUtil.h>
 
 @interface TSResourceViewController ()
 
@@ -71,20 +70,22 @@
     
     
     // 设置数据
-    UIImage *localImage = [CQTSLocImagesUtil cjts_localImageRandom];
-    imageView1.image = localImage;
+    NSInteger trySelIndex = random();
+    NSArray<NSString *> *folderNames = @[@"png", @"jpg", @"webp", @"svg"];
+    UIImage *localImageRandom = [CQTSAssetSourceUtil localImageAtIndex:trySelIndex folderNames:folderNames];
+    imageView1.image = localImageRandom;
     
     
-    NSString *networkImageUrl = [CQTSNetImagesUtil cjts_imageUrlRandom];
+    UIImage *imageUrlRandom = [CQTSAssetSourceUtil imageUrlAtIndex:trySelIndex folderNames:folderNames];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *networkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:networkImageUrl]]];
+        UIImage *networkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrlRandom]]];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             weakSelf.imageView2.image = networkImage;
         });
     });
     
-    UIImage *longVerticalImage = [CQTSLocImagesUtil longVertical01];
+    UIImage *longVerticalImage = [UIImage cqresource_imageNamed:@"cqts_long_vertical_1.jpg"];
     imageView3.image = longVerticalImage;
 }
 
