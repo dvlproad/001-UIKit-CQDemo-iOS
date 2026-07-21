@@ -327,6 +327,20 @@ UIImage *imageUrlRandom = [CQTSAssetSourceUtil imageUrlAtIndex:trySelIndex folde
         }
     }
     
+    if ([folderNames containsObject:@"plist"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_area.plist",
+            @"cqts_city.plist"
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"plist",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
     return resultDictionarys;
 }
 

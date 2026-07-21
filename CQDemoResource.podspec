@@ -42,18 +42,20 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.3.0"
+  s.version      = "0.3.1"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
   s.description  = <<-DESC
                  DemoResource，可按需独立引入：
                  • CQDemoResource/Core - Core - 源码，不含资源
-                 • CQDemoResource/Images - Images - jpg, png, webp, heic
+                 • CQDemoResource/Images - Images - 后缀为 jpg, png, webp, heic 的资源
                  • CQDemoResource/Images_Big - Images - jpg_big
-                 • CQDemoResource/GIF - GIF - GIF
-                 • CQDemoResource/SVG - SVG - SVG 文件
-                 • CQDemoResource/Videos - Videos - mp4, mov
+                 • CQDemoResource/GIF - GIF - 后缀为 GIF 的资源
+                 • CQDemoResource/SVG - SVG - 后缀为 SVG 的资源
+                 • CQDemoResource/Videos - Videos - 后缀为 mp4, mov 的资源
+
+                 • CQDemoResource/plist - plist - 后缀为 plist 的资源
 
                  每个子库可独立引入，详见各子库描述。
                  DESC
@@ -71,7 +73,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.3.0" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.3.1" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -126,7 +128,7 @@ Pod::Spec.new do |s|
   # 方法2(⭐️⭐️  )：删除到所有资源放只用一个 bundle
   # 方法3(⭐️⭐️⭐️)：把他们的 bundle 名区分开
   
-  # Images - jpg, png, webp, heic
+  # Images - 后缀为 jpg, png, webp, heic 的资源
   s.subspec 'Images' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
@@ -152,7 +154,7 @@ Pod::Spec.new do |s|
     }
   end
 
-  # GIF - GIF
+  # GIF - 后缀为 GIF 的资源
   s.subspec 'GIF' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
@@ -162,7 +164,7 @@ Pod::Spec.new do |s|
     }
   end
 
-  # SVG - SVG 文件
+  # SVG - 后缀为 SVG 的资源
   s.subspec 'SVG' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
@@ -172,7 +174,7 @@ Pod::Spec.new do |s|
     }
   end
   
-  # Videos - mp4, mov
+  # Videos - 后缀为 mp4, mov 的资源
   s.subspec 'Videos' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
@@ -183,12 +185,22 @@ Pod::Spec.new do |s|
     }
   end
 
-  # Zip - zip
+  # Zip - 后缀为 zip 的资源
   s.subspec 'Zip' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
       'CQDemoResource_Zip' => [
         'CQDemoResource/Resources/zip/**/*',
+      ]
+    }
+  end
+
+  # plist - 后缀为 plist 的资源
+  s.subspec 'plist' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource_plist' => [
+        'CQDemoResource/Resources/plist/**/*',
       ]
     }
   end

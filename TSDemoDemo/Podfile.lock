@@ -96,27 +96,30 @@ PODS:
   - CQDemoKit/TestMethod (0.9.10):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-  - CQDemoResource (0.3.0):
-    - CQDemoResource/Core (= 0.3.0)
-    - CQDemoResource/GIF (= 0.3.0)
-    - CQDemoResource/Images (= 0.3.0)
-    - CQDemoResource/Images_Big (= 0.3.0)
-    - CQDemoResource/SVG (= 0.3.0)
-    - CQDemoResource/Videos (= 0.3.0)
-    - CQDemoResource/Zip (= 0.3.0)
-  - CQDemoResource/Core (0.3.0):
+  - CQDemoResource (0.3.1):
+    - CQDemoResource/Core (= 0.3.1)
+    - CQDemoResource/GIF (= 0.3.1)
+    - CQDemoResource/Images (= 0.3.1)
+    - CQDemoResource/Images_Big (= 0.3.1)
+    - CQDemoResource/plist (= 0.3.1)
+    - CQDemoResource/SVG (= 0.3.1)
+    - CQDemoResource/Videos (= 0.3.1)
+    - CQDemoResource/Zip (= 0.3.1)
+  - CQDemoResource/Core (0.3.1):
     - CQDemoKit/Demo_Resource
-  - CQDemoResource/GIF (0.3.0):
+  - CQDemoResource/GIF (0.3.1):
     - CQDemoResource/Core
-  - CQDemoResource/Images (0.3.0):
+  - CQDemoResource/Images (0.3.1):
     - CQDemoResource/Core
-  - CQDemoResource/Images_Big (0.3.0):
+  - CQDemoResource/Images_Big (0.3.1):
     - CQDemoResource/Core
-  - CQDemoResource/SVG (0.3.0):
+  - CQDemoResource/plist (0.3.1):
     - CQDemoResource/Core
-  - CQDemoResource/Videos (0.3.0):
+  - CQDemoResource/SVG (0.3.1):
     - CQDemoResource/Core
-  - CQDemoResource/Zip (0.3.0):
+  - CQDemoResource/Videos (0.3.1):
+    - CQDemoResource/Core
+  - CQDemoResource/Zip (0.3.1):
     - CQDemoResource/Core
   - CQDemoShareFramework-Swift/WidgetExtension (0.0.1)
   - FBRetainCycleDetector (0.1.4)
@@ -183,7 +186,7 @@ SPEC CHECKSUMS:
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
   CQDemoKit: be41edaf6eafd6042a85b86a7a67c01df6783b2a
   CQDemoKit-Swift: 7349f4c9f408776b0ddf49bc787058641fccc8e5
-  CQDemoResource: 2d609f0496f41e54ebec0e0d3315e6493c29bd11
+  CQDemoResource: ae10d1e3a99bd38f13952d6d2d68ba93b249ae02
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   InjectHotReload: e524b7c46ec063d84e407e65df5fe251cde19b32
