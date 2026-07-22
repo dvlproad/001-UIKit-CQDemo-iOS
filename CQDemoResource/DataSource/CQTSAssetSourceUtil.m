@@ -214,6 +214,20 @@ UIImage *imageUrlRandom = [CQTSAssetSourceUtil imageUrlAtIndex:trySelIndex folde
         }
     }
     
+    if ([folderNames containsObject:@"bmp"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_bmp_01.bmp",
+            @"cqts_bmp_02.bmp",
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"bmp",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
     if ([folderNames containsObject:@"gif"]) {
         NSArray *sourceImageNames = @[
             @"cqts_gif_01.gif",

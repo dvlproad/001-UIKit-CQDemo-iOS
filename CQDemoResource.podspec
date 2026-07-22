@@ -49,7 +49,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                  DemoResource，可按需独立引入：
                  • CQDemoResource/Core - Core - 源码，不含资源
-                 • CQDemoResource/Images - Images - 后缀为 jpg, png, webp, heic 的资源
+                 • CQDemoResource/Images - Images - 后缀为 jpg, png, bmp, webp, heic 的资源
                  • CQDemoResource/Images_Big - Images - jpg_big
                  • CQDemoResource/GIF - GIF - 后缀为 GIF 的资源
                  • CQDemoResource/SVG - SVG - 后缀为 SVG 的资源
@@ -128,7 +128,7 @@ Pod::Spec.new do |s|
   # 方法2(⭐️⭐️  )：删除到所有资源放只用一个 bundle
   # 方法3(⭐️⭐️⭐️)：把他们的 bundle 名区分开
   
-  # Images - 后缀为 jpg, png, webp, heic 的资源
+  # Images - 后缀为 jpg, png, bmp, webp, heic 的资源
   s.subspec 'Images' do |ss|
     ss.dependency 'CQDemoResource/Core'
     ss.resource_bundle = {
@@ -137,6 +137,7 @@ Pod::Spec.new do |s|
         'CQDemoResource/Resources/placeholder/**/*',
         'CQDemoResource/Resources/jpg/**/*',
         'CQDemoResource/Resources/png/**/*',
+        'CQDemoResource/Resources/bmp/**/*',
         'CQDemoResource/Resources/webp/**/*',
         'CQDemoResource/Resources/heic/**/*',
         'CQDemoResource/Resources/**/*.{xcassets}',

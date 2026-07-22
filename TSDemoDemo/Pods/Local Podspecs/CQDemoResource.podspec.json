@@ -35,6 +35,7 @@
           "CQDemoResource/Resources/placeholder/**/*",
           "CQDemoResource/Resources/jpg/**/*",
           "CQDemoResource/Resources/png/**/*",
+          "CQDemoResource/Resources/bmp/**/*",
           "CQDemoResource/Resources/webp/**/*",
           "CQDemoResource/Resources/heic/**/*",
           "CQDemoResource/Resources/**/*.{xcassets}"
@@ -94,6 +95,17 @@
       "resource_bundles": {
         "CQDemoResource_Zip": [
           "CQDemoResource/Resources/zip/**/*"
+        ]
+      }
+    },
+    {
+      "name": "icon",
+      "dependencies": {
+        "CQDemoResource/Core": []
+      },
+      "resource_bundles": {
+        "CQDemoResource_icon": [
+          "CQDemoResource/Resources/icon/**/*"
         ]
       }
     },
