@@ -3,7 +3,7 @@
   "version": "0.3.1",
   "summary": "Demo",
   "homepage": "https://github.com/dvlproad/001-UIKit-CQDemo-iOS",
-  "description": "DemoResource，可按需独立引入：\n• CQDemoResource/Core - Core - 源码，不含资源\n• CQDemoResource/Images - Images - 后缀为 jpg, png, webp, heic 的资源\n• CQDemoResource/Images_Big - Images - jpg_big\n• CQDemoResource/GIF - GIF - 后缀为 GIF 的资源\n• CQDemoResource/SVG - SVG - 后缀为 SVG 的资源\n• CQDemoResource/Videos - Videos - 后缀为 mp4, mov 的资源\n\n• CQDemoResource/plist - plist - 后缀为 plist 的资源\n\n每个子库可独立引入，详见各子库描述。",
+  "description": "DemoResource，可按需独立引入：\n• CQDemoResource/Core - Core - 源码，不含资源\n• CQDemoResource/Images - Images - 后缀为 jpg, png, bmp, webp, heic 的资源\n• CQDemoResource/Images_Big - Images - jpg_big\n• CQDemoResource/GIF - GIF - 后缀为 GIF 的资源\n• CQDemoResource/SVG - SVG - 后缀为 SVG 的资源\n• CQDemoResource/Videos - Videos - 后缀为 mp4, mov 的资源\n\n• CQDemoResource/plist - plist - 后缀为 plist 的资源\n\n每个子库可独立引入，详见各子库描述。",
   "license": "MIT",
   "authors": {
     "dvlproad": ""
