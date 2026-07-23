@@ -14,11 +14,11 @@ PODS:
     - CQDemoKit/Monitor (= 0.9.10)
     - CQDemoKit/StateUI (= 0.9.10)
     - CQDemoKit/TestMethod (= 0.9.10)
-  - CQDemoKit-Swift (0.0.3):
-    - CQDemoKit-Swift/as (= 0.0.3)
-    - CQDemoKit-Swift/BaseVC (= 0.0.3)
-  - CQDemoKit-Swift/as (0.0.3)
-  - CQDemoKit-Swift/BaseVC (0.0.3)
+  - CQDemoKit-Swift (0.0.4):
+    - CQDemoKit-Swift/as (= 0.0.4)
+    - CQDemoKit-Swift/BaseVC (= 0.0.4)
+  - CQDemoKit-Swift/as (0.0.4)
+  - CQDemoKit-Swift/BaseVC (0.0.4)
   - CQDemoKit/Auxiliary (0.9.10):
     - Masonry
   - CQDemoKit/BaseUIKit (0.9.10):
@@ -182,7 +182,7 @@ SPEC CHECKSUMS:
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
   CQDemoKit: be41edaf6eafd6042a85b86a7a67c01df6783b2a
-  CQDemoKit-Swift: ffbe4790a99eecd0b2b6628dd35dfb3b53351d26
+  CQDemoKit-Swift: b9bef1d7923ba65a1955defccf348e1d213a8adf
   CQDemoResource: 8517e49608bdc8688d21b3029c85f74ae6dfa63e
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015

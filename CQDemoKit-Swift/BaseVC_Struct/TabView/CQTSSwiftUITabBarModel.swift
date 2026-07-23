@@ -1,5 +1,5 @@
 //
-//  CQTSSwiftTabBarModel.swift
+//  CQTSSwiftUITabBarModel.swift
 //  CQDemoKit-Swift
 //
 //  Created by qian on 2021/3/5.
@@ -9,7 +9,7 @@ import SwiftUI
 
 /// 标签页数据模型
 @available(iOS 13.0, *)
-public struct CQTSSwiftTabBarModel: Identifiable {
+public struct CQTSSwiftUITabBarModel: Identifiable {
     public let id = UUID()
     public let title: String
     public let normalImage: Image

@@ -11,18 +11,18 @@ import SwiftUI
 // MARK: - SwiftUI 专用模型（与 ObjC 的 CQDMSectionDataModel / CQDMModuleModel 同名但独立），解决：在 swiftui 里 values 如果是 ObjC 的 NSMutableArray，不能直接用于 ForEach ，需要多一层转换的问题。
 
 @available(iOS 13.0, *)
-public struct CQDMSwiftSectionDataModel {
+public struct CQDMSwiftUISectionDataModel {
     public var theme: String
-    public var values: [CQDMSwiftModuleModel]
+    public var values: [CQDMSwiftUIModuleModel]
     
-    public init(theme: String, values: [CQDMSwiftModuleModel]) {
+    public init(theme: String, values: [CQDMSwiftUIModuleModel]) {
         self.theme = theme
         self.values = values
     }
 }
 
 @available(iOS 13.0, *)
-public struct CQDMSwiftModuleModel: Identifiable {
+public struct CQDMSwiftUIModuleModel: Identifiable {
     public var id = UUID()
     public var title: String
     public var content: String? = nil

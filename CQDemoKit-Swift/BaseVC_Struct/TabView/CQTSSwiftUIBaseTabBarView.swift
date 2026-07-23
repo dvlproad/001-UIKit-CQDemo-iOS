@@ -12,9 +12,9 @@ import SwiftUI
 @available(iOS 13.0, *)
 public struct CQTSSwiftUIBaseTabBarView: View {
     @State private var selectedTab: Int = 0
-    let tabBarModels: [CQTSSwiftTabBarModel]
+    let tabBarModels: [CQTSSwiftUITabBarModel]
     
-    public init(tabBarModels: [CQTSSwiftTabBarModel]) {
+    public init(tabBarModels: [CQTSSwiftUITabBarModel]) {
         self.tabBarModels = tabBarModels
     }
     
@@ -40,14 +40,14 @@ public struct CQTSSwiftUIBaseTabBarView: View {
 struct CQTSSwiftUIBaseTabBarView_Previews: PreviewProvider {
     static var previews: some View {
         CQTSSwiftUIBaseTabBarView(tabBarModels: [
-            CQTSSwiftTabBarModel(
+            CQTSSwiftUITabBarModel(
                 title: "首页",
                 normalImage: Image(systemName: "house"),
                 view: NavigationView {
                     MySwiftUIBaseHomeView()
                 }
             ),
-            CQTSSwiftTabBarModel(
+            CQTSSwiftUITabBarModel(
                 title: "发现",
                 normalImage: Image(systemName: "safari"),
                 view: NavigationView {
@@ -65,7 +65,7 @@ struct CQTSSwiftUIBaseTabBarView_Previews: PreviewProvider {
                     .navigationTitle("发现")
                 }
             ),
-            CQTSSwiftTabBarModel(
+            CQTSSwiftUITabBarModel(
                 title: "消息",
                 normalImage: Image(systemName: "message"),
                 view: NavigationView {
@@ -83,7 +83,7 @@ struct CQTSSwiftUIBaseTabBarView_Previews: PreviewProvider {
                     .navigationTitle("消息")
                 }
             ),
-            CQTSSwiftTabBarModel(
+            CQTSSwiftUITabBarModel(
                 title: "购物",
                 normalImage: Image(systemName: "cart"),
                 view: NavigationView {
@@ -101,7 +101,7 @@ struct CQTSSwiftUIBaseTabBarView_Previews: PreviewProvider {
                     .navigationTitle("购物")
                 }
             ),
-            CQTSSwiftTabBarModel(
+            CQTSSwiftUITabBarModel(
                 title: "我的",
                 normalImage: Image(systemName: "person"),
                 view: NavigationView {

@@ -13,9 +13,9 @@ import SwiftUI
 @available(iOS 14.0, *)  // .navigationTitle(title) // 需要iOS14
 public struct CQTSSwiftUIBaseHomeView: View {
     private var title: String
-    private var sectionDataModels: [CQDMSwiftSectionDataModel] = []
+    private var sectionDataModels: [CQDMSwiftUISectionDataModel] = []
     
-    public init(title: String, sectionDataModels: [CQDMSwiftSectionDataModel]) {
+    public init(title: String, sectionDataModels: [CQDMSwiftUISectionDataModel]) {
         self.title = title
         self.sectionDataModels = sectionDataModels
     }
@@ -66,7 +66,7 @@ public struct CQTSSwiftUIBaseHomeView: View {
         .modifier(NavigationTitleModifier(title: title)) // 可选标题
     }
     
-    private func destinationView(for moduleModel: CQDMSwiftModuleModel) -> some View {
+    private func destinationView(for moduleModel: CQDMSwiftUIModuleModel) -> some View {
         if let view = moduleModel.viewGetterHandle?() {
             return view
         }
@@ -89,12 +89,20 @@ struct NavigationTitleModifier: ViewModifier {
 }
 
 // MARK: - Preview
+/*
 @available(iOS 14.0, *)
 struct CQTSSwiftUIBaseHomeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             MySwiftUIBaseHomeView()
         }
+    }
+}
+*/
+@available(iOS 14.0, *)
+#Preview {
+    NavigationView {
+        MySwiftUIBaseHomeView()
     }
 }
 
@@ -104,17 +112,17 @@ struct MySwiftUIBaseHomeView: View {
         CQTSSwiftUIBaseHomeView(
             title: "首页",
             sectionDataModels: [
-                CQDMSwiftSectionDataModel(
+                CQDMSwiftUISectionDataModel(
                     theme: "功能列表",
                     values: [
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "跳转到详情页面",
                             content: "使用 viewGetterHandle 点击后跳转到 NavigationLink",
                             viewGetterHandle: {
                                 AnyView(Text("详情页面"))
                             }
                         ),
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "点击执行动作",
                             content: "使用 actionBlock 点击后直接执行闭包",
                             actionBlock: {
@@ -123,16 +131,16 @@ struct MySwiftUIBaseHomeView: View {
                         )
                     ]
                 ),
-                CQDMSwiftSectionDataModel(
+                CQDMSwiftUISectionDataModel(
                     theme: "更多功能",
                     values: [
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "设置",
                             viewGetterHandle: {
                                 AnyView(Text("设置页面"))
                             }
                         ),
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "关于",
                             content: "版本 1.0.0",
                             viewGetterHandle: {

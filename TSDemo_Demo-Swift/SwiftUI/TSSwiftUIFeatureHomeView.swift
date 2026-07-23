@@ -26,10 +26,10 @@ public struct TSSwiftUIFeatureHomeView: View {
         CQTSSwiftUIBaseHomeView(
             title: "SwiftUI",
             sectionDataModels: [
-                CQDMSwiftSectionDataModel(
+                CQDMSwiftUISectionDataModel(
                     theme: "CQTSSwiftUIBaseHomeView 自身的测试",
                     values: [
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "点击后跳转到指定页面",
                             content: "点击后跳转到指定页面",
                             contentLines: 1,
@@ -37,7 +37,7 @@ public struct TSSwiftUIFeatureHomeView: View {
                                 AnyView(Text("我是点击后跳转进去的页面"))
                             }
                         ),
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "点击后执行自定义事件",
                             actionBlock: {
                                 debugPrint("点击")
@@ -45,16 +45,16 @@ public struct TSSwiftUIFeatureHomeView: View {
                         )
                     ]
                 ),
-                CQDMSwiftSectionDataModel(
+                CQDMSwiftUISectionDataModel(
                     theme: "SwiftUI ↔ UIKit 互转(as)",
                     values: [
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "SwiftUI as UIKit",
                             viewGetterHandle: {
                                 AnyView(TSSwiftUIAsUIKitHomeView())
                             }
                         ),
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "UIKit as SwiftUI\n(不额外提供，请使用 CJBaseUIKit-Swift 的 UIView+asSwiftUI)",
                             viewGetterHandle: {
                                 AnyView(Text("UIKit as SwiftUI\n(不额外提供，请使用 CJBaseUIKit-Swift 的 UIView+asSwiftUI)"))
@@ -62,10 +62,10 @@ public struct TSSwiftUIFeatureHomeView: View {
                         ),
                     ]
                 ),
-                CQDMSwiftSectionDataModel(
+                CQDMSwiftUISectionDataModel(
                     theme: "语法问题",
                     values: [
-                        CQDMSwiftModuleModel(
+                        CQDMSwiftUIModuleModel(
                             title: "类型擦除（Type Erasure）",
                             viewGetterHandle: {
                                 AnyView(TSSwiftUIExceDiffTypeView())
