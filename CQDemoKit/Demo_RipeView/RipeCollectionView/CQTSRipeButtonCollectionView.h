@@ -18,9 +18,22 @@ NS_ASSUME_NONNULL_BEGIN
 }
 @property (nullable, nonatomic, copy) void(^cellConfigBlock)(UICollectionViewCell *bCell); /**< cell的UI定制（有时候需要cell和其所在列表的背景色为透明） */
 
+#pragma mark - RadioButton
+/// 单行的 单选按钮组合
++ (instancetype)rowRadioButtonsWithHorizontalMargin:(CGFloat)horizontalMargin
+                                             height:(CGFloat)height
+                                             titles:(NSArray<NSString *> *)buttonTitles
+                         didSelectItemAtIndexHandle:(void(^)(NSInteger index))didSelectItemAtIndexHandle;
+
+/// 单列的 单选按钮组合
++ (instancetype)columnRadioButtonsWithWidth:(CGFloat)width
+                                     height:(CGFloat)height
+                                     titles:(NSArray<NSString *> *)buttonTitles
+                 didSelectItemAtIndexHandle:(void(^)(NSInteger index))didSelectItemAtIndexHandle;
+
 #pragma mark - Init
 /*
- *  初始化 单行或单列的CollectionView
+ *  初始化 指定行数或列数的CollectionView
  *
  *  @param buttonTitles                 按钮的标题数组
  *  @param perMaxCount                  当滚动方向为①水平时,每列显示几个；②竖直时,每行显示几个；
@@ -34,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
                    perMaxCount:(NSInteger)perMaxCount
               widthHeightRatio:(CGFloat)widthHeightRatio
                scrollDirection:(UICollectionViewScrollDirection)scrollDirection
-    didSelectItemAtIndexHandle:(void(^)(NSInteger index))didSelectItemAtIndexHandle NS_DESIGNATED_INITIALIZER;
+    didSelectItemAtIndexHandle:(void(^)(NSInteger index))didSelectItemAtIndexHandle;
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
