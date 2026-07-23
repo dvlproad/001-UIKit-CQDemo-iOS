@@ -56,6 +56,12 @@
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Button";
+            module.content = [@[
+                @"主题按钮:themeBGButton \ themeBorderButton",
+                @"状态按钮:submitButton",
+                @"bug按钮:bugButton",
+                @"单选按钮的组合:CQTSRipeButtonCollectionView"
+            ] componentsJoinedByString:@"\n"];
             module.classEntry = [TSButtonHomeViewController class];
             [sectionDataModel.values addObject:module];
         }

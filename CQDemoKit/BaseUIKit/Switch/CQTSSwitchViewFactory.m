@@ -19,7 +19,7 @@
 @implementation CQTSSwitchViewFactory
 
 
-#pragma mark - 含开关的视图
+#pragma mark - 含标题的开关视图
 + (UIView *)switchViewWithTitle:(NSString *)title
                        switchOn:(BOOL)switchOn
         switchValueChangedBlock:(void(^)(UISwitch *bSwitch))switchValueChangedBlock

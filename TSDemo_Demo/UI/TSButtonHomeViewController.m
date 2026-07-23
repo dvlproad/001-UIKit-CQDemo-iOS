@@ -31,6 +31,7 @@
     
     __weak typeof(self) weakSelf = self;
     
+    // 主题按钮:themeBGButton \ themeBorderButton
     // themeBGButton
     UIButton *themeBGButton = [CQTSButtonFactory themeBGButtonWithTitle:@"以主题色为背景的按钮" actionBlock:^(UIButton * _Nonnull bButton) {
         [CJUIKitToastUtil showMessage:@"点击以主题色为背景的按钮"];
@@ -41,7 +42,7 @@
         [CJUIKitToastUtil showMessage:@"以主题色为边框的按钮"];
     }];
     
-    // submitButton
+    // 状态按钮:submitButton
     UIButton *submitButton = [CQTSButtonFactory submitButtonWithSubmitTitle:NSLocalizedString(@"提交", nil) editTitle:NSLocalizedString(@"修改", nil) showEditTitle:YES clickSubmitTitleHandle:^(UIButton *button) {
         button.selected = !button.selected;
     } clickEditTitleHandle:^(UIButton *button) {
@@ -62,7 +63,7 @@
     }];
     
     
-#pragma mark normalSelectedButton View
+#pragma mark 状态按钮
     UIButton *normalSelectedButton1 = [CQTSButtonFactory submitButtonWithSubmitTitle:@"提交" editTitle:@"修改" showEditTitle:NO clickSubmitTitleHandle:nil clickEditTitleHandle:nil];
 //    [normalSelectedButton1 setTitle:@"修改(未选中，可点)" forState:UIControlStateNormal];
     normalSelectedButton1.selected = false;
@@ -96,12 +97,14 @@
     
     
 #pragma mark 其他按钮
+    // bug按钮:bugButton
     UIButton *bugButton = [CQTSButtonFactory bugButtonWithBugHappen:YES fixBugHandle:^{
         [CJUIKitToastUtil showMessage:@"修复bug"];
     } reproduceBugHandle:^{
         [CJUIKitToastUtil showMessage:@"重现bgu"];
     }];
     
+    // 单选按钮的组合:CQTSRipeButtonCollectionView
     UIButton *goRadioButton = [CQTSButtonFactory themeBGButtonWithTitle:@"查看单选按钮的组合" actionBlock:^(UIButton * _Nonnull bButton) {
         UIViewController *viewController = [[TSRipeButtonCollectionViewController alloc] init];
         [weakSelf.navigationController pushViewController:viewController animated:YES];

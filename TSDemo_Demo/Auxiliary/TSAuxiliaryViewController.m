@@ -34,32 +34,42 @@
         make.left.mas_equalTo(self.view).mas_offset(20);
     }];
     
-    
-    UIView *buttonsView2 = [CQTSContainerViewFactory threeButtonsViewAlongAxis:MASAxisTypeHorizontal title1:@"添加上辅助" actionBlock1:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_addPromptText:@"这是【上】辅助文本" layout:CQAuxiliaryAlignmentTop height:20];
-    } title2:@"添加中辅助" actionBlock2:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_addPromptText:@"这是【中】辅助文本" layout:CQAuxiliaryAlignmentCenter height:20];
-    } title3:@"添加下辅助" actionBlock3:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_addPromptText:@"这是【下】辅助文本" layout:CQAuxiliaryAlignmentBottom height:20];
-    }];
-    [self.view addSubview:buttonsView2];
-    [buttonsView2 mas_makeConstraints:^(MASConstraintMaker *make) {
+    NSArray *addButtons = @[
+        [CQTSButtonFactory themeBGButtonWithTitle:@"添加上辅助" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqdemo_addPromptText:@"这是【上】辅助文本" layout:CQAuxiliaryAlignmentTop height:20];
+        }],
+        [CQTSButtonFactory themeBGButtonWithTitle:@"添加中辅助" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqdemo_addPromptText:@"这是【中】辅助文本" layout:CQAuxiliaryAlignmentCenter height:20];
+        }],
+        [CQTSButtonFactory themeBGButtonWithTitle:@"添加下辅助" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqdemo_addPromptText:@"这是【下】辅助文本" layout:CQAuxiliaryAlignmentBottom height:20];
+        }],
+    ];
+    UIView *addButtonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeHorizontal withSubviews:addButtons fixedSpacing:10];
+    [self.view addSubview:addButtonsView];
+    [addButtonsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(buttonsView.mas_bottom).mas_offset(40);
         make.height.mas_equalTo(44);
         make.centerX.mas_equalTo(self.view);
         make.left.mas_equalTo(self.view).mas_offset(20);
     }];
     
-    UIView *removeButtonsView = [CQTSContainerViewFactory threeButtonsViewAlongAxis:MASAxisTypeVertical title1:@"移除辅助(正序：按添加顺序移除)" actionBlock1:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveFirstOne];
-    } title2:@"移除辅助(逆序：后添加到先移除)" actionBlock2:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveLastOne];
-    } title3:@"移除辅助(所有的都移除)" actionBlock3:^(UIButton * _Nonnull bButton) {
-        [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveAll];
-    }];
+    
+    NSArray *removeButtons = @[
+        [CQTSButtonFactory themeBGButtonWithTitle:@"移除辅助FirstOne(正序：按添加顺序移除)" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveFirstOne];
+        }],
+        [CQTSButtonFactory themeBGButtonWithTitle:@"移除辅助LastOne(逆序：后添加到先移除)" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveLastOne];
+        }],
+        [CQTSButtonFactory themeBGButtonWithTitle:@"移除辅助All(所有的都移除)" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveAll];
+        }],
+    ];
+    UIView *removeButtonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:removeButtons fixedSpacing:10];
     [self.view addSubview:removeButtonsView];
     [removeButtonsView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(buttonsView2.mas_bottom).mas_offset(40);
+        make.top.mas_equalTo(addButtonsView.mas_bottom).mas_offset(40);
         make.height.mas_equalTo(44*3+10*2);
         make.centerX.mas_equalTo(self.view);
         make.left.mas_equalTo(self.view).mas_offset(20);

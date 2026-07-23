@@ -22,6 +22,18 @@ PODS:
   - CQDemoKit/Auxiliary (0.9.11):
     - Masonry
   - CQDemoKit/BaseUIKit (0.9.11):
+    - CQDemoKit/BaseUIKit/Button (= 0.9.11)
+    - CQDemoKit/BaseUIKit/Container (= 0.9.11)
+    - CQDemoKit/BaseUIKit/ImageLoader (= 0.9.11)
+    - CQDemoKit/BaseUIKit/Switch (= 0.9.11)
+    - Masonry
+  - CQDemoKit/BaseUIKit/Button (0.9.11):
+    - Masonry
+  - CQDemoKit/BaseUIKit/Container (0.9.11):
+    - Masonry
+  - CQDemoKit/BaseUIKit/ImageLoader (0.9.11):
+    - Masonry
+  - CQDemoKit/BaseUIKit/Switch (0.9.11):
     - Masonry
   - CQDemoKit/BaseUtil (0.9.11)
   - CQDemoKit/BaseVC (0.9.11):
@@ -181,7 +193,7 @@ SPEC CHECKSUMS:
   CJBaseUIKit-Swift: 432f05b09106994c16a4cf582c6a728c3e59316e
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
-  CQDemoKit: 0a09a0095ec75c4788d8c3a3295472b4cd8ec961
+  CQDemoKit: 1d022e35d3ef60bb287aab6357398a91019cf72f
   CQDemoKit-Swift: b9bef1d7923ba65a1955defccf348e1d213a8adf
   CQDemoResource: 8517e49608bdc8688d21b3029c85f74ae6dfa63e
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887

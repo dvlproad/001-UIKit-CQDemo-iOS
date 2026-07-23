@@ -61,7 +61,12 @@ Pod::Spec.new do |s|
                  • CQDemoKit/BaseVC/Collection - 集合视图
                  • CQDemoKit/BaseVC/TabBar - TabBar
                  
-                 • CQDemoKit/BaseUIKit - 基础模块UIKit
+                 • CQDemoKit/BaseUIKit - 基础模块UIKit(Button \ Container \ ImageLoader \ Switch)
+                 • CQDemoKit/BaseUIKit/Button - 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
+                 • CQDemoKit/BaseUIKit/Container - 创建子视图均分的containerView
+                 • CQDemoKit/BaseUIKit/ImageLoader - 图片加载
+                 • CQDemoKit/BaseUIKit/Switch - 含标题的开关视图
+
                  • CQDemoKit/BaseUtil - 基础工具
                  
                  • CQDemoKit/Demo_Resource - Demo 工程中基本都需要的 DemoResource
@@ -166,10 +171,28 @@ Pod::Spec.new do |s|
     end
   end
 
-  # 基础模块UIKit
+  # 基础模块UIKit(Button \ Container \ ImageLoader \ Switch)
   s.subspec 'BaseUIKit' do |ss|
-    ss.source_files = "CQDemoKit/BaseUIKit/**/*.{h,m}"
-    ss.dependency 'Masonry'
+    # 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
+    ss.subspec 'Button' do |sss|
+      sss.source_files = "CQDemoKit/BaseUIKit/Button/**/*.{h,m}"
+    end
+
+    # 创建子视图均分的containerView
+    ss.subspec 'Container' do |sss|
+      sss.source_files = "CQDemoKit/BaseUIKit/Container/**/*.{h,m}"
+      ss.dependency 'Masonry'
+    end
+
+    # 图片加载
+    ss.subspec 'ImageLoader' do |sss|
+      sss.source_files = "CQDemoKit/BaseUIKit/ImageLoader/**/*.{h,m}"
+    end
+
+    # 含标题的开关视图
+    ss.subspec 'Switch' do |sss|
+      sss.source_files = "CQDemoKit/BaseUIKit/Switch/**/*.{h,m}"
+    end
   end
 
   # 悬浮的视图
@@ -240,7 +263,7 @@ Pod::Spec.new do |s|
     ss.dependency 'CQDemoKit/Demo_Resource'
     ss.dependency 'CQDemoKit/Demo_DataSourceAndDelegate'  # 使用 DataSource 或 Delegate
 
-    # 集合视图(CQTSRipeButtonCollectionViewCell \ CQTSRipeImageCollectionViewCell)
+    # 集合视图(CQTSRipeButtonCollectionViewCell \ CQTSRipeImageCollectionViewCell \ 单选按钮的组合:CQTSRipeButtonCollectionView)
     ss.subspec 'RipeCollectionView' do |sss|
       sss.source_files = "CQDemoKit/Demo_RipeView/RipeCollectionView/**/*.{h,m}"
       sss.dependency 'Masonry'
