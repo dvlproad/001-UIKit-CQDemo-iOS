@@ -5,8 +5,9 @@
 //  Created by ciyouzen on 8/10/15.
 //  Copyright (c) 2015 dvlproad. All rights reserved.
 //
+//  本视图介绍：单选按钮的组合。为了提供给某些例子需要有多种情况的测试时候，而快速构建的【单排或单列的按钮组合CollectionView】
+//
 //  为了快速构建完整 Demo 工程提供的成熟的CollectionView(已含内容和事件)
-//  为了提供给某些例子需要有多种情况的测试时候，而快速构建的【单排或单列的按钮组合CollectionView】
 
 #import <UIKit/UIKit.h>
 

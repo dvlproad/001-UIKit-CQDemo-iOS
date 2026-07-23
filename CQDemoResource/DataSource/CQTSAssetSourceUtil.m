@@ -158,6 +158,30 @@ UIImage *imageUrlRandom = [CQTSAssetSourceUtil imageUrlAtIndex:trySelIndex folde
         }
     }
     
+    if ([folderNames containsObject:@"icon"]) {
+        NSArray *sourceImageNames = @[
+            @"cqts_arrowDown_dark.png",
+            
+            @"cqts_backBarButtonItem_blue.png",
+            @"cqts_backBarButtonItem_gray.png",
+            
+            @"cqts_icon_check_blue01_yes.png",
+            @"cqts_icon_check_blue02_no.png",
+            @"cqts_icon_check_blue02_yes.png",
+            @"cqts_icon_check_white01_yes.png",
+            
+            @"cqts_icon_knock.png",
+            @"cqts_icon_nodata_01.png",
+        ];
+        for (NSString *sourceImageName in sourceImageNames) {
+            NSDictionary *dict = @{
+                @"folderName": @"icon",
+                @"assetName": sourceImageName
+            };
+            [resultDictionarys addObject:dict];
+        }
+    }
+    
     if ([folderNames containsObject:@"jpg"]) {
         NSArray *sourceImageNames = @[
             @"cqts_jpg_01.jpg",
@@ -201,9 +225,7 @@ UIImage *imageUrlRandom = [CQTSAssetSourceUtil imageUrlAtIndex:trySelIndex folde
     
     if ([folderNames containsObject:@"png"]) {
         NSArray *sourceImageNames = @[
-            @"cqts_icon_01.png",
-            @"cqts_icon_02.png",
-            @"cqts_icon_03.png",
+            @"cqts_png_01.png",
         ];
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
@@ -335,19 +357,6 @@ UIImage *imageUrlRandom = [CQTSAssetSourceUtil imageUrlAtIndex:trySelIndex folde
         for (NSString *sourceImageName in sourceImageNames) {
             NSDictionary *dict = @{
                 @"folderName": @"zip",
-                @"assetName": sourceImageName
-            };
-            [resultDictionarys addObject:dict];
-        }
-    }
-    
-    if ([folderNames containsObject:@"icon"]) {
-        NSArray *sourceImageNames = @[
-            @"cqts_arrowDown_dark.png"
-        ];
-        for (NSString *sourceImageName in sourceImageNames) {
-            NSDictionary *dict = @{
-                @"folderName": @"icon",
                 @"assetName": sourceImageName
             };
             [resultDictionarys addObject:dict];

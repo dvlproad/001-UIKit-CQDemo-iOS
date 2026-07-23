@@ -211,6 +211,7 @@
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Demo RipeCollectionView:Button";
+            module.content = @"使用场景：单选按钮的组合";
             module.classEntry = [TSRipeButtonCollectionViewController class];
             [sectionDataModel.values addObject:module];
         }

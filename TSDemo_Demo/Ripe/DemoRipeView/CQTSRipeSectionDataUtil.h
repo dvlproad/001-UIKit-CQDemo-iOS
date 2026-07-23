@@ -28,15 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
                                                  selectedIndexPaths:(nullable NSArray<NSIndexPath *> *)selectedIndexPaths
                                                         folderNames:(NSArray<NSString *> *)folderNames;
 
-/*
- *  获取 sectionModels
- *
- *  @param buttonTitles                 按钮的标题数组
- *
- *  @return sectionModels
- */
-+ (NSMutableArray<CQDMSectionDataModel *> *)sectionModelsWithTitles:(NSArray<NSString *> *)buttonTitles;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,6 +13,8 @@
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/CQTSContainerViewFactory.h>
 
+#import "TSRipeButtonCollectionViewController.h"
+
 @interface TSButtonHomeViewController () {
     
 }
@@ -26,6 +28,8 @@
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = NSLocalizedString(@"测试Button", nil);
+    
+    __weak typeof(self) weakSelf = self;
     
     // themeBGButton
     UIButton *themeBGButton = [CQTSButtonFactory themeBGButtonWithTitle:@"以主题色为背景的按钮" actionBlock:^(UIButton * _Nonnull bButton) {
@@ -79,19 +83,37 @@
     normalSelectedButton4.selected = true;
     normalSelectedButton4.enabled = false;
     
-    UIButton *bugButton = [CQTSButtonFactory bugButtonWithBugHappen:YES fixBugHandle:^{
-        [CJUIKitToastUtil showMessage:@"修复bug"];
-    } reproduceBugHandle:^{
-        [CJUIKitToastUtil showMessage:@"重现bgu"];
-    }];
-    
-    UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4, bugButton] fixedSpacing:10];
+    UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4] fixedSpacing:10];
    [self.view addSubview:normalSelectedButtonView];
    [normalSelectedButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
        make.left.mas_equalTo(buttonsView);
        make.centerX.mas_equalTo(buttonsView);
        make.top.mas_equalTo(buttonsView.mas_bottom).mas_offset(40);
        make.height.mas_equalTo(4*44+3*15+10+10);
+   }];
+    
+    
+    
+    
+#pragma mark 其他按钮
+    UIButton *bugButton = [CQTSButtonFactory bugButtonWithBugHappen:YES fixBugHandle:^{
+        [CJUIKitToastUtil showMessage:@"修复bug"];
+    } reproduceBugHandle:^{
+        [CJUIKitToastUtil showMessage:@"重现bgu"];
+    }];
+    
+    UIButton *goRadioButton = [CQTSButtonFactory themeBGButtonWithTitle:@"查看单选按钮的组合" actionBlock:^(UIButton * _Nonnull bButton) {
+        UIViewController *viewController = [[TSRipeButtonCollectionViewController alloc] init];
+        [weakSelf.navigationController pushViewController:viewController animated:YES];
+    }];
+    
+    UIView *otherButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[bugButton, goRadioButton] fixedSpacing:10];
+   [self.view addSubview:otherButtonView];
+   [otherButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
+       make.left.mas_equalTo(normalSelectedButtonView);
+       make.centerX.mas_equalTo(normalSelectedButtonView);
+       make.top.mas_equalTo(normalSelectedButtonView.mas_bottom).mas_offset(40);
+       make.height.mas_equalTo(2*44+1*15+10+10);
    }];
     
     

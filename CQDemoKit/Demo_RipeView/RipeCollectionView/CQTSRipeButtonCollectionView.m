@@ -12,8 +12,6 @@
 #import <CQDemoKit/CQTSRipeButtonCollectionViewCell.h>
 #import <CQDemoKit/CQTSLocImageDataModel.h>
 
-#import "CQTSRipeSectionDataUtil.h"
-
 @interface CQTSRipeButtonCollectionView () {
     
 }
@@ -56,15 +54,18 @@
         }];
         self.delegate = self.ripeCollectionViewDelegate;
         
-        NSMutableArray<CQDMSectionDataModel *> *sectionDataModels = [CQTSRipeSectionDataUtil sectionModelsWithTitles:buttonTitles];
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"单选按钮的组合";
+        sectionDataModel.values = buttonTitles;
+        NSMutableArray<CQDMSectionDataModel *> *sectionDataModels = @[sectionDataModel];
         _ripeCollectionViewDataSource = [[CQTSRipeBaseCollectionViewDataSource alloc] initWithSectionDataModels:sectionDataModels registerHandler:^{
             [weakSelf registerClass:[CQTSRipeButtonCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
             
         } cellForItemAtIndexPath:^UICollectionViewCell * _Nonnull(UICollectionView * _Nonnull bCollectionView, NSIndexPath * _Nonnull bIndexPath, id bDataModel) {
-            CQTSLocImageDataModel *dataModel = (CQTSLocImageDataModel *)bDataModel;
+            NSString *dataModel = (NSString *)bDataModel;
             CQTSRipeButtonCollectionViewCell *cell = [bCollectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:bIndexPath];
             
-            NSString *title = buttonTitles[bIndexPath.item];
+            NSString *title = dataModel;
             cell.text = title;
             //cell.text = [NSString stringWithFormat:@"%zd", bIndexPath.item];
             

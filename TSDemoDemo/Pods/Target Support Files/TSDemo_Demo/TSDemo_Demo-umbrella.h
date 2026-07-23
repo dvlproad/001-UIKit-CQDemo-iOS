@@ -17,7 +17,6 @@
 #import "TSResourceCollectionViewController.h"
 #import "TSResourceViewController.h"
 #import "CQTSResourceEnum.h"
-#import "CQTSRipeButtonCollectionView.h"
 #import "CQTSRipeImageCollectionView.h"
 #import "CQTSRipeSectionDataUtil.h"
 #import "TSRipeButtonCollectionViewController.h"
