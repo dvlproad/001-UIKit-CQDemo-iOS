@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoProtocol_0.0.1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoProtocol_0.0.1_1" }
   # s.source_files  = "CQDemoProtocol/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -79,6 +79,6 @@ Pod::Spec.new do |s|
   # 子库定义的 AppDelegate 协议。用于在子库中获取主 app 里的 AppDelegate
   s.subspec 'AppDelegate' do |ss|
     ss.source_files = "CQDemoProtocol/AppDelegate/**/*.{h,m}"  # 包含UIImage+CQDemoProtocol
-  end=
+  end
 
 end
