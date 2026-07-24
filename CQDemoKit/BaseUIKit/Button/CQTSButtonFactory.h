@@ -51,6 +51,14 @@ NS_ASSUME_NONNULL_BEGIN
                    clickSubmitTitleHandle:(void(^)(UIButton *button))clickSubmitTitleHandle
                      clickEditTitleHandle:(void(^)(UIButton *button))clickEditTitleHandle;
 
+/*
+ *  有状态切换的单选按钮
+ *  @param title                    单选按钮的标题
+ *  @param clickHandle              单选按钮点击要执行的操作
+ */
++ (UIButton *)radioButtonWithTitle:(NSString *)title
+                       clickHandle:(void(^)(UIButton *button))clickHandle;
+
 @end
 
 NS_ASSUME_NONNULL_END

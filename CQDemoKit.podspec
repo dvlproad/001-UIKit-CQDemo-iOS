@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.11"
+  s.version      = "0.9.12"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、TestMethod、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -62,7 +62,7 @@ Pod::Spec.new do |s|
                  • CQDemoKit/BaseVC/TabBar - TabBar
                  
                  • CQDemoKit/BaseUIKit - 基础模块UIKit(Button \ Container \ ImageLoader \ Switch)
-                 • CQDemoKit/BaseUIKit/Button - 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
+                 • CQDemoKit/BaseUIKit/Button - 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
                  • CQDemoKit/BaseUIKit/Container - 创建子视图均分的containerView
                  • CQDemoKit/BaseUIKit/ImageLoader - 图片加载
                  • CQDemoKit/BaseUIKit/Switch - 含标题的开关视图
@@ -96,7 +96,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.11" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.12" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -173,7 +173,7 @@ Pod::Spec.new do |s|
 
   # 基础模块UIKit(Button \ Container \ ImageLoader \ Switch)
   s.subspec 'BaseUIKit' do |ss|
-    # 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
+    # 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
     ss.subspec 'Button' do |sss|
       sss.source_files = "CQDemoKit/BaseUIKit/Button/**/*.{h,m}"
     end
@@ -263,7 +263,7 @@ Pod::Spec.new do |s|
     ss.dependency 'CQDemoKit/Demo_Resource'
     ss.dependency 'CQDemoKit/Demo_DataSourceAndDelegate'  # 使用 DataSource 或 Delegate
 
-    # 集合视图(CQTSRipeButtonCollectionViewCell \ CQTSRipeImageCollectionViewCell \ 单选按钮的组合:CQTSRipeButtonCollectionView)
+    # 集合视图(CQTSRipeButtonCollectionViewCell \ CQTSRipeImageCollectionViewCell \ 【多行或者多列】的单选按钮的组合:CQTSRipeButtonCollectionView)
     ss.subspec 'RipeCollectionView' do |sss|
       sss.source_files = "CQDemoKit/Demo_RipeView/RipeCollectionView/**/*.{h,m}"
       sss.dependency 'Masonry'

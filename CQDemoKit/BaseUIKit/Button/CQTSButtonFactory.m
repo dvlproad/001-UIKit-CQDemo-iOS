@@ -169,6 +169,23 @@
     return submitButton;
 }
 
+/*
+ *  有状态切换的单选按钮
+ *  @param title                    单选按钮的标题
+ *  @param clickHandle              单选按钮点击要执行的操作
+ */
++ (UIButton *)radioButtonWithTitle:(NSString *)title
+                       clickHandle:(void(^)(UIButton *button))clickHandle
+{
+    UIButton *radioButton = [self themeNormalSelectedButtonWithNormalTitle:title selectedTitle:title];
+    radioButton.cqtsTouchUpInsideBlock = ^(UIButton *bButton) {
+        !clickHandle ?: clickHandle(bButton);
+    };
+    
+    return radioButton;
+}
+
+
 /// 有状态切换的按钮
 + (CQTSBorderStateButton *)themeNormalSelectedButtonWithNormalTitle:(NSString *)normalTitle selectedTitle:(NSString *)selectedTitle {
     UIColor *themeColor = [CQTSButtonFactory sharedInstance].themeColor;

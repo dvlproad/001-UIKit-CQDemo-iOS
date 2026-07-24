@@ -12,6 +12,7 @@
 //Button
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/CQTSContainerViewFactory.h>
+#import <CQDemoKit/CQTSRadioButtonsView.h>
 
 #import "TSRipeButtonCollectionViewController.h"
 
@@ -30,6 +31,7 @@
     self.navigationItem.title = NSLocalizedString(@"测试Button", nil);
     
     __weak typeof(self) weakSelf = self;
+    UIView *containerView = self.containerView;
     
     // 主题按钮:themeBGButton \ themeBorderButton
     // themeBGButton
@@ -54,12 +56,12 @@
     
     UIView *buttonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:buttons fixedSpacing:10];
     
-    [self.view addSubview:buttonsView];
+    [containerView addSubview:buttonsView];
     [buttonsView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view).mas_offset(120);
+        make.top.mas_equalTo(containerView).mas_offset(40);
         make.height.mas_equalTo(44*3+10*2);
-        make.centerX.mas_equalTo(self.view);
-        make.left.mas_equalTo(self.view).mas_offset(20);
+        make.centerX.mas_equalTo(containerView);
+        make.left.mas_equalTo(containerView).mas_offset(20);
     }];
     
     
@@ -85,7 +87,7 @@
     normalSelectedButton4.enabled = false;
     
     UIView *normalSelectedButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[normalSelectedButton1, normalSelectedButton2, normalSelectedButton3, normalSelectedButton4] fixedSpacing:10];
-   [self.view addSubview:normalSelectedButtonView];
+   [containerView addSubview:normalSelectedButtonView];
    [normalSelectedButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
        make.left.mas_equalTo(buttonsView);
        make.centerX.mas_equalTo(buttonsView);
@@ -104,23 +106,56 @@
         [CJUIKitToastUtil showMessage:@"重现bgu"];
     }];
     
-    // 单选按钮的组合:CQTSRipeButtonCollectionView
-    UIButton *goRadioButton = [CQTSButtonFactory themeBGButtonWithTitle:@"查看单选按钮的组合" actionBlock:^(UIButton * _Nonnull bButton) {
-        UIViewController *viewController = [[TSRipeButtonCollectionViewController alloc] init];
-        [weakSelf.navigationController pushViewController:viewController animated:YES];
-    }];
-    
-    UIView *otherButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[bugButton, goRadioButton] fixedSpacing:10];
-   [self.view addSubview:otherButtonView];
+    UIView *otherButtonView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:@[bugButton] fixedSpacing:10];
+   [containerView addSubview:otherButtonView];
    [otherButtonView mas_makeConstraints:^(MASConstraintMaker *make) {
        make.left.mas_equalTo(normalSelectedButtonView);
        make.centerX.mas_equalTo(normalSelectedButtonView);
        make.top.mas_equalTo(normalSelectedButtonView.mas_bottom).mas_offset(40);
-       make.height.mas_equalTo(2*44+1*15+10+10);
+       make.height.mas_equalTo(44);
    }];
     
+#pragma mark 单选按钮组
+    NSArray<NSString *> *radioButtonTitles = @[@"按钮1", @"按钮2", @"按钮3", @"按钮4",];
+    CQTSRadioButtonsView *horizontalRadioButtons = [[CQTSRadioButtonsView alloc] initWithTitles:radioButtonTitles alongAxis:MASAxisTypeHorizontal fixedSpacing:10 didSelectItemAtIndexHandle:^(NSInteger index) {
+        NSString *message = [NSString stringWithFormat:@"点击了第%ld个按钮", index+1];
+        [CJUIKitToastUtil showMessage:message];
+    }];
+    [containerView addSubview:horizontalRadioButtons];
+    [horizontalRadioButtons mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(otherButtonView);
+        make.centerX.mas_equalTo(otherButtonView);
+        make.top.mas_equalTo(otherButtonView.mas_bottom).mas_offset(40);
+        make.height.mas_equalTo(44);
+    }];
     
-//    [self updateScrollHeightWithBottomInterval:40 accordingToLastBottomView:submitButton];
+    CQTSRadioButtonsView *verticalRadioButtons = [[CQTSRadioButtonsView alloc] initWithTitles:radioButtonTitles alongAxis:MASAxisTypeVertical fixedSpacing:10 didSelectItemAtIndexHandle:^(NSInteger index) {
+        NSString *message = [NSString stringWithFormat:@"点击了第%ld个按钮", index+1];
+        [CJUIKitToastUtil showMessage:message];
+    }];
+    [containerView addSubview:verticalRadioButtons];
+    [verticalRadioButtons mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(horizontalRadioButtons);
+        make.centerX.mas_equalTo(horizontalRadioButtons);
+        make.top.mas_equalTo(horizontalRadioButtons.mas_bottom).mas_offset(20);
+        make.height.mas_equalTo(4*44+3*15);
+    }];
+    
+    // 单选按钮组合的其他实现方式:CQTSRipeButtonCollectionView
+    UIButton *goRadioButton = [CQTSButtonFactory themeBGButtonWithTitle:@"查看单选按钮的组合的其他实现" actionBlock:^(UIButton * _Nonnull bButton) {
+        UIViewController *viewController = [[TSRipeButtonCollectionViewController alloc] init];
+        [weakSelf.navigationController pushViewController:viewController animated:YES];
+    }];
+   [containerView addSubview:goRadioButton];
+   [goRadioButton mas_makeConstraints:^(MASConstraintMaker *make) {
+       make.left.mas_equalTo(verticalRadioButtons);
+       make.centerX.mas_equalTo(verticalRadioButtons);
+       make.top.mas_equalTo(verticalRadioButtons.mas_bottom).mas_offset(40);
+       make.height.mas_equalTo(44);
+   }];
+    
+#pragma mark 更新ScrollView的高（如果视图滚动异常，请检查你的视图是不是加在了self.view上了。而不是self.containerView上）
+    [self updateScrollHeightWithBottomInterval:40 accordingToLastBottomView:goRadioButton];
 }
 
 
