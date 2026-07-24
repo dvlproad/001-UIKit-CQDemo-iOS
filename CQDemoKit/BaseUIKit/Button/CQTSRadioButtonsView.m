@@ -12,7 +12,7 @@
 @interface CQTSRadioButtonsView () {
     
 }
-@property (nonatomic, strong, readonly) NSMutableArray<NSString *> *titles;
+@property (nonatomic, strong, readonly) NSArray<NSString *> *titles;
 @property (nonatomic, strong) NSMutableArray<UIButton *> *buttons;
 @property (nullable, nonatomic, copy, readonly) void(^didSelectItemAtIndexHandle)(NSInteger index); /**< 点击item的回调 */
 
@@ -43,8 +43,19 @@
     for (NSInteger i = 0; i < titles.count; i++) {
         NSString *title = [titles objectAtIndex:i];
         UIButton *radioButton = [CQTSButtonFactory radioButtonWithTitle:title clickHandle:^(UIButton * _Nonnull button) {
-            [weakSelf __didSelectItemAtIndex:i];
+            [weakSelf didSelectItemAtIndex:i];
         }];
+        // 添加checkView
+        UILabel *checkedView = [[UILabel alloc] init];
+        checkedView.tag = 973+i;
+        checkedView.text = @"✅"; // 其他打勾符号：☑️ ✓
+        [radioButton addSubview:checkedView];
+        [checkedView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.right.mas_equalTo(radioButton);
+            make.width.height.mas_equalTo(20);
+        }];
+        checkedView.hidden = YES;
+        
         [buttons addObject:radioButton];
     }
     _buttons = buttons;
@@ -73,11 +84,21 @@
     return self;
 }
 
-- (void)__didSelectItemAtIndex:(NSInteger)index {
+#pragma mark - Public Method
+- (void)didSelectItemAtIndex:(NSInteger)index {
+    if (index < 0 || index >= self.buttons.count) return;
+    
     NSArray<NSString *> *titles = self.titles;
     for (NSInteger i = 0; i < titles.count; i++) {
         UIButton *radioButton = [self.buttons objectAtIndex:i];
         radioButton.selected = i == index;
+        
+        UILabel *checkedView = [radioButton viewWithTag:973+i];
+        checkedView.hidden = i != index;
+    }
+    
+    if (self.didSelectItemAtIndexHandle) {
+        self.didSelectItemAtIndexHandle(index);
     }
 }
 

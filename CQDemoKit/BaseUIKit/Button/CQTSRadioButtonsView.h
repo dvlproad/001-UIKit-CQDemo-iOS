@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CQTSRadioButtonsView : UIView {
     
 }
-
+#pragma mark - Init
 /// 初始化 单行或单列的按钮组
 ///
 /// @param titles                                              按钮的标题数组
@@ -36,6 +36,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
 - (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
+
+#pragma mark - Public Method
+/// 主动选中某项（更新UI并触发回调）
+- (void)didSelectItemAtIndex:(NSInteger)index;
 
 @end
 

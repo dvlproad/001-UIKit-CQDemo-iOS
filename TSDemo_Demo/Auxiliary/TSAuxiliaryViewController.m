@@ -36,20 +36,26 @@
     
     NSArray *addButtons = @[
         [CQTSButtonFactory themeBGButtonWithTitle:@"添加上辅助" actionBlock:^(UIButton * _Nonnull bButton) {
-            [buttonsView cqdemo_addPromptText:@"这是【上】辅助文本" layout:CQAuxiliaryAlignmentTop height:20];
+            [buttonsView cqts_addPromptText:@"这是【上】辅助文本" layout:CQAuxiliaryAlignmentTop height:20];
         }],
         [CQTSButtonFactory themeBGButtonWithTitle:@"添加中辅助" actionBlock:^(UIButton * _Nonnull bButton) {
-            [buttonsView cqdemo_addPromptText:@"这是【中】辅助文本" layout:CQAuxiliaryAlignmentCenter height:20];
+            [buttonsView cqts_addPromptText:@"这是【中】辅助文本" layout:CQAuxiliaryAlignmentCenter height:20];
         }],
         [CQTSButtonFactory themeBGButtonWithTitle:@"添加下辅助" actionBlock:^(UIButton * _Nonnull bButton) {
-            [buttonsView cqdemo_addPromptText:@"这是【下】辅助文本" layout:CQAuxiliaryAlignmentBottom height:20];
+            [buttonsView cqts_addPromptText:@"这是【下】辅助文本" layout:CQAuxiliaryAlignmentBottom height:20];
+        }],
+        [CQTSButtonFactory themeBGButtonWithTitle:@"添加上辅助(视图外)" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqts_addPromptText:@"这是【上】辅助文本(视图外)" layout:CQAuxiliaryAlignmentTopTop height:20];
+        }],
+        [CQTSButtonFactory themeBGButtonWithTitle:@"添加下辅助(视图外)" actionBlock:^(UIButton * _Nonnull bButton) {
+            [buttonsView cqts_addPromptText:@"这是【下】辅助文本(视图外)" layout:CQAuxiliaryAlignmentBottomBottom height:20];
         }],
     ];
-    UIView *addButtonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeHorizontal withSubviews:addButtons fixedSpacing:10];
+    UIView *addButtonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:addButtons fixedSpacing:10];
     [self.view addSubview:addButtonsView];
     [addButtonsView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(buttonsView.mas_bottom).mas_offset(40);
-        make.height.mas_equalTo(44);
+        make.height.mas_equalTo(5*44+4*10);
         make.centerX.mas_equalTo(self.view);
         make.left.mas_equalTo(self.view).mas_offset(20);
     }];
@@ -57,13 +63,13 @@
     
     NSArray *removeButtons = @[
         [CQTSButtonFactory themeBGButtonWithTitle:@"移除辅助FirstOne(正序：按添加顺序移除)" actionBlock:^(UIButton * _Nonnull bButton) {
-            [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveFirstOne];
+            [buttonsView cqts_removePrompt:CQAuxiliaryRemoveFirstOne];
         }],
         [CQTSButtonFactory themeBGButtonWithTitle:@"移除辅助LastOne(逆序：后添加到先移除)" actionBlock:^(UIButton * _Nonnull bButton) {
-            [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveLastOne];
+            [buttonsView cqts_removePrompt:CQAuxiliaryRemoveLastOne];
         }],
         [CQTSButtonFactory themeBGButtonWithTitle:@"移除辅助All(所有的都移除)" actionBlock:^(UIButton * _Nonnull bButton) {
-            [buttonsView cqdemo_removePrompt:CQAuxiliaryRemoveAll];
+            [buttonsView cqts_removePrompt:CQAuxiliaryRemoveAll];
         }],
     ];
     UIView *removeButtonsView = [CQTSContainerViewFactory containerViewAlongAxis:MASAxisTypeVertical withSubviews:removeButtons fixedSpacing:10];

@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CQTSWindow.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+// 获取的方法:
+// id<CQTSDemoAppDelegateProtocol> delegate = (id<CQTSDemoAppDelegateProtocol>)[UIApplication sharedApplication].delegate;
 @protocol CQTSDemoAppDelegateProtocol <NSObject>
 
-@property (nonatomic, strong) UIWindow *cqtsFloatingWindow; // 悬浮的 window
+@property (strong, nonatomic) CQTSWindow *cqtsFloatingWindow; /**< 悬浮的 window：创建的window必须强制持有，且要想window一直不被释放，除了strong，还必须放在AppDelegate上 */
 
 @end
+
+NS_ASSUME_NONNULL_END

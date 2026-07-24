@@ -137,6 +137,6 @@ struct CQTSView: View {
 //    
 //} else {
 //    let tsview = UIView()
-//    tsview.cqdemo_addPromptText("需要 iOS 14.0+", layout: .center, height: 20)
+//    tsview.cqts_addPromptText("需要 iOS 14.0+", layout: .center, height: 20)
 //    return tsview
 //}

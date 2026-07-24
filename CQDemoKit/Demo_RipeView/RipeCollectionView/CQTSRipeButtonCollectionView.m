@@ -180,4 +180,13 @@
         self.dataSource = self.ripeCollectionViewDataSource;
 }
 
+#pragma mark - Public Method
+- (void)didSelectItemAtIndex:(NSInteger)index {
+    if (index < 0 || index >= [self numberOfItemsInSection:0]) return;
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
+    [self selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    !self.didSelectItemAtIndexHandle ?: self.didSelectItemAtIndexHandle(index);
+}
+
 @end

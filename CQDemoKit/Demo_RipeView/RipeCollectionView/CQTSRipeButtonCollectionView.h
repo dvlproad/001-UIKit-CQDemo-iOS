@@ -71,6 +71,10 @@ collectionView.cellConfigBlock = ^(UICollectionViewCell * _Nonnull bCell) {
 };
 */
 
+#pragma mark - Public Method
+/// 主动选中某项（更新UI并触发回调）
+- (void)didSelectItemAtIndex:(NSInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END

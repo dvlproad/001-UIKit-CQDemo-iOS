@@ -43,7 +43,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "CQDemoProtocol"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "CQDemoProtocol 基础协议库 - 包含 AppDelegate 等通用协议"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoProtocol_0.0.1_1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoProtocol_0.0.2" }
   # s.source_files  = "CQDemoProtocol/*.{h,m}"
 
   s.frameworks = "UIKit"

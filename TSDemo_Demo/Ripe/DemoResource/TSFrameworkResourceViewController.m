@@ -161,7 +161,7 @@
 }
 
 - (void)_addErrorText:(NSString *)errorText toView:(UIView *)view {
-    [view cqdemo_addPromptText:errorText layout:CQAuxiliaryAlignmentCenter height:44];
+    [view cqts_addPromptText:errorText layout:CQAuxiliaryAlignmentCenter height:44];
 }
 
 /*

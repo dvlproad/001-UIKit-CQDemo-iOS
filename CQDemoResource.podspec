@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoResource"
-  s.version      = "0.3.1"
+  s.version      = "0.3.2"
   s.summary      = "Demo"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.3.1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoResource_0.3.2" }
   # s.source_files  = "CQDemoResource/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -154,6 +154,16 @@ Pod::Spec.new do |s|
       ]
     }
   end
+  
+  # icon - 后缀为 png 的资源（箭头等图标）
+  s.subspec 'icon' do |ss|
+    ss.dependency 'CQDemoResource/Core'
+    ss.resource_bundle = {
+      'CQDemoResource_icon' => [
+        'CQDemoResource/Resources/icon/**/*',
+      ]
+    }
+  end
 
   # GIF - 后缀为 GIF 的资源
   s.subspec 'GIF' do |ss|
@@ -192,16 +202,6 @@ Pod::Spec.new do |s|
     ss.resource_bundle = {
       'CQDemoResource_Zip' => [
         'CQDemoResource/Resources/zip/**/*',
-      ]
-    }
-  end
-
-  # icon - 后缀为 png 的资源（箭头等图标）
-  s.subspec 'icon' do |ss|
-    ss.dependency 'CQDemoResource/Core'
-    ss.resource_bundle = {
-      'CQDemoResource_icon' => [
-        'CQDemoResource/Resources/icon/**/*',
       ]
     }
   end
