@@ -21,6 +21,20 @@ class TSBaseVCHomeViewController: CJUIKitBaseHomeViewController {
 
         var sectionDataModels: [CQDMSectionDataModel] = []
 
+        // 【测试首页列表视图】
+        do {
+            let sectionDataModel = CQDMSectionDataModel()
+            sectionDataModel.theme = "首页列表"
+
+            do {
+                let module = CQDMModuleModel()
+                module.title = "CJUIKitBaseHomeViewController"
+                module.classEntry = TSTableHomeViewController.self
+                sectionDataModel.values.add(module)
+            }
+            sectionDataModels.append(sectionDataModel)
+        }
+        
         // 【测试方法的列表视图】
         do {
             let sectionDataModel = CQDMSectionDataModel()

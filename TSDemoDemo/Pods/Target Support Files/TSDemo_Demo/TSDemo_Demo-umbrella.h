@@ -31,6 +31,7 @@
 #import "TSContainerViewController.h"
 #import "TSSwitchViewController.h"
 #import "UIUtilHomeViewController.h"
+#import "TSTableHomeViewController.h"
 #import "TSManualTestMethodViewController.h"
 #import "TSMultilineTextViewController.h"
 #import "TSSingleLineTextViewController.h"
