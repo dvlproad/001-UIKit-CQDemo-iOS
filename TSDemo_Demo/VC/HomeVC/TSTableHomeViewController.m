@@ -197,14 +197,21 @@
     }
     
     
-    // 6. 综合场景测试
+    // 6. UITabBarController 测试（特殊处理：替换 rootViewController）
+    // 注意: execModuleModel 中检测到 isKindOfClass:[UITabBarController class] 时，不走 push，
+    //       而是直接替换 window.rootViewController，并创建一个悬浮"返回主页"按钮。
+    //       由于项目使用了 SceneDelegate(iOS13+)，需通过 self.view.window 获取 keyWindow，
+    //       同时悬浮按钮的 CQTSSuspendWindow 也需设置 windowScene 才能显示。
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
         sectionDataModel.theme = @"导航方式测试: UITabBarController (特殊处理)";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"UITabBarController 特殊处理";
-            module.content = @"点击后会替换 rootViewController";
+            module.content = [@[
+                @"点击后会替换 window.rootViewController",
+                @"并创建悬浮返回按钮（可拖拽）",
+            ] componentsJoinedByString:@"\n"];
             module.classEntry = [TSTabBarViewController class];
             [sectionDataModel.values addObject:module];
         }
