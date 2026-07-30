@@ -76,7 +76,10 @@
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"actionBlock - Push控制器";
-            module.content = @"actionBlock 中手动 push";
+            module.content = [@[
+                @"actionBlock 中手动 push",
+                @"actionBlock 优先于 classEntry 执行",
+            ] componentsJoinedByString:@"\n"];
             module.actionBlock = ^{
                 UIViewController *vc = [[UIViewController alloc] init];
                 vc.view.backgroundColor = [UIColor whiteColor];
@@ -84,16 +87,6 @@
                 vc.hidesBottomBarWhenPushed = YES;
                 [weakSelf.navigationController pushViewController:vc animated:YES];
             };
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"actionBlock - 带classEntry(不应执行)";
-            module.content = @"actionBlock优先级高于classEntry";
-            module.actionBlock = ^{
-                [CJUIKitToastUtil showMessage:@"actionBlock 优先于 classEntry 执行"];
-            };
-            module.classEntry = [UIViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
@@ -106,16 +99,11 @@
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"selector - 测试方法";
-            module.content = @"点击执行 testSelectorAction:";
+            module.content = [@[
+                @"点击执行 testSelectorAction:",
+                @"selector优先级高于classEntry",
+            ] componentsJoinedByString:@"\n"];
             module.selector = @selector(testSelectorAction);
-            [sectionDataModel.values addObject:module];
-        }
-        {
-            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"selector - 带classEntry(不应执行)";
-            module.content = @"selector优先级高于classEntry";
-            module.selector = @selector(testSelectorAction);
-            module.classEntry = [UIViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
@@ -191,6 +179,7 @@
                 NSString *message = [NSString stringWithFormat:@"暂不测试使用xib的情况"];
                 [CJUIKitToastUtil showMessage:message];
             };
+            module.classEntry = [UIViewController class];
             [sectionDataModel.values addObject:module];
         }
         {

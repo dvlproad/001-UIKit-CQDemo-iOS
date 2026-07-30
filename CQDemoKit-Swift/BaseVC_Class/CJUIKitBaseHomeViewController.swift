@@ -57,7 +57,18 @@ public class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableVi
         
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         cell.textLabel!.text = moduleModel.title
+        cell.textLabel!.numberOfLines = moduleModel.titleLines
         cell.detailTextLabel!.text = moduleModel.content
+        cell.detailTextLabel!.numberOfLines = moduleModel.contentLines
+        
+        if moduleModel.viewGetterHandle != nil || moduleModel.viewControllerGetterHandle != nil || moduleModel.classEntry != nil {
+            cell.accessoryType = .disclosureIndicator
+        } else if moduleModel.actionBlock != nil || moduleModel.selector != nil {
+            cell.accessoryType = .detailButton
+        } else {
+            cell.accessoryType = .none
+        }
+        
         return cell
     }
     
@@ -79,27 +90,35 @@ public class CJUIKitBaseHomeViewController: CJUIKitBaseViewController, UITableVi
         } else if (moduleModel.selector != nil) {
             self.performSelector(onMainThread: moduleModel.selector!, with: nil, waitUntilDone: false)
             
+        } else if (moduleModel.viewGetterHandle != nil) {
+            let tsview: UIView = moduleModel.viewGetterHandle!()
+            let viewController: UIViewController = CQDMModuleModel.viewControll(withTitle: moduleModel.title, tsview: tsview)
+            viewController.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
         } else {
             var viewController: UIViewController? = nil
-            let classEntry: AnyClass = moduleModel.classEntry!
-            let viewControllerClass: UIViewController.Type = classEntry as! UIViewController.Type
-            
-            let clsString: String = NSStringFromClass(moduleModel.classEntry!)
-            if clsString.isEqual(NSStringFromClass(UIViewController.self)) {
-                viewController = viewControllerClass.init()
-                viewController!.view.backgroundColor = UIColor.white
+            if (moduleModel.viewControllerGetterHandle != nil) {
+                viewController = moduleModel.viewControllerGetterHandle!()
             } else {
-                if moduleModel.isCreateByXib! {
-                    viewController = viewControllerClass.init(nibName: clsString, bundle: nil)
-                } else {
+                let classEntry: AnyClass = moduleModel.classEntry!
+                let viewControllerClass: UIViewController.Type = classEntry as! UIViewController.Type
+                let clsString: String = NSStringFromClass(moduleModel.classEntry!)
+                if clsString.isEqual(NSStringFromClass(UIViewController.self)) {
                     viewController = viewControllerClass.init()
-                    
+                    viewController!.view.backgroundColor = UIColor.white
+                } else {
+                    if moduleModel.isCreateByXib {
+                        let xibBundle: Bundle? = moduleModel.xibBundle
+                        viewController = viewControllerClass.init(nibName: clsString, bundle: xibBundle)
+                    } else {
+                        viewController = viewControllerClass.init()
+                    }
                 }
             }
             viewController!.title = NSLocalizedString(moduleModel.title, comment: moduleModel.title)
             viewController!.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(viewController!, animated: true)
-
         }
     }
 }

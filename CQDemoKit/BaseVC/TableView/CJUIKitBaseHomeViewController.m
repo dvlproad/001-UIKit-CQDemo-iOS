@@ -138,6 +138,14 @@
     cell.detailTextLabel.text = moduleModel.content;
     cell.detailTextLabel.numberOfLines = moduleModel.contentLines;
     
+    if (moduleModel.viewGetterHandle || moduleModel.viewControllerGetterHandle || moduleModel.classEntry) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    } else if (moduleModel.actionBlock || moduleModel.selector) {
+        cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
 }
 
