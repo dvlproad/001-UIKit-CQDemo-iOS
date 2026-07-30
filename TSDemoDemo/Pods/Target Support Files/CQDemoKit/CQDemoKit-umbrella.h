@@ -19,6 +19,7 @@
 #import "CQTSContainerViewFactory.h"
 #import "CQTSImageLoader.h"
 #import "UIImageView+CQTSBaseUtil.h"
+#import "CQTSSegmentViewFactory.h"
 #import "CQTSSwitchViewFactory.h"
 #import "UISwitch+CQTSMoreProperty.h"
 #import "CJUIKitAlertUtil.h"

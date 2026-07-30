@@ -12,6 +12,7 @@
 #import "TSButtonHomeViewController.h"
 #import "TSContainerViewController.h"
 #import "TSSwitchViewController.h"
+#import "TSSegmentViewController.h"
 
 // FrameworkResource 的测试
 #import "TSFrameworkResourceViewController.h"
@@ -77,6 +78,12 @@
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"Switch";
             module.classEntry = [TSSwitchViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"Segment";
+            module.classEntry = [TSSegmentViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];
