@@ -10,7 +10,7 @@
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
 #import <CQDemoKit/CQTSQuickPopupUtil.h>
-#import <CQDemoKit/CQTSQuickPopupView.h>
+#import <CQDemoKit/CQTSBottomBlankView.h>
 
 @interface UIUtilHomeViewController () {
     
@@ -95,7 +95,7 @@
                     make.height.mas_equalTo(44);
                 }];
                 
-                [CQTSQuickPopupUtil showWindowBottomClearView:popupView height:200 tapBlankComplete:^(CQTSQuickPopupView * _Nonnull bBlankView) {
+                [CQTSQuickPopupUtil showWindowBottomClearView:popupView height:200 tapBlankComplete:^(CQTSBottomBlankView * _Nonnull bBlankView) {
                     [bBlankView hideBlankView];
                 }];
             };
@@ -114,7 +114,7 @@
 }
 
 - (void)hidePopupAction:(UIButton *)button {
-    CQTSQuickPopupView *popupView = [CQTSQuickPopupView blankViewFromPopupView:button];
+    CQTSBottomBlankView *popupView = [CQTSBottomBlankView blankViewFromPopupView:button];
     [popupView hideBlankView];
 }
 

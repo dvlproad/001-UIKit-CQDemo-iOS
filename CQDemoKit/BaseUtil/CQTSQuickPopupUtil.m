@@ -7,18 +7,18 @@
 
 #import "CQTSQuickPopupUtil.h"
 
-#import "CQTSQuickPopupView.h"
+#import "CQTSBottomBlankView.h"
 
 @implementation CQTSQuickPopupUtil
 
-+ (nullable CQTSQuickPopupView *)showWindowBottomClearView:(UIView *)contentView
++ (nullable CQTSBottomBlankView *)showWindowBottomClearView:(UIView *)contentView
                                                     height:(CGFloat)popupViewHeight
-                                          tapBlankComplete:(void(^ _Nullable)(CQTSQuickPopupView *bBlankView))tapBlankComplete
+                                          tapBlankComplete:(void(^ _Nullable)(CQTSBottomBlankView *bBlankView))tapBlankComplete
 {
     if (contentView == nil) {
         return nil;
     }
-    CQTSQuickPopupView *blankView = [[CQTSQuickPopupView alloc] initWithPopupView:contentView
+    CQTSBottomBlankView *blankView = [[CQTSBottomBlankView alloc] initWithPopupView:contentView
                                                                  popupViewHeight:popupViewHeight
                                                                  tapBlankComplete:tapBlankComplete];
     [blankView showBlankViewInView:nil complete:nil];

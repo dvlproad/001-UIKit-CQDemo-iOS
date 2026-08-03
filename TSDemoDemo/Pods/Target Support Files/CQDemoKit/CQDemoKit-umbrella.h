@@ -27,7 +27,7 @@
 #import "CQTSQuickPopupUtil.h"
 #import "CQTSBlankPresenter.h"
 #import "CQTSBlankViewProtocol.h"
-#import "CQTSQuickPopupView.h"
+#import "CQTSBottomBlankView.h"
 #import "CQTSSuspendWindow.h"
 #import "CQTSSuspendButtonRootViewController.h"
 #import "CQTSSuspendWindowFactory.h"

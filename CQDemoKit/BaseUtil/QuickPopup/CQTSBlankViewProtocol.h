@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*
  *  弹窗容器空白视图(blankView)的布局契约
- *  @brief 遵守本协议的是 blankView 本身（如 CQTSQuickPopupView）：
+ *  @brief 遵守本协议的是 blankView 本身（如 CQTSBottomBlankView）：
  *         操作对象就是自己（self），按自身弹出位置（底部）实现
  *         updateConstraintsForPopupViewWithShow:，来显示/隐藏其中的 popupView。
  *         展示者不感知具体容器类型，只通过本契约驱动布局

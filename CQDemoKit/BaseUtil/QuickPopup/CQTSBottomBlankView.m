@@ -1,23 +1,23 @@
 //
-//  CQTSBottomBlankView.m
+//  CQTSQuickPopupView.m
 //  CQDemoKit
 //
 //  Created by ciyouzen on 2026/08/04.
 //
 
-#import "CQTSBottomBlankView.h"
+#import "CQTSQuickPopupView.h"
 
 #import <Masonry/Masonry.h>
 #import "CQTSBlankPresenter.h"
 
-@interface CQTSBottomBlankView () {
+@interface CQTSQuickPopupView () {
     
 }
-@property (nonatomic, copy) void(^ _Nullable tapBlankHandle)(CQTSBottomBlankView *bBlankView);
+@property (nonatomic, copy) void(^ _Nullable tapBlankHandle)(CQTSQuickPopupView *bBlankView);
 
 @end
 
-@implementation CQTSBottomBlankView
+@implementation CQTSQuickPopupView
 
 #pragma mark - Init
 /*
@@ -28,7 +28,7 @@
  */
 - (instancetype)initWithPopupView:(UIView *)popupView
                   popupViewHeight:(CGFloat)popupViewHeight
-                 tapBlankComplete:(void(^ _Nullable)(CQTSBottomBlankView *bBlankView))tapBlankComplete
+                 tapBlankComplete:(void(^ _Nullable)(CQTSQuickPopupView *bBlankView))tapBlankComplete
 {
     self = [super initWithFrame:CGRectZero];
     if (self) {
@@ -95,12 +95,12 @@
 
 #pragma mark - Get Method
 /// 通过 popupView 获取到其所在的 popupView 容器，常用于 popupView 中的点击需要让容器隐藏等动作
-+ (nullable CQTSBottomBlankView *)blankViewFromPopupView:(UIView *)popupView {
++ (nullable CQTSQuickPopupView *)blankViewFromPopupView:(UIView *)popupView {
     for (UIView *superview = popupView.superview;
          superview != nil;
          superview = superview.superview) {
-        if ([superview isKindOfClass:[CQTSBottomBlankView class]]) {
-            return (CQTSBottomBlankView *)superview;
+        if ([superview isKindOfClass:[CQTSQuickPopupView class]]) {
+            return (CQTSQuickPopupView *)superview;
         }
     }
     return nil;

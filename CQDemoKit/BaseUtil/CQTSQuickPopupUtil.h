@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class CQTSQuickPopupView;
+@class CQTSBottomBlankView;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,9 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return 显示中的容器视图（可持有，用于之后调用 hideBlankView 隐藏）
  */
-+ (nullable CQTSQuickPopupView *)showWindowBottomClearView:(UIView *)contentView
++ (nullable CQTSBottomBlankView *)showWindowBottomClearView:(UIView *)contentView
                                                     height:(CGFloat)popupViewHeight
-                                          tapBlankComplete:(void(^ _Nullable)(CQTSQuickPopupView *bBlankView))tapBlankComplete;
+                                          tapBlankComplete:(void(^ _Nullable)(CQTSBottomBlankView *bBlankView))tapBlankComplete;
 
 @end
 
