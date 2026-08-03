@@ -9,6 +9,8 @@
 #import "UIUtilHomeViewController.h"
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
+#import <CQDemoKit/CQTSQuickPopupUtil.h>
+#import <CQDemoKit/CQTSQuickPopupView.h>
 
 @interface UIUtilHomeViewController () {
     
@@ -74,6 +76,31 @@
             };
             [sectionDataModel.values addObject:module];
         }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"底部弹窗(CQTSQuickPopupUtil)";
+            module.actionBlock = ^{
+                UIView *popupView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
+                popupView.backgroundColor = [UIColor greenColor];
+                
+                UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+                [btn setTitle:@"点我收起" forState:UIControlStateNormal];
+                [btn setBackgroundColor:[UIColor redColor]];
+                [btn addTarget:self action:@selector(hidePopupAction:) forControlEvents:UIControlEventTouchUpInside];
+                [popupView addSubview:btn];
+                [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(popupView).offset(50);
+                    make.centerX.equalTo(popupView);
+                    make.width.mas_equalTo(200);
+                    make.height.mas_equalTo(44);
+                }];
+                
+                [CQTSQuickPopupUtil showWindowBottomClearView:popupView height:200 tapBlankComplete:^(CQTSQuickPopupView * _Nonnull bBlankView) {
+                    [bBlankView hideBlankView];
+                }];
+            };
+            [sectionDataModel.values addObject:module];
+        }
         [sectionDataModels addObject:sectionDataModel];
     }
     
@@ -84,6 +111,11 @@
 #pragma mark - Touch
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
+}
+
+- (void)hidePopupAction:(UIButton *)button {
+    CQTSQuickPopupView *popupView = [CQTSQuickPopupView blankViewFromPopupView:button];
+    [popupView hideBlankView];
 }
 
 - (void)didReceiveMemoryWarning {
