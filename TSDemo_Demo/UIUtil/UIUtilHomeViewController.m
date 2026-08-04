@@ -9,8 +9,11 @@
 #import "UIUtilHomeViewController.h"
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CJUIKitAlertUtil.h>
+
 #import <CQDemoKit/CQTSQuickPopupUtil.h>
+
 #import <CQDemoKit/CQTSBottomBlankView.h>
+#import <CQDemoKit/CQTSBlankPresenter.h>
 
 @interface UIUtilHomeViewController () {
     
@@ -95,9 +98,12 @@
                     make.height.mas_equalTo(44);
                 }];
                 
-                [CQTSQuickPopupUtil showWindowBottomClearView:popupView height:200 tapBlankComplete:^(CQTSBottomBlankView * _Nonnull bBlankView) {
-                    [bBlankView hideBlankView];
+                CQTSBlankPresenter *blankPresenter = [[CQTSBlankPresenter alloc] init];
+                
+                CQTSBottomBlankView *blankView = [[CQTSBottomBlankView alloc] initWithPopupView:popupView popupViewHeight:200 tapBlankComplete:^(CQTSBottomBlankView * _Nonnull bBlankView) {
+                    [blankPresenter hideBlankView:bBlankView];
                 }];
+                [blankPresenter showBlankView:blankView inView:nil complete:nil];
             };
             [sectionDataModel.values addObject:module];
         }
@@ -114,8 +120,10 @@
 }
 
 - (void)hidePopupAction:(UIButton *)button {
-    CQTSBottomBlankView *popupView = [CQTSBottomBlankView blankViewFromPopupView:button];
-    [popupView hideBlankView];
+    CQTSBottomBlankView *blankView = [CQTSBottomBlankView blankViewFromPopupView:button];
+    
+    CQTSBlankPresenter *blankPresenter = [[CQTSBlankPresenter alloc] init];
+    [blankPresenter hideBlankView:blankView];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.17"
+  s.version      = "0.9.18"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、TestMethod、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
                  • CQDemoKit/BaseVC/Collection - 集合视图
                  • CQDemoKit/BaseVC/TabBar - TabBar
                  
-                 • CQDemoKit/BaseUIKit - 基础模块UIKit(Button \ Container \ ImageLoader \ Switch)
+                 • CQDemoKit/BaseUIKit - 基础模块UIKit(Button \ Container \ ImageLoader \ Switch \ Segment)
                  • CQDemoKit/BaseUIKit/Button - 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
                  • CQDemoKit/BaseUIKit/Container - 创建子视图均分的containerView
                  • CQDemoKit/BaseUIKit/ImageLoader - 图片加载
@@ -96,7 +96,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.17_1" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.18" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -171,7 +171,7 @@ Pod::Spec.new do |s|
     end
   end
 
-  # 基础模块UIKit(Button \ Container \ ImageLoader \ Switch)
+  # 基础模块UIKit(Button \ Container \ ImageLoader \ Switch \ Segment)
   s.subspec 'BaseUIKit' do |ss|
     # 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
     ss.subspec 'Button' do |sss|
@@ -243,7 +243,7 @@ Pod::Spec.new do |s|
       sss.dependency 'CQDemoKit/Demo_Resource/ResourceInfoUtil' # 如果要尝试假智能的根据路径的后缀名保存任意媒体文件的时候需要
     end
     
-    # 将下载到 app 沙盒中的媒体文件保存到相册中
+    # 本地\网络\Icon 图片的模型
     ss.subspec 'ImageModel' do |sss|
       sss.source_files = "CQDemoKit/Demo_Resource/ImageModel/**/*.{h,m}"
     end
