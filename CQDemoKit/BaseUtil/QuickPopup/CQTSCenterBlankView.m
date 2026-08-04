@@ -1,39 +1,42 @@
 //
-//  CQTSBottomBlankView.m
+//  CQTSCenterBlankView.m
 //  CQDemoKit
 //
 //  Created by ciyouzen on 2026/08/04.
 //
 
-#import "CQTSBottomBlankView.h"
+#import "CQTSCenterBlankView.h"
 
 #import <Masonry/Masonry.h>
 #import "CQTSBlankPresenter.h"
 
-@interface CQTSBottomBlankView () {
+@interface CQTSCenterBlankView () {
     
 }
-@property (nonatomic, copy) void(^ _Nullable tapBlankHandle)(CQTSBottomBlankView *bBlankView);
+@property (nonatomic, copy) void(^ _Nullable tapBlankHandle)(CQTSCenterBlankView *bBlankView);
 
 @end
 
-@implementation CQTSBottomBlankView
+@implementation CQTSCenterBlankView
 
 #pragma mark - Init
 /*
- *  初始化包含popupView的【底部完整弹出框视图】（内容视图左右铺满容器）
+ *  初始化包含popupView的【中心完整弹出框视图】（内容视图居中显示在容器）
  *
  *  @param popupView            弹出视图的内容视图
- *  @param popupViewHeight      弹出视图的高度
+ *  @param popupViewSize        弹出视图的大小
+ *  @param popupCenterOffset    弹出视图相对容器中心的偏移量
  */
 - (instancetype)initWithPopupView:(UIView *)popupView
-                  popupViewHeight:(CGFloat)popupViewHeight
-                 tapBlankComplete:(void(^ _Nullable)(CQTSBottomBlankView *bBlankView))tapBlankComplete
+                    popupViewSize:(CGSize)popupViewSize
+                popupCenterOffset:(CGPoint)popupCenterOffset
+                 tapBlankComplete:(void(^ _Nullable)(CQTSCenterBlankView *bBlankView))tapBlankComplete
 {
     self = [super initWithFrame:CGRectZero];
     if (self) {
         _popupView = popupView;
-        _popupViewHeight = popupViewHeight;
+        _popupViewSize = popupViewSize;
+        _popupCenterOffset = popupCenterOffset;
         _tapBlankHandle = tapBlankComplete;
 
         _blankPresenter = [[CQTSBlankPresenter alloc] init];
@@ -50,10 +53,14 @@
         
         [self addSubview:popupView];
         [popupView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self);
-            make.height.mas_equalTo(popupViewHeight);
-            make.bottom.equalTo(self).mas_offset(popupViewHeight);   // 初始藏于屏下
+            make.centerX.equalTo(self).mas_offset(popupCenterOffset.x);
+            make.centerY.equalTo(self).mas_offset(popupCenterOffset.y);
+            make.width.mas_equalTo(popupViewSize.width);
+            make.height.mas_equalTo(popupViewSize.height);
         }];
+        
+        popupView.alpha = 0.0f;                          // 初始隐藏
+        popupView.transform = CGAffineTransformMakeScale(0.01, 0.01);
     }
     return self;
 }
@@ -84,23 +91,25 @@
  *  @param show     是否显示popupView
  */
 - (void)updateConstraintsForPopupViewWithShow:(BOOL)show {
-    [self.popupView mas_updateConstraints:^(MASConstraintMaker *make) {
+    [UIView animateWithDuration:0.3 animations:^{
         if (show) {
-            make.bottom.equalTo(self);
+            self.popupView.alpha = 1.0f;
+            self.popupView.transform = CGAffineTransformIdentity;
         } else {
-            make.bottom.equalTo(self).mas_offset(self.popupViewHeight);
+            self.popupView.alpha = 0.0f;
+            self.popupView.transform = CGAffineTransformMakeScale(0.01, 0.01);
         }
     }];
 }
 
 #pragma mark - Get Method
 /// 通过 popupView 获取到其所在的 popupView 容器，常用于 popupView 中的点击需要让容器隐藏等动作
-+ (nullable CQTSBottomBlankView *)blankViewFromPopupView:(UIView *)popupView {
++ (nullable CQTSCenterBlankView *)blankViewFromPopupView:(UIView *)popupView {
     for (UIView *superview = popupView.superview;
          superview != nil;
          superview = superview.superview) {
-        if ([superview isKindOfClass:[CQTSBottomBlankView class]]) {
-            return (CQTSBottomBlankView *)superview;
+        if ([superview isKindOfClass:[CQTSCenterBlankView class]]) {
+            return (CQTSCenterBlankView *)superview;
         }
     }
     return nil;

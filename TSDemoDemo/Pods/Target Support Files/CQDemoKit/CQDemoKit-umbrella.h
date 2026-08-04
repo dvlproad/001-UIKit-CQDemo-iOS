@@ -28,6 +28,7 @@
 #import "CQTSBlankPresenter.h"
 #import "CQTSBlankViewProtocol.h"
 #import "CQTSBottomBlankView.h"
+#import "CQTSCenterBlankView.h"
 #import "CQTSSuspendWindow.h"
 #import "CQTSSuspendButtonRootViewController.h"
 #import "CQTSSuspendWindowFactory.h"

@@ -178,9 +178,9 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit-Swift/CJBaseUIKit_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUtil-Swift/CJBaseUtil_Swift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CQDemoProtocol/CQDemoProtocol.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoShareFramework-Swift-iOS11.0/CQDemoShareFramework_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework"
@@ -194,9 +194,9 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit-Swift/CJBaseUIKit_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUtil-Swift/CJBaseUtil_Swift.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CQDemoProtocol/CQDemoProtocol.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoShareFramework-Swift-iOS11.0/CQDemoShareFramework_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework"

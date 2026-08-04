@@ -18,47 +18,47 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>CJPopupAction.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
 		<key>CQDemoKit-CQDemoKit_Privacy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>CQDemoKit-CQDemoKit_StateUI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>CQDemoKit-CQDemoKit_TestMethod.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>CQDemoKit-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>7</integer>
 		</dict>
 		<key>CQDemoKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>3</integer>
+		</dict>
+		<key>CQDemoProtocol.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>CQDemoResource-CQDemoResource.xcscheme</key>
 		<dict>

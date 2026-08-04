@@ -1,7 +1,6 @@
 PODS:
   - CJBaseUIKit-Swift/UIView/as (0.0.2)
   - CJBaseUtil-Swift/FrameworkCJHelper (0.1.1)
-  - CJPopupAction (1.5.0)
   - CQDemoKit (0.9.17):
     - CQDemoKit/Auxiliary (= 0.9.17)
     - CQDemoKit/BaseUIKit (= 0.9.17)
@@ -104,6 +103,9 @@ PODS:
   - CQDemoKit/TestMethod (0.9.17):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
+  - CQDemoProtocol (0.0.2):
+    - CQDemoProtocol/AppDelegate (= 0.0.2)
+  - CQDemoProtocol/AppDelegate (0.0.2)
   - CQDemoResource (0.3.2):
     - CQDemoResource/Core (= 0.3.2)
     - CQDemoResource/GIF (= 0.3.2)
@@ -156,9 +158,9 @@ PODS:
     - TSDemo_Demo
 
 DEPENDENCIES:
-  - CJPopupAction
   - CQDemoKit (from `../`)
   - CQDemoKit-Swift (from `../`)
+  - CQDemoProtocol (from `../`)
   - CQDemoResource (from `../`)
   - CQDemoShareFramework-Swift/WidgetExtension (from `../`)
   - InjectHotReload
@@ -170,7 +172,6 @@ SPEC REPOS:
   trunk:
     - CJBaseUIKit-Swift
     - CJBaseUtil-Swift
-    - CJPopupAction
     - FBRetainCycleDetector
     - InjectHotReload
     - Masonry
@@ -181,6 +182,8 @@ EXTERNAL SOURCES:
   CQDemoKit:
     :path: "../"
   CQDemoKit-Swift:
+    :path: "../"
+  CQDemoProtocol:
     :path: "../"
   CQDemoResource:
     :path: "../"
@@ -194,9 +197,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CJBaseUIKit-Swift: 432f05b09106994c16a4cf582c6a728c3e59316e
   CJBaseUtil-Swift: ba15bb3ac8512a9e374078b5e7514e77b9303af5
-  CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
   CQDemoKit: fb7da75177e3cb88426161dbd6583d1a7f74bf29
   CQDemoKit-Swift: 7d9c026dc37e64b13ddaa91c1b1df823e022781e
+  CQDemoProtocol: c222084b0aec11e1d675d8848cad50f3795c7424
   CQDemoResource: d28c37b5f878135d3056405a44e911589b5c0c1f
   CQDemoShareFramework-Swift: 51c1c3ffe65826f8a1949d3e2acd7082e2c7c887
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
@@ -207,6 +210,6 @@ SPEC CHECKSUMS:
   TSDemo_Demo: c85b40a0fea827f649d93229b6a9f0fbc302de5d
   TSDemo_Demo-Swift: 94c5699a0986776d2e8f5c8b2d0c52e4ba79d2b5
 
-PODFILE CHECKSUM: 3be5036ed1537d2c8a550cb302fad06f2f65825a
+PODFILE CHECKSUM: a1a67f620ce79a77fb423ad6d9fc4760478a255b
 
 COCOAPODS: 1.16.2

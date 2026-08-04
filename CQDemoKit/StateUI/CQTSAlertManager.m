@@ -58,7 +58,11 @@
             self.networkNoOpenAlertVC = nil;
             NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
             if ([[UIApplication sharedApplication] canOpenURL:settingsURL]) {
-                [[UIApplication sharedApplication] openURL:settingsURL options:@{} completionHandler:nil];
+                if (@available(iOS 10.0, *)) {
+                    [[UIApplication sharedApplication] openURL:settingsURL options:@{} completionHandler:nil];
+                } else {
+                    [[UIApplication sharedApplication] openURL:settingsURL];
+                }
             }
         }];
         [alertVC addAction:okAction];
