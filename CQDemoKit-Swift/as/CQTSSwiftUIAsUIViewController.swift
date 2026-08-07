@@ -63,10 +63,13 @@ open class CQTSSwiftUIAsUIViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    /// 宿主视图的背景色，默认使用 CQDemoKit 的主题蓝
+    public var backgroundColor = UIColor(red: 105/255.0, green: 193/255.0, blue: 243/255.0, alpha: 1)
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 105/255.0, green: 193/255.0, blue: 243/255.0, alpha: 1)
+        view.backgroundColor = backgroundColor
 
         // 创建 SwiftUI 视图，并用 UIHostingController 来包装 SwiftUI 视图
         let hostingController = UIHostingController(rootView: swiftUIView)
@@ -76,10 +79,10 @@ open class CQTSSwiftUIAsUIViewController: UIViewController {
         view.addSubview(hostingController.view)
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
-            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            hostingController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10)
+            hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0,
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0)
         ])
 
         // 完成添加子视图控制器
