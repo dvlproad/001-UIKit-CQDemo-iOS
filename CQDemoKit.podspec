@@ -61,11 +61,10 @@ Pod::Spec.new do |s|
                  • CQDemoKit/BaseVC/Collection - 集合视图
                  • CQDemoKit/BaseVC/TabBar - TabBar
                  
-                 • CQDemoKit/BaseUIKit - 基础模块UIKit(Button \ Container \ ImageLoader \ Switch \ Segment)
+                 • CQDemoKit/BaseUIKit - 基础模块UIKit(Button \ Container \ ImageLoader \ Segment)
                  • CQDemoKit/BaseUIKit/Button - 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
                  • CQDemoKit/BaseUIKit/Container - 创建子视图均分的containerView
                  • CQDemoKit/BaseUIKit/ImageLoader - 图片加载
-                 • CQDemoKit/BaseUIKit/Switch - 含标题的开关视图
 
                  • CQDemoKit/BaseUtil - 基础工具
                  
@@ -171,7 +170,7 @@ Pod::Spec.new do |s|
     end
   end
 
-  # 基础模块UIKit(Button \ Container \ ImageLoader \ Switch \ Segment)
+  # 基础模块UIKit(Button \ Container \ ImageLoader \ Segment)
   s.subspec 'BaseUIKit' do |ss|
     # 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView; 【单行或者单列】的普通功能按钮的组合:CQTSActionButtonsBuilder)
     ss.subspec 'Button' do |sss|
@@ -190,17 +189,9 @@ Pod::Spec.new do |s|
       sss.source_files = "CQDemoKit/BaseUIKit/ImageLoader/**/*.{h,m}"
     end
 
-    # 含标题的开关视图
-    ss.subspec 'Switch' do |sss|
-      sss.source_files = "CQDemoKit/BaseUIKit/Switch/**/*.{h,m}"
-      sss.dependency 'Masonry'
-    end
-
-    
-    # 含标题的单选 Segment
+    # Segment
     ss.subspec 'Segment' do |sss|
       sss.source_files = "CQDemoKit/BaseUIKit/Segment/**/*.{h,m}"
-      sss.dependency 'Masonry'
     end
   end
 

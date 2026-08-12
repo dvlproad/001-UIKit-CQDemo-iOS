@@ -11,6 +11,7 @@
 #endif
 
 #import "UIView+CQAuxiliaryText.h"
+#import "UIView+CQAuxiliaryTitle.h"
 #import "UIViewController+CQNavigationBar.h"
 #import "CQTSActionButtonsBuilder.h"
 #import "CQTSBorderStateButton.h"
@@ -20,9 +21,7 @@
 #import "CQTSContainerViewFactory.h"
 #import "CQTSImageLoader.h"
 #import "UIImageView+CQTSBaseUtil.h"
-#import "CQTSSegmentViewFactory.h"
-#import "CQTSSwitchViewFactory.h"
-#import "UISwitch+CQTSMoreProperty.h"
+#import "UISegmentedControl+CQTSMoreProperty.h"
 #import "CJUIKitAlertUtil.h"
 #import "CJUIKitToastUtil.h"
 #import "CQTSQuickPopupUtil.h"

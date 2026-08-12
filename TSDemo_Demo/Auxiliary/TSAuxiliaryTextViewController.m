@@ -1,22 +1,22 @@
 //
-//  TSAuxiliaryViewController.m
+//  TSAuxiliaryTextViewController.m
 //  TSDemo_Demo
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "TSAuxiliaryViewController.h"
+#import "TSAuxiliaryTextViewController.h"
 #import <CQDemoKit/CJUIKitToastUtil.h>
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/CQTSContainerViewFactory.h>
 #import <CQDemoKit/UIView+CQAuxiliaryText.h>
 
-@interface TSAuxiliaryViewController ()
+@interface TSAuxiliaryTextViewController ()
 
 @end
 
-@implementation TSAuxiliaryViewController
+@implementation TSAuxiliaryTextViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

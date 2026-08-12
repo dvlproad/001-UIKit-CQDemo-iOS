@@ -14,6 +14,7 @@
 #import <CQDemoKit/CQTSContainerViewFactory.h>
 #import <CQDemoKit/CQTSRadioButtonsView.h>
 #import <CQDemoKit/CQTSActionButtonsBuilder.h>
+#import <CQDemoKit/UIView+CQAuxiliaryTitle.h>
 
 #import "TSRipeButtonCollectionViewController.h"
 
@@ -197,8 +198,35 @@
         make.height.mas_equalTo(44);
     }];
     
+#pragma mark 视图+title:UIView+CQAuxiliaryTitle
+    // left title
+    UIButton *titleBGButton = [CQTSButtonFactory themeBGButtonWithTitle:@"带左title的按钮" actionBlock:^(UIButton * _Nonnull bButton) {
+        [CJUIKitToastUtil showMessage:@"带左title的按钮"];
+    }];
+    UIView *leftTitleView = [titleBGButton cqts_withLeftTitle:@"左title"];
+    [containerView addSubview:leftTitleView];
+    [leftTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(goRadioButton);
+        make.centerX.mas_equalTo(goRadioButton);
+        make.top.mas_equalTo(goRadioButton.mas_bottom).mas_offset(40);
+        make.height.mas_equalTo(44);
+    }];
+    
+    // top title
+    UIButton *topTitleBGButton = [CQTSButtonFactory themeBGButtonWithTitle:@"带顶title的按钮" actionBlock:^(UIButton * _Nonnull bButton) {
+        [CJUIKitToastUtil showMessage:@"带顶title的按钮"];
+    }];
+    UIView *topTitleView = [topTitleBGButton cqts_withTopTitle:@"顶title"];
+    [containerView addSubview:topTitleView];
+    [topTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(leftTitleView);
+        make.centerX.mas_equalTo(leftTitleView);
+        make.top.mas_equalTo(leftTitleView.mas_bottom).mas_offset(40);
+        make.height.mas_equalTo(44+20+4);
+    }];
+    
 #pragma mark 更新ScrollView的高（如果视图滚动异常，请检查你的视图是不是加在了self.view上了。而不是self.containerView上）
-    [self updateScrollHeightWithBottomInterval:40 accordingToLastBottomView:goRadioButton];
+    [self updateScrollHeightWithBottomInterval:40 accordingToLastBottomView:topTitleView];
 }
 
 

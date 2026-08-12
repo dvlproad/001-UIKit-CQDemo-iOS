@@ -11,7 +11,8 @@
 #endif
 
 #import "TSAuxiliaryHomeViewController.h"
-#import "TSAuxiliaryViewController.h"
+#import "TSAuxiliaryTextViewController.h"
+#import "TSAuxiliaryTitleViewController.h"
 #import "TSCopyMainBunldeFileViewController.h"
 #import "TSFrameworkResourceViewController.h"
 #import "TSResourceCollectionViewController.h"
@@ -30,7 +31,6 @@
 #import "TSButtonHomeViewController.h"
 #import "TSContainerViewController.h"
 #import "TSSegmentViewController.h"
-#import "TSSwitchViewController.h"
 #import "UIUtilHomeViewController.h"
 #import "TSTableHomeViewController.h"
 #import "TSManualTestMethodViewController.h"

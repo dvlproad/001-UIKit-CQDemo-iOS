@@ -7,7 +7,8 @@
 //
 
 #import "TSAuxiliaryHomeViewController.h"
-#import "TSAuxiliaryViewController.h"
+#import "TSAuxiliaryTextViewController.h"
+#import "TSAuxiliaryTitleViewController.h"
 #import "TSCopyMainBunldeFileViewController.h"
 
 #import <CQDemoKit/CJUIKitToastUtil.h>
@@ -39,8 +40,16 @@
         sectionDataModel.theme = @"测试 Auxiliary 等";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"Auxiliary";
-            module.classEntry = [TSAuxiliaryViewController class];
+            module.title = @"AuxiliaryText";
+            module.content = @"添加辅助文本(叠加式)";
+            module.classEntry = [TSAuxiliaryTextViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"AuxiliaryTitle";
+            module.content = @"给任意视图添加title(容器式)";
+            module.classEntry = [TSAuxiliaryTitleViewController class];
             [sectionDataModel.values addObject:module];
         }
         [sectionDataModels addObject:sectionDataModel];

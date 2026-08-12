@@ -1,5 +1,5 @@
 //
-//  TSSwitchViewController.h
+//  TSAuxiliaryTextViewController.h
 //  TSDemo_Demo
 //
 //  Created by ciyouzen on 2017/2/25.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TSSwitchViewController : CJUIKitBaseViewController
+@interface TSAuxiliaryTextViewController : CJUIKitBaseViewController
 
 @end
 
