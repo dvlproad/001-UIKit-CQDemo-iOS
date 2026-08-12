@@ -80,7 +80,7 @@ open class CQTSSwiftUIAsUIViewController: UIViewController {
         hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0,
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             hostingController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0)
         ])

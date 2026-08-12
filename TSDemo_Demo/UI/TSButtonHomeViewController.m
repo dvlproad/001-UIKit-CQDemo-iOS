@@ -13,6 +13,7 @@
 #import <CQDemoKit/CQTSButtonFactory.h>
 #import <CQDemoKit/CQTSContainerViewFactory.h>
 #import <CQDemoKit/CQTSRadioButtonsView.h>
+#import <CQDemoKit/CQTSActionButtonsBuilder.h>
 
 #import "TSRipeButtonCollectionViewController.h"
 
@@ -115,9 +116,51 @@
        make.height.mas_equalTo(44);
    }];
     
+#pragma mark 一排功能按钮:CQTSActionButtonsBuilder
+    // 水平一排，每个按钮独立 actionBlock，title 与 action 在同一调用中贴近配对
+    UIView *horizontalBarButtonsView = [CQTSActionButtonsBuilder makeButtonsViewUsingBlock:^(CQTSActionButtonsBuilder * _Nonnull make) {
+        make.axisType = MASAxisTypeHorizontal;
+        make.fixedSpacing = 10;
+        [make addButtonWithTitle:@"功能按钮1" actionBlock:^(UIButton * _Nonnull bButton) {
+            [CJUIKitToastUtil showMessage:@"点击功能按钮1"];
+        }];
+        [make addButtonWithTitle:@"功能按钮2" actionBlock:^(UIButton * _Nonnull bButton) {
+            [CJUIKitToastUtil showMessage:@"点击功能按钮2"];
+        }];
+    }];
+    [containerView addSubview:horizontalBarButtonsView];
+    [horizontalBarButtonsView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(otherButtonView);
+        make.centerX.mas_equalTo(otherButtonView);
+        make.top.mas_equalTo(otherButtonView.mas_bottom).mas_offset(40);
+        make.height.mas_equalTo(44);
+    }];
+    
+    // 垂直一排，3 个按钮，验证多个按钮的纵向排列
+    UIView *verticalBarButtonsView = [CQTSActionButtonsBuilder makeButtonsViewUsingBlock:^(CQTSActionButtonsBuilder * _Nonnull make) {
+        make.axisType = MASAxisTypeVertical;
+        make.fixedSpacing = 10;
+        [make addButtonWithTitle:@"功能按钮1" actionBlock:^(UIButton * _Nonnull bButton) {
+            [CJUIKitToastUtil showMessage:@"点击功能按钮1"];
+        }];
+        [make addButtonWithTitle:@"功能按钮2" actionBlock:^(UIButton * _Nonnull bButton) {
+            [CJUIKitToastUtil showMessage:@"点击功能按钮2"];
+        }];
+        [make addButtonWithTitle:@"功能按钮3" actionBlock:^(UIButton * _Nonnull bButton) {
+            [CJUIKitToastUtil showMessage:@"点击功能按钮3"];
+        }];
+    }];
+    [containerView addSubview:verticalBarButtonsView];
+    [verticalBarButtonsView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(horizontalBarButtonsView);
+        make.centerX.mas_equalTo(horizontalBarButtonsView);
+        make.top.mas_equalTo(horizontalBarButtonsView.mas_bottom).mas_offset(40);
+        make.height.mas_equalTo(44*3+10*2);
+    }];
+    
 #pragma mark 单选按钮组
-    NSArray<NSString *> *radioButtonTitles = @[@"按钮1", @"按钮2", @"按钮3", @"按钮4",];
-    CQTSRadioButtonsView *horizontalRadioButtons = [[CQTSRadioButtonsView alloc] initWithTitles:radioButtonTitles alongAxis:MASAxisTypeHorizontal fixedSpacing:10 didSelectItemAtIndexHandle:^(NSInteger index) {
+    NSArray<NSString *> *radioButtonTitles = @[@"单选按钮1", @"单选按钮2", @"单选按钮3", @"单选按钮4",];
+    CQTSRadioButtonsView *horizontalRadioButtons = [[CQTSRadioButtonsView alloc] initWithTitles:radioButtonTitles alongAxis:MASAxisTypeHorizontal fixedSpacing:6 didSelectItemAtIndexHandle:^(NSInteger index) {
         NSString *message = [NSString stringWithFormat:@"点击了第%ld个按钮", index+1];
         [CJUIKitToastUtil showMessage:message];
     }];
@@ -125,7 +168,7 @@
     [horizontalRadioButtons mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(otherButtonView);
         make.centerX.mas_equalTo(otherButtonView);
-        make.top.mas_equalTo(otherButtonView.mas_bottom).mas_offset(40);
+        make.top.mas_equalTo(verticalBarButtonsView.mas_bottom).mas_offset(40);
         make.height.mas_equalTo(44);
     }];
     
@@ -146,13 +189,13 @@
         UIViewController *viewController = [[TSRipeButtonCollectionViewController alloc] init];
         [weakSelf.navigationController pushViewController:viewController animated:YES];
     }];
-   [containerView addSubview:goRadioButton];
-   [goRadioButton mas_makeConstraints:^(MASConstraintMaker *make) {
-       make.left.mas_equalTo(verticalRadioButtons);
-       make.centerX.mas_equalTo(verticalRadioButtons);
-       make.top.mas_equalTo(verticalRadioButtons.mas_bottom).mas_offset(40);
-       make.height.mas_equalTo(44);
-   }];
+    [containerView addSubview:goRadioButton];
+    [goRadioButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(verticalRadioButtons);
+        make.centerX.mas_equalTo(verticalRadioButtons);
+        make.top.mas_equalTo(verticalRadioButtons.mas_bottom).mas_offset(40);
+        make.height.mas_equalTo(44);
+    }];
     
 #pragma mark 更新ScrollView的高（如果视图滚动异常，请检查你的视图是不是加在了self.view上了。而不是self.containerView上）
     [self updateScrollHeightWithBottomInterval:40 accordingToLastBottomView:goRadioButton];

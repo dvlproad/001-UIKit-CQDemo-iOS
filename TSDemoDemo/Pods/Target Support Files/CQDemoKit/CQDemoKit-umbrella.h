@@ -12,6 +12,7 @@
 
 #import "UIView+CQAuxiliaryText.h"
 #import "UIViewController+CQNavigationBar.h"
+#import "CQTSActionButtonsBuilder.h"
 #import "CQTSBorderStateButton.h"
 #import "CQTSButtonFactory.h"
 #import "CQTSRadioButtonsView.h"

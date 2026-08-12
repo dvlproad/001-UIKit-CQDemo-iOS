@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
   # s.resources = 会拷贝到mainBundle下
   # s.resource_bundle = 会放在指定的customBundle下
   s.name         = "CQDemoKit"
-  s.version      = "0.9.18"
+  s.version      = "0.9.19"
   s.summary      = "CQDemoKit 基础库 - 包含 Helper、BaseVC、BaseUIKit、BaseUtil、Demo_Resource、TestMethod、Monitor 等通用 Demo 组件"
   s.homepage     = "https://github.com/dvlproad/001-UIKit-CQDemo-iOS"
 
@@ -96,7 +96,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
  
-  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.18" }
+  s.source       = { :git => "https://github.com/dvlproad/001-UIKit-CQDemo-iOS.git", :tag => "CQDemoKit_0.9.19" }
   # s.source_files  = "CQDemoKit/*.{h,m}"
 
   s.frameworks = "UIKit"
@@ -173,7 +173,7 @@ Pod::Spec.new do |s|
 
   # 基础模块UIKit(Button \ Container \ ImageLoader \ Switch \ Segment)
   s.subspec 'BaseUIKit' do |ss|
-    # 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView)
+    # 各种按钮(主题按钮:themeBGButton \ themeBorderButton; 状态按钮:submitButton; bug按钮:bugButton; 【单行或者单列】的单选按钮的组合:CQTSRadioButtonsView； 【多行或者多列】的单选按钮的组合见:CQDemoKit/Demo_RipeView/RipeCollectionView; 【单行或者单列】的普通功能按钮的组合:CQTSActionButtonsBuilder)
     ss.subspec 'Button' do |sss|
       sss.source_files = "CQDemoKit/BaseUIKit/Button/**/*.{h,m}"
       sss.dependency 'Masonry'
